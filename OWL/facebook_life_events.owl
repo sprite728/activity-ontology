@@ -10,12 +10,12 @@
 
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/root/ontologies/2013/6/facebook_life_events"
+     xml:base="http://mem0r1es.github.io/ontology/events"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="http://www.semanticweb.org/root/ontologies/2013/6/facebook_life_events">
+     ontologyIRI="http://mem0r1es.github.io/ontology/events">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="db" IRI="http://dbpedia.org/ontology/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -23,8 +23,8 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://xmlns.com/foaf/0.1/</Import>
+    <Import>http://mem0r1es.github.io/ontology/places</Import>
     <Import>http://rdfs.org/sioc/ns#</Import>
-    <Import>http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Ontology for Facebook Life Events and associated activities.</Literal>
@@ -751,11 +751,11 @@
     <EquivalentClasses>
         <Class IRI="#EatingHabit"/>
         <ObjectOneOf>
-            <NamedIndividual IRI="#Pescetarian"/>
-            <NamedIndividual IRI="#Fruitarian"/>
+            <NamedIndividual IRI="#Vegan"/>
             <NamedIndividual IRI="#Omnivore"/>
             <NamedIndividual IRI="#Vegetarian"/>
-            <NamedIndividual IRI="#Vegan"/>
+            <NamedIndividual IRI="#Pescetarian"/>
+            <NamedIndividual IRI="#Fruitarian"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -771,38 +771,38 @@
     <EquivalentClasses>
         <Class IRI="#FirstType"/>
         <ObjectOneOf>
-            <NamedIndividual IRI="#FirstWord"/>
             <NamedIndividual IRI="#FirstKiss"/>
+            <NamedIndividual IRI="#FirstWord"/>
             <NamedIndividual IRI="#FirstFlight"/>
-            <NamedIndividual IRI="#FirstVote"/>
             <NamedIndividual IRI="#FirstDrink"/>
+            <NamedIndividual IRI="#FirstVote"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Gender"/>
         <ObjectOneOf>
-            <NamedIndividual IRI="#Unspecified"/>
             <NamedIndividual IRI="#Female"/>
             <NamedIndividual IRI="#Male"/>
+            <NamedIndividual IRI="#Unspecified"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#GoogleActivity"/>
         <ObjectOneOf>
-            <NamedIndividual IRI="#IN_VEHICLE"/>
-            <NamedIndividual IRI="#ON_BICYCLE"/>
             <NamedIndividual IRI="#ON_FOOT"/>
+            <NamedIndividual IRI="#IN_VEHICLE"/>
             <NamedIndividual IRI="#TILTING"/>
-            <NamedIndividual IRI="#STILL"/>
             <NamedIndividual IRI="#UNKNOWN"/>
+            <NamedIndividual IRI="#ON_BICYCLE"/>
+            <NamedIndividual IRI="#STILL"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#HomeType"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Apartment"/>
-            <NamedIndividual IRI="#Flat"/>
             <NamedIndividual IRI="#House"/>
+            <NamedIndividual IRI="#Flat"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -856,56 +856,56 @@
     <EquivalentClasses>
         <Class IRI="#RelationshipTypeFM"/>
         <ObjectOneOf>
-            <NamedIndividual IRI="#Stepfather"/>
-            <NamedIndividual IRI="#Auntie"/>
-            <NamedIndividual IRI="#Sister-in-law"/>
             <NamedIndividual IRI="#Cousin"/>
-            <NamedIndividual IRI="#Brother"/>
-            <NamedIndividual IRI="#Nephew"/>
-            <NamedIndividual IRI="#Uncle"/>
-            <NamedIndividual IRI="#Mother-in-law"/>
+            <NamedIndividual IRI="#Stepfather"/>
             <NamedIndividual IRI="#Stepbrother"/>
-            <NamedIndividual IRI="#Stepmother"/>
-            <NamedIndividual IRI="#Sister"/>
-            <NamedIndividual IRI="#Brother-in-law"/>
             <NamedIndividual IRI="#Grandson"/>
-            <NamedIndividual IRI="#Granddaughter"/>
-            <NamedIndividual IRI="#Niece"/>
             <NamedIndividual IRI="#Father-in-law"/>
+            <NamedIndividual IRI="#Uncle"/>
+            <NamedIndividual IRI="#Niece"/>
+            <NamedIndividual IRI="#Brother"/>
+            <NamedIndividual IRI="#Mother-in-law"/>
+            <NamedIndividual IRI="#Sister-in-law"/>
+            <NamedIndividual IRI="#Auntie"/>
+            <NamedIndividual IRI="#Granddaughter"/>
+            <NamedIndividual IRI="#Sister"/>
+            <NamedIndividual IRI="#Stepmother"/>
+            <NamedIndividual IRI="#Brother-in-law"/>
+            <NamedIndividual IRI="#Nephew"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#RelationshipTypeLO"/>
         <ObjectOneOf>
-            <NamedIndividual IRI="#Father"/>
-            <NamedIndividual IRI="#Mother"/>
-            <NamedIndividual IRI="#LovedOne"/>
-            <NamedIndividual IRI="#Brother"/>
+            <NamedIndividual IRI="#Son"/>
             <NamedIndividual IRI="#Friend"/>
+            <NamedIndividual IRI="#Wife"/>
+            <NamedIndividual IRI="#Father"/>
+            <NamedIndividual IRI="#Brother"/>
+            <NamedIndividual IRI="#Husband"/>
             <NamedIndividual IRI="#Grandfather"/>
             <NamedIndividual IRI="#Daughter"/>
             <NamedIndividual IRI="#Sister"/>
-            <NamedIndividual IRI="#Wife"/>
-            <NamedIndividual IRI="#Son"/>
+            <NamedIndividual IRI="#Mother"/>
+            <NamedIndividual IRI="#LovedOne"/>
             <NamedIndividual IRI="#Grandmother"/>
-            <NamedIndividual IRI="#Husband"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Units"/>
         <ObjectOneOf>
+            <NamedIndividual IRI="#Stone"/>
             <NamedIndividual IRI="#Pounds"/>
             <NamedIndividual IRI="#Kilos"/>
-            <NamedIndividual IRI="#Stone"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#VehicleType"/>
         <ObjectOneOf>
+            <NamedIndividual IRI="#Motorcycle"/>
             <NamedIndividual IRI="#Bicycle"/>
             <NamedIndividual IRI="#Car"/>
             <NamedIndividual IRI="#Truck"/>
-            <NamedIndividual IRI="#Motorcycle"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -919,8 +919,8 @@
         <Class IRI="#VisionAidType"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#CorrectiveSurgery"/>
-            <NamedIndividual IRI="#Contacts"/>
             <NamedIndividual IRI="#Glasses"/>
+            <NamedIndividual IRI="#Contacts"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -951,8 +951,8 @@
             <ObjectProperty IRI="#possibleWhile"/>
             <ObjectOneOf>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1008,8 +1008,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1140,11 +1140,11 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#possibleWhile"/>
             <ObjectOneOf>
-                <NamedIndividual IRI="#IN_VEHICLE"/>
                 <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#IN_VEHICLE"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1178,8 +1178,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1237,8 +1237,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1322,107 +1322,6 @@
         <Class IRI="#Artifact"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GooglePlace"/>
-        <ObjectUnionOf>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ATM"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Accounting"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Airport"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#AmusementPark"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Aquarium"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ArtGallery"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Bakery"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Bank"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Bar"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BeautySalon"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BicycleStore"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BookStore"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BowlingAlley"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BusStation"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Cafe"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Campground"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarDealer"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarRental"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarRepair"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarWash"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Casino"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Cemetery"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Church"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CityHall"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ClothingStore"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ConvenienceStore"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Courthouse"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Dentist"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#DepartmentStore"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Doctor"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Electrician"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ElectronicsStore"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Embassy"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Establishment"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Finance"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#FireStation"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Florist"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Food"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#FuneralHome"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#FurnitureStore"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#GasStation"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#GeneralContractor"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#GroceryOrSupermarket"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Gym"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HairCare"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HardwareStore"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Health"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HinduTemple"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HomeGoodsStore"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Hospital"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#InsuranceAgency"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#JewelryStore"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Laundry"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Lawyer"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Library"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#LiquourStore"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#LocalGovernmentOffice"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Locksmith"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Lodging"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MealDelivery"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MealTakeaway"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Mosque"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MovieRental"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MovieTheater"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MovingCompany"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Museum"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#NightClub"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Painter"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Park"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Parking"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#PetStore"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Pharmacy"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Physiotherapist"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#PlaceOfWorship"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Plumber"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Police"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#PostOffice"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#RVPark"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#RealEstateAgency"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Restaurant"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#RoofingContractor"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#School"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ShoeStore"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ShoppingMall"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Spa"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Stadium"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Storage"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Store"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#SubwayStation"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Synagogue"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#TaxiStand"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#TrainStation"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#TravelAgency"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#University"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#VeterinaryCare"/>
-            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Zoo"/>
-        </ObjectUnionOf>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#HealthEvent"/>
         <Class IRI="#MacroActivity"/>
     </SubClassOf>
@@ -1441,8 +1340,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1521,8 +1420,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1665,8 +1564,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1710,8 +1609,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1793,8 +1692,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1834,8 +1733,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1909,8 +1808,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2158,8 +2057,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2178,8 +2077,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2228,8 +2127,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2292,8 +2191,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2342,8 +2241,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2471,8 +2370,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2572,8 +2471,8 @@
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
                 <NamedIndividual IRI="#TILTING"/>
-                <NamedIndividual IRI="#STILL"/>
                 <NamedIndividual IRI="#UNKNOWN"/>
+                <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -2647,387 +2546,387 @@
         <Class IRI="#MacroActivity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ATM"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#ATM"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Accounting"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Accounting"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Airport"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Airport"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#AmusementPark"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#AmusementPark"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Aquarium"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Aquarium"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ArtGallery"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#ArtGallery"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Bakery"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Bakery"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Bank"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Bank"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Bar"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Bar"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BeautySalon"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#BeautySalon"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BicycleStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#BicycleStore"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BookStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#BookStore"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BowlingAlley"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#BowlingAlley"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BusStation"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#BusStation"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Cafe"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Cafe"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Campground"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Campground"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarDealer"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#CarDealer"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarRental"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#CarRental"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarRepair"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#CarRepair"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarWash"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#CarWash"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Casino"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Casino"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Cemetery"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Cemetery"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Church"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Church"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CityHall"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#CityHall"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ClothingStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#ClothingStore"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ConvenienceStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#ConvenienceStore"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Courthouse"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Courthouse"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Dentist"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Dentist"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#DepartmentStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#DepartmentStore"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Doctor"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Doctor"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Electrician"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Electrician"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ElectronicsStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#ElectronicsStore"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Embassy"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Embassy"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Establishment"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Establishment"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Finance"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Finance"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#FireStation"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#FireStation"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Florist"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Florist"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Food"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Food"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#FuneralHome"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#FuneralHome"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#FurnitureStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#FurnitureStore"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#GasStation"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#GasStation"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#GeneralContractor"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#GeneralContractor"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#GroceryOrSupermarket"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#GroceryOrSupermarket"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Gym"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Gym"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HairCare"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#HairCare"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HardwareStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#HardwareStore"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Health"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Health"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HinduTemple"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#HinduTemple"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HomeGoodsStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#HomeGoodsStore"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Hospital"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Hospital"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#InsuranceAgency"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#InsuranceAgency"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#JewelryStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#JewelryStore"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Laundry"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Laundry"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Lawyer"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Lawyer"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Library"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Library"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#LiquourStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#LiquourStore"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#LocalGovernmentOffice"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#LocalGovernmentOffice"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Locksmith"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Locksmith"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Lodging"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Lodging"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MealDelivery"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#MealDelivery"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MealTakeaway"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#MealTakeaway"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Mosque"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Mosque"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MovieRental"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#MovieRental"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MovieTheater"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#MovieTheater"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MovingCompany"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#MovingCompany"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Museum"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Museum"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#NightClub"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#NightClub"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Painter"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Painter"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Park"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Park"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Parking"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Parking"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#PetStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#PetStore"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Pharmacy"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Pharmacy"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Physiotherapist"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Physiotherapist"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#PlaceOfWorship"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#PlaceOfWorship"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Plumber"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Plumber"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Police"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Police"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#PostOffice"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#PostOffice"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#RVPark"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#RVPark"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#RealEstateAgency"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#RealEstateAgency"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Restaurant"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Restaurant"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#RoofingContractor"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#RoofingContractor"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#School"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#School"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ShoeStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#ShoeStore"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ShoppingMall"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#ShoppingMall"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Spa"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Spa"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Stadium"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Stadium"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Storage"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Storage"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Store"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Store"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#SubwayStation"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#SubwayStation"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Synagogue"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Synagogue"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#TaxiStand"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#TaxiStand"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#TrainStation"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#TrainStation"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#TravelAgency"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#TravelAgency"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#University"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#University"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#VeterinaryCare"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#VeterinaryCare"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Zoo"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Zoo"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <DisjointClasses>
