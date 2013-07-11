@@ -1,0 +1,10 @@
+Casino
+Cemetery
+Church
+City hall
+Clothing store
+Convenience store
+Courthouse
+Dentist
+Department store
+Doctor

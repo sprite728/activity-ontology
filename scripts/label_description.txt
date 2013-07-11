@@ -1,0 +1,82 @@
+Achievement or Award
+Description: User has won an achievement, or an award.
+Bought Home
+Description: User has bought a new home.
+Broken Bone
+Description: User has broken a bone, or damaged a body part.
+Changed Belief
+Description: User has changed his belief.
+End of Relationship
+Description: User has ended a relationship with another person.
+Engagement
+Description: User has become engaged.
+Expecting a Baby
+Description: User is expecting a baby.
+First Met
+Description: User has met someone for the first time.
+First Word, Kiss, Other
+Description: User has experienced a first in life.
+Home Improvement
+Description: User has improved his/her home environment.
+Loss of Loved One
+Description: User has lost someone dear to him.
+Marriage
+Description: User has married.
+Military Service
+Description: User has gone through (or has started) military service.
+Moved
+Description: User has moved from some address to some other address.
+New Child
+Description: User has had a child.
+New Eating Habit
+Description: User has changed his eating habits.
+New Family Member
+Description: User has a new family member.
+New Hobby
+Description: User has a new hobby.
+New Housemate
+Description: User has a new housemate.
+New Instrument
+Description: User has learned to play a new instrument.
+New Job
+Description: User has a new job.
+New Language
+Description: User has learned to speak/read/write in a new language.
+New Licence
+Description: User has acquired a new driver&apos;s licence.
+New Pet
+Description: User has a new pet.
+New Relationship
+Description: User is in a new relationship with someone.
+New School
+Description: User has a new school.
+New Sport
+Description: User has started playing a new sport.
+New Vehicle
+Description: User has acquired a new vehicle.
+Organ Donor
+Description: User has registered as an organ donor.
+Overcame Illness
+Description: User has overcome an illness.
+Published
+Description: User has published a publication.
+Quit Habit
+Description: User has quit a habit (this refers exclusively to vices).
+Registered To Vote
+Description: User has registered to vote.
+Removed Braces
+Description: User has removed his/her braces.
+Retirement
+Description: User has retired from work.
+Study Abroad
+Description: User has studied (or is currently studying) abroad.
+Tattoo or Piercing
+Description: User has undergone a body modification for aesthetic purposes.
+Travel
+Description: User has travelled.
+Vision Aid
+Description: User has acquired glasses, contact lenses, or has undergone surgery.
+Volunteer Work
+Description: User has done volunteer work.
+Weight Loss
+Description: User has lost weight.

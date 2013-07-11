@@ -1,0 +1,10 @@
+Accounting
+Airport
+Amusement park
+Aquarium
+Art gallery
+ATM
+Bakery
+Bank
+Bar
+Beauty salon
