@@ -1,0 +1,5060 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/root/ontologies/2013/6/facebook_life_events"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/root/ontologies/2013/6/facebook_life_events">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="db" IRI="http://dbpedia.org/ontology/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://xmlns.com/foaf/0.1/</Import>
+    <Import>http://rdfs.org/sioc/ns#</Import>
+    <Import>http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ontology for Facebook Life Events and associated activities.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Note: all the non-Activity classes that are defined are used as crutches; they&apos;re not meant as final.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Note: All temporal classes can be replaced by OWL-Time. In most cases, a TemporalEntity:Instant can capture all the information.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AchievementOrAward"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Artifact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Atomic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BodyDecorationType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Book"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoughtHome"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BrokenBone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChangedBelief"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Composite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Continuous"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#County"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Detectable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Discrete"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Drink"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DrinkingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EatingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EatingHabit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EducationEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EndOfRelationship"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Engagement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExpectingBaby"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FamilyEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Feeling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FeelingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FirstMet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FirstType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FirstX"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Food"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Game"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GoogleActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GooglePlace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Habit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HealthEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HomeImprovement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HomeType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ListeningToActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LivingEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LossOfLovedOne"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MacroActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Marriage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MicroActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MilitaryService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Moved"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Multistep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Music"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewChild"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewEatingHabit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewFamilyMember"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewHobby"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewHousemate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewInstrument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewJob"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewLicence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewPet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewRelationship"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewSchool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewSport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewVehicle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OrganDonor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OvercameIllness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Paper"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Patent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlayingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Publication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Published"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QuitHabit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReadingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Recurring"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegisteredToVote"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RelationshipEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RelationshipType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RelationshipTypeFM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RelationshipTypeLO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RemovedBraces"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Retirement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SchoolType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SecondarySchool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShowOrMovie"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Social"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StudyAbroad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TattooOrPiercing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Thesis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Travel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Unclassified"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Undetectable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Units"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#University"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VehicleType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VisionAid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VisionAidType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolunteerWork"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WatchingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeightLoss"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WorkEvent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#address"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#canHappenIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#currentAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasArtifact"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBodyDecoration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCountry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCounty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDoctor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEatingHabit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEmployer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFirstType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGender"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHabit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHomeType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOrganisation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParticipant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRegisteredIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRelationship"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRelationshipFM"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRelationshipLO"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSchool"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUnits"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVehicleType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVisionAid"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVisited"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isArtifactOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isConceptOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLocationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isParticipantIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#possibleWhile"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#previousAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#relatedTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#amount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#attempts"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#bodyPart"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#currentlyEmployed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAchievement"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBelief"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBranch"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBreed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDivision"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDueDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEndDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFavouriteSong"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFavouriteWord"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGraduated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasIllness"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasImprovement"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasInstrument"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLanguage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLicenceType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMethod"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPosition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasProfession"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSport"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStartDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTopic"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hobby"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Apartment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Auntie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bicycle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Brother"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Brother-in-law"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Car"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Contacts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CorrectiveSurgery"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cousin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Daughter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Drinking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Father"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Father-in-law"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Female"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FirstDrink"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FirstFlight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FirstKiss"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FirstVote"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FirstWord"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Flat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Friend"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fruitarian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Glasses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Granddaughter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Grandfather"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Grandmother"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Grandson"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#House"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Husband"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IN_VEHICLE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kilos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LovedOne"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Male"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mother"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mother-in-law"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Motorcycle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nephew"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Niece"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ON_BICYCLE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ON_FOOT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Omnivore"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pescetarian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Piercing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pounds"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#STILL"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sister"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sister-in-law"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Smoking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Son"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stepbrother"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stepfather"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stepmother"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TILTING"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tattoo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Truck"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UNKNOWN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Uncle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Unspecified"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vegan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vegetarian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wife"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#BodyDecorationType"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Tattoo"/>
+            <NamedIndividual IRI="#Piercing"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DrinkingActivity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#MicroActivity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasArtifact"/>
+                <Class IRI="#Drink"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EatingActivity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#MicroActivity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasArtifact"/>
+                <Class IRI="#Food"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EatingHabit"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Pescetarian"/>
+            <NamedIndividual IRI="#Fruitarian"/>
+            <NamedIndividual IRI="#Omnivore"/>
+            <NamedIndividual IRI="#Vegetarian"/>
+            <NamedIndividual IRI="#Vegan"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FeelingActivity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#MicroActivity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasArtifact"/>
+                <Class IRI="#Feeling"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FirstType"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#FirstWord"/>
+            <NamedIndividual IRI="#FirstKiss"/>
+            <NamedIndividual IRI="#FirstFlight"/>
+            <NamedIndividual IRI="#FirstVote"/>
+            <NamedIndividual IRI="#FirstDrink"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gender"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Unspecified"/>
+            <NamedIndividual IRI="#Female"/>
+            <NamedIndividual IRI="#Male"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GoogleActivity"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#IN_VEHICLE"/>
+            <NamedIndividual IRI="#ON_BICYCLE"/>
+            <NamedIndividual IRI="#ON_FOOT"/>
+            <NamedIndividual IRI="#TILTING"/>
+            <NamedIndividual IRI="#STILL"/>
+            <NamedIndividual IRI="#UNKNOWN"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HomeType"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Apartment"/>
+            <NamedIndividual IRI="#Flat"/>
+            <NamedIndividual IRI="#House"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ListeningToActivity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#MicroActivity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasArtifact"/>
+                <Class IRI="#Music"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MacroActivity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectMinCardinality cardinality="0">
+                <ObjectProperty IRI="#hasLocation"/>
+                <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+            </ObjectMinCardinality>
+            <DataMinCardinality cardinality="0">
+                <DataProperty IRI="#hasDate"/>
+                <Datatype abbreviatedIRI="xsd:dateTime"/>
+            </DataMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Person"/>
+        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PlayingActivity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#MicroActivity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasArtifact"/>
+                <Class IRI="#Game"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ReadingActivity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#MicroActivity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasArtifact"/>
+                <Class IRI="#Book"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RelationshipTypeFM"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Stepfather"/>
+            <NamedIndividual IRI="#Auntie"/>
+            <NamedIndividual IRI="#Sister-in-law"/>
+            <NamedIndividual IRI="#Cousin"/>
+            <NamedIndividual IRI="#Brother"/>
+            <NamedIndividual IRI="#Nephew"/>
+            <NamedIndividual IRI="#Uncle"/>
+            <NamedIndividual IRI="#Mother-in-law"/>
+            <NamedIndividual IRI="#Stepbrother"/>
+            <NamedIndividual IRI="#Stepmother"/>
+            <NamedIndividual IRI="#Sister"/>
+            <NamedIndividual IRI="#Brother-in-law"/>
+            <NamedIndividual IRI="#Grandson"/>
+            <NamedIndividual IRI="#Granddaughter"/>
+            <NamedIndividual IRI="#Niece"/>
+            <NamedIndividual IRI="#Father-in-law"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RelationshipTypeLO"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Father"/>
+            <NamedIndividual IRI="#Mother"/>
+            <NamedIndividual IRI="#LovedOne"/>
+            <NamedIndividual IRI="#Brother"/>
+            <NamedIndividual IRI="#Friend"/>
+            <NamedIndividual IRI="#Grandfather"/>
+            <NamedIndividual IRI="#Daughter"/>
+            <NamedIndividual IRI="#Sister"/>
+            <NamedIndividual IRI="#Wife"/>
+            <NamedIndividual IRI="#Son"/>
+            <NamedIndividual IRI="#Grandmother"/>
+            <NamedIndividual IRI="#Husband"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Units"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Pounds"/>
+            <NamedIndividual IRI="#Kilos"/>
+            <NamedIndividual IRI="#Stone"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VehicleType"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Bicycle"/>
+            <NamedIndividual IRI="#Car"/>
+            <NamedIndividual IRI="#Truck"/>
+            <NamedIndividual IRI="#Motorcycle"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Vice"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Drinking"/>
+            <NamedIndividual IRI="#Smoking"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VisionAidType"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#CorrectiveSurgery"/>
+            <NamedIndividual IRI="#Contacts"/>
+            <NamedIndividual IRI="#Glasses"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WatchingActivity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#MicroActivity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasArtifact"/>
+                <Class IRI="#ShowOrMovie"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AchievementOrAward"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AchievementOrAward"/>
+        <Class IRI="#Unclassified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AchievementOrAward"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AchievementOrAward"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AchievementOrAward"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AchievementOrAward"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasAchievement"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <Class IRI="#Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Atomic"/>
+        <Class IRI="#MacroActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Book"/>
+        <Class IRI="#Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoughtHome"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoughtHome"/>
+        <Class IRI="#Detectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoughtHome"/>
+        <Class IRI="#LivingEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoughtHome"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHomeType"/>
+            <Class IRI="#HomeType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoughtHome"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoughtHome"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#relatedTo"/>
+            <Class IRI="#Moved"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoughtHome"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BrokenBone"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BrokenBone"/>
+        <Class IRI="#HealthEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BrokenBone"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BrokenBone"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BrokenBone"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#bodyPart"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChangedBelief"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChangedBelief"/>
+        <Class IRI="#Unclassified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChangedBelief"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChangedBelief"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChangedBelief"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasBelief"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Composite"/>
+        <Class IRI="#Detectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Composite"/>
+        <Class IRI="#MacroActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Continuous"/>
+        <Class IRI="#Recurring"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Country"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#County"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Detectable"/>
+        <Class IRI="#MacroActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Discrete"/>
+        <Class IRI="#Recurring"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Drink"/>
+        <Class IRI="#Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EatingHabit"/>
+        <Class IRI="#Habit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EducationEvent"/>
+        <Class IRI="#MacroActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndOfRelationship"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndOfRelationship"/>
+        <Class IRI="#RelationshipEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndOfRelationship"/>
+        <Class IRI="#Social"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndOfRelationship"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndOfRelationship"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#IN_VEHICLE"/>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndOfRelationship"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Engagement"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Engagement"/>
+        <Class IRI="#RelationshipEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Engagement"/>
+        <Class IRI="#Social"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Engagement"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Engagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Engagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#relatedTo"/>
+            <Class IRI="#Marriage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Engagement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#relatedTo"/>
+            <Class IRI="#NewRelationship"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Engagement"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <Class IRI="#GoogleActivity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExpectingBaby"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExpectingBaby"/>
+        <Class IRI="#FamilyEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExpectingBaby"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExpectingBaby"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasGender"/>
+            <Class IRI="#Gender"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExpectingBaby"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExpectingBaby"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExpectingBaby"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDueDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FamilyEvent"/>
+        <Class IRI="#MacroActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Feeling"/>
+        <Class IRI="#Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FirstMet"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FirstMet"/>
+        <Class IRI="#RelationshipEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FirstMet"/>
+        <Class IRI="#Social"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FirstMet"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FirstMet"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FirstX"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FirstX"/>
+        <Class IRI="#Unclassified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FirstX"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FirstX"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasFirstType"/>
+            <Class IRI="#FirstType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FirstX"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Food"/>
+        <Class IRI="#Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Game"/>
+        <Class IRI="#Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GooglePlace"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ATM"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Accounting"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Airport"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#AmusementPark"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Aquarium"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ArtGallery"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Bakery"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Bank"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Bar"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BeautySalon"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BicycleStore"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BookStore"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BowlingAlley"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BusStation"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Cafe"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Campground"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarDealer"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarRental"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarRepair"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarWash"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Casino"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Cemetery"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Church"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CityHall"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ClothingStore"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ConvenienceStore"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Courthouse"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Dentist"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#DepartmentStore"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Doctor"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Electrician"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ElectronicsStore"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Embassy"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Establishment"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Finance"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#FireStation"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Florist"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Food"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#FuneralHome"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#FurnitureStore"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#GasStation"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#GeneralContractor"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#GroceryOrSupermarket"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Gym"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HairCare"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HardwareStore"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Health"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HinduTemple"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HomeGoodsStore"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Hospital"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#InsuranceAgency"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#JewelryStore"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Laundry"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Lawyer"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Library"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#LiquourStore"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#LocalGovernmentOffice"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Locksmith"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Lodging"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MealDelivery"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MealTakeaway"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Mosque"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MovieRental"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MovieTheater"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MovingCompany"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Museum"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#NightClub"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Painter"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Park"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Parking"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#PetStore"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Pharmacy"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Physiotherapist"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#PlaceOfWorship"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Plumber"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Police"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#PostOffice"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#RVPark"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#RealEstateAgency"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Restaurant"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#RoofingContractor"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#School"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ShoeStore"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ShoppingMall"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Spa"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Stadium"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Storage"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Store"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#SubwayStation"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Synagogue"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#TaxiStand"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#TrainStation"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#TravelAgency"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#University"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#VeterinaryCare"/>
+            <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Zoo"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HealthEvent"/>
+        <Class IRI="#MacroActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HomeImprovement"/>
+        <Class IRI="#LivingEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HomeImprovement"/>
+        <Class IRI="#Multistep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HomeImprovement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HomeImprovement"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HomeImprovement"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasImprovement"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LivingEvent"/>
+        <Class IRI="#MacroActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LossOfLovedOne"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LossOfLovedOne"/>
+        <Class IRI="#FamilyEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LossOfLovedOne"/>
+        <Class IRI="#Social"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LossOfLovedOne"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LossOfLovedOne"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRelationshipLO"/>
+            <Class IRI="#RelationshipTypeLO"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LossOfLovedOne"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Marriage"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Marriage"/>
+        <Class IRI="#RelationshipEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Marriage"/>
+        <Class IRI="#Social"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Marriage"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Marriage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Marriage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#relatedTo"/>
+            <Class IRI="#Engagement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Marriage"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MicroActivity"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MicroActivity"/>
+        <ObjectUnionOf>
+            <Class IRI="#DrinkingActivity"/>
+            <Class IRI="#EatingActivity"/>
+            <Class IRI="#FeelingActivity"/>
+            <Class IRI="#ListeningToActivity"/>
+            <Class IRI="#PlayingActivity"/>
+            <Class IRI="#ReadingActivity"/>
+            <Class IRI="#WatchingActivity"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilitaryService"/>
+        <Class IRI="#Continuous"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilitaryService"/>
+        <Class IRI="#WorkEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilitaryService"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasCountry"/>
+            <Class IRI="#Country"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilitaryService"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilitaryService"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasCountry"/>
+            <Class IRI="#Country"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilitaryService"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasBranch"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilitaryService"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDivision"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilitaryService"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasEndDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilitaryService"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasStartDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Moved"/>
+        <Class IRI="#LivingEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Moved"/>
+        <Class IRI="#Multistep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Moved"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#previousAddress"/>
+            <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Moved"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Multistep"/>
+        <Class IRI="#Composite"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Music"/>
+        <Class IRI="#Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewChild"/>
+        <Class IRI="#FamilyEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewChild"/>
+        <Class IRI="#Multistep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewChild"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasGender"/>
+            <Class IRI="#Gender"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewChild"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewChild"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#relatedTo"/>
+            <Class IRI="#ExpectingBaby"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewChild"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewEatingHabit"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewEatingHabit"/>
+        <Class IRI="#HealthEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewEatingHabit"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewEatingHabit"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEatingHabit"/>
+            <Class IRI="#EatingHabit"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewEatingHabit"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewEatingHabit"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewFamilyMember"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewFamilyMember"/>
+        <Class IRI="#FamilyEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewFamilyMember"/>
+        <Class IRI="#Social"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewFamilyMember"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewFamilyMember"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRelationshipFM"/>
+            <Class IRI="#RelationshipTypeFM"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewFamilyMember"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewHobby"/>
+        <Class IRI="#Multistep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewHobby"/>
+        <Class IRI="#Unclassified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewHobby"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewHobby"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hobby"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewHousemate"/>
+        <Class IRI="#LivingEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewHousemate"/>
+        <Class IRI="#Multistep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewHousemate"/>
+        <Class IRI="#Social"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewHousemate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewHousemate"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewHousemate"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasEndDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewHousemate"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasStartDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewInstrument"/>
+        <Class IRI="#Discrete"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewInstrument"/>
+        <Class IRI="#Unclassified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewInstrument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewInstrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasInstrument"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewInstrument"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasEndDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewInstrument"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasFavouriteSong"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewInstrument"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasStartDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewJob"/>
+        <Class IRI="#Multistep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewJob"/>
+        <Class IRI="#WorkEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewJob"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasEmployer"/>
+            <Class IRI="http://purl.org/dc/terms/Agent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewJob"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#currentlyEmployed"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewJob"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasPosition"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLanguage"/>
+        <Class IRI="#Discrete"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLanguage"/>
+        <Class IRI="#Unclassified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLanguage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLanguage"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLanguage"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasLanguage"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLanguage"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasFavouriteWord"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLanguage"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasMethod"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLicence"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLicence"/>
+        <Class IRI="#Unclassified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLicence"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLicence"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#IN_VEHICLE"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLicence"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasCountry"/>
+            <Class IRI="#Country"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLicence"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasCounty"/>
+            <Class IRI="#County"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLicence"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasLicenceType"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewLicence"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#attempts"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewPet"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewPet"/>
+        <Class IRI="#FamilyEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewPet"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewPet"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasGender"/>
+            <Class IRI="#Gender"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewPet"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewPet"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasBreed"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewPet"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasType"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewPet"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewRelationship"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewRelationship"/>
+        <Class IRI="#RelationshipEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewRelationship"/>
+        <Class IRI="#Social"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewRelationship"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewRelationship"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewSchool"/>
+        <Class IRI="#EducationEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewSchool"/>
+        <Class IRI="#Multistep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewSchool"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSchool"/>
+            <Class IRI="#SchoolType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewSchool"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasGraduated"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewSport"/>
+        <Class IRI="#Multistep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewSport"/>
+        <Class IRI="#Unclassified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewSport"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewSport"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasSport"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewVehicle"/>
+        <Class IRI="#LivingEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewVehicle"/>
+        <Class IRI="#Multistep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewVehicle"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasVehicleType"/>
+            <Class IRI="#VehicleType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewVehicle"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewVehicle"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasModel"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewVehicle"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasModelYear"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OrganDonor"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OrganDonor"/>
+        <Class IRI="#HealthEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OrganDonor"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OrganDonor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OvercameIllness"/>
+        <Class IRI="#HealthEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OvercameIllness"/>
+        <Class IRI="#Multistep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OvercameIllness"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OvercameIllness"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OvercameIllness"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasIllness"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paper"/>
+        <Class IRI="#Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patent"/>
+        <Class IRI="#Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publication"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Published"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Published"/>
+        <Class IRI="#EducationEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Published"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Published"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Published"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasArtifact"/>
+            <Class IRI="#Publication"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Published"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuitHabit"/>
+        <Class IRI="#HealthEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuitHabit"/>
+        <Class IRI="#Multistep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuitHabit"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHabit"/>
+            <Class IRI="#Habit"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuitHabit"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recurring"/>
+        <Class IRI="#Composite"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteredToVote"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteredToVote"/>
+        <Class IRI="#Unclassified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteredToVote"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteredToVote"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteredToVote"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasRegisteredIn"/>
+            <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelationshipEvent"/>
+        <Class IRI="#MacroActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelationshipType"/>
+        <ObjectUnionOf>
+            <Class IRI="#RelationshipTypeFM"/>
+            <Class IRI="#RelationshipTypeLO"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelationshipTypeFM"/>
+        <Class IRI="#RelationshipType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelationshipTypeLO"/>
+        <Class IRI="#RelationshipType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RemovedBraces"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RemovedBraces"/>
+        <Class IRI="#HealthEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RemovedBraces"/>
+        <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RemovedBraces"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RemovedBraces"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasDoctor"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RemovedBraces"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Retirement"/>
+        <Class IRI="#Continuous"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Retirement"/>
+        <Class IRI="#WorkEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Retirement"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Retirement"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasProfession"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SchoolType"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecondarySchool"/>
+        <Class IRI="#SchoolType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShowOrMovie"/>
+        <Class IRI="#Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Social"/>
+        <Class IRI="#MacroActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Social"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StudyAbroad"/>
+        <Class IRI="#Continuous"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StudyAbroad"/>
+        <Class IRI="#EducationEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StudyAbroad"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StudyAbroad"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasSchool"/>
+            <Class IRI="#SchoolType"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StudyAbroad"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasTopic"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StudyAbroad"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasEndDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StudyAbroad"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasStartDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TattooOrPiercing"/>
+        <Class IRI="#Multistep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TattooOrPiercing"/>
+        <Class IRI="#Unclassified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TattooOrPiercing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodyDecoration"/>
+            <Class IRI="#BodyDecorationType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TattooOrPiercing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TattooOrPiercing"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thesis"/>
+        <Class IRI="#Publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Travel"/>
+        <Class IRI="#Multistep"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Travel"/>
+        <Class IRI="#Unclassified"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Travel"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Travel"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasVisited"/>
+            <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Travel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Travel"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasEndDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Travel"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasStartDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unclassified"/>
+        <Class IRI="#MacroActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Undetectable"/>
+        <Class IRI="#MacroActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <Class IRI="#SchoolType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vice"/>
+        <Class IRI="#Habit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VisionAid"/>
+        <Class IRI="#Atomic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VisionAid"/>
+        <Class IRI="#Detectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VisionAid"/>
+        <Class IRI="#HealthEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VisionAid"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasVisionAid"/>
+            <Class IRI="#VisionAidType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VisionAid"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#possibleWhile"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#ON_FOOT"/>
+                <NamedIndividual IRI="#TILTING"/>
+                <NamedIndividual IRI="#STILL"/>
+                <NamedIndividual IRI="#UNKNOWN"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VisionAid"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolunteerWork"/>
+        <Class IRI="#Continuous"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolunteerWork"/>
+        <Class IRI="#WorkEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolunteerWork"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasOrganisation"/>
+            <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolunteerWork"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightLoss"/>
+        <Class IRI="#Discrete"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightLoss"/>
+        <Class IRI="#HealthEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightLoss"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasUnits"/>
+            <Class IRI="#Units"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightLoss"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#relatedTo"/>
+            <Class IRI="#NewEatingHabit"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightLoss"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#relatedTo"/>
+            <Class IRI="#NewSport"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeightLoss"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#amount"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorkEvent"/>
+        <Class IRI="#MacroActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ATM"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Accounting"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Airport"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#AmusementPark"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Aquarium"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ArtGallery"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Bakery"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Bank"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Bar"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BeautySalon"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BicycleStore"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BookStore"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BowlingAlley"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#BusStation"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Cafe"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Campground"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarDealer"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarRental"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarRepair"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CarWash"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Casino"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Cemetery"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Church"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#CityHall"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ClothingStore"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ConvenienceStore"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Courthouse"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Dentist"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#DepartmentStore"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Doctor"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Electrician"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ElectronicsStore"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Embassy"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Establishment"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Finance"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#FireStation"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Florist"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Food"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#FuneralHome"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#FurnitureStore"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#GasStation"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#GeneralContractor"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#GroceryOrSupermarket"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Gym"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HairCare"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HardwareStore"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Health"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HinduTemple"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#HomeGoodsStore"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Hospital"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#InsuranceAgency"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#JewelryStore"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Laundry"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Lawyer"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Library"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#LiquourStore"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#LocalGovernmentOffice"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Locksmith"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Lodging"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MealDelivery"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MealTakeaway"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Mosque"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MovieRental"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MovieTheater"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#MovingCompany"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Museum"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#NightClub"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Painter"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Park"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Parking"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#PetStore"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Pharmacy"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Physiotherapist"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#PlaceOfWorship"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Plumber"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Police"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#PostOffice"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#RVPark"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#RealEstateAgency"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Restaurant"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#RoofingContractor"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#School"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ShoeStore"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#ShoppingMall"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Spa"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Stadium"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Storage"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Store"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#SubwayStation"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Synagogue"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#TaxiStand"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#TrainStation"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#TravelAgency"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#University"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#VeterinaryCare"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/sebastian/ontologies/2013/6/google_places#Zoo"/>
+        <Class IRI="#GooglePlace"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Atomic"/>
+        <Class IRI="#Composite"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Detectable"/>
+        <Class IRI="#Undetectable"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#HomeType"/>
+        <NamedIndividual IRI="#Apartment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Auntie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VehicleType"/>
+        <NamedIndividual IRI="#Bicycle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Brother"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeLO"/>
+        <NamedIndividual IRI="#Brother"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Brother-in-law"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VehicleType"/>
+        <NamedIndividual IRI="#Car"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VisionAidType"/>
+        <NamedIndividual IRI="#Contacts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VisionAidType"/>
+        <NamedIndividual IRI="#CorrectiveSurgery"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Cousin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeLO"/>
+        <NamedIndividual IRI="#Daughter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vice"/>
+        <NamedIndividual IRI="#Drinking"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeLO"/>
+        <NamedIndividual IRI="#Father"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Father-in-law"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gender"/>
+        <NamedIndividual IRI="#Female"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FirstType"/>
+        <NamedIndividual IRI="#FirstDrink"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FirstType"/>
+        <NamedIndividual IRI="#FirstFlight"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FirstType"/>
+        <NamedIndividual IRI="#FirstKiss"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FirstType"/>
+        <NamedIndividual IRI="#FirstVote"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FirstType"/>
+        <NamedIndividual IRI="#FirstWord"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HomeType"/>
+        <NamedIndividual IRI="#Flat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeLO"/>
+        <NamedIndividual IRI="#Friend"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EatingHabit"/>
+        <NamedIndividual IRI="#Fruitarian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VisionAidType"/>
+        <NamedIndividual IRI="#Glasses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Granddaughter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeLO"/>
+        <NamedIndividual IRI="#Grandfather"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeLO"/>
+        <NamedIndividual IRI="#Grandmother"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Grandson"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HomeType"/>
+        <NamedIndividual IRI="#House"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeLO"/>
+        <NamedIndividual IRI="#Husband"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GoogleActivity"/>
+        <NamedIndividual IRI="#IN_VEHICLE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Units"/>
+        <NamedIndividual IRI="#Kilos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeLO"/>
+        <NamedIndividual IRI="#LovedOne"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gender"/>
+        <NamedIndividual IRI="#Male"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeLO"/>
+        <NamedIndividual IRI="#Mother"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Mother-in-law"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VehicleType"/>
+        <NamedIndividual IRI="#Motorcycle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Nephew"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Niece"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GoogleActivity"/>
+        <NamedIndividual IRI="#ON_BICYCLE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GoogleActivity"/>
+        <NamedIndividual IRI="#ON_FOOT"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EatingHabit"/>
+        <NamedIndividual IRI="#Omnivore"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EatingHabit"/>
+        <NamedIndividual IRI="#Pescetarian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BodyDecorationType"/>
+        <NamedIndividual IRI="#Piercing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Units"/>
+        <NamedIndividual IRI="#Pounds"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GoogleActivity"/>
+        <NamedIndividual IRI="#STILL"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Sister"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeLO"/>
+        <NamedIndividual IRI="#Sister"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Sister-in-law"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vice"/>
+        <NamedIndividual IRI="#Smoking"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeLO"/>
+        <NamedIndividual IRI="#Son"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Stepbrother"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Stepfather"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Stepmother"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Units"/>
+        <NamedIndividual IRI="#Stone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GoogleActivity"/>
+        <NamedIndividual IRI="#TILTING"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BodyDecorationType"/>
+        <NamedIndividual IRI="#Tattoo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VehicleType"/>
+        <NamedIndividual IRI="#Truck"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GoogleActivity"/>
+        <NamedIndividual IRI="#UNKNOWN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeFM"/>
+        <NamedIndividual IRI="#Uncle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gender"/>
+        <NamedIndividual IRI="#Unspecified"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EatingHabit"/>
+        <NamedIndividual IRI="#Vegan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EatingHabit"/>
+        <NamedIndividual IRI="#Vegetarian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeLO"/>
+        <NamedIndividual IRI="#Wife"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Apartment"/>
+        <NamedIndividual IRI="#Auntie"/>
+        <NamedIndividual IRI="#Bicycle"/>
+        <NamedIndividual IRI="#Brother"/>
+        <NamedIndividual IRI="#Brother-in-law"/>
+        <NamedIndividual IRI="#Car"/>
+        <NamedIndividual IRI="#Contacts"/>
+        <NamedIndividual IRI="#CorrectiveSurgery"/>
+        <NamedIndividual IRI="#Cousin"/>
+        <NamedIndividual IRI="#Drinking"/>
+        <NamedIndividual IRI="#Father-in-law"/>
+        <NamedIndividual IRI="#Female"/>
+        <NamedIndividual IRI="#FirstDrink"/>
+        <NamedIndividual IRI="#FirstFlight"/>
+        <NamedIndividual IRI="#FirstKiss"/>
+        <NamedIndividual IRI="#FirstVote"/>
+        <NamedIndividual IRI="#FirstWord"/>
+        <NamedIndividual IRI="#Flat"/>
+        <NamedIndividual IRI="#Fruitarian"/>
+        <NamedIndividual IRI="#Glasses"/>
+        <NamedIndividual IRI="#Granddaughter"/>
+        <NamedIndividual IRI="#Grandson"/>
+        <NamedIndividual IRI="#House"/>
+        <NamedIndividual IRI="#Kilos"/>
+        <NamedIndividual IRI="#Male"/>
+        <NamedIndividual IRI="#Mother-in-law"/>
+        <NamedIndividual IRI="#Motorcycle"/>
+        <NamedIndividual IRI="#Nephew"/>
+        <NamedIndividual IRI="#Niece"/>
+        <NamedIndividual IRI="#Omnivore"/>
+        <NamedIndividual IRI="#Pescetarian"/>
+        <NamedIndividual IRI="#Piercing"/>
+        <NamedIndividual IRI="#Pounds"/>
+        <NamedIndividual IRI="#Sister"/>
+        <NamedIndividual IRI="#Sister-in-law"/>
+        <NamedIndividual IRI="#Smoking"/>
+        <NamedIndividual IRI="#Stepbrother"/>
+        <NamedIndividual IRI="#Stepfather"/>
+        <NamedIndividual IRI="#Stepmother"/>
+        <NamedIndividual IRI="#Stone"/>
+        <NamedIndividual IRI="#Tattoo"/>
+        <NamedIndividual IRI="#Truck"/>
+        <NamedIndividual IRI="#Uncle"/>
+        <NamedIndividual IRI="#Unspecified"/>
+        <NamedIndividual IRI="#Vegan"/>
+        <NamedIndividual IRI="#Vegetarian"/>
+    </DifferentIndividuals>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#currentAddress"/>
+        <ObjectProperty IRI="#address"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCountry"/>
+        <ObjectProperty IRI="#hasLocation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCounty"/>
+        <ObjectProperty IRI="#hasLocation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEatingHabit"/>
+        <ObjectProperty IRI="#hasHabit"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEmployer"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRelationshipFM"/>
+        <ObjectProperty IRI="#hasRelationship"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRelationshipLO"/>
+        <ObjectProperty IRI="#hasRelationship"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSchool"/>
+        <ObjectProperty IRI="#hasOrganisation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasVice"/>
+        <ObjectProperty IRI="#hasHabit"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#previousAddress"/>
+        <ObjectProperty IRI="#address"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isArtifactOf"/>
+        <ObjectProperty IRI="#hasArtifact"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isLocationOf"/>
+        <ObjectProperty IRI="#hasLocation"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <ObjectProperty IRI="#isParticipantIn"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#relatedTo"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#relatedTo"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#address"/>
+        <Class IRI="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#canHappenIn"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasArtifact"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBodyDecoration"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDoctor"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEatingHabit"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEmployer"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFirstType"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGender"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasHabit"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasHomeType"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLocation"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOrganisation"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRegisteredIn"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRelationship"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUnits"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasVehicleType"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasVisionAid"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasVisited"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#possibleWhile"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#relatedTo"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#address"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#canHappenIn"/>
+        <Class IRI="#GooglePlace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasArtifact"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBodyDecoration"/>
+        <Class IRI="#BodyDecorationType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCountry"/>
+        <Class IRI="#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCounty"/>
+        <Class IRI="#County"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDoctor"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEatingHabit"/>
+        <Class IRI="#EatingHabit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEmployer"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFirstType"/>
+        <Class IRI="#FirstType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGender"/>
+        <Class IRI="#Gender"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasHabit"/>
+        <Class IRI="#Habit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasHomeType"/>
+        <Class IRI="#HomeType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLocation"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOrganisation"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRegisteredIn"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRelationship"/>
+        <Class IRI="#RelationshipType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRelationshipFM"/>
+        <Class IRI="#RelationshipTypeFM"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRelationshipLO"/>
+        <Class IRI="#RelationshipTypeLO"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasUnits"/>
+        <Class IRI="#Units"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasVehicleType"/>
+        <Class IRI="#VehicleType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasVice"/>
+        <Class IRI="#Vice"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasVisionAid"/>
+        <Class IRI="#VisionAidType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasVisited"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#possibleWhile"/>
+        <Class IRI="#GoogleActivity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#relatedTo"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasDueDate"/>
+        <DataProperty IRI="#hasDate"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasEndDate"/>
+        <DataProperty IRI="#hasDate"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasStartDate"/>
+        <DataProperty IRI="#hasDate"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#amount"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#attempts"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#bodyPart"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#currentlyEmployed"/>
+        <Class IRI="#NewJob"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAchievement"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBelief"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBranch"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBreed"/>
+        <Class IRI="#NewPet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDate"/>
+        <Class IRI="#Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDivision"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDueDate"/>
+        <Class IRI="#ExpectingBaby"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFavouriteSong"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFavouriteWord"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGraduated"/>
+        <Class IRI="#NewSchool"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasIllness"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasImprovement"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasInstrument"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLanguage"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLicenceType"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMethod"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModel"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelYear"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPosition"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasProfession"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSport"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTopic"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasType"/>
+        <Class IRI="#NewPet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hobby"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#amount"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#attempts"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#bodyPart"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#currentlyEmployed"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAchievement"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBelief"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBranch"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBreed"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDivision"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDueDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFavouriteSong"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFavouriteWord"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasGraduated"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasIllness"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasImprovement"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasInstrument"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLanguage"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLicenceType"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMethod"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasModel"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasModelYear"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPosition"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasProfession"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSport"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTopic"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasType"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hobby"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#AchievementOrAward</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has won an achievement, or an award.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AchievementOrAward</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Achievement or Award</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Artifact</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An artifact present in the real world.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Artifact</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Artifact</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Atomic</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Activities that cannot be further broken down into subtasks.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Atomic</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Atomic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BodyDecorationType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Body Decoration Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#BoughtHome</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has bought a new home.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BoughtHome</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Note: this overlaps with Moved.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BoughtHome</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Person&apos;s home changes. This can be used to deduce the BoughtHome activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BoughtHome</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Bought Home</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#BrokenBone</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has broken a bone, or damaged a body part.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BrokenBone</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Broken Bone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#ChangedBelief</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has changed his belief.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ChangedBelief</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Changed Belief</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Composite</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Activities that can either be broken down into smaller independent subtasks, or that involve the repetition of a particular task.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Composite</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Note: the subactivities may are not usually other activities of this ontology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Composite</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Composite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Continuous</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Activities that occur continuously within a period of time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Continuous</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Continuous</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Detectable</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Activities that can be detected given contextual information about the environment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Detectable</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Detectable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Discrete</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Activities that occur periodically at discrete points in time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Discrete</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Discrete</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Drink</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Drink</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DrinkingActivity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Drinking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EatingActivity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Eating</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#EatingHabit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Eating habits that a user might have.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EatingHabit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Eating Habit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#EducationEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Events related to education.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EducationEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Education</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#EndOfRelationship</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has ended a relationship with another person.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EndOfRelationship</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">End of Relationship</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Engagement</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has become engaged.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Engagement</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Engagement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Event</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An event; that is, any activity in the life of a user.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Event</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#ExpectingBaby</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User is expecting a baby.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ExpectingBaby</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Expecting a Baby</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#FamilyEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Events related to family, or connected with other family members.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FamilyEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Family</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Feeling</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Feeling</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FeelingActivity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Feeling</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#FirstMet</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has met someone for the first time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FirstMet</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Maybe it&apos;s possible to detect this if we take into account the social aspect.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FirstMet</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">First Met</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#FirstType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">All possible types that a &apos;FirstX&apos; can be.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FirstType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">First Experience Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#FirstX</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has experienced a first in life.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FirstX</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">First Word, Kiss, Other</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Food</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Food</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Game</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Game</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Gender</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The two genders, plus unspecified for pets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Gender</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Gender</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#GoogleActivity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Low-level activities that represent the possible activities returned by Google&apos;s Activity Recognition API.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GoogleActivity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Google Activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#GooglePlace</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Taxonomy for place types returned by the Google Places API.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GooglePlace</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Google Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Habit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Possible habits that a user might have.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Habit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Habit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#HealthEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Events related to health or general well being.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HealthEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Health</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#HomeImprovement</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has improved his/her home environment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HomeImprovement</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To detect: it&apos;s necessary to have a home, and go to a home improvement store (e.g., IKEA)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HomeImprovement</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Home Improvement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#HomeType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Types of home that a user might purchase.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HomeType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Home Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ListeningToActivity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Listening To</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#LivingEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Events related to living conditions, or day to day life.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LivingEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Living</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#LossOfLovedOne</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has lost someone dear to him.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LossOfLovedOne</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Loss of Loved One</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#MacroActivity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Activities on a large or high-level scale (as opposed to activities of daily living)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MacroActivity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Macro Activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Marriage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has married.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Marriage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Can be detected through the following inference: person is at religious facility for longer than usual. Presence of many friends can also suggest this.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Marriage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Marriage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#MicroActivity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An activity that is atomic and has a short duration.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MicroActivity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Micro Activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#MilitaryService</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has gone through (or has started) military service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MilitaryService</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Military Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Moved</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has moved from some address to some other address.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Moved</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Moved</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Multistep</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Multistep activities are those that are composed of several subactivities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Multistep</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Multistep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Music</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Music</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewChild</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has had a child.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewChild</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New Child</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewEatingHabit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has changed his eating habits.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewEatingHabit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New Eating Habit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewFamilyMember</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has a new family member.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewFamilyMember</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New Family Member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewHobby</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has a new hobby.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewHobby</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New Hobby</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewHousemate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has a new housemate.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NewHousemate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Assuming we can detect anything on the Social aspect, this is also Detectable.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewHousemate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New Housemate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewInstrument</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has learned to play a new instrument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewInstrument</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New Instrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewJob</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has a new job.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewJob</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New Job</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewLanguage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has learned to speak/read/write in a new language.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewLanguage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New Language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewLicence</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has acquired a new driver&apos;s licence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewLicence</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New Licence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewPet</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has a new pet.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewPet</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New Pet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewRelationship</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User is in a new relationship with someone.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NewRelationship</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">I&apos;ve omitted the relationship subcategories, as they do not provide any meaningful information.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewRelationship</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New Relationship</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewSchool</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has a new school.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewSchool</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New School</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewSport</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has started playing a new sport.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewSport</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New Sport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#NewVehicle</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has acquired a new vehicle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NewVehicle</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Detectable if there is a lack of a vehicle beforehand.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NewVehicle</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">New Vehicle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#OrganDonor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has registered as an organ donor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OrganDonor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Organ Donor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#OvercameIllness</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has overcome an illness.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OvercameIllness</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Overcame Illness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PlayingActivity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Playing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Published</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has published a publication.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Published</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Published</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#QuitHabit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has quit a habit (this refers exclusively to vices).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#QuitHabit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Quit Habit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ReadingActivity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Reading</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Recurring</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Activities that occur either periodically, or continuously for a period of time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Recurring</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Recurring</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#RegisteredToVote</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has registered to vote.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RegisteredToVote</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Registered To Vote</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#RelationshipEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Events related to relationships.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RelationshipEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relationships</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#RelationshipType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Type of relation between two individuals.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RelationshipType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relationship Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RelationshipTypeFM</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relationship Type - Family Member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RelationshipTypeLO</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relationship Type - Loved One</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#RemovedBraces</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has removed his/her braces.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RemovedBraces</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Removed Braces</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Retirement</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has retired from work.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Retirement</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Retirement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#SchoolType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A type of school.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SchoolType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">School Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#SecondarySchool</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">High-school or equivalent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SecondarySchool</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Secondary School</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ShowOrMovie</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Show or Movie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Social</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Activities that involve a social aspect (i.e., must be performed with at least one other person).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Social</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Social</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#StudyAbroad</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has studied (or is currently studying) abroad.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StudyAbroad</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Study Abroad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#TattooOrPiercing</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has undergone a body modification for aesthetic purposes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TattooOrPiercing</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Tattoo or Piercing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Travel</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has travelled.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Travel</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Travel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Unclassified</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Unclassified</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Undetectable</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Activities that cannot be detected regardless of contextual information provided.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Undetectable</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Undetectable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Units</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Units for measuring mass.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Units</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Units</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#University</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This includes undergraduate and post-graduate.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#University</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">University</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#VehicleType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Possible types of vehicles that a user might own.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VehicleType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Vehicle Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#Vice</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Vices that a user might have.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Vice</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Vice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#VisionAid</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has acquired glasses, contact lenses, or has undergone surgery.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#VisionAid</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Can be detected if person is at ophthalmologist.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VisionAid</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Vision Aid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#VisionAidType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Types of vision aid that a user might have/undergo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VisionAidType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Vision Aid Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#VolunteerWork</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has done volunteer work.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VolunteerWork</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Volunteer Work</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WatchingActivity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Watching</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#WeightLoss</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has lost weight.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WeightLoss</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Weight Loss</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#WorkEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Events related to work, or labor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WorkEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Work</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#address</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#amount</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">amount</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#attempts</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">attempts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bodyPart</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">body part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#canHappenIn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Describes a set of Google places in which a location can happen.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#canHappenIn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">No mappings are present, as they are to be determined as a result of a crowd-sourcing experiment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#canHappenIn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">can happen in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#currentAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">current address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#currentlyEmployed</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">currently employed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAchievement</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has achievement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasArtifact</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has artifact</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBelief</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has belief</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBodyDecoration</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has body decoration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBranch</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has branch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBreed</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has breed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCountry</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCounty</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has county</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDivision</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has division</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDoctor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has doctor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDueDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has due date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEatingHabit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has eating habit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEmployer</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has employer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEndDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has end date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFavouriteSong</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has favourite song</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFavouriteWord</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has favourite word</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFirstType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has first type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasGender</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has gender</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasGraduated</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has graduated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasHabit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has habit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasHomeType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has home type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasIllness</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has illness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasImprovement</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has improvement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasInstrument</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has instrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLanguage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLicenceType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has licence type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLocation</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMethod</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasModel</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasModelYear</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has model year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOrganisation</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has organisation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasParticipant</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has participant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPosition</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has position</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasProfession</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has profession</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRegisteredIn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has registered in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRelationship</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has relationship</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRelationshipFM</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has relationship - family member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRelationshipLO</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has relationship - loved one</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSchool</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has school</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSport</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has sport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasStartDate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has start date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTopic</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has topic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasUnits</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has units</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasVehicleType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has vehicle type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasVice</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has vice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasVisionAid</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has vision aid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasVisited</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has visited</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hobby</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hobby</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isArtifactOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is artifact of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isConceptOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is concept of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLocationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is location of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isParticipantIn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is participant in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#possibleWhile</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Activity is possible while user is in certain position, or has certain movement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#possibleWhile</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">possible while</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#previousAddress</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">previous address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#relatedTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">related to</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
