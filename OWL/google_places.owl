@@ -111,6 +111,9 @@
         <Class IRI="#Courthouse"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Culture"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Dentist"/>
     </Declaration>
     <Declaration>
@@ -118,6 +121,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Doctor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DrinkPlace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Education"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Electrician"/>
@@ -129,10 +138,16 @@
         <Class IRI="#Embassy"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Entertainment"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Establishment"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Finance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Financial"/>
     </Declaration>
     <Declaration>
         <Class IRI="#FireStation"/>
@@ -142,6 +157,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Food"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FoodOrDrink"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FoodPlace"/>
     </Declaration>
     <Declaration>
         <Class IRI="#FuneralHome"/>
@@ -154,6 +175,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#GeneralContractor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Government"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Grocery"/>
     </Declaration>
     <Declaration>
         <Class IRI="#GroceryOrSupermarket"/>
@@ -180,6 +207,12 @@
         <Class IRI="#Hospital"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Housing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Infrastructure"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#InsuranceAgency"/>
     </Declaration>
     <Declaration>
@@ -190,6 +223,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Lawyer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Leisure"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Library"/>
@@ -213,6 +249,9 @@
         <Class IRI="#MealTakeaway"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Medical"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Mosque"/>
     </Declaration>
     <Declaration>
@@ -229,6 +268,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#NightClub"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Other"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Painter"/>
@@ -261,10 +303,19 @@
         <Class IRI="#PostOffice"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#PrivateTransport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicTransport"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#RVPark"/>
     </Declaration>
     <Declaration>
         <Class IRI="#RealEstateAgency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Religion"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Restaurant"/>
@@ -279,10 +330,16 @@
         <Class IRI="#ShoeStore"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Shop"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ShoppingMall"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Spa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sport"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Stadium"/>
@@ -306,17 +363,426 @@
         <Class IRI="#TrainStation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Transport"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#TravelAgency"/>
     </Declaration>
     <Declaration>
         <Class IRI="#University"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Utilities"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#VeterinaryCare"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wellbeing"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Zoo"/>
     </Declaration>
+    <SubClassOf>
+        <Class IRI="#ATM"/>
+        <Class IRI="#Financial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Accounting"/>
+        <Class IRI="#Financial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Airport"/>
+        <Class IRI="#PublicTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AmusementPark"/>
+        <Class IRI="#Entertainment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aquarium"/>
+        <Class IRI="#Leisure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArtGallery"/>
+        <Class IRI="#Culture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bakery"/>
+        <Class IRI="#Grocery"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bank"/>
+        <Class IRI="#Financial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bar"/>
+        <Class IRI="#DrinkPlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BeautySalon"/>
+        <Class IRI="#Wellbeing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BicycleStore"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BookStore"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BowlingAlley"/>
+        <Class IRI="#Entertainment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BusStation"/>
+        <Class IRI="#PublicTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cafe"/>
+        <Class IRI="#DrinkPlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Campground"/>
+        <Class IRI="#Leisure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarDealer"/>
+        <Class IRI="#PrivateTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarRental"/>
+        <Class IRI="#PrivateTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarRepair"/>
+        <Class IRI="#PrivateTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarWash"/>
+        <Class IRI="#PrivateTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Casino"/>
+        <Class IRI="#Entertainment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cemetery"/>
+        <Class IRI="#Other"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Church"/>
+        <Class IRI="#Religion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CityHall"/>
+        <Class IRI="#Government"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClothingStore"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConvenienceStore"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Courthouse"/>
+        <Class IRI="#Government"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dentist"/>
+        <Class IRI="#Medical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DepartmentStore"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Doctor"/>
+        <Class IRI="#Medical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DrinkPlace"/>
+        <Class IRI="#FoodOrDrink"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electrician"/>
+        <Class IRI="#Utilities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectronicsStore"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embassy"/>
+        <Class IRI="#Government"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Establishment"/>
+        <Class IRI="#Government"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Finance"/>
+        <Class IRI="#Financial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FireStation"/>
+        <Class IRI="#Government"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Florist"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Food"/>
+        <Class IRI="#FoodPlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FoodPlace"/>
+        <Class IRI="#FoodOrDrink"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FuneralHome"/>
+        <Class IRI="#Other"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FurnitureStore"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GasStation"/>
+        <Class IRI="#PrivateTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeneralContractor"/>
+        <Class IRI="#Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GroceryOrSupermarket"/>
+        <Class IRI="#Grocery"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gym"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HairCare"/>
+        <Class IRI="#Wellbeing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HardwareStore"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health"/>
+        <Class IRI="#Wellbeing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HinduTemple"/>
+        <Class IRI="#Religion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HomeGoodsStore"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hospital"/>
+        <Class IRI="#Medical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InsuranceAgency"/>
+        <Class IRI="#Other"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JewelryStore"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Laundry"/>
+        <Class IRI="#Utilities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lawyer"/>
+        <Class IRI="#Other"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Library"/>
+        <Class IRI="#Culture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LiquourStore"/>
+        <Class IRI="#DrinkPlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LocalGovernmentOffice"/>
+        <Class IRI="#Government"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Locksmith"/>
+        <Class IRI="#Utilities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lodging"/>
+        <Class IRI="#Housing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MealDelivery"/>
+        <Class IRI="#FoodPlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MealTakeaway"/>
+        <Class IRI="#FoodPlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mosque"/>
+        <Class IRI="#Religion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovieRental"/>
+        <Class IRI="#Entertainment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovieTheater"/>
+        <Class IRI="#Entertainment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovingCompany"/>
+        <Class IRI="#Housing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Museum"/>
+        <Class IRI="#Culture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NightClub"/>
+        <Class IRI="#Entertainment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Painter"/>
+        <Class IRI="#Culture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Park"/>
+        <Class IRI="#Leisure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parking"/>
+        <Class IRI="#Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PetStore"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pharmacy"/>
+        <Class IRI="#Medical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Physiotherapist"/>
+        <Class IRI="#Medical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlaceOfWorship"/>
+        <Class IRI="#Religion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plumber"/>
+        <Class IRI="#Utilities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Police"/>
+        <Class IRI="#Government"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PostOffice"/>
+        <Class IRI="#Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrivateTransport"/>
+        <Class IRI="#Transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicTransport"/>
+        <Class IRI="#Transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RVPark"/>
+        <Class IRI="#Leisure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RealEstateAgency"/>
+        <Class IRI="#Housing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restaurant"/>
+        <Class IRI="#FoodPlace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoofingContractor"/>
+        <Class IRI="#Housing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#School"/>
+        <Class IRI="#Education"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShoeStore"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShoppingMall"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spa"/>
+        <Class IRI="#Wellbeing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stadium"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Storage"/>
+        <Class IRI="#Utilities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Store"/>
+        <Class IRI="#Shop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SubwayStation"/>
+        <Class IRI="#PublicTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Synagogue"/>
+        <Class IRI="#Religion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TaxiStand"/>
+        <Class IRI="#PublicTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrainStation"/>
+        <Class IRI="#PublicTransport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TravelAgency"/>
+        <Class IRI="#Leisure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <Class IRI="#Education"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VeterinaryCare"/>
+        <Class IRI="#Medical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Zoo"/>
+        <Class IRI="#Entertainment"/>
+    </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ATM</IRI>

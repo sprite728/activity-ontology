@@ -759,7 +759,7 @@
         <Class IRI="#Game"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI="db:MusicalGame"/>
+        <Class abbreviatedIRI="db:MusicalWork"/>
         <Class IRI="#Music"/>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -2625,387 +2625,75 @@
         <Class IRI="#MacroActivity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#ATM"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Culture"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Accounting"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Education"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Airport"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Entertainment"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#AmusementPark"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Financial"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Aquarium"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#FoodOrDrink"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#ArtGallery"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Government"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Bakery"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Grocery"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Bank"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Housing"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Bar"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Infrastructure"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#BeautySalon"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Leisure"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#BicycleStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Medical"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#BookStore"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Other"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#BowlingAlley"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Religion"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#BusStation"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Shop"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Cafe"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Sport"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Campground"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Transport"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#CarDealer"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Utilities"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#CarRental"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#CarRepair"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#CarWash"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Casino"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Cemetery"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Church"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#CityHall"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#ClothingStore"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#ConvenienceStore"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Courthouse"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Dentist"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#DepartmentStore"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Doctor"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Electrician"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#ElectronicsStore"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Embassy"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Establishment"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Finance"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#FireStation"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Florist"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Food"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#FuneralHome"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#FurnitureStore"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#GasStation"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#GeneralContractor"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#GroceryOrSupermarket"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Gym"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#HairCare"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#HardwareStore"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Health"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#HinduTemple"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#HomeGoodsStore"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Hospital"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#InsuranceAgency"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#JewelryStore"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Laundry"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Lawyer"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Library"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#LiquourStore"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#LocalGovernmentOffice"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Locksmith"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Lodging"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#MealDelivery"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#MealTakeaway"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Mosque"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#MovieRental"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#MovieTheater"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#MovingCompany"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Museum"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#NightClub"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Painter"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Park"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Parking"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#PetStore"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Pharmacy"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Physiotherapist"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#PlaceOfWorship"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Plumber"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Police"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#PostOffice"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#RVPark"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#RealEstateAgency"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Restaurant"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#RoofingContractor"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#School"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#ShoeStore"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#ShoppingMall"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Spa"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Stadium"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Storage"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Store"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#SubwayStation"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Synagogue"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#TaxiStand"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#TrainStation"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#TravelAgency"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#University"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#VeterinaryCare"/>
-        <Class IRI="#GooglePlace"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://mem0r1es.github.io/ontology/places#Zoo"/>
+        <Class IRI="http://mem0r1es.github.io/ontology/places#Wellbeing"/>
         <Class IRI="#GooglePlace"/>
     </SubClassOf>
     <DisjointClasses>
@@ -3541,10 +3229,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#bodyPart"/>
         <Class abbreviatedIRI="db:AnatomicalStructure"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#canHappenIn"/>
-        <Class IRI="#GooglePlace"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasArtifact"/>
@@ -4148,16 +3832,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GoogleActivity</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Google Activity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-        <IRI>#GooglePlace</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Taxonomy for place types returned by the Google Places API.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#GooglePlace</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Google Place</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
