@@ -1,0 +1,14 @@
+# Generated .question files
+*.question
+
+# Log files
+*.log
+
+# Python compiled classes
+*.py[cod]
+
+# Ruby compiled classes and gems
+*.gem
+*.rbc
+.bundle
+.config
