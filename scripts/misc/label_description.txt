@@ -113,8 +113,8 @@ Travel
 Description: User has travelled.
 
 Vision Aid
-Description: User has acquired glasses, contact lenses, or has undergone 
-surgery.
+Description: User has acquired glasses, contact lenses, or has undergone surgery.
+
 Volunteer Work
 Description: User has done volunteer work.
 
