@@ -10,13 +10,13 @@ require login
 hits = RTurk::Hit.all
 
 unless hits.empty?
-    puts "Removing all HITs"
+  puts "Removing all HITs"
 
-    hits.each do |hit|
-        hit.expire!
-        hit.assignments.each do |assignment|
-            assignment.approve!
-        end
-        hit.dispose!
+  hits.each do |hit|
+    hit.expire!
+    hit.assignments.each do |assignment|
+      assignment.approve!
     end
+    hit.dispose!
+  end
 end
