@@ -15,3 +15,6 @@ login.rb
 *.rbc
 .bundle
 .config
+
+# Virtual environment
+venv

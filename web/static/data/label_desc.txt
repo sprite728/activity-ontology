@@ -1,0 +1,192 @@
+accounting
+Accountancy, or accounting, is the production of financial records about an organization
+airport
+An airport is a location where aircraft such as fixed-wing aircraft, helicopters, and blimps take off and land
+amusement_park
+An Amusement park or theme park is a group of entertainment attractions, rides, and other events in a location for the enjoyment of large numbers of people
+aquarium
+An aquarium (plural aquariums or aquaria) is a vivarium consisting of at least one transparent side in which water-dwelling plants or animals are kept
+art_gallery
+An art gallery or art museum is a building or space for the exhibition of art, usually visual art
+atm
+An automated or automatic teller machine (ATM) (American, Australian and Indian English), also known as an automated banking machine (ABM) (Canadian English), cash machine, cashpoint, cashline or hole in the wall (British and Hiberno-English), is a computerized telecommunications device that enables the clients of a financial institution to perform financial transactions without the need for a cashier, human clerk or bank teller
+bakery
+A bakery (or baker's shop) is an establishment that produces and sells flour-based food baked in an oven such as bread, cakes, pastries, and pies
+bank
+A bank is financial institution and a financial intermediary that accepts deposits and channels those deposits into lending activities, either directly by loaning or indirectly through capital markets
+bar
+A bar is a retail business establishment that serves alcoholic drinks — beer, wine, liquor, and cocktails — for consumption on the premises
+beauty_salon
+A beauty salon or beauty parlor (beauty parlour) (or sometimes beauty shop) is an establishment dealing with cosmetic treatments for men and women
+bicycle_store
+A bicycle store is a store that sells, buys or repairs bicycles.
+book_store
+Bookselling is the commercial trading of books, the retail and distribution end of the publishing process
+bowling_alley
+Bowling refers to a series of sports or leisure activities in which a player rolls or throws a bowling ball
+bus_station
+A bus station is a structure where city or intercity buses stop to pick up and drop off passengers
+cafe
+Coffeehouse, coffee shop, and café are related terms for an establishment which primarily serves prepared coffee or other hot beverages
+campground
+A campsite or camping pitch is a place used for overnight stay in the outdoors
+car_dealer
+A car dealership or vehicle local distribution is a business that sells new or used cars at the retail level, based on a dealership contract with an automaker or its sales subsidiary
+car_rental
+A car rental or car hire agency is a company that rents automobiles for short periods of time (generally ranging from a few hours to a few weeks) for a fee
+car_repair
+A vehicle breakdown is the mechanical failure of a motor vehicle in such a way that the underlying problem prevents the vehicle from being operated at all, or impedes the vehicle's operation so much, that it is very difficult, nearly impossible, or else dangerous to operate
+car_wash
+A car wash (also written as carwash) or auto wash is a facility used to clean the exterior and, in some cases, the interior of motor vehicles
+casino
+In modern English, a casino is a facility which houses and accommodates certain types of gambling activities
+cemetery
+A cemetery is a spatially defined area where the remains of dead people are buried or otherwise interred
+church
+Church is a Christian religious institution or building
+city_hall
+In local government, a city hall, town hall, civic centre, (in the United Kingdom) a guildhall, or (more rarely) a municipal building, is the chief administrative building of a city town or other municipality
+clothing_store
+A store where clothes are sold.
+convenience_store
+A convenience store, corner store, or corner shop, is a small store that stocks a range of everyday items such as groceries, toiletries, alcoholic and soft drinks, tobacco products, and newspapers
+courthouse
+A courthouse (sometimes spelled court house) is a building that is home to a local court of law and often the regional county government as well, although this is not the case in some larger cities
+dentist
+A dentist, also known as a 'dental surgeon', is a health care practitioner that specializes in the diagnosis, prevention, and treatment of diseases and conditions of the oral cavity
+department_store
+A department store is a retail establishment with a building open to the public which offers a wide range of consumer goods such as clothing, housewares, furniture and appliances
+doctor
+A physician is a professional who practices medicine, which is concerned with promoting, maintaining or restoring human health through the study, diagnosis, and treatment of disease, injury, and other physical and mental impairments
+electrician
+An electrician is a tradesperson specializing in electrical wiring of buildings, stationary machines and related equipment
+electronics_store
+Consumer electronics (abbreviated CE) are electronic equipment intended for everyday use, most often in entertainment, communications and office productivity
+embassy
+A diplomatic mission is a group of people from one state or an international inter-governmental organisation (such as the United Nations) present in another state to represent the sending state/organisation officially in the receiving state
+establishment
+A business organization, public institution, or household.
+finance
+Finance is the study of funds management, or the allocation of assets and liabilities over time under conditions of certainty and uncertainty
+fire_station
+A fire station (also called a fire house, fire hall, or firemen's hall) is a structure or other area set aside for storage of firefighting apparatus such as fire engines and related vehicles, personal protective equipment, fire hoses and other specialized equipment
+florist
+Floristry is the production, commerce and trade in flowers
+food
+Food is any substance consumed to provide nutritional support for the body
+funeral_home
+A funeral home, funeral parlor or mortuary, is a business that provides burial and funeral services for the dead and their families
+furniture_store
+PLACEHOLDER
+gas_station
+A filling station, fueling station, garage, gasbar (Canada), gas station (United States and Canada), petrol bunk or petrol pump (India), petrol garage, petrol station (Australia, Hong Kong, Ireland, Malaysia, New Zealand, Singapore, South Africa and United Kingdom), service station (Australia), or servo (Australia), is a facility which sells fuel and usually lubricants for motor vehicles
+general_contractor
+A general contractor is responsible for the day-to-day oversight of a construction site, management of vendors and trades, and communication of information to involved parties throughout the course of a building project
+grocery_or_supermarket
+A grocery store is a retail store that sells food and other non-food items
+gym
+The Greek term gymnasion (γυμνάσιον) was used in Ancient Greece to describe a locality for both physical and intellectual education of young men (see gymnasium (ancient Greece))
+hair_care
+Hair care is an overall term for parts of hygiene and cosmetology involving the hair on the human head
+hardware_store
+Hardware stores (in a number of countries, shops), sometimes known as home improvement stores or DIY stores, sell household hardware for home improvement including: fasteners, hand tools, power tools, keys, locks, hinges, chains, plumbing supplies, electrical supplies, cleaning products, housewares, tools, utensils, paint, and lawn and garden products directly to consumers for use at home or for business
+health
+Health is the level of functional or metabolic efficiency of a living being
+hindu_temple
+A Hindu temple, also known as a Mandiram (Sanskrit: मंदिरम, IAST: Maṁdiraṁ), which means means gladdening[1] is a place of worship for followers of Hinduism
+home_goods_store
+Home goods stores are stores that sell household goods (home appliances, consumer electronics, furniture, etc.).
+hospital
+A hospital is a health care institution providing patient treatment by specialized staff and equipment
+insurance_agency
+An insurance broker (also insurance agent) sells, solicits, or negotiates insurance for compensation.
+jewelry_store
+A jewelry store (also jewelry dealer) is a firm that sells and buys jewelry
+laundry
+Laundry is the washing of clothing and linens
+lawyer
+A lawyer, according to Black's Law Dictionary, is a person learned in the law; as an attorney, counsel or solicitor; a person who is practicing law
+library
+A library (from French librairie; Latin liber= book) is an organized collection of information resources made accessible to a defined community for reference or borrowing
+liquor_store
+A liquor store is a retail shop that sells prepackaged alcoholic beverages — typically in bottles — intended to be consumed off the store's premises
+local_government_office
+An office where government employees work.
+locksmith
+A lock is a mechanical or electronic fastening device that is released by a physical object (such as a key, keycard, fingerprint, RFID card, or security token), by supplying secret information (such as a keycode or password), or by a combination thereof
+lodging
+Lodging (or a holiday accommodation) is a type of residential accommodation
+meal_delivery
+Meal delivery is a service in which a restaurant or fast food chain delivers a meal to a customer.
+meal_takeaway
+Take-out or takeout (in North American and Philippine English), carry-out (in U.S. and Scottish English), take-away (in the United Kingdom, Australia, New Zealand, South Africa, Hong Kong, and Ireland), or parcel (in Indian English and Pakistani English) refers to prepared meals or other food items, purchased at a restaurant, that the purchaser intends to eat elsewhere.
+mosque
+A mosque (/mɒsk/; Arabic:مسجد masjid pl. مساجد masājid), sometimes spelt mosk, is a place of worship for followers of Islam
+movie_rental
+Renting, also known as hiring, is an agreement where a payment is made for the temporary use of a good, service or property owned by another
+movie_theater
+A movie theater or movie theatre (also called a cinema, movie house, film house, film theater or picture house) is a venue, usually a building, for viewing movies (films)
+moving_company
+A moving company, removalist, or van line is a company that helps people and businesses relocate their goods from one place to another
+museum
+A museum is an institution that cares for (conserves) a collection of artifacts and other objects of scientific, artistic, cultural, or historical importance and makes them available for public viewing through exhibits that may be permanent or temporary
+night_club
+A nightclub (also known as a discothèque, or simply a club or disco) is an entertainment venue which usually operates late into the night
+painter
+Painting is the practice of applying paint, pigment, color or other medium to a surface (support base)
+park
+A park is an area of open space provided for recreational use
+parking
+Parking is the act of stopping and disengaging a vehicle and leaving it unoccupied
+pet_store
+A pet store or pet shop is a retail business which sells different kinds of animals, pet food, animal supplies, and pet accessories
+pharmacy
+Pharmacy is the health profession that links the health sciences with the chemical sciences and it is charged with ensuring the safe and effective use of pharmaceutical drugs
+physiotherapist
+Physical Therapists or physiotherapists are autonomous, primary health-care professionals who are experts in movement and function of the body
+place_of_worship
+A place of worship is a specially designed structure or consecrated space where individuals or a group of people such as a congregation come to perform acts of devotion, veneration, or religious study
+plumber
+A plumber is a tradesperson who specializes in installing and maintaining systems used for potable (drinking) water, sewage, and drainage in plumbing systems
+police
+The police are a constituted body of persons empowered by the state to enforce the law, protect property, and limit civil disorder
+post_office
+A post office, historically also a posthouse, is a facility forming part of a postal system for the posting, receipt, sorting, handling, transmission or delivery of mail, such as letters, small packages, and usually money
+real_estate_agency
+The law of agency is an area of commercial law dealing with a set of contractual, quasi-contractual and non-contractual relationships that involve a person, called the agent, that is authorized to act on behalf of another (called the principal) to create a legal relationship with a third party
+restaurant
+A restaurant (/ˈrɛstərənt/ or /ˈrɛstərɒnt/; French: [ʀɛs.to.ʁɑ̃] ( listen)) is a business establishment which prepares and serves food and drink to customers in return for money, either paid before the meal, after the meal, or with a running tab
+roofing_contractor
+jewelry dealer: a firm that sells and buys jewelry
+rv_park
+A recreational vehicle park (RV park) or caravan park is a place where people with recreational vehicles can stay overnight, or longer, in allotted spaces known as pitches(sitesin North America, Europe, and Australia).
+school
+A school is an institution designed for the teaching of students (or pupils) under the direction of teachers
+shoe_store
+A shoe store or shoe shop is a type of retailer that specializes in selling shoes
+shopping_mall
+A shopping mall, shopping center/centre, shopping arcade, shopping precinct, or simply mall is one or more buildings forming a complex of shops representing merchandisers, with interconnecting walkways enabling visitors to easily walk from unit to unit, along with a parking area – a modern, indoor version of the traditional marketplace
+spa
+The term spa is associated with water treatment which is also known as balneotherapy
+stadium
+A modern stadium (plural stadiums/stadia) is a place or venue for (mostly) outdoor sports, concerts, or other events and consists of a field or stage either partly or completely surrounded by a structure designed to allow spectators to stand or sit and view the event
+storage
+PLACEHOLDER
+store
+A store is a place where the sale of goods and services from individuals or businesses to the end-user occurs.
+subway_station
+A metro station or subway station is a railway station for a rapid transit system, often known by names such as metro, undergroundand subway
+synagogue
+A synagogue, also spelled synagog (from Greek: συναγωγή transliterated synagogē, meaning assembly; בית כנסת beyt knesset, meaning house of assembly; בית תפילה beyt t'fila, meaning house of prayer; שול shul; אסנוגה esnoga; קהל kal) is a Jewish house of prayer
+taxi_stand
+A taxicab stand (also called taxi rank, cab stand, taxi stand, cab rank, or hack stand) is a queue area on a street or on private property where taxicabs line up to wait for passengers
+train_station
+A train station, also referred to as a railway station (in Commonwealth English) or a railroad station (in US English) and often shortened to just station,[note 1] is a railway facility where trains regularly stop to load or unload passengers and/or freight
+travel_agency
+A travel agency is a private retailer or public service that provides tourism related services to the public on behalf of suppliers such as airlines, car rentals, cruise lines, hotels, railways, and package tours
+university
+A university is an institution of higher education and research which grants academic degrees in a variety of subjects and provides both undergraduate education and postgraduate education
+veterinary_care
+A veterinary physician, colloquially called a vet, shortened from veterinarian (American English, Australian English) or veterinary surgeon (British English), is a professional who practices veterinary medicine by treating disease, disorder, and injury in non-human animals.
+zoo
+A zoo (short for zoological park or zoological garden, and also called a menagerie) is a facility in which animals are confined within enclosures, displayed to the public, and in which they may also be bred

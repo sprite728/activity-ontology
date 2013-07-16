@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <p class="lead">For the following location, please input a predicate-object pair representing an activity that can be done at that location.</p>
+</div>
+
+<hr>
+      
+<form action="{{ url_for('submit') }}" method="post" class="questions">
+    <h2 class="questions-heading">{{ location|replace("_", " ")|capitalize }}</h2>
+    <p class="lead">{{ description }}</p>
+    <div class="submit_form">
+        <input id="predicate" name="predicate" type="text" class="predicate" placeholder="Predicate">
+        <input id="object" name="object" type="text" class="object" placeholder="Object">
+        <input id="location" name="location" type="hidden" value="{{ location }}">
+        <input class="btn btn-large btn-primary" type="submit" value="Submit">
+    </div>
+</form>
+
+{% endblock %}
+
+{% block js %}
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap-transition.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap-alert.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap-modal.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap-dropdown.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap-scrollspy.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap-tab.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap-tooltip.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap-popover.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap-button.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap-collapse.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap-carousel.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap-typeahead.js') }}"></script>
+
+<script type="text/javascript">
+var predicates = [];
+var objects = [];
+
+$(function() {
+    $.getJSON("{{ url_for('static', filename='data/predicates.json') }}", function(data) {
+        $.each(data, function(key, val) {
+            predicates.push(val);
+        });
+    });
+
+    $.getJSON("{{ url_for('static', filename='data/objects.json') }}", function(data) {
+        $.each(data, function(key, val) {
+            objects.push(val);
+        });
+    });
+});
+
+</script>
+
+<script src="{{ url_for('static', filename='js/autocomplete.js') }}"></script>
+
+{% endblock %}
