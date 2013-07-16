@@ -4,14 +4,16 @@
  * Need to add support for many more objects.
  */
 
+var min_len = 1
+
 $(document).ready(function() {
     $('#predicate').typeahead({
-        minLength: 3,
+        minLength: min_len,
         source: function(query, process) {
             process(predicates);
         }
     }).blur(function() {
-        if ($.inArray($(this).val(), predicates) === -1) {
+        if (predicates.binarySearch($(this).val()) === -1) {
             $('#predicate').val('');
         }
     });
@@ -19,7 +21,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $('#object').typeahead({
-        minLength: 3,
+        minLength: min_len,
         source: function(query, process) {
             process(objects);
         }

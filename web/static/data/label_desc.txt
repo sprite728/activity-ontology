@@ -77,7 +77,7 @@ Food is any substance consumed to provide nutritional support for the body
 funeral_home
 A funeral home, funeral parlor or mortuary, is a business that provides burial and funeral services for the dead and their families
 furniture_store
-PLACEHOLDER
+A commercial establishment wherein home or office furnishings and related accessories are sold to the ultimate consumer.
 gas_station
 A filling station, fueling station, garage, gasbar (Canada), gas station (United States and Canada), petrol bunk or petrol pump (India), petrol garage, petrol station (Australia, Hong Kong, Ireland, Malaysia, New Zealand, Singapore, South Africa and United Kingdom), service station (Australia), or servo (Australia), is a facility which sells fuel and usually lubricants for motor vehicles
 general_contractor
@@ -171,7 +171,7 @@ The term spa is associated with water treatment which is also known as balneothe
 stadium
 A modern stadium (plural stadiums/stadia) is a place or venue for (mostly) outdoor sports, concerts, or other events and consists of a field or stage either partly or completely surrounded by a structure designed to allow spectators to stand or sit and view the event
 storage
-PLACEHOLDER
+A space for storing goods.
 store
 A store is a place where the sale of goods and services from individuals or businesses to the end-user occurs.
 subway_station

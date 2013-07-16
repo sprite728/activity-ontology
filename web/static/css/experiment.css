@@ -28,7 +28,7 @@ body {
 /* Questions form */
 .questions {
   margin: 30px 0;
-  text-align: left;
+  text-align: justify;
 }
 .questions .questions-heading,
 .questions .questions-desc {
