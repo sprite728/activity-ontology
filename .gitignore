@@ -18,3 +18,6 @@ login.rb
 
 # Virtual environment
 venv
+
+# Configuration files
+config.py

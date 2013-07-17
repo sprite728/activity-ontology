@@ -4,7 +4,7 @@
  * Need to add support for many more objects.
  */
 
-var min_len = 1
+var min_len = 0
 
 $(document).ready(function() {
     $('#predicate').typeahead({

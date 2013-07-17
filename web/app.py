@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, session, g, redirect
-from flask import url_for, abort, flash, _app_ctx_stack
+from flask import url_for, abort, flash, _app_ctx_stack, jsonify
+import json
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -50,6 +51,19 @@ def submit():
     flash('Object: ' + obj)
     flash('Location: ' + loc)
     return render_template('submit.html')
+
+
+@app.route('/_load_objects')
+def load_objects():
+    prefix = request.args.get('prefix')
+    filename = request.args.get('filename')
+
+    """ Do a query using the prefix, and jsonify the results.
+    Then send the data."""
+    with app.open_resource('static/data/' + filename) as f:
+        data = json.loads(f.read());
+
+    return json.dumps(data)
 
 
 if __name__ == '__main__':

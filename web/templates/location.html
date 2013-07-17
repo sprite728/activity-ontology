@@ -9,7 +9,13 @@
 <hr>
       
 <form action="{{ url_for('submit') }}" method="post" class="questions">
+    {% if location == 'atm' %}
+    <h2 class="questions-heading">{{ location|upper }}</h2>
+    {% elif location == 'rv_park' %}
+    <h2 class="questions-heading">RV park</h2>
+    {% else %}
     <h2 class="questions-heading">{{ location|replace("_", " ")|capitalize }}</h2>
+    {% endif %}
     <p class="lead">{{ description }}</p>
     <div class="submit_form">
         <input id="predicate" name="predicate" type="text" class="predicate" placeholder="Predicate">
@@ -38,6 +44,11 @@
 <script src="{{ url_for('static', filename='js/bootstrap-collapse.js') }}"></script>
 <script src="{{ url_for('static', filename='js/bootstrap-carousel.js') }}"></script>
 <script src="{{ url_for('static', filename='js/bootstrap-typeahead.js') }}"></script>
+<script src="{{ url_for('static', filename='js/binary-search.js') }}"></script>
+
+<script type="text/javascript">
+    $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+</script>
 
 <script type="text/javascript">
 var predicates = [];
@@ -49,16 +60,9 @@ $(function() {
             predicates.push(val);
         });
     });
-
-    $.getJSON("{{ url_for('static', filename='data/objects.json') }}", function(data) {
-        $.each(data, function(key, val) {
-            objects.push(val);
-        });
-    });
 });
-
 </script>
-
+<script src="{{ url_for('static', filename='js/fetch-objects.js') }}"></script>
 <script src="{{ url_for('static', filename='js/autocomplete.js') }}"></script>
 
 {% endblock %}
