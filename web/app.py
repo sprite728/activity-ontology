@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request, session, g, redirect
 from flask import url_for, abort, flash, _app_ctx_stack, jsonify
+
+import complete
 import json
+import redis
+import sys
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -13,6 +17,7 @@ def about():
 
 @app.route('/location/<location>')
 def location(location):
+    # Process query for a location; deals with all the MTurk arguments. 
     locations = []
     descriptions = []
     with app.open_resource('static/data/label_desc.txt') as f:
@@ -24,47 +29,42 @@ def location(location):
     if location in locations:
         description = descriptions[locations.index(location)]
     else:
-        """ Abort if the location is unknown """
+        # Abort if the location is unknown
         abort(404)
 
-    try:
-        flash('HitId: ' + request.args.get('hitId'))
-        flash('AssignmentId: ' + request.args.get('assignmentId'))
-    except:
-        pass
+    # Process arguments; namely set values for needed ids
+    auxHitId = request.args.get('hitId')
+    auxId = request.args.get('assignmentId')
+    auxWorkId = request.args.get('workerId')
+    auxSubmit = request.args.get('turkSubmitTo')
 
-    return render_template('location.html', location=location, description=description)
+    hitId = auxHitId if auxHitId else 'HIT_ID_NOT_AVAILABLE'
+    assignmentId = auxId if auxId else 'ASSIGNMENT_ID_NOT_AVAILABLE'
+    workerId = auxWorkId if auxWorkId else 'WORKER_ID_NOT_AVAILABLE'
 
+    turkSubmitTo = auxSubmit if auxSubmit else 'https://www.mturk.com'
+    turkSubmitTo += '/mturk/externalSubmit'
 
-@app.route('/submit', methods=['POST'])
-def submit():
-    """ Placeholder submission form until we run MTurk """
-    pred = request.form['predicate']
-    obj = request.form['object']
-    loc = request.form['location']
-    
-    if not pred or not obj:
-        flash('Fields cannot be empty')
-        return redirect(url_for('location', location=loc))
-
-    flash('Predicate: ' + pred)
-    flash('Object: ' + obj)
-    flash('Location: ' + loc)
-    return render_template('submit.html')
+    return render_template('location.html', location=location, 
+        description=description, hitId=hitId, assignmentId=assignmentId,
+        workerId=workerId, turkSubmitTo=turkSubmitTo)
 
 
 @app.route('/_load_objects')
 def load_objects():
-    prefix = request.args.get('prefix')
-    filename = request.args.get('filename')
+    # Open Redis connection; change/replace/remove this line for production
+    r = redis.StrictRedis(host='localhost', port=6379, db=0)
+    # Preprocess Redis data
+    complete.preprocess(r, open('static/data/instances.txt'), 'dbpedia')
 
-    """ Do a query using the prefix, and jsonify the results.
-    Then send the data."""
-    with app.open_resource('static/data/' + filename) as f:
-        data = json.loads(f.read());
+    # Query using the prefix; return the list as JSON.
+    prefix = request.args.get('prefix')
+    data = complete.complete(r, prefix, db='dbpedia')
 
     return json.dumps(data)
 
 
 if __name__ == '__main__':
+    # Uncomment the next line before deployment
+    # app.host = '0.0.0.0'
     app.run(debug=True)

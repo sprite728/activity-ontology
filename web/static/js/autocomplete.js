@@ -1,15 +1,9 @@
-/*
- * Autocomplete on two textfields using Bootstrap Typeahead.
- * 
- * Need to add support for many more objects.
- */
-
-var min_len = 0
-
+// Typeahead for predicates. All predicates are statically loaded at the 
+// beginning.
 $(document).ready(function() {
     $('#predicate').typeahead({
-        minLength: min_len,
-        source: function(query, process) {
+        minLength: 1,
+        source: function(query, process) {   
             process(predicates);
         }
     }).blur(function() {
@@ -19,10 +13,15 @@ $(document).ready(function() {
     });
 });
 
+// Typeahead for objects. Objects are dynamically loaded once the user has
+// typed at least two characters.
 $(document).ready(function() {
     $('#object').typeahead({
-        minLength: min_len,
+        minLength: 2,
         source: function(query, process) {
+            if ($('#object').val().length === 2) {
+                fetchObjects();
+            }
             process(objects);
         }
     }).blur(function() {

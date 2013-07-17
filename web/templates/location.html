@@ -7,8 +7,9 @@
 </div>
 
 <hr>
-      
-<form action="{{ url_for('submit') }}" method="post" class="questions">
+
+<!-- Submission form -->   
+<form id="submit-form" action="{{ turkSubmitTo }}" method="GET" class="questions">
     {% if location == 'atm' %}
     <h2 class="questions-heading">{{ location|upper }}</h2>
     {% elif location == 'rv_park' %}
@@ -18,10 +19,13 @@
     {% endif %}
     <p class="lead">{{ description }}</p>
     <div class="submit_form">
-        <input id="predicate" name="predicate" type="text" class="predicate" placeholder="Predicate">
-        <input id="object" name="object" type="text" class="object" placeholder="Object">
+        <input id="predicate" name="predicate" type="text" class="predicate" placeholder="Predicate" required>
+        <input id="object" name="object" type="text" class="object" placeholder="Object" required>
         <input id="location" name="location" type="hidden" value="{{ location }}">
-        <input class="btn btn-large btn-primary" type="submit" value="Submit">
+        <input id="hitId" name="hitId" type="hidden" value="{{ hitId }}">
+        <input id="assignmentId" name="assignmentId" type="hidden" value="{{ assignmentId }}">
+        <input id="workerId" name="workerId" type="hidden" value="{{ workerId }}">
+        <input class="btn btn-large btn-primary" type="submit" value="Commit">
     </div>
 </form>
 
@@ -51,9 +55,31 @@
 </script>
 
 <script type="text/javascript">
+{% if assignmentId == 'ASSIGNMENT_ID_NOT_AVAILABLE' %}
+    $("input").attr("disabled", "true");
+{% endif %}
+
+// Uncomment this if deemed necessary for IE browsers
+
+// $('#submit-form').submit(function() {
+//     var emptyPred = $('#predicate').val().length === 0;
+//     var emptyObj = $('#object').val().length === 0;
+
+//     var isFormValid = !emptyObj && !emptyPred;
+
+//     if (!isFormValid) {
+//         alert("Please fill in all the required fields.");
+//     }
+
+//     return isFormValid;
+// });
+</script>
+
+<script type="text/javascript">
 var predicates = [];
 var objects = [];
 
+// Load predicates from a static file.
 $(function() {
     $.getJSON("{{ url_for('static', filename='data/predicates.json') }}", function(data) {
         $.each(data, function(key, val) {

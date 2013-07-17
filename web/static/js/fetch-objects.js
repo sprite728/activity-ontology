@@ -1,11 +1,8 @@
-/*
- * Fetch objects from by executing an AJAX query
- */
-
-var fetch_objects = function() {
+// Fetch objects from file; will be extended to fetch them using a 
+// query to Redis
+var fetchObjects = function() {
     $.getJSON($SCRIPT_ROOT + '/_load_objects', {
-        prefix: $('#object').val(),
-        filename: 'objects.json'
+        prefix: $('#object').val()
     }, function(data) {
         $.each(data, function(key, val) {
             objects.push(val);
@@ -13,13 +10,11 @@ var fetch_objects = function() {
     });
 };
 
-var object_field = $('#object')[0];
-object_field.onkeyup = function() {
-    if (object_field.value.length == 2) {
-        $(function() {
-            fetch_objects();
-        });
-    } else if (object_field.value.length < 2) {
+// Clears the objects array. This is to prevent the user from seeing 
+// duplicates
+var objectField = $('#object')[0];
+objectField.onkeyup = function() {
+    if (objectField.value.length < 2) {
         objects.length = 0;
     }
 };
