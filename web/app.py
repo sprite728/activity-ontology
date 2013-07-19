@@ -1,18 +1,17 @@
 from flask import Flask, render_template, request, session, g, redirect
-from flask import url_for, abort, flash, _app_ctx_stack, jsonify
+from flask import url_for, abort, flash, _app_ctx_stack, jsonify, make_response
+
+from werkzeug.contrib.fixers import ProxyFix
 
 import complete
+import gzip
 import json
 import redis
+import StringIO
 import sys
 
 app = Flask(__name__)
 app.config.from_object('config')
-
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
 
 
 @app.route('/location/<location>')
@@ -52,19 +51,29 @@ def location(location):
 
 @app.route('/_load_objects')
 def load_objects():
-    # Open Redis connection; change/replace/remove this line for production
+    # Open Redis connection; change/replace/remove this line for deployment
     r = redis.StrictRedis(host='localhost', port=6379, db=0)
-    # Preprocess Redis data
-    complete.preprocess(r, open('static/data/instances.txt'), 'dbpedia')
 
     # Query using the prefix; return the list as JSON.
-    prefix = request.args.get('prefix')
+    prefix = request.args.get('prefix').lower()
     data = complete.complete(r, prefix, db='dbpedia')
+    data.sort(key=lambda item: (len(item), item))
 
-    return json.dumps(data)
+    gzip_buffer = StringIO.StringIO()
+    gzip_file = gzip.GzipFile(mode='wb', compresslevel=4, fileobj=gzip_buffer)
+    gzip_file.write(json.dumps(data))
+    gzip_file.close()
 
+    response = make_response()
+    response.data = gzip_buffer.getvalue()
+    response.headers['Content-Encoding'] = 'gzip'
+    response.headers['Content-Length'] = len(response.data)
+
+    return response
+
+
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 if __name__ == '__main__':
     # Uncomment the next line before deployment
-    # app.host = '0.0.0.0'
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0')

@@ -8,7 +8,7 @@
  * @return {number} Index of the element if found, or -1.
  */
 Array.prototype.binarySearch = function(value, comparison) {
-    comparison = typeof comparison != 'undefined' ? 
+    comparison = typeof comparison !== 'undefined' ? 
                         comparison : 
                         function(a, b) {
                             return a < b;

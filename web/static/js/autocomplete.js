@@ -14,12 +14,14 @@ $(document).ready(function() {
 });
 
 // Typeahead for objects. Objects are dynamically loaded once the user has
-// typed at least two characters.
+// typed at least prefixLength characters.
+var prefixLength = 3;
 $(document).ready(function() {
     $('#object').typeahead({
-        minLength: 2,
+        minLength: prefixLength,
         source: function(query, process) {
-            if ($('#object').val().length === 2) {
+            var object_s = $('#object').val();
+            if (object_s.length === prefixLength) {
                 fetchObjects();
             }
             process(objects);

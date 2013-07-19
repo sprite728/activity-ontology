@@ -2,8 +2,10 @@
 
 {% block content %}
 
-<div class="jumbotron">
-    <p class="lead">For the following location, please input a predicate-object pair representing an activity that can be done at that location.</p>
+<div class="well">
+    <p class="lead-small">You will be given a location type (e.g., Hospital, Aquarium, etc.) and a description of that location. Write down an activity or event that can occur in that location; that is, write a verb (e.g., go, swim, eat, etc.), and an object (e.g., home, food, etc.) in the two forms.<p>
+    <p class="lead-small">Some examples to give you a better idea: at a <i>bowling alley</i> you can <span class="label label-success" style="font-size: 17px">go</span> <span class="label label-info" style="font-size:17px">bowling</span>; at a <i>hospital</i> you can <span class="label label-success" style="font-size:17px">visit</span> <span class="label label-info" style="font-size: 17px">doctor</span>.</p>
+    <p class="lead-small">Also specify what you think the average duration of that activity is, as well as whether you can think of any other activities that can occur in that location (no need to name them).</p>
 </div>
 
 <hr>
@@ -19,13 +21,55 @@
     {% endif %}
     <p class="lead">{{ description }}</p>
     <div class="submit_form">
-        <input id="predicate" name="predicate" type="text" class="predicate" placeholder="Predicate" required>
-        <input id="object" name="object" type="text" class="object" placeholder="Object" required>
+        <div class="row">
+	<div class="span3">
+        <span class="label label-success" style="font-size:15px">Verb:</span> 
+	<input id="predicate" name="predicate" type="text" class="span4" placeholder="Verb" required>
+        <span class="label label-info" style="font-size:15px">Object:</span> 
+        <input id="object" name="object" type="text" class="span4" placeholder="Object" required>
+
+	<span class="label" style="font-size:15px">Duration:</span>
+            <select id="duration" name="duration" required>
+                <option value="0m15m">0-15 Minutes</option>
+                <option value="15m30m">15-30 Minutes</option>
+                <option value="30m1h">30 Minutes to 1 Hour</option>
+                <option value="1h2h">1-2 Hours</option>
+                <option value="2h">2 Hours or More</option>
+		<option value="none">None of the Above</option>
+            </select>
+
+	<span class="label" style="font-size:15px">Time of Day:</span>
+            <select id="time" name="time" multiple required>
+                <option value="morning">Morning</option>
+                <option value="noon">Noon</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+                <option value="night">Nighttime</option>
+            </select>
+	</div>
+
         <input id="location" name="location" type="hidden" value="{{ location }}">
         <input id="hitId" name="hitId" type="hidden" value="{{ hitId }}">
         <input id="assignmentId" name="assignmentId" type="hidden" value="{{ assignmentId }}">
         <input id="workerId" name="workerId" type="hidden" value="{{ workerId }}">
-        <input class="btn btn-large btn-primary" type="submit" value="Commit">
+        </div>
+
+        <div class="outer">
+            <hr>
+            <p class="lead-small">Can you think of other activities for this location?</p>
+            <div class="forms-inline">
+                <div class="controls-row">
+                    <label class="radio inline">
+                    <input id="r1" name="more" type="radio" value="Yes" required><b>Yes</b>
+                    </label>
+                    <label class="radio inline">
+                    <input id="r2" name="more" type="radio" value="No" required><b>No</b>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <input class="btn btn-large btn-primary" type="submit" value="Submit">
     </div>
 </form>
 
@@ -59,20 +103,34 @@
     $("input").attr("disabled", "true");
 {% endif %}
 
+$('#duration').prop('selectedIndex', -1);
+
 // Uncomment this if deemed necessary for IE browsers
 
-// $('#submit-form').submit(function() {
-//     var emptyPred = $('#predicate').val().length === 0;
-//     var emptyObj = $('#object').val().length === 0;
+$('#submit-form').submit(function() {
+    var emptyPred = $('#predicate').val().length === 0;
+    var emptyObj = $('#object').val().length === 0; 
+    var emptyDur = $('#duration').prop('selectedIndex') === -1;
+    var emptyTime = $('#time').val() === null;
 
-//     var isFormValid = !emptyObj && !emptyPred;
+    var emptyMore = true;
+    var i = 0;
+    var radios = document.getElementsByName("more");
+    while (emptyMore && i < radios.length) {
+	if (radios[i].checked)
+  	    emptyMore = false;
+	++i;
+    }
 
-//     if (!isFormValid) {
-//         alert("Please fill in all the required fields.");
-//     }
+    var isFormValid = !emptyObj && !emptyPred && 
+		      !emptyDur && !emptyTime && !emptyMore;
 
-//     return isFormValid;
-// });
+    if (!isFormValid) {
+        alert("Please fill in all the fields!");
+    }
+
+    return isFormValid;
+});
 </script>
 
 <script type="text/javascript">
