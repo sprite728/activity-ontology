@@ -17,7 +17,31 @@ login.rb
 .config
 
 # Virtual environment
-venv
+venv/
 
 # Configuration files
 config.py
+
+# IntelliJ directories and files
+bin/
+.idea/
+gen/
+*.iml
+
+# Java compiled classes
+*.class
+
+# Java package files
+*.jar
+*.war
+*.ear
+
+# Local configuration file
+local.properties
+
+# Android built application files
+*.apk
+*.ap_
+
+# Android files for the dex VM
+*.dex

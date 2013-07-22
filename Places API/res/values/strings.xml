@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Places API</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send" >Send</string>
+    <string name="button_location">Get Location</string>
+    <string name="location_message">Location</string>
+    <string name="title_activity_display_message">My Message</string>
+</resources>
