@@ -13,10 +13,6 @@ unless hits.empty?
   puts "Removing all HITs"
 
   hits.each do |hit|
-    hit.expire!
-    hit.assignments.each do |assignment|
-      assignment.approve!
-    end
-    hit.dispose!
+    hit.disable!
   end
 end

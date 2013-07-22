@@ -1,0 +1,18 @@
+{"time"=>"noon", "predicate"=>"fix up", "location"=>"plumber", "more"=>"No", "duration"=>"15m30m", "workerId"=>"A1OL25WY0BYMMH", "object"=>"leak"}
+{"predicate"=>"attend", "time"=>"morning", "location"=>"physiotherapist", "more"=>"Yes", "duration"=>"30m1h", "workerId"=>"A30N3RNO1PUA2I", "object"=>"sessions"}
+{"time"=>"morning", "predicate"=>"go", "location"=>"cemetery", "more"=>"No", "duration"=>"1h2h", "workerId"=>"AA53PK560WIO8", "object"=>"bury"}
+{"time"=>"evening", "predicate"=>"visit", "location"=>"hospital", "more"=>"No", "duration"=>"1h2h", "workerId"=>"A14J86Y1L3RCQ0", "object"=>"doctor"}
+{"predicate"=>"test drive", "time"=>"evening", "workerId"=>"AA53PK560WIO8", "location"=>"car_dealer", "more"=>"Yes", "object"=>"car", "duration"=>"1h2h"}
+{"time"=>"morning", "predicate"=>"visit", "location"=>"courthouse", "more"=>"Yes", "duration"=>"1h2h", "workerId"=>"AA53PK560WIO8", "object"=>"lawyer"}
+{"predicate"=>"park", "time"=>"night", "workerId"=>"A14J86Y1L3RCQ0", "location"=>"rv_park", "more"=>"No", "object"=>"vehicle", "duration"=>"2h"}
+{"predicate"=>"take", "time"=>"morning|noon|afternoon|evening|night", "workerId"=>"A1P6E9IE7F1HIE", "location"=>"airport", "more"=>"Yes", "object"=>"flight", "duration"=>"2h"}
+{"predicate"=>"drive", "time"=>"afternoon", "workerId"=>"A1FUBGE9CHDHU6", "location"=>"car_rental", "more"=>"No", "object"=>"cars", "duration"=>"1h2h"}
+{"time"=>"afternoon", "predicate"=>"unlock", "location"=>"locksmith", "more"=>"Yes", "duration"=>"30m1h", "workerId"=>"A30N3RNO1PUA2I", "object"=>"safe"}
+{"time"=>"evening", "predicate"=>"go", "location"=>"department_store", "more"=>"Yes", "duration"=>"1h2h", "workerId"=>"AA53PK560WIO8", "object"=>"shop"}
+{"time"=>"noon", "predicate"=>"visit", "location"=>"dentist", "more"=>"No", "duration"=>"30m1h", "workerId"=>"AA53PK560WIO8", "object"=>"dentist"}
+{"predicate"=>"worship", "time"=>"morning", "workerId"=>"A14J86Y1L3RCQ0", "location"=>"place_of_worship", "more"=>"No", "object"=>"church", "duration"=>"30m1h"}
+{"predicate"=>"walk", "time"=>"morning", "workerId"=>"A14J86Y1L3RCQ0", "location"=>"health", "more"=>"No", "object"=>"fitness", "duration"=>"15m30m"}
+{"time"=>"evening", "predicate"=>"go", "location"=>"establishment", "more"=>"Yes", "duration"=>"30m1h", "workerId"=>"AA53PK560WIO8", "object"=>"shop"}
+{"time"=>"morning", "predicate"=>"mail", "location"=>"post_office", "more"=>"Yes", "duration"=>"0m15m", "workerId"=>"A30N3RNO1PUA2I", "object"=>"letter"}
+{"predicate"=>"service", "time"=>"evening", "workerId"=>"AA53PK560WIO8", "location"=>"car_wash", "more"=>"Yes", "object"=>"car", "duration"=>"30m1h"}
+{"time"=>"morning", "predicate"=>"buy", "location"=>"grocery_or_supermarket", "more"=>"Yes", "duration"=>"15m30m", "workerId"=>"A19OCN9KO1NWNL", "object"=>"food"}
