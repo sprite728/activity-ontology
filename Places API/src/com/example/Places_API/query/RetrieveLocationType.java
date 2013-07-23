@@ -52,15 +52,14 @@ public final class RetrieveLocationType extends AsyncTask<String, Void, String> 
         try {
             String charset = "UTF-8";
             String query = String.format("location=%s&radius=%s&sensor=false&key=%s",
+                        URLEncoder.encode(params[0], charset),
                         URLEncoder.encode(params[1], charset),
-                        URLEncoder.encode(params[2], charset),
                         URLEncoder.encode(key, charset));
 
             URLConnection connection = new URL(url + "?" + query).openConnection();
             connection.setRequestProperty("Accept-Charset", charset);
 
-            InputStream response = null;
-            response = connection.getInputStream();
+            InputStream response = connection.getInputStream();
 
             JSONParser parser = new JSONParser();
             JSONObject object = (JSONObject) parser.parse(new InputStreamReader(response));
@@ -68,7 +67,6 @@ public final class RetrieveLocationType extends AsyncTask<String, Void, String> 
 
             final Map<String, Integer> counter = new HashMap<String, Integer>();
             List<String> locationTypes = Utils.getLocationTypes(context);
-            System.out.println(locationTypes);
             for (Object result : results) {
                 JSONObject place = (JSONObject) result;
                 JSONArray types = (JSONArray) place.get("types");
@@ -89,7 +87,7 @@ public final class RetrieveLocationType extends AsyncTask<String, Void, String> 
             Collections.sort(types, new Comparator<String>() {
                 @Override
                 public int compare(String lhs, String rhs) {
-                    return -(counter.get(lhs) - counter.get(rhs));
+                return -(counter.get(lhs) - counter.get(rhs));
                 }
             });
 

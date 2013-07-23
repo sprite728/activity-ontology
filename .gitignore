@@ -27,6 +27,7 @@ bin/
 .idea/
 gen/
 *.iml
+.classpath
 
 # Java compiled classes
 *.class
