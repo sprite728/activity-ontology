@@ -41,9 +41,6 @@
         <Class IRI="#AchievementOrAward"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Article"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Artifact"/>
     </Declaration>
     <Declaration>
@@ -54,9 +51,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#BodyDecorationType"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Book"/>
     </Declaration>
     <Declaration>
         <Class IRI="#BoughtHome"/>
@@ -242,19 +236,10 @@
         <Class IRI="#OvercameIllness"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Paper"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Patent"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Person"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PlayingActivity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Publication"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Published"/>
@@ -276,6 +261,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#RelationshipType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RelationshipTypeBegin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RelationshipTypeEnd"/>
     </Declaration>
     <Declaration>
         <Class IRI="#RelationshipTypeFM"/>
@@ -308,7 +299,10 @@
         <Class IRI="#TattooOrPiercing"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Thesis"/>
+        <Class IRI="#TimeDuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TimeOfDay"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Travel"/>
@@ -368,16 +362,25 @@
         <ObjectProperty IRI="#hasAward"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasBegunRelationship"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasBodyDecoration"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasBranch"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasCitation"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasCountry"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasCounty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDivision"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasDoctor"/>
@@ -387,6 +390,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasEmployer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEndRelationship"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasEvent"/>
@@ -434,9 +440,6 @@
         <ObjectProperty IRI="#hasPublished"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasRegisteredIn"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasRelationship"/>
     </Declaration>
     <Declaration>
@@ -453,6 +456,12 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSport"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTimeDuration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTimeOfDay"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasUnits"/>
@@ -509,9 +518,6 @@
         <DataProperty IRI="#hasDate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasDivision"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasDueDate"/>
     </Declaration>
     <Declaration>
@@ -551,6 +557,27 @@
         <DataProperty IRI="#hobby"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#isCurrentStudent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#0-15Minutes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#120+Minutes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#15-30Minutes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#30-60Minutes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#60-120Minutes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Afternoon"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Apartment"/>
     </Declaration>
     <Declaration>
@@ -569,6 +596,12 @@
         <NamedIndividual IRI="#Car"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CivilUnion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComplicatedRelationship"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Contacts"/>
     </Declaration>
     <Declaration>
@@ -581,7 +614,19 @@
         <NamedIndividual IRI="#Daughter"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Divorced"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DomesticPartnership"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Drinking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EndedRelationship"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Evening"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Father"/>
@@ -650,6 +695,9 @@
         <NamedIndividual IRI="#Male"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Morning"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Mother"/>
     </Declaration>
     <Declaration>
@@ -665,6 +713,15 @@
         <NamedIndividual IRI="#Niece"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Nighttime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NoneOfTheAbove"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Noon"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ON_BICYCLE"/>
     </Declaration>
     <Declaration>
@@ -672,6 +729,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Omnivore"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OpenRelationship"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Pescetarian"/>
@@ -683,10 +743,16 @@
         <NamedIndividual IRI="#Pounds"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Relationship"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#STILL"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SecondarySchool"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Separated"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Sister"/>
@@ -731,6 +797,9 @@
         <NamedIndividual IRI="#University"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#UniversityPostgrad"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Unspecified"/>
     </Declaration>
     <Declaration>
@@ -738,6 +807,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Vegetarian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Widowed"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Wife"/>
@@ -893,14 +965,23 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#ReadingActivity"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#MicroActivity"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasArtifact"/>
-                <Class IRI="#Book"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="#RelationshipTypeBegin"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#ComplicatedRelationship"/>
+            <NamedIndividual IRI="#CivilUnion"/>
+            <NamedIndividual IRI="#OpenRelationship"/>
+            <NamedIndividual IRI="#Relationship"/>
+            <NamedIndividual IRI="#DomesticPartnership"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RelationshipTypeEnd"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Divorced"/>
+            <NamedIndividual IRI="#EndedRelationship"/>
+            <NamedIndividual IRI="#Separated"/>
+            <NamedIndividual IRI="#Widowed"/>
+        </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#RelationshipTypeFM"/>
@@ -943,8 +1024,30 @@
     <EquivalentClasses>
         <Class IRI="#SchoolType"/>
         <ObjectOneOf>
+            <NamedIndividual IRI="#UniversityPostgrad"/>
             <NamedIndividual IRI="#University"/>
             <NamedIndividual IRI="#SecondarySchool"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TimeDuration"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#NoneOfTheAbove"/>
+            <NamedIndividual IRI="#0-15Minutes"/>
+            <NamedIndividual IRI="#120+Minutes"/>
+            <NamedIndividual IRI="#60-120Minutes"/>
+            <NamedIndividual IRI="#15-30Minutes"/>
+            <NamedIndividual IRI="#30-60Minutes"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TimeOfDay"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Evening"/>
+            <NamedIndividual IRI="#Nighttime"/>
+            <NamedIndividual IRI="#Morning"/>
+            <NamedIndividual IRI="#Noon"/>
+            <NamedIndividual IRI="#Afternoon"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -1027,10 +1130,6 @@
         </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Article"/>
-        <Class IRI="#Publication"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Atomic"/>
         <Class IRI="#MacroActivity"/>
     </SubClassOf>
@@ -1039,8 +1138,11 @@
         <Class IRI="#Unclassified"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Book"/>
-        <Class IRI="#Publication"/>
+        <Class IRI="#AttendingEvent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEvent"/>
+            <Class abbreviatedIRI="db:Event"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#BoughtHome"/>
@@ -1206,6 +1308,13 @@
     <SubClassOf>
         <Class IRI="#EndOfRelationship"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEndRelationship"/>
+            <Class IRI="#RelationshipTypeEnd"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndOfRelationship"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#possibleWhile"/>
             <ObjectOneOf>
                 <NamedIndividual IRI="#ON_FOOT"/>
@@ -1214,6 +1323,13 @@
                 <NamedIndividual IRI="#UNKNOWN"/>
                 <NamedIndividual IRI="#STILL"/>
             </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndOfRelationship"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#relatedTo"/>
+            <Class IRI="#NewRelationship"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1271,6 +1387,20 @@
             <ObjectProperty IRI="#hasParticipant"/>
             <Class IRI="#Person"/>
         </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTimeDuration"/>
+            <Class IRI="#TimeDuration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTimeOfDay"/>
+            <Class IRI="#TimeOfDay"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Event"/>
@@ -1529,16 +1659,23 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MilitaryService"/>
-        <ObjectSomeValuesFrom>
+        <ObjectMinCardinality cardinality="0">
             <ObjectProperty IRI="#hasBranch"/>
             <Class abbreviatedIRI="db:MilitaryUnit"/>
-        </ObjectSomeValuesFrom>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MilitaryService"/>
         <ObjectMinCardinality cardinality="0">
             <ObjectProperty IRI="#hasCountry"/>
             <Class IRI="#Country"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilitaryService"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasDivision"/>
+            <Class abbreviatedIRI="db:MilitaryUnit"/>
         </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -1554,13 +1691,6 @@
             <ObjectProperty IRI="#hasCountry"/>
             <Class IRI="#Country"/>
         </ObjectMaxCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MilitaryService"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasDivision"/>
-            <Datatype abbreviatedIRI="rdfs:Literal"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MilitaryService"/>
@@ -1586,16 +1716,23 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Moved"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#previousAddress"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#currentAddress"/>
             <Class abbreviatedIRI="db:Place"/>
-        </ObjectSomeValuesFrom>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Moved"/>
         <ObjectMinCardinality cardinality="0">
             <ObjectProperty IRI="#hasParticipant"/>
             <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Moved"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#previousAddress"/>
+            <Class abbreviatedIRI="db:Place"/>
         </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -1918,15 +2055,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NewLicence"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#possibleWhile"/>
-            <ObjectOneOf>
-                <NamedIndividual IRI="#IN_VEHICLE"/>
-            </ObjectOneOf>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#NewLicence"/>
         <ObjectMinCardinality cardinality="0">
             <ObjectProperty IRI="#hasCountry"/>
             <Class IRI="#Country"/>
@@ -2018,6 +2146,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NewRelationship"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBegunRelationship"/>
+            <Class IRI="#RelationshipTypeBegin"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewRelationship"/>
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="#hasParticipant"/>
             <Class IRI="#Person"/>
@@ -2051,6 +2186,27 @@
             <DataProperty IRI="#hasGraduated"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewSchool"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#isCurrentStudent"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewSchool"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasEndDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewSchool"/>
+        <DataMinCardinality cardinality="0">
+            <DataProperty IRI="#hasStartDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NewSport"/>
@@ -2169,18 +2325,6 @@
         </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Paper"/>
-        <Class IRI="#Publication"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Patent"/>
-        <Class IRI="#Publication"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Publication"/>
-        <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Published"/>
         <Class IRI="#Atomic"/>
     </SubClassOf>
@@ -2191,6 +2335,13 @@
     <SubClassOf>
         <Class IRI="#Published"/>
         <Class IRI="#Undetectable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Published"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCitation"/>
+            <Class abbreviatedIRI="db:Reference"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Published"/>
@@ -2269,13 +2420,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#RegisteredToVote"/>
-        <ObjectMinCardinality cardinality="0">
-            <ObjectProperty IRI="#hasRegisteredIn"/>
-            <Class abbreviatedIRI="db:Place"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#RelationshipEvent"/>
         <Class IRI="#MacroActivity"/>
     </SubClassOf>
@@ -2285,6 +2429,14 @@
             <Class IRI="#RelationshipTypeFM"/>
             <Class IRI="#RelationshipTypeLO"/>
         </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelationshipTypeBegin"/>
+        <Class IRI="#RelationshipType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelationshipTypeEnd"/>
+        <Class IRI="#RelationshipType"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RelationshipTypeFM"/>
@@ -2462,10 +2614,6 @@
         </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Thesis"/>
-        <Class IRI="#Publication"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Travel"/>
         <Class IRI="#Multistep"/>
     </SubClassOf>
@@ -2574,7 +2722,7 @@
         <Class IRI="#VolunteerWork"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasOrganisation"/>
-            <Class abbreviatedIRI="db:Organisation"/>
+            <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2615,10 +2763,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#WeightLoss"/>
-        <DataSomeValuesFrom>
+        <DataMinCardinality cardinality="0">
             <DataProperty IRI="#amount"/>
             <Datatype abbreviatedIRI="xsd:decimal"/>
-        </DataSomeValuesFrom>
+        </DataMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#WorkEvent"/>
@@ -2705,6 +2853,30 @@
         <Class IRI="#Undetectable"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#TimeDuration"/>
+        <NamedIndividual IRI="#0-15Minutes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TimeDuration"/>
+        <NamedIndividual IRI="#120+Minutes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TimeDuration"/>
+        <NamedIndividual IRI="#15-30Minutes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TimeDuration"/>
+        <NamedIndividual IRI="#30-60Minutes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TimeDuration"/>
+        <NamedIndividual IRI="#60-120Minutes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TimeOfDay"/>
+        <NamedIndividual IRI="#Afternoon"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#HomeType"/>
         <NamedIndividual IRI="#Apartment"/>
     </ClassAssertion>
@@ -2733,6 +2905,14 @@
         <NamedIndividual IRI="#Car"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#RelationshipTypeBegin"/>
+        <NamedIndividual IRI="#CivilUnion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeBegin"/>
+        <NamedIndividual IRI="#ComplicatedRelationship"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#VisionAidType"/>
         <NamedIndividual IRI="#Contacts"/>
     </ClassAssertion>
@@ -2749,8 +2929,24 @@
         <NamedIndividual IRI="#Daughter"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#RelationshipTypeEnd"/>
+        <NamedIndividual IRI="#Divorced"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeBegin"/>
+        <NamedIndividual IRI="#DomesticPartnership"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Vice"/>
         <NamedIndividual IRI="#Drinking"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeEnd"/>
+        <NamedIndividual IRI="#EndedRelationship"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TimeOfDay"/>
+        <NamedIndividual IRI="#Evening"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#RelationshipTypeLO"/>
@@ -2841,6 +3037,10 @@
         <NamedIndividual IRI="#Male"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#TimeOfDay"/>
+        <NamedIndividual IRI="#Morning"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#RelationshipTypeLO"/>
         <NamedIndividual IRI="#Mother"/>
     </ClassAssertion>
@@ -2861,6 +3061,18 @@
         <NamedIndividual IRI="#Niece"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#TimeOfDay"/>
+        <NamedIndividual IRI="#Nighttime"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TimeDuration"/>
+        <NamedIndividual IRI="#NoneOfTheAbove"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TimeOfDay"/>
+        <NamedIndividual IRI="#Noon"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#GoogleActivity"/>
         <NamedIndividual IRI="#ON_BICYCLE"/>
     </ClassAssertion>
@@ -2871,6 +3083,10 @@
     <ClassAssertion>
         <Class IRI="#EatingHabit"/>
         <NamedIndividual IRI="#Omnivore"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeBegin"/>
+        <NamedIndividual IRI="#OpenRelationship"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#EatingHabit"/>
@@ -2885,12 +3101,20 @@
         <NamedIndividual IRI="#Pounds"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#RelationshipTypeBegin"/>
+        <NamedIndividual IRI="#Relationship"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#GoogleActivity"/>
         <NamedIndividual IRI="#STILL"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#SchoolType"/>
         <NamedIndividual IRI="#SecondarySchool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeEnd"/>
+        <NamedIndividual IRI="#Separated"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#RelationshipTypeFM"/>
@@ -2953,6 +3177,10 @@
         <NamedIndividual IRI="#University"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#SchoolType"/>
+        <NamedIndividual IRI="#UniversityPostgrad"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Gender"/>
         <NamedIndividual IRI="#Unspecified"/>
     </ClassAssertion>
@@ -2963,6 +3191,10 @@
     <ClassAssertion>
         <Class IRI="#EatingHabit"/>
         <NamedIndividual IRI="#Vegetarian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RelationshipTypeEnd"/>
+        <NamedIndividual IRI="#Widowed"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#RelationshipTypeLO"/>
@@ -3021,6 +3253,10 @@
         <ObjectProperty IRI="#address"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBegunRelationship"/>
+        <ObjectProperty IRI="#hasRelationship"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCountry"/>
         <ObjectProperty IRI="#hasLocation"/>
     </SubObjectPropertyOf>
@@ -3035,6 +3271,10 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasEmployer"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEndRelationship"/>
+        <ObjectProperty IRI="#hasRelationship"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasRelationshipFM"/>
@@ -3099,11 +3339,23 @@
         <Class IRI="#MacroActivity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBegunRelationship"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasBodyDecoration"/>
         <Class IRI="#MacroActivity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasBranch"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCitation"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDivision"/>
         <Class IRI="#MacroActivity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -3116,6 +3368,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasEmployer"/>
+        <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEndRelationship"/>
         <Class IRI="#MacroActivity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -3179,10 +3435,6 @@
         <Class IRI="#MacroActivity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasRegisteredIn"/>
-        <Class IRI="#MacroActivity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasRelationship"/>
         <Class IRI="#MacroActivity"/>
     </ObjectPropertyDomain>
@@ -3197,6 +3449,14 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSport"/>
         <Class IRI="#MacroActivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTimeDuration"/>
+        <Class abbreviatedIRI="db:Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTimeOfDay"/>
+        <Class abbreviatedIRI="db:Event"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasUnits"/>
@@ -3239,6 +3499,10 @@
         <Class abbreviatedIRI="db:Award"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBegunRelationship"/>
+        <Class IRI="#RelationshipTypeBegin"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasBodyDecoration"/>
         <Class IRI="#BodyDecorationType"/>
     </ObjectPropertyRange>
@@ -3247,12 +3511,20 @@
         <Class abbreviatedIRI="db:MilitaryUnit"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCitation"/>
+        <Class abbreviatedIRI="db:Reference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCountry"/>
         <Class IRI="#Country"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCounty"/>
         <Class IRI="#County"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDivision"/>
+        <Class abbreviatedIRI="db:MilitaryUnit"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDoctor"/>
@@ -3265,6 +3537,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEmployer"/>
         <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEndRelationship"/>
+        <Class IRI="#RelationshipTypeEnd"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEvent"/>
@@ -3312,7 +3588,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasOrganisation"/>
-        <Class abbreviatedIRI="db:Organisation"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasParticipant"/>
@@ -3325,10 +3601,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPublished"/>
         <Class abbreviatedIRI="db:WrittenWork"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasRegisteredIn"/>
-        <Class abbreviatedIRI="db:Place"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasRelationship"/>
@@ -3353,6 +3625,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSport"/>
         <Class abbreviatedIRI="db:Sport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTimeDuration"/>
+        <Class IRI="#TimeDuration"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTimeOfDay"/>
+        <Class IRI="#TimeOfDay"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasUnits"/>
@@ -3419,10 +3699,6 @@
         <Class IRI="#Event"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasDivision"/>
-        <Class IRI="#MacroActivity"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#hasDueDate"/>
         <Class IRI="#ExpectingBaby"/>
     </DataPropertyDomain>
@@ -3466,6 +3742,10 @@
         <DataProperty IRI="#hobby"/>
         <Class IRI="#MacroActivity"/>
     </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isCurrentStudent"/>
+        <Class IRI="#MacroActivity"/>
+    </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#amount"/>
         <Datatype abbreviatedIRI="xsd:decimal"/>
@@ -3489,10 +3769,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasDate"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasDivision"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasDueDate"/>
@@ -3537,6 +3813,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#hobby"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isCurrentStudent"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
@@ -3667,6 +3947,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Discrete</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Discrete</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <IRI>#DoctorVisit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">User has gone to the doctor for medical reasons.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4220,6 +4505,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RelationshipTypeBegin</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relationship Type - Begin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RelationshipTypeEnd</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relationship Type - End</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RelationshipTypeFM</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relationship Type - Family Member</Literal>
     </AnnotationAssertion>
@@ -4292,6 +4587,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TattooOrPiercing</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Tattoo or Piercing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TimeDuration</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Time Duration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TimeOfDay</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Time of Day</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
@@ -4475,6 +4780,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBegunRelationship</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has begun relationship</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBelief</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has belief</Literal>
     </AnnotationAssertion>
@@ -4492,6 +4802,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBreed</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has breed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCitation</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has citation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4540,8 +4855,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEndRelationship</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has ended relationship</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasEvent</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFavouriteSong</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has favourite song</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4575,8 +4900,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasIllness</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has illness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasImprovement</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has improvement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasInstrument</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has instrument</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4600,6 +4935,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasModel</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasModelYear</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has model year</Literal>
     </AnnotationAssertion>
@@ -4620,13 +4960,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasPublished</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has published</Literal>
+        <IRI>#hasProfession</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has profession</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasRegisteredIn</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has registered in</Literal>
+        <IRI>#hasPublished</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has published</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4655,8 +4995,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSport</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has sport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasStartDate</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has start date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTimeDuration</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has time duration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTimeOfDay</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has time of day</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4696,7 +5051,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hobby</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hobby</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has hobby</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4707,6 +5062,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#isConceptOf</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is concept of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCurrentStudent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is current student</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
