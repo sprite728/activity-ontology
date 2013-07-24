@@ -60,6 +60,7 @@ body {
 }
 
 .lead-small {
+  text-align: justify;
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: 200;

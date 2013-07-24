@@ -1,3 +1,5 @@
+var objects = [];
+
 // Fetch objects given a prefix
 var fetchObjects = function() {
     $.getJSON($SCRIPT_ROOT + '/_load_objects', {
