@@ -6,16 +6,17 @@ rootdir = File.dirname $0
 login = rootdir + "/login.rb"
 
 require login
+require "yaml"
 
 hits = RTurk::Hit.all_reviewable
 
 unless hits.empty?
   puts "Reviewing and approving all assignments"
 
-  File.open('results/results.txt', 'a') do |file|
+  File.open('results/results.yaml', 'w') do |file|
     hits.each do |hit|
       hit.assignments.each do |assignment|
-        file.write(assignment.answers.to_s + "\n")
+        file.write(YAML::dump(assignment.answers))
         assignment.approve! if assignment.status == 'Submitted'
       end
     end
