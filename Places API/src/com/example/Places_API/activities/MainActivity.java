@@ -131,31 +131,35 @@ public class MainActivity extends FragmentActivity implements
 
     @Override
     public void onLocationChanged(Location location) {
-        String msg = "Updated Location: " +
-                        Double.toString(location.getLatitude()) + "," +
-                        Double.toString(location.getLongitude());
         getLocationType();
     }
 
     /**
-     * Displays the location type of the current user location in a Toast.
+     * Displays the location type of the current user location in a Toast, and returns
+     * a string representation.
+     *
+     * @return The location type of the current location as a String.
      */
-    public void getLocationType() {
+    public String getLocationType() {
         String coords = getCoordinates();
         String radius = LocationConstants.RADIUS.getValueAsString();
 
+        String locationType = null;
         AsyncTask<String,Void,String> execute = new RetrieveLocationType(this).execute(coords, radius);
         try {
-            Toast.makeText(this, execute.get(), Toast.LENGTH_LONG).show();
+            locationType = execute.get();
+            Toast.makeText(this, locationType, Toast.LENGTH_LONG).show();
         } catch (InterruptedException e) {
             showErrorDialog();
         } catch (ExecutionException e) {
             showErrorDialog();
         }
+
+        return locationType;
     }
 
     /**
-     * Shows an error Toast if something went wrong during the retrieval.
+     * Shows an error Toast if something went wrong during the location type retrieval.
      */
     private void showErrorDialog() {
         Toast.makeText(this, "Error with retrieving type.", Toast.LENGTH_SHORT).show();
