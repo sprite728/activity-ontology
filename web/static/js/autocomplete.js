@@ -3,11 +3,10 @@ $(document).ready(function() {
     $('#predicate').typeahead({
         minLength: 1,
         source: function(query, process) {
-			var object_s = $('#object').val();
-			var predicate_s = $('#predicate').val();
-			if (object_s.length !== 0 && predicate_s.length === 1) {
-				fetchPredicates();
-			}
+            var predicate_s = $('#predicate').val();
+            if (predicate_s.length === 1) {
+                fetchPredicates();
+            }
             process(predicates);
         }
     }).blur(function() {
