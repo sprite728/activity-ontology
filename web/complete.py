@@ -54,7 +54,7 @@ def complete(r, prefix, count=None, db='compl'):
     Args:
         r: Redis instance from which to extract the words.
         prefix: A string representing a prefix to be matched.
-        count: The number of results to be returned. This is None, 
+        count: The number of results to be returned. This is None,
             if all the results are wanted.
         db: The name of the Redis key which to query.
 
@@ -75,5 +75,5 @@ def complete(r, prefix, count=None, db='compl'):
     else:
         hi = r.zrank(db, _prefixes[pos + 1]) - 1
     length = hi - lo if count is None or hi - lo < count else count
-    
+
     return map(lambda s: s[0:-1], r.zrange(db, lo, lo + length))

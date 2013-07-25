@@ -3,6 +3,7 @@ from flask import url_for, abort, flash, _app_ctx_stack, jsonify, make_response
 from werkzeug.contrib.fixers import ProxyFix
 
 import complete
+import collections
 import gzip
 import json
 import redis
@@ -12,6 +13,9 @@ import yaml
 
 app = Flask(__name__)
 app.config.from_object('config')
+
+illegal_predicates = collections.defaultdict(set)
+illegal_objects = collections.defaultdict(set)
 
 
 @app.route('/location/<location>')
@@ -26,7 +30,7 @@ def location_first_experiment(location):
 
     hitId, assignmentId, workerId, turkSubmitTo = get_arguments()
 
-    return render_template('location.html', location=location, 
+    return render_template('location.html', location=location,
         description=description, hitId=hitId, assignmentId=assignmentId,
         workerId=workerId, turkSubmitTo=turkSubmitTo)
 
@@ -45,7 +49,7 @@ def location_second_experiment(location):
 
     hitId, assignmentId, workerId, turkSubmitTo = get_arguments()
 
-    return render_template('location2.html', location=location, 
+    return render_template('location2.html', location=location,
         description=description, hitId=hitId, assignmentId=assignmentId,
         workerId=workerId, turkSubmitTo=turkSubmitTo, responses=responses)
 
@@ -54,9 +58,12 @@ def location_second_experiment(location):
 def load_objects():
     r = redis.StrictRedis(host='localhost', port=6379, db=0)
 
+    predicate = request.args.get('predicate').lower()
     # Query using the prefix; return the list as JSON.
     prefix = request.args.get('prefix').lower()
     data = complete.complete(r, prefix, db='dbpedia')
+    data = [d for d in data if d not in illegal_objects[predicate]]
+
     data.sort(key=lambda item: (len(item), item))
 
     gzip_buffer = StringIO.StringIO()
@@ -72,19 +79,43 @@ def load_objects():
     return response
 
 
+@app.route('/_load_predicates')
+def load_predicates():
+    # Get associated object
+    obj = request.args.get('object').lower()
+
+    with app.open_resource('static/data/predicates.json') as f:
+        data = json.loads(f.read())
+        data = [d for d in data if d not in illegal_predicates[obj]]
+
+        return json.dumps(data)
+
+
 def get_previous_responses(location):
     """Returns a list of responses given by other MTurkers for this location
 
+    Args:
+        location: Location of current HIT, used to filter the previous
+        responses
+
+    Returns:
+        A list of all the previous responses given by MTurk users.
     """
     with app.open_resource('static/data/previous_responses.yaml') as f:
         data = yaml.load_all(f)
+        data = filter(lambda datum: datum['location'] == location, data)
+        for datum in data:
+            datum['predicate'] = datum['predicate'].strip().replace('_', ' ')
+
+            illegal_objects[datum['predicate']].add(datum['object'])
+            illegal_predicates[datum['object']].add(datum['predicate'])
 
         return list(data)
 
 
 def get_locations():
     """Returns the Google Places location types and descriptions.
-    
+
     Returns:
         Two lists, the first with all the location labels, and the second
         with the descriptions for each location
@@ -101,8 +132,8 @@ def get_arguments():
     """Returns the request arguments for a typical call from MTurk
 
     Returns:
-        The parameters required for a HIT submission in MTurk: hitId, 
-            assignmentId, workerId, turkSubmitTo    
+        The parameters required for a HIT submission in MTurk: hitId,
+            assignmentId, workerId, turkSubmitTo
     """
     # Process arguments for MTurk submission
     auxHitId = request.args.get('hitId')

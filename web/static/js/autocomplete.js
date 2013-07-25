@@ -1,9 +1,13 @@
-// Typeahead for predicates. All predicates are statically loaded at the 
-// beginning.
+// Typeahead for predicates
 $(document).ready(function() {
     $('#predicate').typeahead({
         minLength: 1,
-        source: function(query, process) {   
+        source: function(query, process) {
+			var object_s = $('#object').val();
+			var predicate_s = $('#predicate').val();
+			if (object_s.length !== 0 && predicate_s.length === 1) {
+				fetchPredicates();
+			}
             process(predicates);
         }
     }).blur(function() {
