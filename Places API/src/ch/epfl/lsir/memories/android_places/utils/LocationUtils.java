@@ -1,14 +1,11 @@
-package com.example.Places_API.utils;
+package ch.epfl.lsir.memories.android_places.utils;
 
-import android.content.Context;
-import com.example.Places_API.R;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -23,18 +20,19 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Various utility functions.
+ * Various utility functions relating to the Places API.
  *
  * @author Sebastian Claici
  */
-public final class Utils {
+public final class LocationUtils {
 
     private static final String key = "{API KEY}";
     private static final String url = "https://maps.googleapis.com/maps/api/place/search/json";
 
     private static List<String> locationTypes;
 
-    private Utils() {}
+    private LocationUtils() {
+    }
 
     /**
      * Initialize the locationTypes array from a static resource file.
@@ -80,6 +78,11 @@ public final class Utils {
 
         JSONParser parser = new JSONParser();
         JSONObject object = (JSONObject) parser.parse(new InputStreamReader(response));
+
+        String status = (String) object.get("status");
+        if (status.equals("REQUEST_DENIED") || status.equals("OVER_QUERY_LIMIT"))
+            return status;
+
         JSONArray results = (JSONArray) object.get("results");
 
         final Map<String, Integer> counter = new HashMap<String, Integer>();

@@ -1,4 +1,4 @@
-package com.example.Places_API.activities;
+package ch.epfl.lsir.memories.android_places.activities;
 
 import android.content.Context;
 import android.content.IntentSender;
@@ -7,12 +7,11 @@ import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.View;
 import android.widget.Toast;
 import com.example.Places_API.R;
-import com.example.Places_API.query.RetrieveLocationType;
-import com.example.Places_API.utils.LocationConstants;
-import com.example.Places_API.utils.TimeConstants;
+import ch.epfl.lsir.memories.android_places.query.RetrieveLocationType;
+import ch.epfl.lsir.memories.android_places.utils.LocationConstants;
+import ch.epfl.lsir.memories.android_places.utils.TimeConstants;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -145,7 +144,7 @@ public class MainActivity extends FragmentActivity implements
         String radius = LocationConstants.RADIUS.getValueAsString();
 
         String locationType = null;
-        AsyncTask<String,Void,String> execute = new RetrieveLocationType(this).execute(coords, radius);
+        AsyncTask<String, Void, String> execute = new RetrieveLocationType(this).execute(coords, radius);
         try {
             locationType = execute.get();
             Toast.makeText(this, locationType, Toast.LENGTH_LONG).show();
@@ -188,9 +187,9 @@ public class MainActivity extends FragmentActivity implements
      * @return <b>true</b> if the Play services are connected, <b>false</b> otherwise
      */
     private boolean servicesConnected() {
-       // Check that Google Play services is available
+        // Check that Google Play services is available
         int resultCode = GooglePlayServicesUtil.
-                            isGooglePlayServicesAvailable(this);
+                isGooglePlayServicesAvailable(this);
         if (resultCode != ConnectionResult.SUCCESS) {
             GooglePlayServicesUtil.getErrorDialog(resultCode, this, 0).show();
 

@@ -1,6 +1,8 @@
-package com.example.Places_API.utils;
+package ch.epfl.lsir.memories.android_places.utils;
 
 /**
+ * Constants to represent time intervals.
+ *
  * @author Sebastian Claici
  */
 public enum TimeConstants {

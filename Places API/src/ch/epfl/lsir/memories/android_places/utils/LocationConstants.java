@@ -1,4 +1,4 @@
-package com.example.Places_API.utils;
+package ch.epfl.lsir.memories.android_places.utils;
 
 /**
  * Various integer constants. Will remove if we don't need it for very many of them.
