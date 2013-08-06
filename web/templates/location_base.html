@@ -5,65 +5,77 @@
 {% block content %}
 <!-- Submission form -->   
 <form id="submit-form" action="{{ turkSubmitTo }}" method="GET" class="questions">
-    {% if location == 'atm' %}
-    <h2 class="questions-heading">{{ location|upper }}</h2>
-    {% elif location == 'rv_park' %}
-    <h2 class="questions-heading">RV park</h2>
-    {% else %}
-    <h2 class="questions-heading">{{ location|replace("_", " ")|capitalize }}</h2>
-    {% endif %}
-    <p class="lead">{{ description }}</p>
-    <div class="submit_form">
-        <div class="row">
-            <div class="span3">
-                <span class="label label-success" style="font-size:15px">Verb:</span> 
-                <input id="predicate" name="predicate" type="text" class="span4" placeholder="Verb" required>
-                <span class="label label-info" style="font-size:15px">Object:</span> 
-                <input id="object" name="object" type="text" class="span4" placeholder="Object" required>
+    <fieldset>
+        {% if location == 'atm' %}
+        <h2 class="questions-heading">{{ location|upper }}</h2>
+        {% elif location == 'rv_park' %}
+        <h2 class="questions-heading">RV park</h2>
+        {% else %}
+        <h2 class="questions-heading">{{ location|replace("_", " ")|capitalize }}</h2>
+        {% endif %}
+        <p class="lead">{{ description }}</p>
+        <div class="submit_form">
+            <div class="row">
+                <div class="span3">
+                    <span class="label label-success" style="font-size:15px">Verb:</span> 
+                    <input id="predicate" name="predicate" type="text" class="span4" placeholder="Verb" required>
+                    <span class="label label-info" style="font-size:15px">Object:</span> 
+                    <input id="object" name="object" type="text" class="span4" placeholder="Object" required>
 
-                <span class="label" style="font-size:15px">Duration:</span>
-                <select id="duration" name="duration" required>
-                    <option value="0m15m">0-15 Minutes</option>
-                    <option value="15m30m">15-30 Minutes</option>
-                    <option value="30m1h">30 Minutes to 1 Hour</option>
-                    <option value="1h2h">1-2 Hours</option>
-                    <option value="2h">2 Hours or More</option>
-                    <option value="none">None of the Above</option>
-                </select>
+                    <span class="label" style="font-size:15px">Duration:</span>
+                    <select id="duration" name="duration" required>
+                        <option value="0m15m">0-15 Minutes</option>
+                        <option value="15m30m">15-30 Minutes</option>
+                        <option value="30m1h">30 Minutes to 1 Hour</option>
+                        <option value="1h2h">1-2 Hours</option>
+                        <option value="2h">2 Hours or More</option>
+                        <option value="none">None of the Above</option>
+                    </select>
 
-                <span class="label" style="font-size:15px">Time of Day:</span>
-                <select id="time" name="time" multiple required>
-                    <option value="morning">Morning</option>
-                    <option value="noon">Noon</option>
-                    <option value="afternoon">Afternoon</option>
-                    <option value="evening">Evening</option>
-                    <option value="night">Nighttime</option>
-                </select>
+                    <span class="label" style="font-size:15px">Time of Day:</span>
+                    <div class="checkbox">
+                        <label>
+                            <input name="time" id="morning" type="checkbox" value="morning" >Morning
+                        </label>
+                        <label>
+                            <input name="time" id="noon" type="checkbox" value="noon" >Noon
+                        </label>
+                        <label>
+                            <input name="time" id="afternoon" type="checkbox" value="afternoon" >Afternoon
+                        </label>
+                        <label>
+                            <input name="time" id="evening" type="checkbox" value="evening" >Evening
+                        </label>
+                        <label>
+                            <input name="time" id="nighttime" type="checkbox" value="nighttime" >Nighttime
+                        </label>
+                    </div>
+                </div>
+
+                <input id="location" name="location" type="hidden" value="{{ location }}">
+                <input id="hitId" name="hitId" type="hidden" value="{{ hitId }}">
+                <input id="assignmentId" name="assignmentId" type="hidden" value="{{ assignmentId }}">
+                <input id="workerId" name="workerId" type="hidden" value="{{ workerId }}">
             </div>
 
-            <input id="location" name="location" type="hidden" value="{{ location }}">
-            <input id="hitId" name="hitId" type="hidden" value="{{ hitId }}">
-            <input id="assignmentId" name="assignmentId" type="hidden" value="{{ assignmentId }}">
-            <input id="workerId" name="workerId" type="hidden" value="{{ workerId }}">
-        </div>
-
-        <div class="outer">
-            <hr>
-            <p class="lead-small">Can you think of other activities for this location?</p>
-            <div class="forms-inline">
-                <div class="controls-row">
-                    <label class="radio inline">
-                        <input id="r1" name="more" type="radio" value="Yes" required><b>Yes</b>
-                    </label>
-                    <label class="radio inline">
-                        <input id="r2" name="more" type="radio" value="No" required><b>No</b>
-                    </label>
+            <div class="outer">
+                <hr>
+                <p class="lead-small">Can you think of other activities for this location?</p>
+                <div class="forms-inline">
+                    <div class="controls-row">
+                        <label class="radio inline">
+                            <input id="r1" name="more" type="radio" value="Yes" required><b>Yes</b>
+                        </label>
+                        <label class="radio inline">
+                            <input id="r2" name="more" type="radio" value="No" required><b>No</b>
+                        </label>
+                    </div>
                 </div>
             </div>
+            <hr>
+            <input class="btn btn-large btn-primary" type="submit" value="Submit">
         </div>
-        <hr>
-        <input class="btn btn-large btn-primary" type="submit" value="Submit">
-    </div>
+    </fieldset>
 </form>
 
 {% endblock %}
@@ -92,7 +104,7 @@
 </script>
 
 <script type="text/javascript">
-{% if assignmentId == 'ASSIGNMENT_ID_NOT_AVAILABLE' %}
+    {% if assignmentId == 'ASSIGNMENT_ID_NOT_AVAILABLE' %}
     $("input").attr("disabled", "true");
 {% endif %}
 
