@@ -21,6 +21,14 @@ public final class EvaluateLocationType {
     private EvaluateLocationType() {
     }
 
+    /**
+     * Read in a file of GPS coordinates and extract the types from each coordinate.
+     *
+     * The files are taken from the Microsoft Geolife dataset.
+     *
+     * @param infile File to read data from.
+     * @param outfile File to write results to.
+     */
     public static void evaluateAgainstFile(File infile, File outfile) throws IOException, ParseException {
         LocationUtils.initLocationTypes(new BufferedReader(
                 new FileReader("/home/sebastian/Documents/Internship/Ontology/Places API/res/raw/locations.txt")));
@@ -49,6 +57,13 @@ public final class EvaluateLocationType {
         out.close();
     }
 
+    /**
+     * Recursively evaluate each file in a directory structure.
+     *
+     * I assume files that contain relevant data have the .plt extension.
+     *
+     * @param directory Directory to recursively explore.
+     */
     public static void evaluateAgainstDirectory(File directory) {
         if (!directory.isDirectory())
             throw new IllegalArgumentException();

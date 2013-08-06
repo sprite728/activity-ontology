@@ -7,7 +7,9 @@ import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.widget.Toast;
+import ch.epfl.lsir.memories.android_places.utils.Utils;
 import com.example.Places_API.R;
 import ch.epfl.lsir.memories.android_places.query.RetrieveLocationType;
 import ch.epfl.lsir.memories.android_places.utils.LocationConstants;
@@ -18,6 +20,19 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
+import com.hp.hpl.jena.graph.Node;
+import com.hp.hpl.jena.graph.Triple;
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.Statement;
+import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.rdf.model.impl.ModelCom;
+import deri.org.store.BDBGraph;
 
 import java.util.concurrent.ExecutionException;
 
@@ -55,7 +70,49 @@ public class MainActivity extends FragmentActivity implements
         mLocationClient = new LocationClient(this, this, this);
         // Start with updates turned on
         mUpdatesRequested = true;
+
+        new preStubClass().execute();
     }
+
+    public final class preStubClass extends AsyncTask<Void, Void, Void> {
+
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            Node s,p,o;
+            Triple t;
+            s = Node.createURI("http://example.org");
+            p = Node.createURI("http://xmlns.com/foaf/0.1/name");
+            o = Node.createLiteral("Anh Le Tuan");
+
+            t = new Triple(s, p, o);
+
+            BDBGraph graph = new BDBGraph("example");
+            graph.add(t);
+            graph.sync();
+
+            ModelCom model = new ModelCom(graph);
+
+            String queryString = Utils.join("\n", "PREFIX foaf: <http://xmlns.com/foaf/0.1/>",
+                    "SELECT ?name {",
+                    "?uri foaf:name ?name .",
+                    "}");
+
+            Query query = QueryFactory.create(queryString);
+            QueryExecution qExec = QueryExecutionFactory.create(query, model);
+
+            for (ResultSet itr = qExec.execSelect(); itr.hasNext(); ) {
+                QuerySolution sol = itr.next();
+                Log.d("QUERY", sol.get("name").toString());
+            }
+            qExec.close();
+
+            graph.close();
+
+            return null;
+        }
+    }
+
 
     @Override
     protected void onStart() {
@@ -115,7 +172,7 @@ public class MainActivity extends FragmentActivity implements
 
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
-        if (connectionResult.hasResolution()) {
+       /* if (connectionResult.hasResolution()) {
             try {
                 connectionResult.startResolutionForResult(
                         this,
@@ -125,7 +182,7 @@ public class MainActivity extends FragmentActivity implements
             }
         } else {
             GooglePlayServicesUtil.getErrorDialog(connectionResult.getErrorCode(), this, 0).show();
-        }
+        }*/
     }
 
     @Override

@@ -23,4 +23,17 @@ public final class Utils {
 
         return name.substring(name.lastIndexOf("."));
     }
+
+    public static String join(String sep, String... args) {
+        if (args.length == 0)
+            return "";
+
+        StringBuffer buf = new StringBuffer(args[0]);
+        for (int i = 1; i < args.length; ++i) {
+            buf.append(sep);
+            buf.append(args[i]);
+        }
+
+        return buf.toString();
+    }
 }

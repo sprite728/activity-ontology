@@ -49,5 +49,4 @@ public final class RetrieveLocationType extends AsyncTask<String, Void, String> 
         return retval;
     }
 
-
 }
