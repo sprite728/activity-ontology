@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'ruby-aws'
+
 @mturk = Amazon::WebServices::MechanicalTurkRequester.new :Host => :Production
 
 def createNewExternalQuestion
@@ -9,17 +10,35 @@ def createNewExternalQuestion
          " the locations in which they might take place"
   keywords = "activity, recognition, location, mapping"
   numAssignments = 1
-  numHits = 50
-  rewardAmount = 0.05 
 
+  numHits = -1
+  rewardAmount = 0.03
   base = 'http://crowd.fooshed.net/location/'
-  locations = IO.read("misc/locs.txt").split()
+
+  if ARGV.length == 1
+    numHits = ARGV[0].to_i
+  elsif ARGV.length == 2
+    numHits = ARGV[0].to_i
+    rewardAmount = ARGV[1].to_f
+  elsif ARGV.length == 3
+    numHits = ARGV[0].to_i
+    rewardAmount = ARGV[1].to_f
+    base = ARGV[2]
+  end
+
+  p numHits
+  p rewardAmount
+  p base
+
+  locations = IO.read(Dir.pwd + "/misc/locs.txt").split()
   locations.map! { |x| x.strip() }
 
-  # Change next line to publish all
   locations.sort_by! { rand }
-  locations.slice!(numHits..-1)
+  # Publish only numHits HITs
+  locations = locations.slice(0..numHits-1)
 
+
+  # Wrap HIT into an ExternalQuestion form and send it to MTurk
   locations.each do |location|
     link = base + location
     p link
@@ -49,6 +68,13 @@ def getHITUrl( hitTypeId )
   else
     "http://mturk.com/mturk/preview?groupId=#{hitTypeId}"   # Production Url
   end
+end
+
+USAGE = 'USAGE: publish_external [NUM HITs] [REWARD] [BASE_URL]'
+
+if ARGV.length > 0 && ARGV[0] == '--help'
+  puts USAGE
+  exit(0)
 end
 
 createNewExternalQuestion
