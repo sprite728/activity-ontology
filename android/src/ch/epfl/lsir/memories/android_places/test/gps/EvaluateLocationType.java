@@ -1,6 +1,6 @@
 package ch.epfl.lsir.memories.android_places.test.gps;
 
-import ch.epfl.lsir.memories.android_places.utils.LocationUtils;
+import ch.epfl.lsir.memories.android_places.utils.loc.LocationUtils;
 import ch.epfl.lsir.memories.android_places.utils.Utils;
 import org.json.simple.parser.ParseException;
 
@@ -39,7 +39,7 @@ public final class EvaluateLocationType {
         // Discard first 6 lines;
         for (int i = 0; i < 6; ++i, in.readLine()) ;
 
-        // Read data, find location type, and write to output file
+        // Read data, find location loc, and write to output file
         for (String line = in.readLine(); line != null; line = in.readLine()) {
             int firstComma = line.indexOf(",");
             String coords = line.substring(0, line.indexOf(",", firstComma + 1));

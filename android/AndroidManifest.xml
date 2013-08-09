@@ -18,6 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="ch.epfl.lsir.memories.android_places.activities.BenchmarkActivity"/>
 
     </application>
 </manifest>

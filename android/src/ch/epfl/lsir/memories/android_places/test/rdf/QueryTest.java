@@ -13,7 +13,7 @@ import deri.org.store.BDBGraph;
 /**
  * @author Sebastian Claici
  */
-public class QueryTest {
+public final class QueryTest {
 
     public static void main(String[] args) {
         BDBGraph graph = new BDBGraph("store");

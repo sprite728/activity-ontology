@@ -1,18 +1,20 @@
 package ch.epfl.lsir.memories.android_places.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
-import ch.epfl.lsir.memories.android_places.utils.Utils;
+import ch.epfl.lsir.memories.android_places.test.benchmark.BenchmarkStorage;
+import ch.epfl.lsir.memories.android_places.utils.rdf.RDFUtils;
 import com.example.Places_API.R;
-import ch.epfl.lsir.memories.android_places.query.RetrieveLocationType;
-import ch.epfl.lsir.memories.android_places.utils.LocationConstants;
+import ch.epfl.lsir.memories.android_places.query.loc.RetrieveLocationType;
+import ch.epfl.lsir.memories.android_places.utils.loc.LocationConstants;
 import ch.epfl.lsir.memories.android_places.utils.TimeConstants;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
@@ -20,20 +22,8 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
-import com.hp.hpl.jena.graph.Node;
-import com.hp.hpl.jena.graph.Triple;
-import com.hp.hpl.jena.query.Query;
-import com.hp.hpl.jena.query.QueryExecution;
-import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.query.QueryFactory;
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.query.ResultSet;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.Statement;
-import com.hp.hpl.jena.rdf.model.StmtIterator;
-import com.hp.hpl.jena.rdf.model.impl.ModelCom;
-import deri.org.store.BDBGraph;
 
+import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends FragmentActivity implements
@@ -70,49 +60,7 @@ public class MainActivity extends FragmentActivity implements
         mLocationClient = new LocationClient(this, this, this);
         // Start with updates turned on
         mUpdatesRequested = true;
-
-        new preStubClass().execute();
     }
-
-    public final class preStubClass extends AsyncTask<Void, Void, Void> {
-
-
-        @Override
-        protected Void doInBackground(Void... params) {
-            Node s,p,o;
-            Triple t;
-            s = Node.createURI("http://example.org");
-            p = Node.createURI("http://xmlns.com/foaf/0.1/name");
-            o = Node.createLiteral("Anh Le Tuan");
-
-            t = new Triple(s, p, o);
-
-            BDBGraph graph = new BDBGraph("example");
-            graph.add(t);
-            graph.sync();
-
-            ModelCom model = new ModelCom(graph);
-
-            String queryString = Utils.join("\n", "PREFIX foaf: <http://xmlns.com/foaf/0.1/>",
-                    "SELECT ?name {",
-                    "?uri foaf:name ?name .",
-                    "}");
-
-            Query query = QueryFactory.create(queryString);
-            QueryExecution qExec = QueryExecutionFactory.create(query, model);
-
-            for (ResultSet itr = qExec.execSelect(); itr.hasNext(); ) {
-                QuerySolution sol = itr.next();
-                Log.d("QUERY", sol.get("name").toString());
-            }
-            qExec.close();
-
-            graph.close();
-
-            return null;
-        }
-    }
-
 
     @Override
     protected void onStart() {
@@ -177,9 +125,7 @@ public class MainActivity extends FragmentActivity implements
                 connectionResult.startResolutionForResult(
                         this,
                         CONNECTION_FAILURE_RESOLUTION_REQUEST);
-            } catch (IntentSender.SendIntentException e) {
-                e.printStackTrace();
-            }
+            } catch (IntentSender.SendIntentException e) {}
         } else {
             GooglePlayServicesUtil.getErrorDialog(connectionResult.getErrorCode(), this, 0).show();
         }*/
@@ -191,10 +137,10 @@ public class MainActivity extends FragmentActivity implements
     }
 
     /**
-     * Displays the location type of the current user location in a Toast, and returns
+     * Displays the location loc of the current user location in a Toast, and returns
      * a string representation.
      *
-     * @return The location type of the current location as a String.
+     * @return The location loc of the current location as a String.
      */
     public String getLocationType() {
         String coords = getCoordinates();
@@ -215,10 +161,10 @@ public class MainActivity extends FragmentActivity implements
     }
 
     /**
-     * Shows an error Toast if something went wrong during the location type retrieval.
+     * Shows an error Toast if something went wrong during the location loc retrieval.
      */
     private void showErrorDialog() {
-        Toast.makeText(this, "Error with retrieving type.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Error with retrieving loc.", Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -254,6 +200,11 @@ public class MainActivity extends FragmentActivity implements
         }
 
         return true;
+    }
+
+    public void benchmark(View view) {
+        Intent intent = new Intent(this, BenchmarkActivity.class);
+        startActivity(intent);
     }
 
 }
