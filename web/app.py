@@ -2,11 +2,13 @@ from flask import Flask, render_template, request, session, g, redirect
 from flask import url_for, abort, flash, _app_ctx_stack, jsonify, make_response
 from werkzeug.contrib.fixers import ProxyFix
 
+import codecs
 import complete
 import collections
 import gzip
 import json
 import redis
+import random
 import StringIO
 import sys
 import yaml
@@ -27,12 +29,14 @@ def location_first_experiment(location):
     else:
         # Abort if the location is unknown
         abort(404)
+    # Create honeypot for this location
+    honeypot = make_honeypot(locations, location)
 
     hitId, assignmentId, workerId, turkSubmitTo = get_arguments()
 
     return render_template('location.html', location=location,
-        description=description, hitId=hitId, assignmentId=assignmentId,
-        workerId=workerId, turkSubmitTo=turkSubmitTo)
+        description=description, honeypot=honeypot, hitId=hitId,
+        assignmentId=assignmentId, workerId=workerId, turkSubmitTo=turkSubmitTo)
 
 
 @app.route('/location2/<location>')
@@ -44,14 +48,16 @@ def location_second_experiment(location):
     else:
         # Abort if the location is unknown
         abort(404)
+    # Create honeypot for this location
+    honeypot = make_honeypot(locations, location)
 
     responses = get_previous_responses(location)
 
     hitId, assignmentId, workerId, turkSubmitTo = get_arguments()
 
     return render_template('location2.html', location=location,
-        description=description, hitId=hitId, assignmentId=assignmentId,
-        workerId=workerId, turkSubmitTo=turkSubmitTo, responses=responses)
+        description=description, honeypot=honeypot, responses=responses,
+        hitId=hitId, assignmentId=assignmentId, workerId=workerId, turkSubmitTo=turkSubmitTo)
 
 
 @app.route('/_load_objects')
@@ -90,6 +96,13 @@ def load_predicates():
 
         return json.dumps(data)
 
+# Get locations for honeypot question
+def make_honeypot(locations, location):
+    random.shuffle(locations)
+    i = locations.index(location)
+
+    return [locations[i-2], locations[i-1], locations[i]]
+
 
 def get_previous_responses(location):
     """Returns a list of responses given by other MTurkers for this location
@@ -120,10 +133,11 @@ def get_locations():
         Two lists, the first with all the location labels, and the second
         with the descriptions for each location
     """
+    charset='utf-8'
     with app.open_resource('static/data/label_desc.txt') as f:
         lines = f.readlines()
-        locations = [lines[i].strip() for i in range(0, len(lines), 2)]
-        descriptions = [lines[i].strip() for i in range(1, len(lines), 2)]
+        locations = [lines[i].decode(charset).strip() for i in range(0, len(lines), 2)]
+        descriptions = [lines[i].decode(charset).strip() for i in range(1, len(lines), 2)]
 
     return locations, descriptions
 

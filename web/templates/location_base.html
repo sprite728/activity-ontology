@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "index.html" %}p
 
 {% block head %}{% endblock %}
 
@@ -61,7 +61,7 @@
             <div class="outer">
                 <hr>
                 <p class="lead-small">Can you think of other activities for this location?</p>
-                <div class="forms-inline">
+                <div class="forms-inline" style="margin-bottom:10px">
                     <div class="controls-row">
                         <label class="radio inline">
                             <input id="r1" name="more" type="radio" value="Yes" required><b>Yes</b>
@@ -71,6 +71,19 @@
                         </label>
                     </div>
                 </div>
+
+                <p class="lead-small">What location is the question about?</p>
+                <select id="honeypot" name="honeypot">
+                    {% for loc in honeypot %} 
+                        {% if loc == 'atm' %}
+                            <option value="{{ loc }}">ATM</option>
+                        {% elif loc == 'rv_park' %}
+                            <option value="{{ loc }}">RV park</option>
+                        {% else %}
+                            <option value="{{ loc }}">{{ loc|replace("_", " ")|capitalize }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
             </div>
             <hr>
             <input class="btn btn-large btn-primary" type="submit" value="Submit">
@@ -104,8 +117,9 @@
 </script>
 
 <script type="text/javascript">
-    {% if assignmentId == 'ASSIGNMENT_ID_NOT_AVAILABLE' %}
+{% if assignmentId == 'ASSIGNMENT_ID_NOT_AVAILABLE' %}
     $("input").attr("disabled", "true");
+    $("select").attr("disabled", "true");
 {% endif %}
 
 $('#duration').prop('selectedIndex', -1);

@@ -1,9 +1,9 @@
 accounting
-Accountancy, or accounting, is the production of financial records about an organization
+Accountancy, or accounting, is the production of financial records about an organization. An establishment that deals with accounting is an accounting firm.
 airport
 An airport is a location where aircraft such as fixed-wing aircraft, helicopters, and blimps take off and land
 amusement_park
-An Amusement park or theme park is a group of entertainment attractions, rides, and other events in a location for the enjoyment of large numbers of people
+An amusement park or theme park is a group of entertainment attractions, rides, and other events in a location for the enjoyment of large numbers of people
 aquarium
 An aquarium (plural aquariums or aquaria) is a vivarium consisting of at least one transparent side in which water-dwelling plants or animals are kept
 art_gallery
@@ -23,7 +23,7 @@ A bicycle store is a store that sells, buys or repairs bicycles.
 book_store
 Bookselling is the commercial trading of books, the retail and distribution end of the publishing process
 bowling_alley
-Bowling refers to a series of sports or leisure activities in which a player rolls or throws a bowling ball
+Bowling refers to a series of sports or leisure activities in which a player rolls or throws a bowling ball. A bowling alley is an establishment where people play bowling.
 bus_station
 A bus station is a structure where city or intercity buses stop to pick up and drop off passengers
 cafe
@@ -61,19 +61,19 @@ A physician is a professional who practices medicine, which is concerned with pr
 electrician
 An electrician is a tradesperson specializing in electrical wiring of buildings, stationary machines and related equipment
 electronics_store
-Consumer electronics (abbreviated CE) are electronic equipment intended for everyday use, most often in entertainment, communications and office productivity
+Consumer electronics (abbreviated CE) are electronic equipment intended for everyday use, most often in entertainment, communications and office productivity. An electronics store is a store that sells consumer electronics.
 embassy
-A diplomatic mission is a group of people from one state or an international inter-governmental organisation (such as the United Nations) present in another state to represent the sending state/organisation officially in the receiving state
+A building containing the offices of an ambassador and staff.
 establishment
 A business organization, public institution, or household.
 finance
-Finance is the study of funds management, or the allocation of assets and liabilities over time under conditions of certainty and uncertainty
+Finance is the study of funds management, or the allocation of assets and liabilities over time under conditions of certainty and uncertainty. 
 fire_station
 A fire station (also called a fire house, fire hall, or firemen's hall) is a structure or other area set aside for storage of firefighting apparatus such as fire engines and related vehicles, personal protective equipment, fire hoses and other specialized equipment
 florist
 Floristry is the production, commerce and trade in flowers
 food
-Food is any substance consumed to provide nutritional support for the body
+An establishment that sells food or produce.
 funeral_home
 A funeral home, funeral parlor or mortuary, is a business that provides burial and funeral services for the dead and their families
 furniture_store
@@ -123,7 +123,7 @@ Take-out or takeout (in North American and Philippine English), carry-out (in U.
 mosque
 A mosque (/mɒsk/; Arabic:مسجد masjid pl. مساجد masājid), sometimes spelt mosk, is a place of worship for followers of Islam
 movie_rental
-Renting, also known as hiring, is an agreement where a payment is made for the temporary use of a good, service or property owned by another
+Renting, also known as hiring, is an agreement where a payment is made for the temporary use of a good, service or property owned by another. A movie rental is an establishment that rents movies.
 movie_theater
 A movie theater or movie theatre (also called a cinema, movie house, film house, film theater or picture house) is a venue, usually a building, for viewing movies (films)
 moving_company
@@ -137,7 +137,7 @@ Painting is the practice of applying paint, pigment, color or other medium to a 
 park
 A park is an area of open space provided for recreational use
 parking
-Parking is the act of stopping and disengaging a vehicle and leaving it unoccupied
+Parking is space in which to park vehicles or a vehicle.
 pet_store
 A pet store or pet shop is a retail business which sells different kinds of animals, pet food, animal supplies, and pet accessories
 pharmacy
@@ -153,13 +153,13 @@ The police are a constituted body of persons empowered by the state to enforce t
 post_office
 A post office, historically also a posthouse, is a facility forming part of a postal system for the posting, receipt, sorting, handling, transmission or delivery of mail, such as letters, small packages, and usually money
 real_estate_agency
-The law of agency is an area of commercial law dealing with a set of contractual, quasi-contractual and non-contractual relationships that involve a person, called the agent, that is authorized to act on behalf of another (called the principal) to create a legal relationship with a third party
+A person who is authorized to act as an agent for the sale of land.
 restaurant
 A restaurant (/ˈrɛstərənt/ or /ˈrɛstərɒnt/; French: [ʀɛs.to.ʁɑ̃] ( listen)) is a business establishment which prepares and serves food and drink to customers in return for money, either paid before the meal, after the meal, or with a running tab
 roofing_contractor
-jewelry dealer: a firm that sells and buys jewelry
+A contractor that deals with the process of roofing.
 rv_park
-A recreational vehicle park (RV park) or caravan park is a place where people with recreational vehicles can stay overnight, or longer, in allotted spaces known as pitches(sitesin North America, Europe, and Australia).
+A recreational vehicle park (RV park) or caravan park is a place where people with recreational vehicles can stay overnight, or longer, in allotted spaces known as pitches (sites in North America, Europe, and Australia).
 school
 A school is an institution designed for the teaching of students (or pupils) under the direction of teachers
 shoe_store
@@ -181,7 +181,7 @@ A synagogue, also spelled synagog (from Greek: συναγωγή transliterated s
 taxi_stand
 A taxicab stand (also called taxi rank, cab stand, taxi stand, cab rank, or hack stand) is a queue area on a street or on private property where taxicabs line up to wait for passengers
 train_station
-A train station, also referred to as a railway station (in Commonwealth English) or a railroad station (in US English) and often shortened to just station,[note 1] is a railway facility where trains regularly stop to load or unload passengers and/or freight
+A train station, also referred to as a railway station (in Commonwealth English) or a railroad station (in US English) and often shortened to just station, is a railway facility where trains regularly stop to load or unload passengers and/or freight
 travel_agency
 A travel agency is a private retailer or public service that provides tourism related services to the public on behalf of suppliers such as airlines, car rentals, cruise lines, hotels, railways, and package tours
 university
