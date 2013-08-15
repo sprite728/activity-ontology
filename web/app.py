@@ -50,7 +50,6 @@ def location_second_experiment(location):
         abort(404)
     # Create honeypot for this location
     honeypot = make_honeypot(locations, location)
-
     responses = get_previous_responses(location)
 
     hitId, assignmentId, workerId, turkSubmitTo = get_arguments()
@@ -85,6 +84,30 @@ def load_objects():
     return response
 
 
+@app.route('/_load_objects2')
+def load_objects2():
+    # Get associated predicate
+    predicate = request.args.get('predicate').lower()
+
+    with app.open_resource('static/data/objects.json') as f:
+        data = json.loads(f.read())
+        data = [d for d in data if d not in illegal_objects[predicate]]
+
+        data.sort(key=lambda item: (len(item), item))
+
+        gzip_buffer = StringIO.StringIO()
+        gzip_file = gzip.GzipFile(mode='wb', compresslevel=4, fileobj=gzip_buffer)
+        gzip_file.write(json.dumps(data))
+        gzip_file.close()
+
+        response = make_response()
+        response.data = gzip_buffer.getvalue()
+        response.headers['Content-Encoding'] = 'gzip'
+        response.headers['Content-Length'] = len(response.data)
+
+        return response
+
+
 @app.route('/_load_predicates')
 def load_predicates():
     # Get associated object
@@ -105,7 +128,9 @@ def make_honeypot(locations, location):
 
 
 def get_previous_responses(location):
-    """Returns a list of responses given by other MTurkers for this location
+    """Returns a list of responses given by other MTurkers for this location.
+
+    Expects a CSV file where the first line represents the column names.
 
     Args:
         location: Location of current HIT, used to filter the previous
@@ -114,16 +139,28 @@ def get_previous_responses(location):
     Returns:
         A list of all the previous responses given by MTurk users.
     """
-    with app.open_resource('static/data/previous_responses.yaml') as f:
-        data = yaml.load_all(f)
-        data = filter(lambda datum: datum['location'] == location, data)
+    with app.open_resource('static/data/previous.csv') as f:
+        lines = f.readlines()
+        keys = lines[0].split(',')
+
+        data = []
+        for line in lines[1:]:
+            vals = line.split(',')
+            d = {}
+            for (k, v) in zip(keys, vals):
+                d[k] = v
+
+            if d['location'] == location:
+                predicate = d['predicate'].strip().replace('_', ' ')
+                obj = d['object'].strip().replace('_', ' ')
+
+                data.append((predicate, obj))
+
         for datum in data:
-            datum['predicate'] = datum['predicate'].strip().replace('_', ' ')
+            illegal_objects[datum[0]].add(datum[1])
+            illegal_predicates[datum[1]].add(datum[0])
 
-            illegal_objects[datum['predicate']].add(datum['object'])
-            illegal_predicates[datum['object']].add(datum['predicate'])
-
-        return list(data)
+        return sorted(set(data))
 
 
 def get_locations():
@@ -167,4 +204,4 @@ def get_arguments():
 
 if __name__ == '__main__':
     app.wsgi_app = ProxyFix(app.wsgi_app)
-    app.run(debug=False)
+    app.run(debug=True)

@@ -11,7 +11,7 @@
     <p class="lead-small">Previous responders gave the following examples:</p>
     <ul class="lead-small">
         {% for response in responses %}
-        <li><span class="label label-success" style="font-size: 17px">{{ response['predicate'] }}</span> <span class="label label-info" style="font-size: 17px">{{ response['object'] }}</span></li>
+        <li><span class="label label-success" style="font-size: 17px">{{ response[0]|replace('_', ' ')|lower }}</span> <span class="label label-info" style="font-size: 17px">{{ response[1]|replace('_', ' ')|lower }}</span></li>
         {% endfor %}
     </ul>
     <p class="lead-small">These cannot be picked again.</p>
