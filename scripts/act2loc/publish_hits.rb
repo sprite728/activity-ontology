@@ -13,7 +13,7 @@ def createNewHIT
   title = "Location Based Activity Recognition"
   desc = "Each individual question will refer to a particular activity. Select all locations in which the activity CANNOT take place."
   keywords = "activity, recognition, location, mapping"
-  numAssignments = 3
+  numAssignments = 1
   rewardAmount = 0.02 # 2 cents
 
   # Define the location of the externalized question (QuestionForm) file.
@@ -28,7 +28,7 @@ def createNewHIT
     result = @mturk.createHIT( :Title => title,
                               :Description => desc,
                               :MaxAssignments => numAssignments,
-                              :Reward => { :Amount => rewardAmount, 
+                              :Reward => { :Amount => rewardAmount,
                                            :CurrencyCode => 'USD' },
                               :Question => q.strip(),
                               :Keywords => keywords )
