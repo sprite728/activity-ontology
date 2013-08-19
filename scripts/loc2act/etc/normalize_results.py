@@ -1,45 +1,12 @@
 #!/usr/bin/python
 
 from nltk.corpus import wordnet as wn
-from matcher import Matcher
+from utils import *
 
 import collections
-import inflect
 import os
 import re
 import yaml
-
-
-def stemmer(data):
-    exclude = ['bus', 'gas', 'tennis', 'canvas', 'campus', 'mathematics',
-    'clothes', 'theives']
-    engine = inflect.engine()
-
-    p = re.compile('^(a |the )(.*)')
-    q = re.compile('.*ss$')
-    for d in data:
-        m1 = p.match(d['object'])
-        if m1:
-            d['object'] = m1.group(2)
-
-        m2 = q.match(d['object'])
-        if d['object'] not in exclude and not m2:
-            try:
-                w = engine.singular_noun(d['object'])
-                d['object'] = w if w else d['object']
-            except:
-                pass
-
-    return data
-
-
-def matcher(data):
-    for d in data:
-        word = Matcher.match(d['object'])
-        if word:
-            d['object'] = word
-
-    return data
 
 
 def collapse_synonyms(data):
@@ -81,6 +48,15 @@ def collapse_synonyms(data):
 
 
 def collapse_hyponyms(data):
+    """Collapse words into their hypernyms (superclass word) if the hypernym
+    exists among other answers for that particular location type.
+
+    Args:
+        data: List of results each of which contains a predicate-object pair
+
+    Returns:
+        A list where the replacement has been performed for each result.
+    """
     def flatten(lst):
         return [elem for l in lst for elem in l]
 
@@ -123,7 +99,32 @@ def collapse_hyponyms(data):
 
 
 def normalize(data):
+    for d in data:
+        d['object'] = matcher(stemmer(d['object']))
+
+    check_bigrams(data)
     return collapse_hyponyms(collapse_synonyms(data))
+
+
+def count_votes(data):
+    """Count number of Yes and No votes for the 'More' question.
+
+    Args:
+        data: List of results.
+
+    Returns:
+        The locations for which the number of Yes's is strictly greater
+        than the number of No's.
+    """
+    c = collections.Counter()
+    for d in data:
+        loc = d['location']
+        c[loc] += 1 if d['more'] == 'Yes' else -1
+
+    yes = [loc for loc in c if c[loc] > 0]
+    no  = [loc for loc in c if c[loc] <= 0]
+
+    return yes, no
 
 
 def make_csv(data):
@@ -152,34 +153,13 @@ def make_csv(data):
     return "\n".join(csv_data)
 
 
-def count_votes(data):
-    """Count number of Yes and No votes for the 'More' question.
-
-    Args:
-        data: List of results.
-
-    Returns:
-        The locations for which the number of Yes's is strictly greater
-        than the number of No's.
-    """
-    c = collections.Counter()
-    for d in data:
-        loc = d['location']
-        c[loc] += 1 if d['more'] == 'Yes' else -1
-
-    yes = [loc for loc in c if c[loc] > 0]
-    no  = [loc for loc in c if c[loc] <= 0]
-
-    return yes, no
-
-
 def write_data():
     raw_results = os.path.join(os.pardir, 'results/results.yaml')
     raw_csv = os.path.join(os.pardir, 'results/results.csv')
     parsed_csv = os.path.join(os.pardir, 'results/parsed_results.csv')
 
     with open(raw_results, 'r') as f:
-        raw_data = matcher(stemmer(list(yaml.load_all(f))))
+        raw_data = list(yaml.load_all(f))
 
     with open(raw_csv, 'w') as stream:
         stream.write(make_csv(raw_data))

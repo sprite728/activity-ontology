@@ -1,31 +1,33 @@
 #!/usr/bin/env ruby
 
-rootdir = File.dirname $0
-login = rootdir + "/login.rb"
+require 'docopt'
+require 'yaml'
 
-require login
-require "yaml"
+require_relative "rturk_hit"
 
-# Modify Hit class to allow iterating over more than 100 results
-module RTurk
-  class Hit
-    def self.each(page_number=1, &block)
-      results = RTurk::SearchHITs.create(page_number:page_number, page_size:100)
-      num_results = results.xpath("//TotalNumResults").text.to_i
+doc = <<DOCOPT
+Approve HITs.
 
-      results.hits.map do |hit|
-        yield new(hit.id, hit)
-      end
-      each(page_number + 1, &block) if num_results > page_number * 100
-    end
-  end
-end
+Usage:
+  #{__FILE__} [-p | --production]
+  #{__FILE__} -h | --help
+  #{__FILE__} --version
+
+Options:
+  -h --help         Show this screen.
+  --version         Show the version.
+
+  -p --production   Approve HITs from production.
+
+DOCOPT
 
 # Approve all HITs that are correct
 def approve
   puts "Reviewing and approving assignments"
+  approved = 0
+  rejected = 0
 
-  File.open('results/results.yaml', 'w') do |file|
+  File.open('results.yaml', 'w') do |file|
     RTurk::Hit.each do |hit|
       hit.assignments.each do |assignment|
         # Write result to YAML file
@@ -36,15 +38,33 @@ def approve
 
         # Check if honeypot answer is correct. If not, reject HIT
         if location != honeypot
-          if location == 'rv_park' || location == 'atm'
-            assignment.approve! if assignment.status == 'Submitted'
-          else
-            assignment.reject! if assignment.status == 'Submitted'
-          end
+          assignment.reject!("Failed to answer last question correctly.") if assignment.status == 'Submitted'
+          rejected += 1
         else
           assignment.approve! if assignment.status == 'Submitted'
+          approved += 1
         end
       end
     end
   end
+
+  puts "Approved: #{approved}"
+  puts "Rejected: #{rejected}"
+end
+
+# Parse arguments and call approve function
+begin
+  args = Docopt::docopt(doc, version: '0.2')
+rescue Docopt::Exit => e
+  puts e.message
+end
+
+if args
+  if args['--production']
+    RTurk.setup(AWSAccessKey, AWSSecretKey, :sandbox => false)
+  else
+    RTurk.setup(AWSAccessKey, AWSSecretKey, :sandbox => true)
+  end
+
+  approve
 end

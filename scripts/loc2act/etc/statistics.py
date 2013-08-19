@@ -2,7 +2,7 @@
 
 from matcher import Matcher
 from nltk.corpus import wordnet as wn
-from normalize_results import stemmer
+from utils import stemmer
 
 import os
 import yaml
@@ -41,7 +41,6 @@ def count_matched(data):
             wrong.append(obj)
     correct = len(objects) - len(wrong)
 
-    print wrong
     return correct, correct / float(len(objects))
 
 
@@ -80,7 +79,9 @@ def print_stats(raw_data):
     print '---Matched'
     print "Number: {0}\nPercentage: {1}".format(matched, p_matched)
 
-    raw_data = stemmer(raw_data)
+    for d in raw_data:
+        d['object'] = stemmer(d['object'])
+
     unique, p_unique = count_unique(raw_data)
     matched, p_matched = count_matched(raw_data)
 
