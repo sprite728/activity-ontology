@@ -102,7 +102,6 @@ def normalize(data):
     for d in data:
         d['object'] = matcher(stemmer(d['object']))
 
-    check_bigrams(data)
     return collapse_hyponyms(collapse_synonyms(data))
 
 
@@ -160,6 +159,8 @@ def write_data():
 
     with open(raw_results, 'r') as f:
         raw_data = list(yaml.load_all(f))
+    raw_data = [d for d in raw_data
+                if 'honeypot' not in d or d['location'] == d['honeypot']]
 
     with open(raw_csv, 'w') as stream:
         stream.write(make_csv(raw_data))

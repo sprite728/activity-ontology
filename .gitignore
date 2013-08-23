@@ -49,3 +49,7 @@ local.properties
 
 # Vim swap files
 *.swp
+
+# Results files
+*.csv
+*.yaml

@@ -18,7 +18,7 @@ Options:
   --hits=<h>        Number of HITs to publish [default: 0]
   --batches=<b>     Number of batches [default: 1]
   --reward=<r>      Reward in dollars [default: 0.03]
-  --url=<u>         Base url of HIT [default: http://crowd.fooshed.net/location/]
+  --url=<u>         Base url of HIT [default: http://crowd.fooshed.net/location2/]
 
   -p --production   Publish HITs in production.
 
