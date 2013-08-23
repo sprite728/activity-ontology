@@ -2,49 +2,40 @@ package ch.epfl.lsir.memories.android_places.activities;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentSender;
 import android.content.SharedPreferences;
-import android.location.Location;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
-import ch.epfl.lsir.memories.android_places.test.benchmark.BenchmarkStorage;
-import ch.epfl.lsir.memories.android_places.utils.rdf.RDFUtils;
-import com.example.Places_API.R;
-import ch.epfl.lsir.memories.android_places.query.loc.RetrieveLocationType;
-import ch.epfl.lsir.memories.android_places.utils.loc.LocationConstants;
 import ch.epfl.lsir.memories.android_places.utils.TimeConstants;
+import ch.epfl.lsir.memories.android_places.utils.Utils;
+import com.example.Places_API.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
-import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 
-import java.io.IOException;
-import java.util.concurrent.ExecutionException;
+import java.io.InputStream;
+import java.util.Arrays;
 
 public class MainActivity extends FragmentActivity implements
         GooglePlayServicesClient.ConnectionCallbacks,
-        GooglePlayServicesClient.OnConnectionFailedListener,
-        LocationListener {
+        GooglePlayServicesClient.OnConnectionFailedListener {
 
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
 
     private LocationClient mLocationClient;
     private LocationRequest mLocationRequest;
+    private LocationListener mLocationListener;
     private boolean mUpdatesRequested;
 
     private SharedPreferences.Editor mEditor;
     private SharedPreferences mPrefs;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+    private void setupLocationFeatures() {
         // Create and setup a location request
         mLocationRequest = LocationRequest.create();
         mLocationRequest.setPriority(
@@ -58,8 +49,60 @@ public class MainActivity extends FragmentActivity implements
 
         // Create new location client
         mLocationClient = new LocationClient(this, this, this);
+        // Create new location listener
+        mLocationListener = new LocationTypeListener(this, mLocationClient);
         // Start with updates turned on
         mUpdatesRequested = true;
+    }
+
+    private void setupAutoComplete() {
+        // Create and setup the two autocomplete forms
+        AutoCompleteTextView verbComplete = (AutoCompleteTextView) findViewById(R.id.verbs);
+        AutoCompleteTextView objectComplete = (AutoCompleteTextView) findViewById(R.id.objects);
+
+        String[] verbs = Utils.readLines(this, getResources().openRawResource(R.raw.verbs));
+        String[] objects = Utils.readLines(this, getResources().openRawResource(R.raw.objects));
+        ArrayAdapter<String> verbAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, verbs);
+        ArrayAdapter<String> objectAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
+                objects);
+
+        // Word validator that checks whether the user string is in the array of verbs/objects
+        class WordValidator implements AutoCompleteTextView.Validator {
+            private final String[] array;
+
+            public WordValidator(String[] array) {
+                this.array = array;
+            }
+
+            @Override
+            public boolean isValid(CharSequence text) {
+                String val = text.toString().toLowerCase();
+
+                return Arrays.binarySearch(array, val) != -1;
+            }
+
+            @Override
+            public CharSequence fixText(CharSequence invalidText) {
+                return invalidText.subSequence(0, 0);
+            }
+        }
+        verbComplete.setValidator(new WordValidator(verbs));
+        objectComplete.setValidator(new WordValidator(objects));
+
+        // Start to autocomplete after the user has typed two characters
+        verbComplete.setThreshold(2);
+        objectComplete.setThreshold(2);
+        verbComplete.setAdapter(verbAdapter);
+        objectComplete.setAdapter(objectAdapter);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        setupLocationFeatures();
+        setupAutoComplete();
     }
 
     @Override
@@ -73,7 +116,7 @@ public class MainActivity extends FragmentActivity implements
     protected void onStop() {
         if (mLocationClient.isConnected()) {
             // Remove location updates for client
-            mLocationClient.removeLocationUpdates(this);
+            mLocationClient.removeLocationUpdates(mLocationListener);
         }
 
         // Disconnecting the client invalidates it.
@@ -109,7 +152,7 @@ public class MainActivity extends FragmentActivity implements
         // Display the connection status
         Toast.makeText(this, "Connected", Toast.LENGTH_SHORT).show();
         // Request location updates
-        mLocationClient.requestLocationUpdates(mLocationRequest, this);
+        mLocationClient.requestLocationUpdates(mLocationRequest, mLocationListener);
     }
 
     @Override
@@ -119,88 +162,7 @@ public class MainActivity extends FragmentActivity implements
     }
 
     @Override
-    public void onConnectionFailed(ConnectionResult connectionResult) {
-       /* if (connectionResult.hasResolution()) {
-            try {
-                connectionResult.startResolutionForResult(
-                        this,
-                        CONNECTION_FAILURE_RESOLUTION_REQUEST);
-            } catch (IntentSender.SendIntentException e) {}
-        } else {
-            GooglePlayServicesUtil.getErrorDialog(connectionResult.getErrorCode(), this, 0).show();
-        }*/
-    }
-
-    @Override
-    public void onLocationChanged(Location location) {
-        getLocationType();
-    }
-
-    /**
-     * Displays the location loc of the current user location in a Toast, and returns
-     * a string representation.
-     *
-     * @return The location loc of the current location as a String.
-     */
-    public String getLocationType() {
-        String coords = getCoordinates();
-        String radius = LocationConstants.RADIUS.getValueAsString();
-
-        String locationType = null;
-        AsyncTask<String, Void, String> execute = new RetrieveLocationType(this).execute(coords, radius);
-        try {
-            locationType = execute.get();
-            Toast.makeText(this, locationType, Toast.LENGTH_LONG).show();
-        } catch (InterruptedException e) {
-            showErrorDialog();
-        } catch (ExecutionException e) {
-            showErrorDialog();
-        }
-
-        return locationType;
-    }
-
-    /**
-     * Shows an error Toast if something went wrong during the location loc retrieval.
-     */
-    private void showErrorDialog() {
-        Toast.makeText(this, "Error with retrieving loc.", Toast.LENGTH_SHORT).show();
-    }
-
-    /**
-     * Queries the current location and returns a String representation of a latitude and longitude.
-     *
-     * @return A String representation of the coordinates of a point (latitude and longitude).
-     */
-    public String getCoordinates() {
-        Location location = null;
-        if (servicesConnected()) {
-            location = mLocationClient.getLastLocation();
-        } else {
-            Toast.makeText(this, "No location found", Toast.LENGTH_LONG).show();
-            return "";
-        }
-
-        return location.getLatitude() + "," + location.getLongitude();
-    }
-
-    /**
-     * Checks if the Google Play services are connected.
-     *
-     * @return <b>true</b> if the Play services are connected, <b>false</b> otherwise
-     */
-    private boolean servicesConnected() {
-        // Check that Google Play services is available
-        int resultCode = GooglePlayServicesUtil.
-                isGooglePlayServicesAvailable(this);
-        if (resultCode != ConnectionResult.SUCCESS) {
-            GooglePlayServicesUtil.getErrorDialog(resultCode, this, 0).show();
-
-            return false;
-        }
-
-        return true;
-    }
+    public void onConnectionFailed(ConnectionResult connectionResult) {}
 
     public void benchmark(View view) {
         Intent intent = new Intent(this, BenchmarkActivity.class);

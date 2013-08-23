@@ -21,15 +21,11 @@ public class RDFUtils {
     public static List<String> queryLocationForActivity(String activity) {
         List<String> res = new ArrayList<String>();
 
-
-
         return res;
     }
 
     public static List<String> queryActivityForLocation(String location) {
         List<String> res = new ArrayList<String>();
-
-
 
         return res;
     }
