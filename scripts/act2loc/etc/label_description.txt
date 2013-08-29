@@ -1,0 +1,87 @@
+Achievement or Award
+User has won an achievement, or an award.
+Travel &amp; Experiences
+Bought Home
+User has bought a new home.
+Home &amp; Living
+Broken Bone
+User has broken a bone, or damaged a body part.
+Health &amp; Wellbeing
+Changed Belief
+User has changed his belief.
+Travel &amp; Experiences
+Expecting a Baby
+User is expecting a baby.
+Family &amp; Relationships
+Home Improvement
+User has improved his/her home environment.
+Home &amp; Living
+Loss of Loved One
+User has lost someone dear to him.
+Family &amp; Relationships
+Marriage
+User has married.
+Family &amp; Relationships
+Military Service
+User has gone through (or has started) military service.
+Work &amp; Education
+Moved
+User has moved from some address to some other address.
+Home &amp; Living
+New Child
+User has had a child.
+Family &amp; Relationships
+New Family Member
+User has a new family member.
+Family &amp; Relationships
+New Housemate
+User has a new housemate.
+Home &amp; Living
+New Language
+User has learned to speak/read/write in a new language.
+Travel &amp; Experiences
+New Licence
+User has acquired a new driver&amp;apos;s licence.
+Travel &amp; Experiences
+New Pet
+User has a new pet.
+Family &amp; Relationships
+New School
+User has a new school.
+Work &amp; Education
+New Sport
+User has started playing a new sport.
+Travel &amp; Experiences
+New Vehicle
+User has acquired a new vehicle.
+Home &amp; Living
+Organ Donor
+User has registered as an organ donor.
+Health &amp; Wellbeing
+Overcame Illness
+User has overcome an illness.
+Health &amp; Wellbeing
+Published
+User has published a publication.
+Work &amp; Education
+Registered To Vote
+User has registered to vote.
+Travel &amp; Experiences
+Removed Braces
+User has removed his/her braces.
+Health &amp; Wellbeing
+Study Abroad
+User has studied (or is currently studying) abroad.
+Work &amp; Education
+Tattoo or Piercing
+User has undergone a body modification for aesthetic purposes.
+Travel &amp; Experiences
+Vision Aid
+User has acquired glasses, contact lenses, or has undergone surgery.
+Health &amp; Wellbeing
+Volunteer Work
+User has done volunteer work.
+Work &amp; Education
+Weight Loss
+User has lost weight.
+Health &amp; Wellbeing

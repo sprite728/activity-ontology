@@ -1,5 +1,6 @@
 # Login details
 login.rb
+*.ini
 
 # Generated .question files
 *.question
