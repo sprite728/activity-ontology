@@ -1,7 +1,5 @@
 package ch.epfl.lsir.memories.android_places.test.gps;
 
-import ch.epfl.lsir.memories.android_places.utils.loc.LocationUtils;
-import ch.epfl.lsir.memories.android_places.utils.Utils;
 import org.json.simple.parser.ParseException;
 
 import java.io.BufferedReader;
@@ -10,6 +8,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+
+import ch.epfl.lsir.memories.android_places.utils.Utils;
+import ch.epfl.lsir.memories.android_places.utils.loc.LocationUtils;
 
 /**
  * Evaluate the Places API against provided data.

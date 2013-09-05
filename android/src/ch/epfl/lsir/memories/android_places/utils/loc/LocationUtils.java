@@ -92,7 +92,7 @@ public final class LocationUtils {
 
             for (Object type : types) {
                 String typeStr = (String) type;
-                if (locationTypes.contains(typeStr) && !typeStr.equals("establishment")) {
+                if (locationTypes.contains(typeStr)) {
                     if (counter.containsKey(typeStr)) {
                         counter.put(typeStr, counter.get(typeStr) + 1);
                     } else {

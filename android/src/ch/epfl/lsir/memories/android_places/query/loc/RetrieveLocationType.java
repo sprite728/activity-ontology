@@ -2,11 +2,13 @@ package ch.epfl.lsir.memories.android_places.query.loc;
 
 import android.content.Context;
 import android.os.AsyncTask;
+
 import com.example.Places_API.R;
-import ch.epfl.lsir.memories.android_places.utils.loc.LocationUtils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+
+import ch.epfl.lsir.memories.android_places.utils.loc.LocationUtils;
 
 /**
  * Retrieve the location loc by making a request to the Google Places API.

@@ -6,11 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
-import ch.epfl.lsir.memories.android_places.utils.TimeConstants;
-import ch.epfl.lsir.memories.android_places.utils.Utils;
+
 import com.example.Places_API.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
@@ -18,8 +15,7 @@ import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 
-import java.io.InputStream;
-import java.util.Arrays;
+import ch.epfl.lsir.memories.android_places.utils.TimeConstants;
 
 public class MainActivity extends FragmentActivity implements
         GooglePlayServicesClient.ConnectionCallbacks,
@@ -55,54 +51,12 @@ public class MainActivity extends FragmentActivity implements
         mUpdatesRequested = true;
     }
 
-    private void setupAutoComplete() {
-        // Create and setup the two autocomplete forms
-        AutoCompleteTextView verbComplete = (AutoCompleteTextView) findViewById(R.id.verbs);
-        AutoCompleteTextView objectComplete = (AutoCompleteTextView) findViewById(R.id.objects);
-
-        String[] verbs = Utils.readLines(this, getResources().openRawResource(R.raw.verbs));
-        String[] objects = Utils.readLines(this, getResources().openRawResource(R.raw.objects));
-        ArrayAdapter<String> verbAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, verbs);
-        ArrayAdapter<String> objectAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
-                objects);
-
-        // Word validator that checks whether the user string is in the array of verbs/objects
-        class WordValidator implements AutoCompleteTextView.Validator {
-            private final String[] array;
-
-            public WordValidator(String[] array) {
-                this.array = array;
-            }
-
-            @Override
-            public boolean isValid(CharSequence text) {
-                String val = text.toString().toLowerCase();
-
-                return Arrays.binarySearch(array, val) != -1;
-            }
-
-            @Override
-            public CharSequence fixText(CharSequence invalidText) {
-                return invalidText.subSequence(0, 0);
-            }
-        }
-        verbComplete.setValidator(new WordValidator(verbs));
-        objectComplete.setValidator(new WordValidator(objects));
-
-        // Start to autocomplete after the user has typed two characters
-        verbComplete.setThreshold(2);
-        objectComplete.setThreshold(2);
-        verbComplete.setAdapter(verbAdapter);
-        objectComplete.setAdapter(objectAdapter);
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         setupLocationFeatures();
-        setupAutoComplete();
     }
 
     @Override

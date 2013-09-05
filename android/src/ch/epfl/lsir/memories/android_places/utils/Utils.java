@@ -1,7 +1,6 @@
 package ch.epfl.lsir.memories.android_places.utils;
 
 import android.content.Context;
-import com.example.Places_API.R;
 
 import java.io.BufferedReader;
 import java.io.File;

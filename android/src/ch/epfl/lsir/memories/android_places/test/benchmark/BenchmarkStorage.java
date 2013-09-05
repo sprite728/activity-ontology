@@ -7,7 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import ch.epfl.lsir.memories.android_places.utils.Utils;
+
 import com.example.Places_API.R;
 import com.hp.hpl.jena.graph.Node;
 import com.hp.hpl.jena.graph.Triple;
@@ -18,7 +18,6 @@ import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.impl.ModelCom;
-import deri.org.store.BDBGraph;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -27,6 +26,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+
+import ch.epfl.lsir.memories.android_places.utils.Utils;
+import deri.org.store.BDBGraph;
 
 /**
  * @author Sebastian Claici

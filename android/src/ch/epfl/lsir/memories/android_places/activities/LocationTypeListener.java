@@ -4,14 +4,16 @@ import android.content.Context;
 import android.location.Location;
 import android.os.AsyncTask;
 import android.widget.Toast;
-import ch.epfl.lsir.memories.android_places.query.loc.RetrieveLocationType;
-import ch.epfl.lsir.memories.android_places.utils.loc.LocationConstants;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 
 import java.util.concurrent.ExecutionException;
+
+import ch.epfl.lsir.memories.android_places.query.loc.RetrieveLocationType;
+import ch.epfl.lsir.memories.android_places.utils.loc.LocationConstants;
 
 /**
  * @author Sebastian Claici
@@ -27,7 +29,8 @@ public class LocationTypeListener implements LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
-        getLocationType();
+        String type = getLocationType();
+        Toast.makeText(context, type, Toast.LENGTH_LONG).show();
     }
 
     /**
@@ -66,11 +69,11 @@ public class LocationTypeListener implements LocationListener {
      * @return A String representation of the coordinates of a point (latitude and longitude).
      */
     public String getCoordinates() {
-        Location location = null;
+        Location location;
         if (servicesConnected()) {
             location = mLocationClient.getLastLocation();
         } else {
-            Toast.makeText(context, "No location found", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "No location found", Toast.LENGTH_SHORT).show();
             return "";
         }
 
@@ -87,7 +90,7 @@ public class LocationTypeListener implements LocationListener {
         int resultCode = GooglePlayServicesUtil.
                 isGooglePlayServicesAvailable(context);
         if (resultCode != ConnectionResult.SUCCESS) {
-            Toast.makeText(context, "Error connecting to Google Play Services", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "Error connecting to Google Play Services", Toast.LENGTH_SHORT).show();
 
             return false;
         }

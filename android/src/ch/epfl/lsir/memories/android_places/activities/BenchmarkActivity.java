@@ -4,9 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import ch.epfl.lsir.memories.android_places.test.benchmark.BenchmarkStorage;
 
 import java.io.IOException;
+
+import ch.epfl.lsir.memories.android_places.test.benchmark.BenchmarkStorage;
 
 /**
  * @author Sebastian Claici

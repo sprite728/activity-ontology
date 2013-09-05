@@ -1,6 +1,5 @@
 package ch.epfl.lsir.memories.android_places.test.rdf;
 
-import ch.epfl.lsir.memories.android_places.utils.Utils;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
@@ -8,6 +7,8 @@ import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.impl.ModelCom;
+
+import ch.epfl.lsir.memories.android_places.utils.Utils;
 import deri.org.store.BDBGraph;
 
 /**
