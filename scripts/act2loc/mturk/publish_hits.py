@@ -24,16 +24,24 @@ from boto.mturk.connection import MTurkConnection
 from docopt import docopt
 
 import boto.mturk.question as boto
+import boto.mturk.qualification as qual
 import ConfigParser
+import datetime
 
 def create_question(locations, activities, hits):
     title = "Location Based Activity Recognition"
-    desc = "Each individual question will refer to a particular activity. Select all locations in which the activity CANNOT take place."
-    keywords = "activity, recognition, location, mapping"
+    desc = "Each individual question will refer to a particular activity. Select all locations in which the activity cannot take place."
+    keywords = "activity, location, activity recognition, location mapping"
 
     def write_checkbox_question(activity):
         question = boto.QuestionContent()
-        question.append(boto.FormattedContent('<font size="4">For the following activity, select the locations in which it <font color="red"><b>cannot</b></font> take place.</font>'))
+        question.append(boto.FormattedContent('For the following activity, select the locations in which it <b>cannot</b> take place.' +
+                                              ' Note that you should only leave a location unchecked if you have a strong belief that the activity' +
+                                              ' is possible there. As an example, the activity <strong>Removed Braces</strong> is strongly' +
+                                              ' connected to either <i>Dentist</i>, or <i>Hospital</i>. While it is possible to remove braces' +
+                                              ' in a different location, one would not normally do so.'))
+        question.append(boto.FormattedContent('If you believe that the activity can regularly occur in each location on the list, do not' +
+                                              ' select any of the options.'))
         question.append(boto.FormattedContent('<strong>' + activity.label + '</strong>: ' + activity.description))
         answer = boto.SelectionAnswer(min=0, max=len(locations),
                                       style='checkbox',
@@ -47,14 +55,12 @@ def create_question(locations, activities, hits):
                              is_required=False)
 
     def write_honeypot_categories(activity, categories):
-        all_cats = set(categories)
-        categories = [cat for cat in categories if cat != activity.category]
-        categories = categories[:2] + [activity.category] + categories[2:]
-
-        assert all_cats == set(categories)
+        shuffle(categories)
+        categories = [""] + categories
 
         question = boto.QuestionContent()
         question.append_field('Text', 'What is the best classification of this activity?')
+        question.append(boto.FormattedContent('As an example, the activity <b>Overcame Illness</b> is best classified as <i>Health &amp; Wellbeing</i>, while <b>Study Abroad</b> is best classified as <i>Work &amp; Education</i>.'))
         answer = boto.SelectionAnswer(min=1, max=1,
                                       style='dropdown',
                                       selections=zip(categories, categories),
@@ -90,6 +96,11 @@ def create_question(locations, activities, hits):
         if i >= hits:
             break
 
+        qualifications = qual.Qualifications()
+        qualifications.add(qual.LocaleRequirement('EqualTo', 'US'))
+        qualifications.add(qual.PercentAssignmentsApprovedRequirement('GreaterThanOrEqualTo', '95'))
+        qualifications.add(qual.NumberHitsApprovedRequirement('GreaterThanOrEqualTo', '100'))
+
         question_form = boto.QuestionForm()
         question_form.append(write_checkbox_question(activity))
         question_form.append(write_honeypot_categories(activity, categories))
@@ -98,10 +109,13 @@ def create_question(locations, activities, hits):
                                                        activities[i-2]))
 
         mtc.create_hit(questions=question_form,
+                       qualifications=qualifications,
                        max_assignments=1,
                        title=title,
                        description=desc,
                        keywords=keywords,
+                       approval_delay=datetime.timedelta(seconds=24*60*60),
+                       duration=datetime.timedelta(seconds=3600),
                        reward=0.02)
 
 def create_questions(args):

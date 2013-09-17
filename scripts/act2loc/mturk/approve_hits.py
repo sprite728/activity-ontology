@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """Approve HITs.
 
 Usage:
@@ -17,20 +19,6 @@ from docopt import docopt
 import ConfigParser
 import datetime
 import logging
-import math
-
-def get_all_reviewable_hits(mtc):
-    page_size = 50
-    hits = mtc.get_reviewable_hits(page_size=page_size)
-
-    total_pages = int(math.ceil(float(hits.TotalNumResults) / page_size))
-    page_number = 1
-    while page_number < total_pages:
-        page_number += 1
-        temp_hits = mtc.get_reviewable_hits(page_size=page_size, page_number=page_number)
-        hits.extend(temp_hits)
-
-    return hits
 
 def approve_hits(hits):
     category = {}
@@ -42,11 +30,18 @@ def approve_hits(hits):
     incorrect = 0
     category_correct = 0
     activity_correct = 0
+    total = 0
 
+    f = open('results5.csv', 'w')
     for hit in hits:
         assignments = mtc.get_assignments(hit.HITId)
 
         for assignment in assignments:
+            if assignment.AssignmentStatus == 'Approved':
+                continue
+            if assignment.AssignmentStatus == 'Rejected':
+                continue
+
             answer_dict = {}
             for answer in assignment.answers[0]:
                 answer_dict[answer.qid] = answer.fields
@@ -56,20 +51,29 @@ def approve_hits(hits):
             honeypot_activity_key = 'honeypot_activity-' + activity
             honeypot_category_key = 'honeypot_category-' + activity
 
-            if answer_dict[honeypot_category_key][0] == category[activity]:
-                category_correct += 1
-                mtc.approve_assignment(assignment.AssignmentId)
-            elif answer_dict[honeypot_activity_key][0] == activity:
-                activity_correct += 1
-                mtc.approve_assignment(assignment.AssignmentId)
-            else:
-                incorrect += 1
-                mtc.reject_assignment(assignment.AssignmentId)
+            try:
+                if answer_dict[honeypot_category_key][0] == category[activity]:
+                    category_correct += 1
+                    mtc.approve_assignment(assignment.AssignmentId)
+                    f.write(activity + ',' + ','.join(answer_dict[activity]) + ',category_correct,' + assignment.AssignmentId + '\n')
+                elif answer_dict[honeypot_activity_key][0] == activity:
+                    activity_correct += 1
+                    mtc.approve_assignment(assignment.AssignmentId)
+                    f.write(activity + ',' + ','.join(answer_dict[activity]) + ',activity_correct,' + assignment.AssignmentId + '\n')
+                else:
+                    incorrect += 1
+                    mtc.reject_assignment(assignment.AssignmentId, feedback='Did not answer either of the last two questions correctly.')
+                    f.write(activity + ',' + ','.join(answer_dict[activity]) + ',incorrect,' + assignment.AssignmentId + '\n')
+                total += 1
+            except:
+                pass
+    f.close()
 
-    logging.basicConfig(filename='log/' + str(datetime.datetime.now()), level=logging.INFO)
+    logging.basicConfig(filename='log/' + str(datetime.datetime.now()) + '.log', level=logging.INFO)
     logging.info('Category correct: {0}'.format(category_correct))
     logging.info('Activity correct: {0}'.format(activity_correct))
     logging.info('Incorrect: {0}'.format(incorrect))
+    logging.info('Total: {0}'.format(total))
 
 if __name__ == '__main__':
     arguments = docopt(__doc__, version='1.0-SNAPSHOT')
@@ -86,4 +90,5 @@ if __name__ == '__main__':
     mtc = MTurkConnection(aws_access_key_id=access_key,
                           aws_secret_access_key=secret_key,
                           host=HOST)
+
     approve_hits(mtc.get_all_hits())

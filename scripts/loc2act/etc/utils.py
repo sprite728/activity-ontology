@@ -27,6 +27,5 @@ def stemmer(word):
 
 def matcher(word):
     repl = Matcher.match(word)
-    if repl:
-        return repl
-    return word
+
+    return repl
