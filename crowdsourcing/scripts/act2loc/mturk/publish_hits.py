@@ -35,13 +35,7 @@ def create_question(locations, activities, hits):
 
     def write_checkbox_question(activity):
         question = boto.QuestionContent()
-        question.append(boto.FormattedContent('For the following activity, select the locations in which it <b>cannot</b> take place.' +
-                                              ' Note that you should only leave a location unchecked if you have a strong belief that the activity' +
-                                              ' is possible there. As an example, the activity <strong>Removed Braces</strong> is strongly' +
-                                              ' connected to either <i>Dentist</i>, or <i>Hospital</i>. While it is possible to remove braces' +
-                                              ' in a different location, one would not normally do so.'))
-        question.append(boto.FormattedContent('If you believe that the activity can regularly occur in each location on the list, do not' +
-                                              ' select any of the options.'))
+        question.append(boto.FormattedContent('For the following activity, select the locations in which it <font color="red"><b>cannot</b></font> take place.'))
         question.append(boto.FormattedContent('<strong>' + activity.label + '</strong>: ' + activity.description))
         answer = boto.SelectionAnswer(min=0, max=len(locations),
                                       style='checkbox',
@@ -96,10 +90,10 @@ def create_question(locations, activities, hits):
         if i >= hits:
             break
 
-        qualifications = qual.Qualifications()
-        qualifications.add(qual.LocaleRequirement('EqualTo', 'US'))
-        qualifications.add(qual.PercentAssignmentsApprovedRequirement('GreaterThanOrEqualTo', '95'))
-        qualifications.add(qual.NumberHitsApprovedRequirement('GreaterThanOrEqualTo', '100'))
+        #qualifications = qual.Qualifications()
+        #qualifications.add(qual.LocaleRequirement('EqualTo', 'US'))
+        #qualifications.add(qual.PercentAssignmentsApprovedRequirement('GreaterThanOrEqualTo', '95'))
+        #qualifications.add(qual.NumberHitsApprovedRequirement('GreaterThanOrEqualTo', '100'))
 
         question_form = boto.QuestionForm()
         question_form.append(write_checkbox_question(activity))
@@ -109,7 +103,7 @@ def create_question(locations, activities, hits):
                                                        activities[i-2]))
 
         mtc.create_hit(questions=question_form,
-                       qualifications=qualifications,
+                       #qualifications=qualifications,
                        max_assignments=1,
                        title=title,
                        description=desc,

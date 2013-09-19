@@ -1,5 +1,5 @@
 Achievement or Award
-User has won an achievement, or an award.
+User has won an achievement or an award.
 Travel &amp; Experiences
 Bought Home
 User has bought a new home.
@@ -8,16 +8,16 @@ Broken Bone
 User has broken a bone, or damaged a body part.
 Health &amp; Wellbeing
 Changed Belief
-User has changed his belief.
+User has changed a belief.
 Travel &amp; Experiences
 Expecting a Baby
 User is expecting a baby.
 Family &amp; Relationships
 Home Improvement
-User has improved his/her home environment.
+User has improved their home environment.
 Home &amp; Living
 Loss of Loved One
-User has lost someone dear to him.
+User has lost someone dear to them.
 Family &amp; Relationships
 Marriage
 User has married.
@@ -26,10 +26,10 @@ Military Service
 User has gone through (or has started) military service.
 Work &amp; Education
 Moved
-User has moved from some address to some other address.
+User has moved their permanent residence.
 Home &amp; Living
 New Child
-User has had a child.
+User has become the parent of a child.
 Family &amp; Relationships
 New Family Member
 User has a new family member.
@@ -41,13 +41,13 @@ New Language
 User has learned to speak/read/write in a new language.
 Travel &amp; Experiences
 New Licence
-User has acquired a new driver&amp;apos;s licence.
+User has acquired a new driver's licence.
 Travel &amp; Experiences
 New Pet
 User has a new pet.
 Family &amp; Relationships
 New School
-User has a new school.
+User has started studying at a new school or university.
 Work &amp; Education
 New Sport
 User has started playing a new sport.
@@ -59,25 +59,25 @@ Organ Donor
 User has registered as an organ donor.
 Health &amp; Wellbeing
 Overcame Illness
-User has overcome an illness.
+User has overcome an illness that they were suffering from.
 Health &amp; Wellbeing
 Published
-User has published a publication.
+User has published a paper or book.
 Work &amp; Education
 Registered To Vote
 User has registered to vote.
 Travel &amp; Experiences
 Removed Braces
-User has removed his/her braces.
+User has removed their braces.
 Health &amp; Wellbeing
 Study Abroad
-User has studied (or is currently studying) abroad.
+User has studied (or is currently studying) outside their native country.
 Work &amp; Education
 Tattoo or Piercing
 User has undergone a body modification for aesthetic purposes.
 Travel &amp; Experiences
 Vision Aid
-User has acquired glasses, contact lenses, or has undergone surgery.
+User has acquired glasses, contact lenses, or has undergone vision-aid surgery.
 Health &amp; Wellbeing
 Volunteer Work
 User has done volunteer work.

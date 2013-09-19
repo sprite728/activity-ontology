@@ -1,4 +1,5 @@
 from nltk.corpus import wordnet as wn
+from nltk.metrics import edit_distance
 from spell_checker import SpellChecker
 
 import re
@@ -81,8 +82,8 @@ class Matcher(object):
     def __match(word, typ):
         # Try matching the base word
         try:
-            repl = word.replace(' ', '_') + '.n.01'
-            synset = wn.synset(repl)
+            synsets = wn.synsets(word)
+            synset = min(synsets, key=lambda w: edit_distance(w, word))
 
             return synset.lemma_names[0]
         except:
