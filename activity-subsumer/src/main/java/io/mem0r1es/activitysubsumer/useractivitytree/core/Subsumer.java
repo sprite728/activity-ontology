@@ -21,15 +21,13 @@ import java.util.Set;
 import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
 import org.jgrapht.graph.DefaultEdge;
 
-
 /**
  * <p>
  * Subsumer class to perform the subsumption/aggregation presented here:
  * https://github.com/MEM0R1ES/ontology/wiki/Subsumer
  * </p>
  * <p>
- * A reference Python implementation can be found here:
- * https://github.com/MEM0R1ES
+ * A reference Python implementation can be found here: https://github.com/MEM0R1ES
  * /ontology/blob/master/crowdsourcing/scripts/etc/subsumer .py
  * </p>
  * 
@@ -41,8 +39,7 @@ public final class Subsumer implements Serializable {
 	private final DirectedAcyclicGraph<String, DefaultEdge> nouns;
 	private final DirectedAcyclicGraph<String, DefaultEdge> verbs;
 
-	private final Set<UserActivity> activities;
-	private final Map<UserActivity, List<UserActivity>> parentActivities;
+	private UserActivityTree userActivityTree;
 
 	// Classes to perform lowest common ancestor search
 	private final LowestCommonAncestor<String, DefaultEdge> verbsLCA;
@@ -50,8 +47,8 @@ public final class Subsumer implements Serializable {
 	private final Map<String, List<UserActivity>> locationToActivityMapping;
 
 	// Mappings between words and word senses
-	private final Map<String, List<String>> senseMapVerbs;
-	private final Map<String, List<String>> senseMapNouns;
+	private final Map<String, Set<String>> senseMapVerbs;
+	private final Map<String, Set<String>> senseMapNouns;
 
 	// Precomputed mappings between senses and maximum depth at which they
 	// appear
@@ -68,8 +65,7 @@ public final class Subsumer implements Serializable {
 		senseMapVerbs = Utils.buildSenseMap(verbs);
 		senseMapNouns = Utils.buildSenseMap(nouns);
 
-		activities = new HashSet<UserActivity>();
-		parentActivities = new HashMap<UserActivity, List<UserActivity>>();
+		userActivityTree = new UserActivityTree();
 		locationToActivityMapping = new HashMap<String, List<UserActivity>>();
 
 		depthMapNouns = GraphUtils.bfsExplore(nouns);
@@ -80,40 +76,51 @@ public final class Subsumer implements Serializable {
 	 * <p>
 	 * Add an activity to the subsumer.
 	 * </p>
+	 * 
+	 * @throws IllegalArgumentException
+	 *             if the noun and/or verb are not in the word net list
 	 */
 	public void addActivity(String verb, String noun) {
+		// convert terms to word net form
 		verb = verb.toLowerCase().replace(' ', '_');
 		noun = noun.toLowerCase().replace(' ', '_');
-		if (!senseMapVerbs.containsKey(verb)
-				|| !senseMapNouns.containsKey(noun))
-			throw new IllegalArgumentException("Unknown verb or noun");
 
+		if (!senseMapVerbs.containsKey(verb) || !senseMapNouns.containsKey(noun))
+			throw new IllegalArgumentException("Unknown verb or noun");
+		
 		addActivity(new UserActivity(verb, noun));
 	}
 
 	public void addActivity(UserActivity activity) {
+		if (activity.getVerb().equals("repair")) {
+			System.out.println();
+		}
+		// add/update location to activity mapping
 		addLocationToActivityMapping(activity);
-		activities.add(activity);
-		if (!parentActivities.containsKey(activity))
-			parentActivities.put(activity, new ArrayList<UserActivity>());
+		userActivityTree.add(activity);
 
 		String noun = activity.getNoun();
 		String verb = activity.getVerb();
-		List<String> verbSenses = senseMapVerbs.get(verb);
-		List<String> nounSenses = senseMapNouns.get(noun);
-
-		if (verbSenses == null || nounSenses == null)
+		Set<String> verbSenses = senseMapVerbs.get(verb);
+		Set<String> nounSenses = senseMapNouns.get(noun);
+		
+		if (verbSenses == null || nounSenses == null) {
 			return;
+		}
 
+		// pairs of matched activities to parent activities
 		List<Pair<String, String>> parentActivities = new ArrayList<Pair<String, String>>();
 		List<UserActivity> matchedActivities = new ArrayList<UserActivity>();
+
+		// distance cache
+		Map<String, BreadthFirstShortestPath<String, DefaultEdge>> nounsDistanceCache = new HashMap<String, BreadthFirstShortestPath<String, DefaultEdge>>();
+		Map<String, BreadthFirstShortestPath<String, DefaultEdge>> verbsDistanceCache = new HashMap<String, BreadthFirstShortestPath<String, DefaultEdge>>();
 
 		// Go through every pair of (noun, verb) senses, and try to find a match
 		// already in the tree
 		for (String nounSense : nounSenses) {
 			for (String verbSense : verbSenses) {
-				Pair<UserActivity, Pair<String, String>> subsumptionResult = subsume(
-						verbSense, nounSense);
+				Pair<UserActivity, Pair<String, String>> subsumptionResult = subsume(verbSense, nounSense, nounsDistanceCache, verbsDistanceCache);
 				if (subsumptionResult == null)
 					continue;
 
@@ -127,127 +134,112 @@ public final class Subsumer implements Serializable {
 
 	/**
 	 * <p>
-	 * We want to connect an {@link UserActivity} to its parent. Since we do not
-	 * know which other activity is semantically closest to it, we need to find
-	 * it.
+	 * We want to connect an {@link UserActivity} to its parent. Since we do not know which other
+	 * activity is semantically closest to it, we need to find it.
 	 * </p>
 	 * <p>
 	 * The algorithm works as follows:
 	 * </p>
 	 * <ol>
 	 * <li>iterate through each existing activity</li>
-	 * <li>find the semantic distance between them as a function of the
-	 * distances between the verbs, and the distance between the nouns</li>
+	 * <li>find the semantic distance between them as a function of the distances between the verbs,
+	 * and the distance between the nouns</li>
 	 * <li>link the found activity with the given activity</li>
 	 * </ol>
+	 * 
+	 * @return a Pair of best matching activity and
 	 */
-	private Pair<UserActivity, Pair<String, String>> subsume(String verbSense,
-			String nounSense) {
+	private Pair<UserActivity, Pair<String, String>> subsume(String verbSense, String nounSense, Map<String, BreadthFirstShortestPath<String, DefaultEdge>> nounsDistanceCache,
+			Map<String, BreadthFirstShortestPath<String, DefaultEdge>> verbsDistanceCache) {
 
-		double bestScore = Double.POSITIVE_INFINITY;
-		UserActivity bestAct = null;
-		String bestNounSense = null;
-		String bestVerbSense = null;
+		double bestMatchingScore = Double.POSITIVE_INFINITY;
+		UserActivity bestMatchingActivity = null;
+		String bestMatchingNounSense = null;
+		String bestMatchingVerbSense = null;
 
-		BreadthFirstShortestPath<String, DefaultEdge> nounShortestPaths = new BreadthFirstShortestPath<String, DefaultEdge>(
-				nouns, nounSense);
-		BreadthFirstShortestPath<String, DefaultEdge> verbShortestPaths = new BreadthFirstShortestPath<String, DefaultEdge>(
-				verbs, verbSense);
+		// TODO from boss Michele: first try to find for Verb; if cost is max value, then stop
 
-		// Create single source shortest paths for all the verb and noun senses
-		Map<String, BreadthFirstShortestPath<String, DefaultEdge>> nounOtherSP = new HashMap<String, BreadthFirstShortestPath<String, DefaultEdge>>();
-		Map<String, BreadthFirstShortestPath<String, DefaultEdge>> verbOtherSP = new HashMap<String, BreadthFirstShortestPath<String, DefaultEdge>>();
-		for (UserActivity other : activities) {
-			String nounOther = other.getNoun();
-			String verbOther = other.getVerb();
+		BreadthFirstShortestPath<String, DefaultEdge> nounShortestPaths = getBreadthFirstShortestPath(nouns, nounSense, nounsDistanceCache);
+		BreadthFirstShortestPath<String, DefaultEdge> verbShortestPaths = getBreadthFirstShortestPath(verbs, verbSense, verbsDistanceCache);
 
-			if (senseMapNouns.containsKey(nounOther)) {
-				for (String nounSenseOther : senseMapNouns.get(nounOther)) {
-					if (nounOtherSP.containsKey(nounSenseOther))
-						continue;
-					BreadthFirstShortestPath<String, DefaultEdge> nounBFSP = new BreadthFirstShortestPath<String, DefaultEdge>(
-							nouns, nounSenseOther);
-					nounOtherSP.put(nounSenseOther, nounBFSP);
-				}
-			}
-			if (senseMapVerbs.containsKey(verbOther)) {
-				for (String verbSenseOther : senseMapVerbs.get(verbOther)) {
-					if (verbOtherSP.containsKey(verbSenseOther))
-						continue;
-					BreadthFirstShortestPath<String, DefaultEdge> verbBFSP = new BreadthFirstShortestPath<String, DefaultEdge>(
-							verbs, verbSenseOther);
-					verbOtherSP.put(verbSenseOther, verbBFSP);
-				}
-			}
-		}
-
-		// Find an already existing activity which is closest to the (nounSense,
-		// verbSense) activity
-		for (UserActivity other : activities) {
-			String nounOther = other.getNoun();
-			String verbOther = other.getVerb();
-
-			if (!senseMapNouns.containsKey(nounOther)
-					|| !senseMapVerbs.containsKey(verbOther))
+		for (UserActivity other : userActivityTree.getNodes()) {
+			if (other.equals(UserActivity.DEFAULT_NODE)) {
 				continue;
-			for (String nounSenseOther : senseMapNouns.get(nounOther)) {
-				for (String verbSenseOther : senseMapVerbs.get(verbOther)) {
-					if (Utils.wordName(nounSenseOther).equals(
-							Utils.wordName(nounSense))
-							&& Utils.wordName(verbSenseOther).equals(
-									Utils.wordName(verbSense)))
+			}
+			String nounOther = other.getNoun();
+			String verbOther = other.getVerb();
+
+			// build the cache of distances for the whole graph
+			Set<String> senseMappedNouns = senseMapNouns.get(nounOther);
+			Set<String> senseMappedVerbs = senseMapVerbs.get(verbOther);
+			if (senseMappedNouns == null || senseMappedVerbs == null) {
+				continue;
+			}
+			for (String nounSenseOther : senseMappedNouns) {
+				getBreadthFirstShortestPath(nouns, nounSenseOther, nounsDistanceCache);
+			}
+
+			for (String verbSenseOther : senseMappedVerbs) {
+				getBreadthFirstShortestPath(verbs, verbSenseOther, verbsDistanceCache);
+			}
+
+			// Find an already existing activity which is closest to the (nounSense, verbSense)
+			// activity
+			for (String nounSenseOther : senseMappedNouns) {
+				for (String verbSenseOther : senseMappedVerbs) {
+					if (Utils.wordName(nounSenseOther).equals(Utils.wordName(nounSense)) && Utils.wordName(verbSenseOther).equals(Utils.wordName(verbSense)))
 						continue;
 
-					double costNouns = 0;
-					double costVerbs = 0;
-					if (!nounSense.equals(nounSenseOther))
+					int costNouns = 0;
+					int costVerbs = 0;
+					if (nounSense.equals(nounSenseOther) == false)
 						costNouns = nounShortestPaths.getCost(nounSenseOther);
-					if (!verbSense.equals(verbSenseOther))
+					if (verbSense.equals(verbSenseOther) == false)
 						costVerbs = verbShortestPaths.getCost(verbSenseOther);
 
-					// no path from given noun to other activity noun
-					if (Double.isInfinite(costNouns)) {
-						BreadthFirstShortestPath<String, DefaultEdge> nounSenseOtherSP = nounOtherSP
-								.get(nounSenseOther);
+					// no path from given noun to other activity noun, then try the other direction
+					if (costNouns == Integer.MAX_VALUE) {
+						BreadthFirstShortestPath<String, DefaultEdge> nounSenseOtherSP = getBreadthFirstShortestPath(nouns, nounSenseOther, nounsDistanceCache);
 						costNouns = nounSenseOtherSP.getCost(nounSense);
 					}
-					// no path from given verb to other activity verb
-					if (Double.isInfinite(costVerbs)) {
-						BreadthFirstShortestPath<String, DefaultEdge> verbSenseOtherSP = verbOtherSP
-								.get(verbSenseOther);
+					// no path from given verb to other activity verb, then try the other direction
+					if (costVerbs == Integer.MAX_VALUE) {
+						BreadthFirstShortestPath<String, DefaultEdge> verbSenseOtherSP = getBreadthFirstShortestPath(verbs, verbSenseOther, verbsDistanceCache);
 						costVerbs = verbSenseOtherSP.getCost(verbSense);
 					}
 
-					// Verbs are more important, thus are weighted more
-					double score = (costVerbs * 2.0 + costNouns * 1.0) / 3.0;
+					if (costVerbs != Integer.MAX_VALUE && costNouns != Integer.MAX_VALUE) {
+						// Verbs are more important, thus are weighted more
+						double score = (costVerbs * 2.0 + costNouns * 1.0) / 3.0;
 
-					if (score < bestScore) {
-						bestScore = score;
-						bestAct = other;
-						bestNounSense = nounSenseOther;
-						bestVerbSense = verbSenseOther;
+						if (score < bestMatchingScore) {
+							bestMatchingScore = score;
+							bestMatchingActivity = other;
+							bestMatchingNounSense = nounSenseOther;
+							bestMatchingVerbSense = verbSenseOther;
+						}
 					}
 				}
 			}
 		}
-		if (bestAct == null)
+
+		if (bestMatchingActivity == null)
 			return null;
 
-		return new Pair<UserActivity, Pair<String, String>>(bestAct, subsume(
-				verbSense, nounSense, bestNounSense, bestVerbSense));
+		Pair<String, String> parentActivity = subsume(verbSense, nounSense, bestMatchingNounSense, bestMatchingVerbSense, nounsDistanceCache, verbsDistanceCache);
+		return new Pair<UserActivity, Pair<String, String>>(bestMatchingActivity, parentActivity);
 	}
 
 	/**
 	 * Find an activity that subsumes <b>act1</b> and <b>act2</b>
 	 */
-	private Pair<String, String> subsume(String verbSense, String nounSense,
-			String nounSenseOther, String verbSenseOther) {
+	private Pair<String, String> subsume(String verbSense, String nounSense, String nounSenseOther, String verbSenseOther,
+			Map<String, BreadthFirstShortestPath<String, DefaultEdge>> nounsDistanceCache, Map<String, BreadthFirstShortestPath<String, DefaultEdge>> verbsDistanceCache) {
 		String nounLCA, verbLCA;
 		if (nounSense.equals(nounSenseOther)) {
 			nounLCA = nounSense;
 		} else {
-			Set<String> nounsLCASet = nounsLCA.onlineLCA(nounSense,
-					nounSenseOther);
+			Set<String> nounsLCASet = nounsLCA.onlineLCA(nounSense, nounSenseOther);
 			if (nounsLCASet.isEmpty())
 				return null;
 
@@ -263,8 +255,7 @@ public final class Subsumer implements Serializable {
 		if (verbSense.equals(verbSenseOther)) {
 			verbLCA = verbSense;
 		} else {
-			Set<String> verbsLCASet = verbsLCA.onlineLCA(verbSense,
-					verbSenseOther);
+			Set<String> verbsLCASet = verbsLCA.onlineLCA(verbSense, verbSenseOther);
 			if (verbsLCASet.isEmpty())
 				return null;
 
@@ -282,17 +273,15 @@ public final class Subsumer implements Serializable {
 
 	/**
 	 * <p>
-	 * Finds the activity that is the best match to the activity presented in
-	 * addActivity.
+	 * Finds the activity that is the best match to the activity presented in addActivity.
 	 * </p>
 	 * <p/>
 	 * <p>
-	 * We define best match in this case to be the activity that is at the
-	 * greatest depth in the verb and noun DAGs.
+	 * We define best match in this case to be the activity that is at the greatest depth in the
+	 * verb and noun DAGs.
 	 * </p>
 	 */
-	private void findBestMatch(UserActivity activity,
-			List<UserActivity> matched, List<Pair<String, String>> parents) {
+	private void findBestMatch(UserActivity activity, List<UserActivity> matched, List<Pair<String, String>> parents) {
 		if (parents.isEmpty() || parents == null)
 			return;
 
@@ -308,8 +297,7 @@ public final class Subsumer implements Serializable {
 
 			int depthNoun = depthMapNouns.get(subsumedNoun);
 			int depthVerb = depthMapVerbs.get(subsumedVerb);
-			double depth = Math.sqrt(depthNoun * depthNoun + depthVerb
-					* depthVerb);
+			double depth = Math.sqrt(depthNoun * depthNoun + depthVerb * depthVerb);
 
 			if (depth > bestDepth) {
 				bestDepth = depth;
@@ -321,39 +309,36 @@ public final class Subsumer implements Serializable {
 		rebuildTree(activity, bestParentActivity, bestMatchedActivity);
 	}
 
-	private UserActivity rebuildTree(UserActivity activity,
-			Pair<String, String> bestParentActivity,
-			UserActivity bestMatchedActivity) {
+	private UserActivity rebuildTree(UserActivity activity, Pair<String, String> bestParentActivity, UserActivity bestMatchedActivity) {
 
 		// Create a new parent activity
 		String parentVerb = Utils.wordName(bestParentActivity.first);
 		String parentNoun = Utils.wordName(bestParentActivity.second);
 
-		List<String> locations = new ArrayList<String>();
+		Set<String> locations = new HashSet<String>();
 		locations.addAll(activity.getLocations());
 		for (String location : bestMatchedActivity.getLocations()) {
 			if (!locations.contains(location))
 				locations.add(location);
 		}
-		List<String> timesOfDay = new ArrayList<String>();
+		Set<String> timesOfDay = new HashSet<String>();
 		locations.addAll(activity.getTimeOfDay());
 		for (String timeOfDay : bestMatchedActivity.getTimeOfDay()) {
 			if (!timesOfDay.contains(timeOfDay))
 				timesOfDay.add(timeOfDay);
 		}
-		UserActivity parentActivity = new UserActivity(parentVerb, parentNoun,
-				locations, timesOfDay, bestMatchedActivity.getAvgDuration());
+		UserActivity parentActivity = new UserActivity(parentVerb, parentNoun, locations, timesOfDay, bestMatchedActivity.getAvgDuration());
 
 		// Add (parent -> activity) and (parent -> bestMatchedActivity) to the
 		// activity tree
-		List<UserActivity> parents;
-		parents = parentActivities.get(activity);
-		parents.add(parentActivity);
-		parentActivities.put(activity, parents);
+		if (activity.equals(parentActivity)) {
+			System.out.println();
+		}
+		if (activity.equals(parentActivity) == false) {
+			userActivityTree.add(activity, parentActivity);
+		}
 
-		parents = parentActivities.get(bestMatchedActivity);
-		parents.add(parentActivity);
-		parentActivities.put(bestMatchedActivity, parents);
+		userActivityTree.add(bestMatchedActivity, parentActivity);
 
 		return parentActivity;
 	}
@@ -367,7 +352,7 @@ public final class Subsumer implements Serializable {
 
 		List<UserActivity> activities = locationToActivityMapping.get(location);
 		Collections.sort(activities, new Comparator<UserActivity>() {
-      public int compare(UserActivity act1, UserActivity act2) {
+			public int compare(UserActivity act1, UserActivity act2) {
 				if (act1.getScore() > act2.getScore())
 					return 1;
 				else if (act1.getScore() < act2.getScore())
@@ -379,14 +364,19 @@ public final class Subsumer implements Serializable {
 		return activities;
 	}
 
-	private void addLocationToActivityMapping(UserActivity act) {
-		List<String> locations = act.getLocations();
-		for (String location : locations)
-			addLocationToActivityMapping(act, location);
+	private BreadthFirstShortestPath<String, DefaultEdge> getBreadthFirstShortestPath(DirectedAcyclicGraph<String, DefaultEdge> graph, String termWithSense,
+			Map<String, BreadthFirstShortestPath<String, DefaultEdge>> distanceCache) {
+		BreadthFirstShortestPath<String, DefaultEdge> result = distanceCache.get(termWithSense);
+		if (result != null) {
+			return result;
+		}
+		result = new BreadthFirstShortestPath<String, DefaultEdge>(graph, termWithSense);
+		distanceCache.put(termWithSense, result);
+		return result;
 	}
 
-	private void addLocationToActivityMapping(UserActivity act,
-			List<String> locations) {
+	private void addLocationToActivityMapping(UserActivity act) {
+		Set<String> locations = act.getLocations();
 		for (String location : locations)
 			addLocationToActivityMapping(act, location);
 	}
@@ -401,9 +391,9 @@ public final class Subsumer implements Serializable {
 		activities.add(act);
 		locationToActivityMapping.put(location, activities);
 	}
-	
+
 	@Override
 	public String toString() {
-		return parentActivities.toString();
+		return userActivityTree.getParentRelations().toString();
 	}
 }

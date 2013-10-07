@@ -10,47 +10,51 @@ import java.util.Queue;
 import java.util.Set;
 
 /**
- * <p>Use this to compute shortest paths on graphs where the cost function is always constant,
- * as it guarantees optimality, and the best running-time guarantee.</p>
+ * <p>
+ * Use this to compute shortest paths on graphs where the cost function is always constant, as it
+ * guarantees optimality, and the best running-time guarantee.
+ * </p>
  * <p/>
- * <p>Time complexity: <i>O(|V| + |E|)</i></p>
- *
+ * <p>
+ * Time complexity: <i>O(|V| + |E|)</i>
+ * </p>
+ * 
  * @author Sebastian Claici
  */
 public class BreadthFirstShortestPath<V, E> {
-    private final Map<V, Integer> distance;
+	private final Map<V, Integer> distance;
 
-    public BreadthFirstShortestPath(Graph<V, E> g, V src) {
-        this.distance = new HashMap<V, Integer>();
+	public BreadthFirstShortestPath(Graph<V, E> g, V src) {
+		this.distance = new HashMap<V, Integer>();
 
-        computeSingleSourceShortestPaths(g, src);
-    }
+		computeSingleSourceShortestPaths(g, src);
+	}
 
-    public double getCost(V dst) {
-        if (!distance.containsKey(dst))
-            return Double.POSITIVE_INFINITY;
-        return distance.get(dst);
-    }
+	public int getCost(V dst) {
+		if (!distance.containsKey(dst))
+			return Integer.MAX_VALUE;
+		return distance.get(dst);
+	}
 
-    private void computeSingleSourceShortestPaths(Graph<V, E> g, V src) {
-        Queue<V> queue = new ArrayDeque<V>();
-        Set<V> visited = new HashSet<V>();
+	private void computeSingleSourceShortestPaths(Graph<V, E> g, V src) {
+		Queue<V> queue = new ArrayDeque<V>();
+		Set<V> visited = new HashSet<V>();
 
-        queue.add(src);
-        visited.add(src);
-        distance.put(src, 0);
-        while (!queue.isEmpty()) {
-            V node = queue.poll();
+		queue.add(src);
+		visited.add(src);
+		distance.put(src, 0);
+		while (!queue.isEmpty()) {
+			V node = queue.poll();
 
-            int d = distance.get(node);
-            for (E edge : g.edgesOf(node)) {
-                V next = g.getEdgeTarget(edge);
-                if (!visited.contains(next)) {
-                    queue.add(next);
-                    visited.add(next);
-                    distance.put(next, d + 1);
-                }
-            }
-        }
-    }
+			int d = distance.get(node);
+			for (E edge : g.edgesOf(node)) {
+				V next = g.getEdgeTarget(edge);
+				if (!visited.contains(next)) {
+					queue.add(next);
+					visited.add(next);
+					distance.put(next, d + 1);
+				}
+			}
+		}
+	}
 }
