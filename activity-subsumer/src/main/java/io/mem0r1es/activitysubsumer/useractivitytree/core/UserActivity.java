@@ -138,4 +138,14 @@ public final class UserActivity implements Serializable {
 		result = prime * result + ((verb == null) ? 0 : verb.hashCode());
 		return result;
 	}
+
+	public void addLocations(Set<String> locations2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void addTimesOfDay(Set<String> timeOfDay2) {
+		// TODO Auto-generated method stub
+		
+	}
 }

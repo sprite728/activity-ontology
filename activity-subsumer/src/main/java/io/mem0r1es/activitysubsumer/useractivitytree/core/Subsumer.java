@@ -72,6 +72,11 @@ public final class Subsumer implements Serializable {
 		depthMapVerbs = GraphUtils.bfsExplore(verbs);
 	}
 
+	public void test() {
+		Set<DefaultEdge> edges = nouns.edgesOf("meal.n.01");
+		System.out.println(nouns.containsEdge("meal.n.01", "lunch.n.01"));
+	}
+
 	/**
 	 * <p>
 	 * Add an activity to the subsumer.
@@ -87,30 +92,24 @@ public final class Subsumer implements Serializable {
 
 		if (!senseMapVerbs.containsKey(verb) || !senseMapNouns.containsKey(noun))
 			throw new IllegalArgumentException("Unknown verb or noun");
-		
+
 		addActivity(new UserActivity(verb, noun));
 	}
 
 	public void addActivity(UserActivity activity) {
-		if (activity.getVerb().equals("repair")) {
-			System.out.println();
-		}
 		// add/update location to activity mapping
-		addLocationToActivityMapping(activity);
-		userActivityTree.add(activity);
 
 		String noun = activity.getNoun();
 		String verb = activity.getVerb();
 		Set<String> verbSenses = senseMapVerbs.get(verb);
 		Set<String> nounSenses = senseMapNouns.get(noun);
-		
+
 		if (verbSenses == null || nounSenses == null) {
 			return;
 		}
 
 		// pairs of matched activities to parent activities
-		List<Pair<String, String>> parentActivities = new ArrayList<Pair<String, String>>();
-		List<UserActivity> matchedActivities = new ArrayList<UserActivity>();
+		Map<Pair<String, String>, Set<UserActivity>> parentToSiblingsMapping = new HashMap<Pair<String, String>, Set<UserActivity>>();
 
 		// distance cache
 		Map<String, BreadthFirstShortestPath<String, DefaultEdge>> nounsDistanceCache = new HashMap<String, BreadthFirstShortestPath<String, DefaultEdge>>();
@@ -124,12 +123,18 @@ public final class Subsumer implements Serializable {
 				if (subsumptionResult == null)
 					continue;
 
-				parentActivities.add(subsumptionResult.second);
-				matchedActivities.add(subsumptionResult.first);
+				Set<UserActivity> siblings = parentToSiblingsMapping.get(subsumptionResult.second);
+				if (siblings == null) {
+					siblings = new HashSet<UserActivity>();
+					parentToSiblingsMapping.put(subsumptionResult.second, siblings);
+				}
+				siblings.add(subsumptionResult.first);
 			}
 		}
 
-		findBestMatch(activity, matchedActivities, parentActivities);
+		findBestMatch(activity, parentToSiblingsMapping);
+
+		addLocationToActivityMapping(activity);
 	}
 
 	/**
@@ -192,10 +197,8 @@ public final class Subsumer implements Serializable {
 
 					int costNouns = 0;
 					int costVerbs = 0;
-					if (nounSense.equals(nounSenseOther) == false)
-						costNouns = nounShortestPaths.getCost(nounSenseOther);
-					if (verbSense.equals(verbSenseOther) == false)
-						costVerbs = verbShortestPaths.getCost(verbSenseOther);
+					costNouns = nounShortestPaths.getCost(nounSenseOther);
+					costVerbs = verbShortestPaths.getCost(verbSenseOther);
 
 					// no path from given noun to other activity noun, then try the other direction
 					if (costNouns == Integer.MAX_VALUE) {
@@ -206,6 +209,10 @@ public final class Subsumer implements Serializable {
 					if (costVerbs == Integer.MAX_VALUE) {
 						BreadthFirstShortestPath<String, DefaultEdge> verbSenseOtherSP = getBreadthFirstShortestPath(verbs, verbSenseOther, verbsDistanceCache);
 						costVerbs = verbSenseOtherSP.getCost(verbSense);
+					}
+
+					if (costNouns != Integer.MAX_VALUE) {
+						System.out.println();
 					}
 
 					if (costVerbs != Integer.MAX_VALUE && costNouns != Integer.MAX_VALUE) {
@@ -281,19 +288,19 @@ public final class Subsumer implements Serializable {
 	 * verb and noun DAGs.
 	 * </p>
 	 */
-	private void findBestMatch(UserActivity activity, List<UserActivity> matched, List<Pair<String, String>> parents) {
-		if (parents.isEmpty() || parents == null)
+	private void findBestMatch(UserActivity activity, Map<Pair<String, String>, Set<UserActivity>> parentToSiblingsMapping) {
+		if (parentToSiblingsMapping.isEmpty()) {
+			userActivityTree.add(activity);
 			return;
+		}
 
 		double bestDepth = Double.NEGATIVE_INFINITY;
 
-		Pair<String, String> bestParentActivity = null;
-		UserActivity bestMatchedActivity = null;
-
 		// Find the parent activity which is deepest in the WordNet hierarchy
-		for (int i = 0; i < parents.size(); ++i) {
-			String subsumedVerb = parents.get(i).first;
-			String subsumedNoun = parents.get(i).second;
+		Map.Entry<Pair<String, String>, Set<UserActivity>> bestEntry = null;
+		for (Map.Entry<Pair<String, String>, Set<UserActivity>> entry : parentToSiblingsMapping.entrySet()) {
+			String subsumedVerb = entry.getKey().first;
+			String subsumedNoun = entry.getKey().second;
 
 			int depthNoun = depthMapNouns.get(subsumedNoun);
 			int depthVerb = depthMapVerbs.get(subsumedVerb);
@@ -301,44 +308,45 @@ public final class Subsumer implements Serializable {
 
 			if (depth > bestDepth) {
 				bestDepth = depth;
-				bestParentActivity = parents.get(i);
-				bestMatchedActivity = matched.get(i);
+				bestEntry = entry;
 			}
 		}
 
-		rebuildTree(activity, bestParentActivity, bestMatchedActivity);
+		rebuildTree(activity, bestEntry.getKey(), bestEntry.getValue());
 	}
 
-	private UserActivity rebuildTree(UserActivity activity, Pair<String, String> bestParentActivity, UserActivity bestMatchedActivity) {
+	private UserActivity rebuildTree(UserActivity activity, Pair<String, String> bestParentActivity, Set<UserActivity> bestMatchedActivities) {
+		/*
+		 * Case 1: the bestParentActivity is not in the tree; activity and bestParentActivity must
+		 * be added to the tree and activity + bestMatchedActivities must become children of
+		 * bestParentActivity. bestParentActivity must be a child of all the parents of
+		 * bestMatchedActivities attention: it is possible that bestParentActivity is the same as
+		 * one of the bestMatchedActivities. Case 2: bestParentActivity is already in the tree. In
+		 * this case, bestMatchedActivities are ignored since they must already be children of
+		 * bestParentActivity (because all additions are with subsumtion and subsumtion works.
+		 */
 
 		// Create a new parent activity
 		String parentVerb = Utils.wordName(bestParentActivity.first);
 		String parentNoun = Utils.wordName(bestParentActivity.second);
 
-		Set<String> locations = new HashSet<String>();
-		locations.addAll(activity.getLocations());
-		for (String location : bestMatchedActivity.getLocations()) {
-			if (!locations.contains(location))
-				locations.add(location);
+		UserActivity parentActivity = userActivityTree.getNode(parentVerb, parentNoun);
+		if (parentActivity == null) {
+			parentActivity = new UserActivity(parentVerb, parentNoun);
+			userActivityTree.add(parentActivity);
+
+			for (UserActivity bestMatchedActivity : bestMatchedActivities) {
+				if (bestMatchedActivity.equals(parentActivity) == false) {
+					userActivityTree.add(bestMatchedActivity, parentActivity);
+				}
+			}
 		}
-		Set<String> timesOfDay = new HashSet<String>();
-		locations.addAll(activity.getTimeOfDay());
-		for (String timeOfDay : bestMatchedActivity.getTimeOfDay()) {
-			if (!timesOfDay.contains(timeOfDay))
-				timesOfDay.add(timeOfDay);
-		}
-		UserActivity parentActivity = new UserActivity(parentVerb, parentNoun, locations, timesOfDay, bestMatchedActivity.getAvgDuration());
 
 		// Add (parent -> activity) and (parent -> bestMatchedActivity) to the
 		// activity tree
-		if (activity.equals(parentActivity)) {
-			System.out.println();
-		}
 		if (activity.equals(parentActivity) == false) {
 			userActivityTree.add(activity, parentActivity);
 		}
-
-		userActivityTree.add(bestMatchedActivity, parentActivity);
 
 		return parentActivity;
 	}

@@ -10,9 +10,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
+import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.SimpleGraph;
 import org.testng.annotations.Test;
-
-import junit.framework.TestCase;
 
 /**
  * Created by George on 9/26/13.
@@ -59,6 +60,8 @@ public class SubsumerTest {
 		}
 
 		List<UserActivity> l = subsumer.getActivitiesForLocation("hospital");
+		
+		subsumer.test();
 
 		/*
 		 * Log.d(TAG, "deserialize tree start"); Subsumer subsumer1 = readFile(FILENAME); Log.d(TAG,

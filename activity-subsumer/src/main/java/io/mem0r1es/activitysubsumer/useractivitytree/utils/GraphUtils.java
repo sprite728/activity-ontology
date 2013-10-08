@@ -84,7 +84,7 @@ public final class GraphUtils {
 				dag.addEdge(node, next);
 			}
 		}
-
+		
 		return dag;
 	}
 

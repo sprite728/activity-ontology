@@ -24,18 +24,47 @@ public class UserActivityTree {
 		return activities;
 	}
 
-	public void add(UserActivity activity, UserActivity parentActivity) {
-		activities.add(activity);
-		activities.add(parentActivity);
-		Set<UserActivity> parents = parentActivities.get(activity);
-		if (parents == null) {
-			parents = new HashSet<UserActivity>();
-			parentActivities.put(activity, parents);
-		}
-		parents.add(parentActivity);
-	}
+	// public void add(UserActivity activity, UserActivity parentActivity) {
+	// activities.add(activity);
+	// activities.add(parentActivity);
+	// Set<UserActivity> parents = parentActivities.get(activity);
+	// if (parents == null) {
+	// parents = new HashSet<UserActivity>();
+	// parentActivities.put(activity, parents);
+	// } else {
+	//
+	// }
+	// parents.add(parentActivity);
+	// }
 
 	public Map<UserActivity, Set<UserActivity>> getParentRelations() {
 		return parentActivities;
+	}
+
+	public UserActivity getNode(String verb, String noun) {
+		for (UserActivity activity : activities) {
+			if (activity.getVerb().equals(verb) && activity.getNoun().equals(noun)) {
+				return activity;
+			}
+		}
+		return null;
+	}
+
+	public void add(UserActivity activity, UserActivity parentActivity) {
+		activities.add(activity);
+		activities.add(parentActivity);
+		Set<UserActivity> activityOldParents = parentActivities.get(activity);
+		Set<UserActivity> parentActivityParents = parentActivities.get(parentActivity);
+		if (activityOldParents == null) {
+			activityOldParents = new HashSet<UserActivity>();
+			parentActivities.put(activity, activityOldParents);
+		}
+		if (parentActivityParents == null) {
+			parentActivityParents = new HashSet<UserActivity>();
+			parentActivities.put(parentActivity, parentActivityParents);
+		}
+		parentActivityParents.addAll(activityOldParents);
+		activityOldParents.clear();
+		activityOldParents.add(parentActivity);
 	}
 }
