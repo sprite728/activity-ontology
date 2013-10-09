@@ -4,7 +4,7 @@ package io.mem0r1es.activitysubsumer.useractivitytree.utils;
  * @author Sebastian Claici
  */
 public class Pair<S, T> {
-	public final S first;
+	public S first;
 	public final T second;
 
 	public Pair(S first, T second) {

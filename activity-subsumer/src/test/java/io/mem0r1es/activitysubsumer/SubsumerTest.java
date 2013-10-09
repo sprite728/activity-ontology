@@ -59,10 +59,6 @@ public class SubsumerTest {
 			e.printStackTrace();
 		}
 
-		List<UserActivity> l = subsumer.getActivitiesForLocation("hospital");
-		
-		subsumer.test();
-
 		/*
 		 * Log.d(TAG, "deserialize tree start"); Subsumer subsumer1 = readFile(FILENAME); Log.d(TAG,
 		 * "deserialize tree end");

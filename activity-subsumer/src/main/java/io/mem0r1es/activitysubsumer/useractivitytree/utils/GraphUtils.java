@@ -26,6 +26,7 @@ import java.util.StringTokenizer;
  * @author Sebastian Claici
  */
 public final class GraphUtils {
+	public static final String DEFAULT_ROOT = "DEFAULT_ROOT";
 
 	private GraphUtils() {
 	}
@@ -84,7 +85,14 @@ public final class GraphUtils {
 				dag.addEdge(node, next);
 			}
 		}
-		
+
+		dag.addVertex(DEFAULT_ROOT);
+		for (String vertex : dag.vertexSet()) {
+			if (dag.inDegreeOf(vertex) == 0 && vertex.equals(DEFAULT_ROOT) == false) {
+				dag.addEdge(DEFAULT_ROOT, vertex);
+			}
+		}
+
 		return dag;
 	}
 
