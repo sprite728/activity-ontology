@@ -20,7 +20,7 @@ public final class UserActivity implements Serializable {
 
 	private static final long serialVersionUID = 7526471156722776147L;
 
-	public static final UserActivity DEFAULT_NODE = new UserActivity("", "");
+	public static final UserActivity DEFAULT_NODE = new UserActivity("XXX", "XXX");
 
 	/**
 	 * <p>
@@ -102,7 +102,7 @@ public final class UserActivity implements Serializable {
 
 	@Override
 	public String toString() {
-		return verb + "," + noun;
+		return verb + "-" + noun;
 	}
 
 	@Override

@@ -31,7 +31,7 @@ import org.jgrapht.graph.DefaultEdge;
 public final class Subsumer implements Serializable {
 	private static final long serialVersionUID = 0L;
 
-	private static final double SIMILARITY_THRESHOLD = 0.2;
+	private static final double SIMILARITY_THRESHOLD = 0.5;
 
 	private final DirectedAcyclicGraph<String, DefaultEdge> nouns;
 	private final DirectedAcyclicGraph<String, DefaultEdge> verbs;
@@ -238,12 +238,12 @@ public final class Subsumer implements Serializable {
 				// activity can't be equal to FIRST -> need for test at the beginning of addActivity
 				// FIRST can be equal to SECOND -> userActivity.add(activity, SECOND)
 				if (pair.first.equals(pair.second)) {
-					userActivityTree.add(activity, pair.second);
+					userActivityTree.addChild(activity, pair.second);
 				} else if (activity.equals(pair.second)) {
-					userActivityTree.add(pair.first, activity);
+					userActivityTree.insertAbove(activity, pair.first);
 				} else {
-					userActivityTree.add(activity, pair.second);
-					userActivityTree.add(pair.first, pair.second);
+					userActivityTree.insertAbove(pair.second, pair.first);
+					userActivityTree.addChild(activity, pair.second);
 				}
 			}
 		}
@@ -277,6 +277,6 @@ public final class Subsumer implements Serializable {
 
 	@Override
 	public String toString() {
-		return userActivityTree.getParentRelations().toString();
+		return userActivityTree.toString();
 	}
 }

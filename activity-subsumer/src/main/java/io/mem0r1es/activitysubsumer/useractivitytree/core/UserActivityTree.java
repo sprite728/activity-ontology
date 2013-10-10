@@ -5,51 +5,31 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
+import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.traverse.BreadthFirstIterator;
+
 public class UserActivityTree {
-	private final Set<UserActivity> activities = new HashSet<UserActivity>();
-	private final Map<UserActivity, Set<UserActivity>> parentActivities = new HashMap<UserActivity, Set<UserActivity>>();
-	private final Map<UserActivity, Set<UserActivity>> childrenActivities = new HashMap<UserActivity, Set<UserActivity>>();
+	private final DirectedAcyclicGraph<UserActivity, DefaultEdge> graph = new DirectedAcyclicGraph<UserActivity, DefaultEdge>(DefaultEdge.class);
 
 	public UserActivityTree() {
-		activities.add(UserActivity.DEFAULT_NODE);
+		graph.addVertex(UserActivity.DEFAULT_NODE);
 	}
 
 	public void add(UserActivity activity) {
-		activities.add(activity);
-		Set<UserActivity> parents = new HashSet<UserActivity>();
-		parents.add(UserActivity.DEFAULT_NODE);
-		parentActivities.put(activity, parents);
-		Set<UserActivity> children = childrenActivities.get(UserActivity.DEFAULT_NODE);
-		if (children == null) {
-			children = new HashSet<UserActivity>();
-			childrenActivities.put(UserActivity.DEFAULT_NODE, children);
+		if (graph.vertexSet().contains(activity)) {
+			return;
 		}
-		children.add(activity);
+		graph.addVertex(activity);
+		graph.addEdge(UserActivity.DEFAULT_NODE, activity);
 	}
 
 	public Set<UserActivity> getNodes() {
-		return activities;
-	}
-
-	// public void add(UserActivity activity, UserActivity parentActivity) {
-	// activities.add(activity);
-	// activities.add(parentActivity);
-	// Set<UserActivity> parents = parentActivities.get(activity);
-	// if (parents == null) {
-	// parents = new HashSet<UserActivity>();
-	// parentActivities.put(activity, parents);
-	// } else {
-	//
-	// }
-	// parents.add(parentActivity);
-	// }
-
-	public Map<UserActivity, Set<UserActivity>> getParentRelations() {
-		return parentActivities;
+		return graph.vertexSet();
 	}
 
 	public UserActivity getNode(String verb, String noun) {
-		for (UserActivity activity : activities) {
+		for (UserActivity activity : graph.vertexSet()) {
 			if (activity.getVerb().equals(verb) && activity.getNoun().equals(noun)) {
 				return activity;
 			}
@@ -57,42 +37,42 @@ public class UserActivityTree {
 		return null;
 	}
 
-	public void add(UserActivity activity, UserActivity parentActivity) {
-		activities.add(activity);
-		activities.add(parentActivity);
-		Set<UserActivity> activityOldParents = parentActivities.get(activity);
-		Set<UserActivity> parentActivityParents = parentActivities.get(parentActivity);
-		if (activityOldParents == null) {
-			activityOldParents = new HashSet<UserActivity>();
-			parentActivities.put(activity, activityOldParents);
+	public void addChild(UserActivity activity, UserActivity targetActivity) {
+		if (graph.containsVertex(targetActivity) == false) {
+			throw new IllegalArgumentException();
 		}
-		if (parentActivityParents == null) {
-			parentActivityParents = new HashSet<UserActivity>();
-			parentActivities.put(parentActivity, parentActivityParents);
+		if (graph.containsVertex(activity)) {
+			throw new IllegalArgumentException();
 		}
-		parentActivityParents.addAll(activityOldParents);
-		activityOldParents.clear();
-		activityOldParents.add(parentActivity);
 
-		Set<UserActivity> parentActivityChildren = childrenActivities.get(parentActivity);
-		Set<UserActivity> activityChildren = childrenActivities.get(activity);
-		if (activityChildren == null) {
-			activityChildren = new HashSet<UserActivity>();
-			childrenActivities.put(activity, activityChildren);
+		graph.addVertex(activity);
+		graph.addEdge(targetActivity, activity);
+	}
+
+	public void insertAbove(UserActivity activity, UserActivity targetActivity) {
+		if (graph.containsVertex(targetActivity) == false) {
+			throw new IllegalArgumentException();
 		}
-		if (parentActivityChildren == null) {
-			parentActivityChildren = new HashSet<UserActivity>();
-			childrenActivities.put(parentActivity, parentActivityChildren);
+		if (graph.containsVertex(activity)) {
+			throw new IllegalArgumentException();
 		}
-		activityChildren.addAll(parentActivityChildren);
-		parentActivityChildren.clear();
-		parentActivityChildren.add(activity);
+
+		graph.addVertex(activity);
+		for (DefaultEdge edge : graph.edgesOf(targetActivity)) {
+			UserActivity edgeTarget = graph.getEdgeTarget(edge);
+			UserActivity edgeSource = graph.getEdgeSource(edge);
+			if (edgeTarget.equals(targetActivity)) {
+				graph.removeEdge(edge);
+				graph.addEdge(edgeSource, activity);
+			}
+		}
+		graph.addEdge(activity, targetActivity);
 	}
 
 	public Map<UserActivity, Set<UserActivity>> getSubtreesByVerbs(Set<String> rootVerbs) {
 		Map<UserActivity, Set<UserActivity>> result = new HashMap<UserActivity, Set<UserActivity>>();
 		for (String rootVerb : rootVerbs) {
-			for (UserActivity activity : activities) {
+			for (UserActivity activity : graph.vertexSet()) {
 				if (activity.getVerb().equals(rootVerb)) {
 					result.put(activity, getSubtree(activity));
 				}
@@ -103,24 +83,15 @@ public class UserActivityTree {
 
 	public Set<UserActivity> getSubtree(UserActivity root) {
 		Set<UserActivity> result = new HashSet<UserActivity>();
-		result.add(root);
-		try {
-		result.addAll(getChildrenRecursively(root));
-		} catch (StackOverflowError e) {
-			System.out.println();
+		BreadthFirstIterator<UserActivity, DefaultEdge> iterator = new BreadthFirstIterator<UserActivity, DefaultEdge>(graph, root);
+		while (iterator.hasNext()) {
+			result.add(iterator.next());
 		}
 		return result;
 	}
-
-	private Set<UserActivity> getChildrenRecursively(UserActivity activity) {
-		Set<UserActivity> result = new HashSet<UserActivity>();
-		Set<UserActivity> children = childrenActivities.get(activity);
-		if (children != null) {
-			result.addAll(children);
-			for (UserActivity child : children) {
-				result.addAll(getChildrenRecursively(child));
-			}
-		}
-		return result;
+	
+	@Override
+	public String toString() {
+		return graph.edgeSet().toString();
 	}
 }
