@@ -12,6 +12,7 @@ public class Pair<S, T> {
 		this.second = second;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public boolean equals(Object o) {
 		if (this == o)

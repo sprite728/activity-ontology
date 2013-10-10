@@ -104,7 +104,11 @@ public class UserActivityTree {
 	public Set<UserActivity> getSubtree(UserActivity root) {
 		Set<UserActivity> result = new HashSet<UserActivity>();
 		result.add(root);
+		try {
 		result.addAll(getChildrenRecursively(root));
+		} catch (StackOverflowError e) {
+			System.out.println();
+		}
 		return result;
 	}
 

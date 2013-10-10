@@ -1,10 +1,5 @@
 package io.mem0r1es.activitysubsumer.useractivitytree.utils;
 
-import org.jgrapht.DirectedGraph;
-import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
-import org.jgrapht.graph.EdgeReversedGraph;
-import org.jgrapht.traverse.BreadthFirstIterator;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,6 +14,11 @@ import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
+
+import org.jgrapht.DirectedGraph;
+import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
+import org.jgrapht.graph.EdgeReversedGraph;
+import org.jgrapht.traverse.BreadthFirstIterator;
 
 /**
  * Various utility methods that work on graphs.

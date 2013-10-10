@@ -7,12 +7,8 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.Date;
-import java.util.List;
 import java.util.StringTokenizer;
 
-import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
-import org.jgrapht.graph.DefaultEdge;
-import org.jgrapht.graph.SimpleGraph;
 import org.testng.annotations.Test;
 
 /**
@@ -47,7 +43,11 @@ public class SubsumerTest {
 				timeOfDay = tok.nextToken();
 				avgDur = tok.nextToken();
 				UserActivity act = new UserActivity(verb, noun, location, timeOfDay, avgDur);
-				subsumer.addActivity(act);
+				try {
+					subsumer.addActivity(verb, noun);
+				} catch (IllegalArgumentException e) {
+
+				}
 				System.out.println(new Date() + " " + "end add activity");
 				System.out.println(new Date() + " " + subsumer.toString());
 			}
@@ -56,8 +56,10 @@ public class SubsumerTest {
 			System.out.println(new Date() + " " + "Add activities Time:" + elapsedTime);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+//			e.printStackTrace();
 		}
+
+		System.out.println(subsumer);
 
 		/*
 		 * Log.d(TAG, "deserialize tree start"); Subsumer subsumer1 = readFile(FILENAME); Log.d(TAG,
