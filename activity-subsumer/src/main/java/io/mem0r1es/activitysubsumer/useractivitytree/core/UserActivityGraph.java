@@ -161,4 +161,16 @@ public class UserActivityGraph {
 	public String toString() {
 		return graph.edgeSet().toString();
 	}
+
+	public Set<DefaultEdge> getEdges() {
+		return graph.edgeSet();
+	}
+	
+	public UserActivity getEdgeSource(DefaultEdge edge) {
+		return graph.getEdgeSource(edge);
+	}
+	
+	public UserActivity getEdgeTarget(DefaultEdge edge) {
+		return graph.getEdgeTarget(edge);
+	}
 }

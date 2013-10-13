@@ -4,6 +4,7 @@ import io.mem0r1es.activitysubsumer.useractivitytree.algorithms.subsumtion.Subsu
 import io.mem0r1es.activitysubsumer.useractivitytree.core.UserActivity;
 import io.mem0r1es.activitysubsumer.useractivitytree.core.UserActivityGraph;
 import io.mem0r1es.activitysubsumer.useractivitytree.core.WordNetGraphs;
+import io.mem0r1es.activitysubsumer.useractivitytree.utils.CSVExporter;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -24,7 +25,7 @@ public class SubsumerTest {
 		WordNetGraphs.initialize(new FileInputStream("src/test/resources/nouns.graph"), new FileInputStream("src/test/resources/verbs.graph"));
 		Subsumer subsumer = new Subsumer();
 		UserActivityGraph activityGraph = new UserActivityGraph();
-		
+
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
 		System.out.println(new Date() + " " + new Date() + " " + "Create Subsumer Time:" + elapsedTime);
@@ -51,22 +52,17 @@ public class SubsumerTest {
 
 				}
 				System.out.println(new Date() + " " + "end add activity");
-//				System.out.println(new Date() + " " + activityGraph.toString());
+				// System.out.println(new Date() + " " + activityGraph.toString());
 			}
 			stopTime = System.currentTimeMillis();
 			elapsedTime = stopTime - startTime;
 			System.out.println(new Date() + " " + "Add activities Time:" + elapsedTime);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			// e.printStackTrace();
 		}
 
-		System.out.println(subsumer);
+		new CSVExporter().exportCSV("activity_graph", activityGraph);
 
-		/*
-		 * Log.d(TAG, "deserialize tree start"); Subsumer subsumer1 = readFile(FILENAME); Log.d(TAG,
-		 * "deserialize tree end");
-		 */
 		// getContext().deleteFile(FILENAME);
 	}
 }

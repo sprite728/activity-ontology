@@ -18,6 +18,8 @@ import org.jgrapht.Graph;
 public class PathBuilder<V, E> {
 	private Map<V, Set<List<V>>> pathsToDestinations = new HashMap<V, Set<List<V>>>();
 
+	private Set<V> destinations = new HashSet<V>();
+	
 	private Set<V> currentDestinations = new HashSet<V>();
 	private List<V> currentPath = new LinkedList<V>();
 	private V startVertex;
@@ -37,6 +39,7 @@ public class PathBuilder<V, E> {
 		this.startVertex = startVertex;
 
 		dfs(startVertex);
+		destinations.addAll(destinationVertices);
 	}
 
 	/**
@@ -48,8 +51,12 @@ public class PathBuilder<V, E> {
 	 */
 	public void computePaths(Set<V> destinations) {
 		currentDestinations.clear();
+		
 		currentDestinations.addAll(destinations);
+		currentDestinations.removeAll(this.destinations);
+		
 		dfs(startVertex);
+		this.destinations.addAll(currentDestinations);
 	}
 
 	/**
