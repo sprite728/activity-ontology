@@ -61,7 +61,7 @@ public class SubsumerTest {
 			// e.printStackTrace();
 		}
 
-		new CSVExporter().exportCSV("activity_graph", activityGraph);
+		new CSVExporter().exportCSV("activity_graph_v4", activityGraph);
 
 		// getContext().deleteFile(FILENAME);
 	}
