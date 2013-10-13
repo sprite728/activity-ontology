@@ -40,7 +40,7 @@ public final class UserActivity implements Serializable {
 		for (int i = 0; i < locations.length; i++) {
 			this.locations.add(locations[i]);
 		}
-		
+
 		String[] timeOfDays = timeOfDay.split("[|]");
 		for (int i = 0; i < timeOfDays.length; i++) {
 			this.timeOfDay.add(timeOfDays[i]);
@@ -136,13 +136,11 @@ public final class UserActivity implements Serializable {
 		return result;
 	}
 
-	public void addLocations(Set<String> locations2) {
-		// TODO Auto-generated method stub
-		
+	public void addLocations(Set<String> locations) {
+		this.locations.addAll(locations);
 	}
 
-	public void addTimesOfDay(Set<String> timeOfDay2) {
-		// TODO Auto-generated method stub
-		
+	public void addTimesOfDay(Set<String> timeOfDay) {
+		this.timeOfDay.addAll(timeOfDay);
 	}
 }

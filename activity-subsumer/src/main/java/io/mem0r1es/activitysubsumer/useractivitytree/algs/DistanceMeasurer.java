@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
+ * Class which encompasses the algorithm to measure the distance between two vertices.
+ * 
  * @author horiaradu
  */
 public class DistanceMeasurer<V, E> {
@@ -20,6 +22,19 @@ public class DistanceMeasurer<V, E> {
 		this.pathBuilder = pathBuilder;
 	}
 
+	/**
+	 * The method returns the best paths between two vertices, based on the paths present in the
+	 * {@link PathBuilder} supplied as a parameter. The distance metric is the following: the
+	 * distance between two vertices, x and y, is equal to the ratio between the number of common
+	 * nodes between the two paths (from x to the default root, respectively from y to the default
+	 * root) and the total number of distinct nodes in the two paths.
+	 * 
+	 * @param vertex1
+	 * @param vertex2
+	 * @return a pair which contains the distance between the two vertices and the set of pairs of
+	 *         paths which have led to that score. These pairs of paths are the ones yielding the
+	 *         best distance.
+	 */
 	public Pair<Double, Set<Pair<List<V>, List<V>>>> getBestPaths(V vertex1, V vertex2) {
 		Pair<V, V> key = new Pair<V, V>(vertex1, vertex2);
 		Pair<Double, Set<Pair<List<V>, List<V>>>> result = paths.get(key);
@@ -47,6 +62,13 @@ public class DistanceMeasurer<V, E> {
 		return result;
 	}
 
+	/**
+	 * Ratio between the number of nodes of the intersection and the number of nodes in the union.
+	 * 
+	 * @param path1
+	 * @param path2
+	 * @return
+	 */
 	private double distance(List<V> path1, List<V> path2) {
 		int intersection = 0;
 		for (V node : path1) {

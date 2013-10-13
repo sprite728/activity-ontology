@@ -1,7 +1,9 @@
 package io.mem0r1es.activitysubsumer;
 
-import io.mem0r1es.activitysubsumer.useractivitytree.core.Subsumer;
+import io.mem0r1es.activitysubsumer.useractivitytree.algorithms.subsumtion.Subsumer;
 import io.mem0r1es.activitysubsumer.useractivitytree.core.UserActivity;
+import io.mem0r1es.activitysubsumer.useractivitytree.core.UserActivityGraph;
+import io.mem0r1es.activitysubsumer.useractivitytree.core.WordNetGraphs;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -16,13 +18,13 @@ import org.testng.annotations.Test;
  */
 @Test
 public class SubsumerTest {
-	private static final String TAG = Subsumer.class.getCanonicalName();
-
 	@Test
 	public void testJavaSerialization() throws Exception {
 		long startTime = System.currentTimeMillis();
-		Subsumer subsumer = new Subsumer(new FileInputStream("src/test/resources/nouns.graph"), new FileInputStream("src/test/resources/verbs.graph"));
-
+		WordNetGraphs.initialize(new FileInputStream("src/test/resources/nouns.graph"), new FileInputStream("src/test/resources/verbs.graph"));
+		Subsumer subsumer = new Subsumer();
+		UserActivityGraph activityGraph = new UserActivityGraph();
+		
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
 		System.out.println(new Date() + " " + new Date() + " " + "Create Subsumer Time:" + elapsedTime);
@@ -44,19 +46,19 @@ public class SubsumerTest {
 				avgDur = tok.nextToken();
 				UserActivity act = new UserActivity(verb, noun, location, timeOfDay, avgDur);
 				try {
-					subsumer.addActivity(verb, noun);
+					activityGraph.insertActivity(act, subsumer);
 				} catch (IllegalArgumentException e) {
 
 				}
 				System.out.println(new Date() + " " + "end add activity");
-				System.out.println(new Date() + " " + subsumer.toString());
+//				System.out.println(new Date() + " " + activityGraph.toString());
 			}
 			stopTime = System.currentTimeMillis();
 			elapsedTime = stopTime - startTime;
 			System.out.println(new Date() + " " + "Add activities Time:" + elapsedTime);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-//			e.printStackTrace();
+			// e.printStackTrace();
 		}
 
 		System.out.println(subsumer);

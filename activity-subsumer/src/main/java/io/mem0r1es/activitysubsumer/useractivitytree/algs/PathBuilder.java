@@ -10,24 +10,56 @@ import java.util.Set;
 import org.jgrapht.Graph;
 
 /**
+ * Class which encompasses the algorithm for finding all the paths from a given start vertex to a
+ * given set of destination vertices.
+ * 
  * @author horiaradu
  */
 public class PathBuilder<V, E> {
 	private Map<V, Set<List<V>>> pathsToDestinations = new HashMap<V, Set<List<V>>>();
-	private Set<V> destinations = new HashSet<V>();
+
+	private Set<V> currentDestinations = new HashSet<V>();
 	private List<V> currentPath = new LinkedList<V>();
+	private V startVertex;
 	private Graph<V, E> graph;
 
+	/**
+	 * Constructs a new {@link PathBuilder} and computes all the paths from the startVertex to each
+	 * destination in the set of destinationVertices.
+	 * 
+	 * @param graph
+	 * @param startVertex
+	 * @param destinationVertices
+	 */
 	public PathBuilder(Graph<V, E> graph, V startVertex, Set<V> destinationVertices) {
 		this.graph = graph;
-		destinations.addAll(destinationVertices);
+		currentDestinations.addAll(destinationVertices);
+		this.startVertex = startVertex;
 
 		dfs(startVertex);
 	}
 
+	/**
+	 * Computes all the paths from the startVertex to each destination in the set of
+	 * destinationVertices.
+	 * 
+	 * @param startVertex
+	 * @param destinationVertices
+	 */
+	public void computePaths(Set<V> destinations) {
+		currentDestinations.clear();
+		currentDestinations.addAll(destinations);
+		dfs(startVertex);
+	}
+
+	/**
+	 * performs a Depth First Search, storing all the paths that reach one of the destinations.
+	 * 
+	 * @param vertex
+	 */
 	private void dfs(V vertex) {
 		currentPath.add(vertex);
-		if (destinations.contains(vertex)) {
+		if (currentDestinations.contains(vertex)) {
 			Set<List<V>> paths = pathsToDestinations.get(vertex);
 			if (paths == null) {
 				paths = new HashSet<List<V>>();
@@ -48,10 +80,18 @@ public class PathBuilder<V, E> {
 		currentPath.remove(currentPath.size() - 1);
 	}
 
+	/**
+	 * @param destination
+	 * @return the set of paths from the given start vertex to the destination.
+	 */
 	public Set<List<V>> getPathsToDestination(V destination) {
 		return pathsToDestinations.get(destination);
 	}
 
+	/**
+	 * @return a map containing as key, all the destinations and as values, for each vertex, the set
+	 *         of paths from the given start vertex to that destination.
+	 */
 	public Map<V, Set<List<V>>> getAllPaths() {
 		return pathsToDestinations;
 	}
