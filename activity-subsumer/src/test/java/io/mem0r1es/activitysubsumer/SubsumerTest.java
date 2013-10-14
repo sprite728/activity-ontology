@@ -49,7 +49,9 @@ public class SubsumerTest {
 				try {
 					activityGraph.insertActivity(act, subsumer);
 				} catch (IllegalArgumentException e) {
-
+					if ("Unknown verb or noun".equals(e.getMessage()) == false) {
+						e.printStackTrace();
+					}
 				}
 				System.out.println(new Date() + " " + "end add activity");
 				// System.out.println(new Date() + " " + activityGraph.toString());
@@ -58,10 +60,11 @@ public class SubsumerTest {
 			elapsedTime = stopTime - startTime;
 			System.out.println(new Date() + " " + "Add activities Time:" + elapsedTime);
 		} catch (Exception e) {
-			// e.printStackTrace();
+			e.printStackTrace();
 		}
 
-		new CSVExporter().exportCSV("activity_graph_v4", activityGraph);
+		new CSVExporter().exportCSV("out_activity_graph_v0", activityGraph);
+		System.out.println(activityGraph.NR_CYCLES);
 
 		// getContext().deleteFile(FILENAME);
 	}

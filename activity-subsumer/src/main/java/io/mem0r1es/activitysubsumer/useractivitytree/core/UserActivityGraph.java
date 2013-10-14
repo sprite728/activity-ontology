@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
+import org.jgrapht.experimental.dag.DirectedAcyclicGraph.CycleFoundException;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.traverse.BreadthFirstIterator;
 
@@ -21,6 +22,8 @@ import org.jgrapht.traverse.BreadthFirstIterator;
  */
 public class UserActivityGraph {
 	private final DirectedAcyclicGraph<UserActivity, DefaultEdge> graph = new DirectedAcyclicGraph<UserActivity, DefaultEdge>(DefaultEdge.class);
+
+	public int NR_CYCLES = 0;
 
 	public UserActivityGraph() {
 		graph.addVertex(UserActivity.DEFAULT_NODE);
@@ -84,15 +87,23 @@ public class UserActivityGraph {
 	 * @throws IllegalArgumentException
 	 */
 	public void addChild(UserActivity activity, UserActivity targetActivity) {
+		System.out.println(this.getEdges());
 		if (graph.containsVertex(targetActivity) == false) {
 			throw new IllegalArgumentException();
 		}
-		if (graph.containsVertex(activity)) {
-			throw new IllegalArgumentException();
-		}
+		// if (graph.containsVertex(activity)) {
+		// throw new IllegalArgumentException();
+		// }
 
 		graph.addVertex(activity);
-		graph.addEdge(targetActivity, activity);
+		try {
+			graph.addEdge(targetActivity, activity);
+		} catch (IllegalArgumentException e) {
+			if (e.getCause() instanceof CycleFoundException) {
+				NR_CYCLES++;
+				System.out.println("CYCLE**************************: " + targetActivity + " -> " + activity);
+			}
+		}
 	}
 
 	/**
@@ -108,9 +119,11 @@ public class UserActivityGraph {
 		if (graph.containsVertex(targetActivity) == false) {
 			throw new IllegalArgumentException();
 		}
-		if (graph.containsVertex(activity)) {
-			throw new IllegalArgumentException();
-		}
+		// if (graph.containsVertex(activity)) {
+		// throw new IllegalArgumentException();
+		// }
+
+		System.out.println(graph.edgeSet().toString());
 
 		graph.addVertex(activity);
 		for (DefaultEdge edge : graph.edgesOf(targetActivity)) {
@@ -118,10 +131,78 @@ public class UserActivityGraph {
 			UserActivity edgeSource = graph.getEdgeSource(edge);
 			if (edgeTarget.equals(targetActivity)) {
 				graph.removeEdge(edge);
-				graph.addEdge(edgeSource, activity);
+				try {
+					if (edgeSource.equals(activity) == false) {
+						graph.addEdge(edgeSource, activity);
+					}
+				} catch (IllegalArgumentException e) {
+					if (e.getCause() instanceof CycleFoundException) {
+						NR_CYCLES++;
+						graph.addEdge(edgeSource, edgeTarget);
+						System.out.println("CYCLE**************************: " + edgeSource + " -> " + activity);
+					}
+				}
 			}
 		}
-		graph.addEdge(activity, targetActivity);
+		try {
+			graph.addEdge(activity, targetActivity);
+		} catch (IllegalArgumentException e) {
+			if (e.getCause() instanceof CycleFoundException) {
+				NR_CYCLES++;
+				System.out.println("CYCLE**************************: " + activity + " -> " + targetActivity);
+			}
+		}
+	}
+
+	/**
+	 * Insert activity as a <b>parent</b> of targetActivity. All the <b>old parents</b> of
+	 * targetActivity will become parents of activity. If activity is already in the graph or if
+	 * targetActivity isn't in the graph, then an {@link IllegalArgumentException} is thrown.
+	 * 
+	 * @param activity
+	 * @param targetActivity
+	 * @throws IllegalArgumentException
+	 */
+	public void insertAbove(Set<UserActivity> activities, UserActivity targetActivity) {
+		if (graph.containsVertex(targetActivity) == false) {
+			throw new IllegalArgumentException();
+		}
+		// if (graph.containsVertex(activity)) {
+		// throw new IllegalArgumentException();
+		// }
+
+		for (UserActivity activity : activities) {
+			graph.addVertex(activity);
+		}
+		for (DefaultEdge edge : graph.edgesOf(targetActivity)) {
+			UserActivity edgeTarget = graph.getEdgeTarget(edge);
+			UserActivity edgeSource = graph.getEdgeSource(edge);
+			if (edgeTarget.equals(targetActivity)) {
+				graph.removeEdge(edge);
+				for (UserActivity activity : activities) {
+					try {
+						if (edgeSource.equals(activity) == false) {
+							graph.addEdge(edgeSource, activity);
+						}
+					} catch (IllegalArgumentException e) {
+						if (e.getCause() instanceof CycleFoundException) {
+							NR_CYCLES++;
+							System.out.println("CYCLE**************************: " + edgeSource + " -> " + activity);
+						}
+					}
+				}
+			}
+		}
+		for (UserActivity activity : activities) {
+			try {
+				graph.addEdge(activity, targetActivity);
+			} catch (IllegalArgumentException e) {
+				if (e.getCause() instanceof CycleFoundException) {
+					NR_CYCLES++;
+					System.out.println("CYCLE**************************: " + activity + " -> " + targetActivity);
+				}
+			}
+		}
 	}
 
 	/**
@@ -165,12 +246,52 @@ public class UserActivityGraph {
 	public Set<DefaultEdge> getEdges() {
 		return graph.edgeSet();
 	}
-	
+
 	public UserActivity getEdgeSource(DefaultEdge edge) {
 		return graph.getEdgeSource(edge);
 	}
-	
+
 	public UserActivity getEdgeTarget(DefaultEdge edge) {
 		return graph.getEdgeTarget(edge);
+	}
+
+	public void addAditionalParent(UserActivity activity, UserActivity targetActivity) {
+		if (graph.containsVertex(targetActivity) == false) {
+			throw new IllegalArgumentException();
+		}
+		// if (graph.containsVertex(activity)) {
+		// throw new IllegalArgumentException();
+		// }
+
+		graph.addVertex(activity);
+		for (DefaultEdge edge : graph.edgesOf(targetActivity)) {
+			UserActivity edgeTarget = graph.getEdgeTarget(edge);
+			UserActivity targetActivityParent = graph.getEdgeSource(edge);
+			if (edgeTarget.equals(targetActivity)) {
+				for (DefaultEdge edgeToParent : graph.edgesOf(targetActivityParent)) {
+					UserActivity edgeToParentTarget = graph.getEdgeTarget(edgeToParent);
+					UserActivity edgeToParentSource = graph.getEdgeSource(edgeToParent);
+					if (edgeToParentTarget.equals(targetActivityParent)) {
+						try {
+							graph.addEdge(edgeToParentSource, activity);
+						} catch (IllegalArgumentException e) {
+							if (e.getCause() instanceof CycleFoundException) {
+								NR_CYCLES++;
+								System.out.println("CYCLE**************************: " + edgeToParentSource + " -> " + activity);
+							}
+						}
+					}
+				}
+				break;
+			}
+		}
+		try {
+			graph.addEdge(activity, targetActivity);
+		} catch (IllegalArgumentException e) {
+			if (e.getCause() instanceof CycleFoundException) {
+				NR_CYCLES++;
+				System.out.println("CYCLE**************************: " + activity + " -> " + targetActivity);
+			}
+		}
 	}
 }

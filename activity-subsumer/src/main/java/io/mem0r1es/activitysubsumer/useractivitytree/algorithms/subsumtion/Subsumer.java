@@ -1,8 +1,5 @@
 package io.mem0r1es.activitysubsumer.useractivitytree.algorithms.subsumtion;
 
-import io.mem0r1es.activitysubsumer.useractivitytree.algorithms.subsumtion.actions.ISubsumtionAction;
-import io.mem0r1es.activitysubsumer.useractivitytree.algorithms.subsumtion.actions.InsertFirstLevelActivity;
-import io.mem0r1es.activitysubsumer.useractivitytree.algorithms.subsumtion.actions.SubsumtionActionFactory;
 import io.mem0r1es.activitysubsumer.useractivitytree.algs.DistanceMeasurer;
 import io.mem0r1es.activitysubsumer.useractivitytree.algs.PathBuilder;
 import io.mem0r1es.activitysubsumer.useractivitytree.core.UserActivity;
@@ -33,6 +30,8 @@ import org.jgrapht.graph.DefaultEdge;
  * @author horia
  */
 public final class Subsumer implements Serializable {
+	private static final int MINIMUM_TERM_LEVEL = 2;
+
 	private static final long serialVersionUID = 0L;
 
 	private static final double SIMILARITY_THRESHOLD = 0.5;
@@ -56,6 +55,9 @@ public final class Subsumer implements Serializable {
 
 		senseMapVerbs = WordNetGraphs.instance().getSenseMapVerbs();
 		senseMapNouns = WordNetGraphs.instance().getSenseMapNouns();
+
+		allVerbPaths = new PathBuilder<String, DefaultEdge>(verbs, GraphUtils.DEFAULT_ROOT, new HashSet<String>());
+		allNounPaths = new PathBuilder<String, DefaultEdge>(nouns, GraphUtils.DEFAULT_ROOT, new HashSet<String>());
 	}
 
 	/**
@@ -86,6 +88,10 @@ public final class Subsumer implements Serializable {
 	public void addActivity(UserActivity activity, UserActivityGraph userActivityGraph) {
 		checkActivityIntegrity(activity);
 
+		if (activity.getVerb().equals("visit") && activity.getNoun().equals("animal")) {
+			System.out.println(userActivityGraph);
+		}
+
 		// build the set of senses
 		Set<String> verbSenses = senseMapVerbs.get(activity.getVerb());
 
@@ -103,7 +109,7 @@ public final class Subsumer implements Serializable {
 		}
 
 		// find all the paths from the fake root to all the verb senses
-		allVerbPaths = new PathBuilder<String, DefaultEdge>(verbs, GraphUtils.DEFAULT_ROOT, allVerbSenses);
+		allVerbPaths.computePaths(allVerbSenses);
 		verbDistances = new DistanceMeasurer<String, DefaultEdge>(allVerbPaths);
 
 		// find the best existing verb senses and paths
@@ -123,6 +129,16 @@ public final class Subsumer implements Serializable {
 				bestVerbs.add(Utils.wordName(bestVerbSense));
 			}
 			Map<UserActivity, Set<UserActivity>> prunedActivities = userActivityGraph.getSubtreesByVerbs(bestVerbs);
+			for (Map.Entry<UserActivity, Set<UserActivity>> entry1 : prunedActivities.entrySet()) {
+				for (Map.Entry<UserActivity, Set<UserActivity>> entry2 : prunedActivities.entrySet()) {
+					if (entry1.equals(entry2)) {
+						continue;
+					}
+					if (entry2.getValue().containsAll(entry1.getValue())) {
+						entry2.getValue().removeAll(entry1.getValue());
+					}
+				}
+			}
 
 			Set<String> nounSenses = senseMapNouns.get(activity.getNoun());
 
@@ -143,7 +159,7 @@ public final class Subsumer implements Serializable {
 			}
 
 			// find all the paths from the fake root to all the verb senses
-			allNounPaths = new PathBuilder<String, DefaultEdge>(nouns, GraphUtils.DEFAULT_ROOT, allNounSenses);
+			allNounPaths.computePaths(allNounSenses);
 			nounDistances = new DistanceMeasurer<String, DefaultEdge>(allNounPaths);
 
 			// map of existingNounSense -> pairs of paths between root and existingNounSense and the
@@ -154,11 +170,8 @@ public final class Subsumer implements Serializable {
 
 			if (maxSimilarity < SIMILARITY_THRESHOLD) {
 				userActivityGraph.add(activity);
-			}
-
-			Set<ISubsumtionAction> actions = createSubsumtionActions(activity, bestNounSenseToPath, bestVerbSenseToPath, existingNounSensesToActivityMap);
-			for (ISubsumtionAction action : actions) {
-				action.execute(userActivityGraph);
+			} else {
+				subsume(userActivityGraph, activity, bestNounSenseToPath, bestVerbSenseToPath, existingNounSensesToActivityMap);
 			}
 		}
 	}
@@ -241,7 +254,7 @@ public final class Subsumer implements Serializable {
 			lastCommonNode = node;
 			level++;
 		}
-		if (level <= 2) {
+		if (level <= MINIMUM_TERM_LEVEL) {
 			return null;
 		}
 		return lastCommonNode;
@@ -262,11 +275,11 @@ public final class Subsumer implements Serializable {
 	 *            of a noun of an activity reachable from A
 	 * @return
 	 */
-	private Set<ISubsumtionAction> createSubsumtionActions(UserActivity activity, Map<String, Set<Pair<List<String>, List<String>>>> bestNounSenseToPath,
+	private void subsume(UserActivityGraph graph, UserActivity activity, Map<String, Set<Pair<List<String>, List<String>>>> bestNounSenseToPath,
 			Map<String, Set<Pair<List<String>, List<String>>>> bestVerbSenseToPath, Map<String, UserActivity> existingNounSensesToActivityMap) {
-		Set<ISubsumtionAction> result = new HashSet<ISubsumtionAction>();
+		boolean added = false;
 
-		Set<Pair<UserActivity, UserActivity>> similarAndParentPair = new HashSet<Pair<UserActivity, UserActivity>>();
+		Set<UserActivity> demotedActivities = new HashSet<UserActivity>();
 
 		// for each best noun sense
 		for (Entry<String, Set<Pair<List<String>, List<String>>>> nounEntry : bestNounSenseToPath.entrySet()) {
@@ -278,44 +291,72 @@ public final class Subsumer implements Serializable {
 			// for each possible pairs of paths in the noun graph, find the ancestor noun
 			for (Pair<List<String>, List<String>> pair : nounEntry.getValue()) {
 				String commonAncestor = commonAncestor(pair.first, pair.second);
-				if (commonAncestor != null) {
-					ancestorNouns.add(Utils.wordName(commonAncestor));
+				if (commonAncestor == null) {
+					continue;
 				}
-			}
+				String commonAncestorNoun = Utils.wordName(commonAncestor);
+				if (ancestorNouns.contains(commonAncestorNoun)) {
+					continue;
+				}
+				ancestorNouns.add(commonAncestorNoun);
 
-			// for each best possible verb sense
-			for (Entry<String, Set<Pair<List<String>, List<String>>>> verbEntry : bestVerbSenseToPath.entrySet()) {
-				String bestVerbSense = verbEntry.getKey();
-				// only if this is the root activity of the subtree
-				if (Utils.wordName(bestVerbSense).equals(similarActivity.getVerb())) {
+				// for each best possible verb sense
+				for (Entry<String, Set<Pair<List<String>, List<String>>>> verbEntry : bestVerbSenseToPath.entrySet()) {
+					String bestVerbSense = verbEntry.getKey();
+					// only if this is the root activity of the subtree
+					if (Utils.wordName(bestVerbSense).equals(similarActivity.getVerb())) {
 
-					// find the ancestor verbs
-					Set<String> ancestorVerbs = new HashSet<String>();
-					for (Pair<List<String>, List<String>> pair : verbEntry.getValue()) {
-						String commonAncestor = commonAncestor(pair.first, pair.second);
-						if (commonAncestor != null) {
-							ancestorVerbs.add(Utils.wordName(commonAncestor));
-						}
-					}
-
-					for (String ancestorNoun : ancestorNouns) {
-						for (String ancestorVerb : ancestorVerbs) {
-							UserActivity parentActivity = new UserActivity(ancestorVerb, ancestorNoun);
-							ISubsumtionAction action = SubsumtionActionFactory.createSubsumtionAction(activity, similarActivity, parentActivity);
-							if (action != null) {
-								result.add(action);
+						// find the ancestor verbs
+						Set<String> ancestorVerbs = new HashSet<String>();
+						for (Pair<List<String>, List<String>> verbPair : verbEntry.getValue()) {
+							String commonAncestorVerbSense = commonAncestor(verbPair.first, verbPair.second);
+							if (commonAncestorVerbSense != null) {
+								ancestorVerbs.add(Utils.wordName(commonAncestorVerbSense));
 							}
-							similarAndParentPair.add(new Pair<UserActivity, UserActivity>(similarActivity, parentActivity));
+						}
+
+						for (String ancestorVerb : ancestorVerbs) {
+							UserActivity parentActivity = new UserActivity(ancestorVerb, Utils.wordName(commonAncestorNoun));
+
+							if (similarActivity.equals(parentActivity)) {
+								graph.addChild(activity, similarActivity);
+								added = true;
+							} else {
+								// check if the similar activity is more generic
+								if (isInPath(pair.first, similarActivity.getNoun()) && isInPath(pair.second, similarActivity.getNoun())) {
+									// this means that similar activity is more generic
+									graph.addChild(parentActivity, similarActivity);
+								} else {
+									if (demotedActivities.contains(similarActivity)) {
+										graph.addAditionalParent(parentActivity, similarActivity);
+									} else {
+										graph.insertAbove(parentActivity, similarActivity);
+										demotedActivities.add(similarActivity);
+									}
+								}
+
+								if (activity.equals(parentActivity) == false) {
+									graph.addChild(activity, parentActivity);
+									added = true;
+								}
+							}
 						}
 					}
 				}
 			}
 		}
 
-		if (result.isEmpty()) {
-			result.add(new InsertFirstLevelActivity(activity));
+		if (added == false) {
+			graph.add(activity);
 		}
+	}
 
-		return result;
+	private boolean isInPath(List<String> senseTerms, String term) {
+		for (String senseTerm : senseTerms) {
+			if (Utils.wordName(senseTerm).equals(term)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
