@@ -1,6 +1,6 @@
 package io.mem0r1es.activitysubsumer;
 
-import io.mem0r1es.activitysubsumer.useractivitytree.algs.PathBuilder;
+import io.mem0r1es.activitysubsumer.algs.PathBuilder;
 
 import java.util.Collections;
 import java.util.HashSet;

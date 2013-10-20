@@ -3,6 +3,12 @@ package io.mem0r1es.activitysubsumer.wordnet;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Node in the WordNet sub-graphs. A node contains multiple words (with senses) based on synonym
+ * sets and on eventual cycles in the WordNet graph.
+ * 
+ * @author horiaradu
+ */
 public class WordNetNode {
 	/**
 	 * set of synonyms

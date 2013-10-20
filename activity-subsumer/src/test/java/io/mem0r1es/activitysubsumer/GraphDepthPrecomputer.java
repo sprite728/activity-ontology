@@ -1,8 +1,8 @@
 package io.mem0r1es.activitysubsumer;
 
-import io.mem0r1es.activitysubsumer.useractivitytree.algs.PathBuilder;
-import io.mem0r1es.activitysubsumer.useractivitytree.core.WordNetGraphs;
-import io.mem0r1es.activitysubsumer.useractivitytree.utils.GraphUtils;
+import io.mem0r1es.activitysubsumer.algs.PathBuilder;
+import io.mem0r1es.activitysubsumer.utils.GraphUtils;
+import io.mem0r1es.activitysubsumer.wordnet.WordNetGraphs;
 
 import java.io.FileInputStream;
 import java.util.HashMap;
@@ -15,7 +15,10 @@ import org.jgrapht.graph.DefaultEdge;
 import org.testng.annotations.Test;
 
 /**
- * Created by George on 9/26/13.
+ * Helper class used to identify which nodes we want to use as roots for the sub-graphs, when they
+ * are going to be built.
+ * 
+ * @author horiaradu
  */
 @Test
 public class GraphDepthPrecomputer {

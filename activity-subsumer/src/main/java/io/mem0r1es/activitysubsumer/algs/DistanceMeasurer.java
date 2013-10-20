@@ -1,6 +1,6 @@
-package io.mem0r1es.activitysubsumer.useractivitytree.algs;
+package io.mem0r1es.activitysubsumer.algs;
 
-import io.mem0r1es.activitysubsumer.useractivitytree.utils.Pair;
+import io.mem0r1es.activitysubsumer.utils.Pair;
 
 import java.util.HashMap;
 import java.util.HashSet;

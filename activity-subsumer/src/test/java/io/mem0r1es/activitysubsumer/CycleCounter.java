@@ -13,6 +13,12 @@ import java.util.Set;
 
 import org.testng.annotations.Test;
 
+/**
+ * Helper class used to count the number of cycles and the number of occurences of different senses
+ * of the same word in a single sub-graph
+ * 
+ * @author horia
+ */
 @Test
 public class CycleCounter {
 	private static final String NOUNS_GRAPH = "src/test/resources/nouns.graph";
@@ -31,8 +37,10 @@ public class CycleCounter {
 
 	@Test
 	public void main() throws IOException {
-//		new TermGraphBuilder().buildFiles(NOUN_SYNONIMS, NOUN_ROOTS, NOUNS_GRAPH, NOUN_NODES_GEPHI, NOUN_EDGES_GEPHI, NOUN_OUT);
-		new TermGraphBuilder().buildFiles(VERB_SYNONIMS, VERB_ROOTS, VERBS_GRAPH, VERB_NODES_GEPHI, VERB_EDGES_GEPHI, VERB_OUT);
+		// new TermGraphBuilder().buildFiles(NOUN_SYNONIMS, NOUN_ROOTS, NOUNS_GRAPH,
+		// NOUN_NODES_GEPHI, NOUN_EDGES_GEPHI, NOUN_OUT);
+		// new TermGraphBuilder().buildFiles(VERB_SYNONIMS, VERB_ROOTS, VERBS_GRAPH,
+		// VERB_NODES_GEPHI, VERB_EDGES_GEPHI, VERB_OUT);
 
 		Set<TermGraph> nounGraphs = new TermGraphBuilder().readFromCSV(NOUN_OUT);
 		Set<TermGraph> verbSubGraphs = new TermGraphBuilder().readFromCSV(VERB_OUT);

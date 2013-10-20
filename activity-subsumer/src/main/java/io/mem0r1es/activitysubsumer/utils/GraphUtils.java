@@ -1,4 +1,4 @@
-package io.mem0r1es.activitysubsumer.useractivitytree.utils;
+package io.mem0r1es.activitysubsumer.utils;
 
 import java.io.BufferedReader;
 import java.io.File;

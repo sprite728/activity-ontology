@@ -1,8 +1,7 @@
-package io.mem0r1es.activitysubsumer.useractivitytree.core;
+package io.mem0r1es.activitysubsumer.wordnet;
 
-import io.mem0r1es.activitysubsumer.useractivitytree.utils.GraphUtils;
+import io.mem0r1es.activitysubsumer.utils.GraphUtils;
 import io.mem0r1es.activitysubsumer.utils.Utils;
-import io.mem0r1es.activitysubsumer.wordnet.WordNetNode;
 
 import java.io.IOException;
 import java.io.InputStream;

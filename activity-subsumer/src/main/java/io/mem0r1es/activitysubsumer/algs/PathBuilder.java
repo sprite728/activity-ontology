@@ -1,4 +1,4 @@
-package io.mem0r1es.activitysubsumer.useractivitytree.algs;
+package io.mem0r1es.activitysubsumer.algs;
 
 import java.util.HashMap;
 import java.util.HashSet;

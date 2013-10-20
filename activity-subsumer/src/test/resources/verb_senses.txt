@@ -1,0 +1,4033 @@
+turn_one's_stomach sicken.v.03
+sack_out go_to_bed.v.01
+head_up head.v.04
+hold_back check.v.18 restrain.v.01 forbear.v.01 wait.v.02 retain.v.03 conceal.v.02
+mesmerize magnetize.v.02 hypnotize.v.01
+change_owners change_hands.v.01
+wank masturbate.v.02
+serve_up serve.v.06
+drive_off chase_away.v.01
+popularise popularize.v.01 popularize.v.02
+enthrall enchant.v.01
+ask_in invite.v.06
+mount_up hop_on.v.01
+appertain pertain.v.02
+unknot unravel.v.01
+stick_about stand_by.v.02
+lube lubricate.v.02
+live_over relive.v.01
+join_forces collaborate.v.01
+remand remit.v.04 imprison.v.01
+prognosticate predict.v.01 bode.v.01
+endue endow.v.01
+even_off compensate.v.01
+dish_out distribute.v.01 serve.v.06
+stutter bumble.v.03
+catch_a_glimpse catch_sight.v.01
+furcate branch.v.02
+laicise laicize.v.01
+disgrace dishonor.v.01 take_down.v.02 discredit.v.02
+break_apart disassemble.v.01 crash.v.05 disunify.v.01
+have_it_away sleep_together.v.01
+have_a_go_at_it sleep_together.v.01
+homogenise homogenize.v.02 homogenize.v.03 homogenize.v.01
+exact demand.v.03 claim.v.05
+aromatise perfume.v.01
+queue line_up.v.03
+annunciate announce.v.04
+goof-proof goofproof.v.01
+step_to_the_fore come_to_the_fore.v.01
+bedevil torment.v.02 confuse.v.02
+call_it_a_day call_it_quits.v.01
+fling_off dash_off.v.01
+cool_one's_heels kick_one's_heels.v.01
+tippytoe tiptoe.v.01
+ill-use mistreat.v.01
+derecognize decertify.v.01
+patinise patinate.v.01
+brominate bromate.v.01 bromate.v.02
+tickle_pink exhilarate.v.01
+tumesce swell.v.03
+cross_question cross_examine.v.01
+transmogrify metamorphose.v.01
+chase_after chase.v.02 chase.v.01
+poetize verse.v.01
+take_in_charge undertake.v.05
+choke_down choke_off.v.01
+look_into investigate.v.01 check.v.01
+go_forth leave.v.01 issue.v.04
+glean reap.v.01
+look_out_over look_out_on.v.01
+creak whine.v.03
+enplane emplane.v.01
+soliloquize monologuize.v.01
+sensify sensitize.v.01
+stay_together stick_together.v.01
+automate automatize.v.02
+clown_around clown.v.01
+transmigrate reincarnate.v.01 migrate.v.01
+overemphasise overemphasize.v.01
+saint enshrine.v.02 canonize.v.01
+word give_voice.v.01
+unsnarl disentangle.v.02
+attitudinise attitudinize.v.01
+incase encase.v.01
+administrate administer.v.01
+awake wake_up.v.02
+stretch_forth exsert.v.01
+nickname dub.v.01
+drill_in hammer_in.v.01
+shoetree tree.v.04
+respite reprieve.v.01
+polychromise polychrome.v.01
+colourise color.v.01
+legalise legalize.v.01
+mishandle botch.v.01 mismanage.v.01
+forebode predict.v.01
+crease wrinkle.v.02 furrow.v.02 graze.v.04 rumple.v.03
+wring_from extort.v.03
+rive rend.v.01 cleave.v.01
+retell recite.v.03 fictionalize.v.01 repeat.v.01
+equalise equalize.v.01 equal.v.03
+declare_oneself propose.v.05
+forest afforest.v.01
+prosper thrive.v.02
+sew_together sew.v.01
+finish_off get_through.v.01
+siphon_off siphon.v.01
+fan_out diffuse.v.01
+fritter_away fritter.v.01
+lexicalise lexicalize.v.01
+expurgate bowdlerize.v.01
+act_superior lord_it_over.v.01
+stalinise stalinize.v.01
+pick_up_the_gauntlet take_a_dare.v.02
+kick_off inaugurate.v.01
+cipher code.v.02 calculate.v.01
+rope_off rope_in.v.01
+overrate overestimate.v.01
+irk gall.v.02
+mark_out mark_off.v.01
+fit_in harmonize.v.01
+misguide mislead.v.01 misadvise.v.01
+stay_away stand_back.v.01
+mythologise mythologize.v.01 mythologize.v.02
+cast_down depress.v.01
+off murder.v.01
+upraise resurrect.v.01
+practise rehearse.v.01 practice.v.01 drill.v.03
+sprain twist.v.10
+catch_one's_breath rest.v.02
+take_apart disassemble.v.01 dismember.v.02 analyze.v.02
+vituperate vilify.v.01
+flow_off flow_away.v.01
+depressurise depressurize.v.01
+poleaxe poleax.v.01
+crank_out grind_out.v.01
+reevaluate reassess.v.01
+ascribe impute.v.01
+overstretch pull.v.08
+particularize specify.v.04
+bebop bop.v.01
+catch_up_with overtake.v.01 make_up.v.04
+disinvest divest.v.02 divest.v.03 strip.v.13
+vaunt boast.v.01
+renege_on renege.v.01
+vanquish beat.v.01
+take_fire erupt.v.03
+garble falsify.v.01
+cadge mooch.v.01 schnorr.v.01
+self-destroy self-destruct.v.01
+tabularise table.v.02
+slide_down slump.v.02
+ham overact.v.01
+narrow_down pin_down.v.01 specialize.v.01
+do_drugs drug.v.02
+extol laud.v.01
+punch_out clock_out.v.01
+spring_to_mind come_to_mind.v.01
+get_wise catch_on.v.01
+talk_terms negociate.v.06
+overexert_oneself kill_oneself.v.01
+chirrup peep.v.03
+write_about write_on.v.01
+systemise systematize.v.01
+be_quiet close_up.v.04
+dope_up dope.v.03
+slough shed.v.04
+bacterise bacterize.v.01
+guttle devour.v.04
+melodise melodize.v.01
+moisturize humidify.v.01
+placate pacify.v.01
+pommel pummel.v.01
+aromatize perfume.v.01
+cockle ripple.v.01 pucker.v.01
+oxidate oxidise.v.02 oxidize.v.02
+staunch stem.v.03
+ante_up pay_up.v.01
+anathematise accurse.v.01
+pester tease.v.01
+capsulise capsule.v.01 encapsulate.v.02
+unlace untie.v.01
+demean take_down.v.02
+team_up team.v.01
+make_over rework.v.01 remake.v.01
+catch_fire erupt.v.03
+immobilise immobilize.v.01 trap.v.04 immobilize.v.03 immobilize.v.04 freeze.v.08 immobilize.v.06
+confab chew_the_fat.v.01 confer.v.01
+wear_down tire.v.02 wear.v.04
+colly dirty.v.01
+obnubilate obscure.v.01 confuse.v.05
+swot cram.v.03
+rest_on lean_on.v.01 repose_on.v.01
+work_on work_at.v.01 work.v.05
+couple_up couple.v.02
+put_back replace.v.03 set_back.v.03
+give_it_a_try give_it_a_whirl.v.01 have_a_go.v.01
+crenellate crenel.v.01
+fall_away slip.v.04 fall_off.v.03
+infer deduce.v.01 generalize.v.01 deduce.v.02 guess.v.04 understand.v.04
+capsulize capsule.v.01 encapsulate.v.02
+create_mentally create_by_mental_act.v.01
+jolly kid.v.02
+swindle victimize.v.03
+clock_up log_up.v.01
+keep_one's_nose_to_the_grindstone plug_away.v.01
+nasalise nasalize.v.01 nasalize.v.02
+lay_into lam_into.v.01
+counterstrike counterattack.v.01
+have_intercourse sleep_together.v.01
+polish_off get_through.v.01 murder.v.01 eat_up.v.01
+tick_over idle.v.01
+knuckle_down slave.v.01
+overcapitalise overcapitalize.v.01 overcapitalize.v.02 overcapitalize.v.03
+furbish buff.v.02
+inclose enclose.v.03 insert.v.02
+sick vomit.v.01
+carburize carbonize.v.01
+go_to attend.v.01
+let_on unwrap.v.02
+slacken_off ease_up.v.02
+step_up escalate.v.01 rev_up.v.01 come_to_the_fore.v.01
+chew_up call_on_the_carpet.v.01
+foresee anticipate.v.03 envision.v.02 anticipate.v.02
+submerse submerge.v.01 submerge.v.03
+set_out get_down.v.07 range.v.05 depart.v.03
+scoot dart.v.02
+wind_off unwind.v.01
+decimalise decimalize.v.01 decimalize.v.02
+clam_up close_up.v.04
+bootlick fawn.v.02
+bitch gripe.v.01 backbite.v.01
+draw_rein harness.v.03
+innovate introduce.v.02
+gross_out disgust.v.01 freak_out.v.01
+camp_out camp.v.01
+jar_against run_into.v.02
+liquidise liquefy.v.02
+skunk lurch.v.05
+keep_apart sequester.v.05
+hector strong-arm.v.02
+marbleise marbleize.v.01
+mellow_out mellow.v.02
+outrank rank.v.03
+dynamise dynamize.v.01 dynamize.v.02
+push_around strong-arm.v.02
+proscribe forbid.v.01
+shamanise shamanize.v.01
+refashion remake.v.01
+discord disagree.v.02
+trigger_off trip.v.04
+satirise satirize.v.01
+come_into_being come_to_life.v.01
+liken compare.v.03
+mizzle drizzle.v.01
+coruscate sparkle.v.01 sparkle.v.02
+go_against violate.v.01 transgress.v.01 buck.v.02
+kvetch complain.v.01
+fasten_on take_up.v.02
+lift_out scoop.v.01
+send_packing dismiss.v.03
+becharm charm.v.02 capture.v.02
+sway rock.v.01 swing.v.02 carry.v.23 rock.v.02
+make_headway gain.v.05
+redact frame.v.04 edit.v.01
+arse_around bum.v.02 horse_around.v.01
+force_back repel.v.01
+remould recast.v.02 retread.v.02
+rationalise rationalize.v.03 apologize.v.02 rationalize.v.04 rationalize.v.05 cut.v.33
+intrust entrust.v.01
+rook victimize.v.03
+room board.v.02
+volatilise volatilize.v.01
+frame_up frame.v.06
+bedight deck.v.02
+look_up_to admire.v.01
+express_joy laugh.v.01
+punch_in clock_in.v.01
+drag_out drag_on.v.01 drag.v.11
+underrate underestimate.v.03
+chortle chuckle.v.01
+jeopardise endanger.v.01
+institutionalise commit.v.03
+lift_up pick_up.v.01 elate.v.01
+bombinate buzz.v.01
+hack_on hack.v.06
+accustom habituate.v.02
+lounge_around bum.v.02
+caramelise caramelize.v.01 caramelize.v.02
+wear_out tire.v.02 break.v.42 wear.v.04
+ill-treat mistreat.v.01
+squander waste.v.01 consume.v.03
+give_care care.v.02
+fraction divide.v.02
+analyse analyze.v.01 analyze.v.03 analyze.v.02 analyze.v.04
+whisker bewhisker.v.01
+meander weave.v.04
+shack_up cohabit.v.01
+vowelise vocalize.v.03
+swoon faint.v.01
+father beget.v.01
+decriminalize legalize.v.01
+micturate make.v.49
+okay approve.v.01
+tense_up tense.v.03 tense.v.04
+fuck sleep_together.v.01
+privatise privatize.v.01
+knuckle_under yield.v.13
+police patrol.v.01
+black_market run.v.25
+tucker exhaust.v.01
+pimp pander.v.02
+root_for pull.v.16
+creep_in sneak_in.v.01
+get_on_with get_along_with.v.01
+disunite disassociate.v.01 separate.v.02
+treasure prize.v.01 care_for.v.02
+bombilate buzz.v.01
+aggrandise embroider.v.02
+plaster_over plaster.v.01
+discolorise bleach.v.01
+puff_out puff.v.07
+abide_by comply.v.01 respect.v.02
+push_on press_on.v.01
+sorcerise sorcerize.v.01
+flavor season.v.01
+spin_out spin.v.08
+kick_downstairs demote.v.01
+waffle hesitate.v.01
+gi g.i..v.01
+take_a_breather rest.v.02
+disfavor disadvantage.v.01
+decarbonise decarbonize.v.01
+weigh_on weigh_down.v.01
+rattle_on yack.v.01
+reanimate animate.v.04
+carry_out carry_through.v.01 follow_through.v.02
+sit_around sit.v.02
+preachify sermonize.v.01
+tog dress.v.02
+oven_broil broil.v.01
+schmoose shmooze.v.01
+pass_judgment evaluate.v.02
+marinate marinade.v.01
+internationalise internationalize.v.01 internationalize.v.02
+add_up come.v.15 total.v.02 total.v.01 make_sense.v.01
+appall shock.v.02 dismay.v.02
+slabber drivel.v.01
+play_down background.v.01
+slush_around slosh.v.03
+pull_a_fast_one_on flim-flam.v.01
+bolshevize communize.v.01
+tut-tut tsk.v.01
+tear_down level.v.02
+digitalise digitize.v.01
+scarf_out gorge.v.01
+repulse repel.v.03 repel.v.02 repel.v.01
+relieve_oneself make.v.49
+mess_about loiter.v.01
+muster_in enlist.v.03
+tuck_away tuck_in.v.01
+wait_on serve.v.10
+chouse cheat.v.02
+baulk resist.v.06
+express_feelings express_emotion.v.01
+intermediate intercede.v.01
+demineralise demineralize.v.01
+incapacitate disable.v.01 disable.v.02
+blackball banish.v.01 veto.v.01
+make_fun ridicule.v.01
+intubate cannulate.v.01
+didder shake.v.02
+wanton_away piddle.v.01 wanton.v.03
+slobber drivel.v.01
+whirr whizz.v.01 churr.v.01
+dish_up serve.v.06
+acetylise acetylate.v.01 acetylate.v.02
+speak_out opine.v.01
+glimmer gleam.v.02
+blab_out spill_the_beans.v.01
+detain confine.v.05 stay.v.06 delay.v.01
+revolve_about focus_on.v.01
+prate chatter.v.04
+bastardise bastardize.v.01 bastardize.v.02
+hang_in persevere.v.01
+archaise archaize.v.01
+keen lament.v.01
+enquire ask.v.01 investigate.v.02 wonder.v.01
+finalise finalize.v.01
+befog obscure.v.01
+flip_out flip.v.09 flip.v.10
+bum_about bum.v.02
+get_hold line_up.v.02
+embellish embroider.v.02 deck.v.01 decorate.v.01 fancify.v.01
+blubber_out blubber.v.02
+cook_out barbeque.v.01
+caterwaul yowl.v.02
+dupe gull.v.02
+ingeminate repeat.v.01
+chevy harass.v.01
+keep_one's_eyes_open keep_one's_eyes_peeled.v.01
+irrupt intrude.v.01 erupt.v.02 explode.v.10
+reiterate repeat.v.01
+rime rhyme.v.02 rhyme.v.01
+fault blame.v.01
+come_before precede.v.03
+push_through erupt.v.04
+chill_out calm.v.03
+europeanise europeanize.v.02 europeanize.v.01
+bone_up cram.v.03
+grind_down tyrannize.v.01
+disgorge spill.v.03 vomit.v.01
+hyperbolize overstate.v.01
+blabber chatter.v.04
+flavour season.v.01
+take_charge take_hold.v.01
+martyrise martyr.v.02
+go_across pass.v.01
+bollocks_up botch.v.01
+come_over come_across.v.04
+psychoanalyze analyze.v.04
+rot decompose.v.03 waste.v.10
+trend swerve.v.01
+witch hex.v.01
+spill_out spill_over.v.02
+ozonise ozonize.v.01
+pervade permeate.v.01
+envenom embitter.v.01 poison.v.03
+pep_up cheer.v.05 jazz_up.v.01
+flip_one's_wig flip_one's_lid.v.01
+empurple purple.v.02
+ooze seep.v.01 exude.v.01
+depilate epilate.v.01
+remunerate compensate.v.06
+annul invalidate.v.01 revoke.v.02
+burlesque spoof.v.01
+bemoan deplore.v.02
+extend_to reach.v.06
+exasperate exacerbate.v.02 infuriate.v.01 worsen.v.02
+live_with accept.v.07
+parboil blanch.v.02
+be_after plan.v.01
+drop_by_the_wayside drop_out.v.01
+lambast cane.v.01 call_on_the_carpet.v.01
+de-aerate deaerate.v.01
+get_hitched_with marry.v.01
+cease discontinue.v.01 end.v.01
+feminise feminize.v.01 feminize.v.02
+tower loom.v.02
+slaughter butcher.v.01 massacre.v.01
+prattle chatter.v.04
+doze snooze.v.01
+exorcize exorcise.v.01
+brush_down tell_off.v.01
+deed_over grant.v.07
+stink_out stink_up.v.01
+lallygag loiter.v.01
+give_chase chase.v.01
+sue action.v.01
+play_a_joke_on hoax.v.01 flim-flam.v.01
+entwine knit.v.02 intertwine.v.01
+give_it_the_deep_six deep-six.v.01
+adventure gamble.v.01 venture.v.03
+jolly_along cheer.v.03
+bestir_oneself get_cracking.v.01
+disquiet perturb.v.01
+kink crimp.v.02 curl.v.01
+discombobulate bewilder.v.02 confuse.v.02
+inconvenience trouble.v.02
+niggle fuss.v.01 quibble.v.02
+extemporise improvise.v.01
+have_the_best get_the_best.v.01
+forego predate.v.01 waive.v.01 forfeit.v.01
+follow_out follow_through.v.02
+indue endow.v.01
+chirk_up cheer.v.04
+break_water fin.v.03
+warrant justify.v.01 guarantee.v.04
+frizz crimp.v.02
+pull_at pick_at.v.01
+secernate distinguish.v.01
+long hanker.v.01
+syphon siphon.v.01
+dispel chase_away.v.01 disperse.v.02
+outsmart outwit.v.01 outmaneuver.v.01
+agenise agenize.v.01
+tap_out beat_out.v.02
+blether babble.v.02
+budge stir.v.02
+call_down raise.v.07 call_on_the_carpet.v.01
+stand_firm resist.v.02 stand_pat.v.01
+send_for call.v.05
+splatter spill.v.01 spatter.v.01
+pare_down pare.v.01
+joy rejoice.v.01 gladden.v.01
+displume deplume.v.01 pluck.v.05
+sermonise sermonize.v.01
+sleep_out live_out.v.02
+cast_away discard.v.01
+impinge_on hit.v.02
+swallow_up immerse.v.03
+embolden cheer.v.01
+bewail deplore.v.02
+acidulate sour.v.02
+brick_over brick_in.v.01
+glint glitter.v.01 glance.v.01
+vomit_up vomit.v.01
+repute think_of.v.03
+shoot_down tear.v.03 down.v.04 kill.v.02
+bellyache gripe.v.01
+disburden unburden.v.02
+prim_out prim.v.03
+telegraph cable.v.01
+fuck_up botch.v.01
+debark disembark.v.01
+reprove admonish.v.03
+overtop dominate.v.05
+handcuff manacle.v.01
+rumour rumor.v.01
+swathe swaddle.v.01
+garment dress.v.02
+ameliorate better.v.02 better.v.03
+waddle toddle.v.01
+secularise secularize.v.01
+come_into come_by.v.02
+endure digest.v.03 weather.v.01 survive.v.01 suffer.v.01 wear.v.06 last.v.01 prevail.v.03
+sulphurette sulfurette.v.01
+encipher code.v.02
+classicise classicize.v.01
+illegalise outlaw.v.01
+pony_up cough_up.v.01
+best outdo.v.02
+vellicate tickle.v.01 pinch.v.05
+thresh_about convulse.v.03
+plight betroth.v.01 pledge.v.01
+isomerise isomerize.v.01 isomerize.v.02
+gormandise gorge.v.01
+birth give_birth.v.01
+hoover vacuum.v.01
+usher_in inaugurate.v.03
+put_over get_across.v.01 postpone.v.01
+think_over chew_over.v.01
+get_the_picture grok.v.01
+become_flat die.v.09
+hiccough hiccup.v.01
+mill_about loiter.v.01 mill.v.01
+festinate rush.v.04
+abut border.v.05
+usher_out dismiss.v.05
+conventionalise conventionalize.v.01
+robe vest.v.05 clothe.v.03
+depolarise depolarize.v.01
+choke_up stuff.v.03
+neutralise neutralize.v.04 neutralize.v.05 neutralize.v.02 neutralize.v.06
+espy descry.v.01
+twit tease.v.02
+egg_on prod.v.02
+girth cinch.v.01
+roll_down avalanche.v.01
+go_past travel_by.v.01 exceed.v.02
+melt_off reduce.v.20
+blazon_out cry.v.04
+overcompensate cover.v.15 over-correct.v.01
+desalt desalinate.v.01
+puzzle_out solve.v.01
+indorse back.v.01 second.v.01 certify.v.04 endorse.v.04
+hang_back drag.v.05
+give_one's_best go_all_out.v.01
+thump_out beat_out.v.02
+dramatise dramatize.v.01 dramatize.v.02 embroider.v.02
+bollix_up botch.v.01
+kibosh stop.v.03
+channelise steer.v.01 channelize.v.02 transmit.v.04 channelize.v.04
+auction_off auction.v.01
+grind_away cram.v.03
+misapprehend misconstrue.v.01
+furbish_up repair.v.01
+haul_up draw_up.v.05
+troubleshoot trouble-shoot.v.01
+glass_over glaze.v.02
+monopolise monopolize.v.01 monopolize.v.02
+dizen bedizen.v.02
+dissever divide.v.01
+funk flinch.v.01
+prescribe order.v.03
+get_laid sleep_together.v.01
+hammer_out thrash_out.v.01
+comprise consist.v.04 incorporate.v.02 constitute.v.01
+domesticize domesticate.v.02
+formalise formalize.v.01 validate.v.01
+conceive_of imagine.v.01
+cobblestone cobble.v.01
+hook_up_with marry.v.01
+essay try.v.01 test.v.01
+cosset pamper.v.01
+apotheose apotheosize.v.01
+decriminalise legalize.v.01
+sire beget.v.01
+set_free liberate.v.03
+inculpate incriminate.v.01
+whisk_away whisk_off.v.02
+hypothesize speculate.v.01
+merge unify.v.01 blend.v.03 unite.v.06
+watch_over watch.v.02
+sally_out sally_forth.v.01 leap_out.v.02
+mechanise mechanize.v.01 mechanize.v.02 mechanize.v.03
+illumine light.v.01
+drub cream.v.02
+scrape_up scrape.v.05
+nictitate blink.v.01
+lust crave.v.01
+balk resist.v.06
+colour color.v.03 color.v.04 color.v.05 tinge.v.01 color.v.01 discolor.v.03
+glut gorge.v.01 flood.v.03
+taunt tease.v.02
+rub_down abrade.v.01 massage.v.01
+vaporise evaporate.v.02 evaporate.v.03 gasify.v.01 evaporate.v.01
+pass_with_flying_colors breeze_through.v.01
+coquette chat_up.v.01
+agnize recognize.v.02
+get_back win_back.v.01 get_even.v.02 settle.v.19
+denudate denude.v.01
+arch_over overarch.v.02
+distort falsify.v.01 twist.v.04 contort.v.01 tinge.v.01 deform.v.05
+teem_in abound_in.v.01
+disk harrow.v.01
+chop_off cut_off.v.03
+burgle burglarize.v.01
+log_on log_in.v.01
+grovel fawn.v.01
+decolorise bleach.v.01
+fragment break_up.v.16
+have_kittens flip_one's_lid.v.01
+sectionalise sectionalize.v.01
+sleep_with sleep_together.v.01
+dialyze dialyse.v.01
+aestivate estivate.v.01
+stand_watch stand_guard.v.01
+carry_forward carry_over.v.04
+anele anoint.v.02
+swoosh lap.v.03
+split_up divorce.v.02 divide.v.01 separate.v.08 break.v.02
+alphabetise alphabetize.v.01
+depict picture.v.02 describe.v.01 portray.v.02
+hallow consecrate.v.04
+reassign transfer.v.01
+cherish care_for.v.02
+intone tone.v.01 chant.v.01 intonate.v.01
+gybe jibe.v.02
+mix_up jumble.v.02 stump.v.01
+fizz foam.v.01
+molt shed.v.04
+subsist exist.v.02
+crystallise clear.v.10 crystallize.v.03 crystallize.v.01
+hump hunch.v.01 sleep_together.v.01
+kick_about kick_around.v.01
+nock score.v.02
+mongrelise mongrelize.v.01
+crepe crape.v.01
+eat_at erode.v.01
+hale coerce.v.01 haul.v.01
+externalise project.v.12 exteriorize.v.02
+pee-pee make.v.49
+footnote annotate.v.01
+chit-chat chew_the_fat.v.01
+berate call_on_the_carpet.v.01
+monologuise monologuize.v.01
+memorialise memorialize.v.01 commemorate.v.03
+ice_over ice_up.v.01
+cooccur_with collocate_with.v.01
+ask_for_trouble ask_for_it.v.01
+detract take_away.v.07
+pollenate pollinate.v.01
+smell_out sniff_out.v.01 smell.v.05
+make_pure purify.v.01
+subdue repress.v.01 suppress.v.01 mortify.v.02 overcome.v.02 subordinate.v.02 tame.v.01
+forswear abjure.v.01
+be_on get_on.v.05
+telefax fax.v.01
+gash slash.v.03
+rain_down rain.v.01
+gasp pant.v.01
+fit_out equip.v.01 dress.v.02
+keep_one's_eyes_off stand_back.v.01
+swob swab.v.01 dab.v.01
+swop trade.v.04
+pup whelp.v.01
+keep_abreast keep_up.v.04
+bear_off take_away.v.01
+oversupply flood.v.03
+labour labor.v.02 tug.v.02 labor.v.03
+take_on assume.v.03 assume.v.02 undertake.v.02 accept.v.05 meet.v.10
+detoxicate detoxify.v.01
+jerk_off masturbate.v.02
+dissertate hold_forth.v.01
+smarten_up spruce_up.v.01 spruce_up.v.02
+kick_out expel.v.01 oust.v.01
+wee make.v.49
+stymy obstruct.v.01
+unthaw dissolve.v.09
+sham simulate.v.03 feign.v.01
+take_shape form.v.03
+rue repent.v.02
+liven_up enliven.v.02
+professionalise professionalize.v.01 professionalize.v.02
+immure imprison.v.01
+loosen_up unstuff.v.01 relax.v.05 limber_up.v.02 relax.v.01 relax.v.04
+shrivel_up shrivel.v.01
+doss_down doss.v.01
+plank_down plonk_down.v.01
+stanch stem.v.03
+stop_up plug.v.01
+mosey amble.v.01
+put_across communicate.v.01
+nurture foster.v.03 rear.v.02 nourish.v.01
+ram_home drive_home.v.02
+pair_off pair.v.01
+decolonise decolonize.v.01
+be_amiss misconstrue.v.01
+chunk lump.v.01 collocate.v.02
+reboot boot.v.02
+islamise islamize.v.01 islamize.v.02
+deodourise deodorize.v.01
+instance exemplify.v.02
+hit_the_roof flip_one's_lid.v.01
+acclimatise acclimatize.v.01
+shinny clamber.v.01
+sulfur sulphur.v.01
+concentrate_on focus_on.v.01
+circle_round revolve_around.v.02
+rain_cats_and_dogs pour.v.06
+break_camp decamp.v.01
+disforest deforest.v.01
+fate destine.v.01
+spiff_up spruce_up.v.01
+renegade rebel.v.02
+candy sugarcoat.v.01
+get_going start.v.09 get_cracking.v.01
+defeminise defeminize.v.01
+intermingle blend.v.01
+stick_up hold_up.v.04 stand_up.v.05
+coquet chat_up.v.01
+embrangle snarl.v.04
+childproof child-proof.v.01
+pull_away withdraw.v.01
+constitutionalise constitutionalize.v.03
+cloture closure.v.01
+house-train housebreak.v.01
+lour lower.v.02 turn_down.v.05 frown.v.01
+brabble quibble.v.02
+matter count.v.02
+trivialise trivialize.v.01
+fold_up fold.v.01 fold.v.05
+keep_an_eye_on watch.v.02
+meditate chew_over.v.01 study.v.06
+bemuse bewilder.v.02
+vote_down kill.v.02 turn_thumbs_down.v.01
+hop_up soup_up.v.01
+bug_out start.v.14
+brick_up brick_in.v.01
+motorise mechanize.v.01
+near approach.v.01
+rope_down rappel.v.01
+jest joke.v.01 joke.v.02
+sweep_over overwhelm.v.01
+fort_up fort.v.01
+outbalance preponderate.v.01
+fly_in_the_teeth_of fly_in_the_face_of.v.01
+initialise initialize.v.01 format.v.03
+bounce_back get_well.v.01
+egest excrete.v.01
+rent_out hire_out.v.01
+burr bur.v.01
+amortise amortize.v.01
+unsay swallow.v.05
+sidestep hedge.v.01
+scrawl scribble.v.02
+botch_up botch.v.01
+deject depress.v.01
+sort_out classify.v.01 clear.v.10 discipline.v.02
+get_started get_cracking.v.01
+burst_forth leap_out.v.02 explode.v.04 effloresce.v.01
+pine ache.v.02
+patronise patronize.v.02 sponsor.v.01 patronize.v.03 patronize.v.04
+aerosolise aerosolize.v.02 aerosolize.v.01
+gesture gesticulate.v.01
+cant_over cant.v.01
+put_together assemble.v.01
+harken hark.v.01
+change_course jibe.v.02
+send_word advise.v.02
+machinate organize.v.05 conspire.v.01
+embark_on start.v.06
+make_relaxed relax.v.04
+munch crunch.v.03
+dichotomise dichotomize.v.01
+criminalise outlaw.v.01
+mythicise mythicize.v.01 mythologize.v.02
+bear_upon affect.v.01
+measure_up qualify.v.01
+frighten_off daunt.v.01
+brattle clatter.v.01
+wear_the_trousers call_the_shots.v.01
+belt_down toss_off.v.02
+palatalise palatalize.v.01
+interbreed crossbreed.v.01
+coax wheedle.v.01
+jingle-jangle jingle.v.01
+prevaricate beat_around_the_bush.v.01
+plank_over plank.v.01
+laugh_loudly guffaw.v.01
+avenge revenge.v.01
+omit exclude.v.01 neglect.v.01
+syllabise syllabify.v.01 syllabize.v.02
+cast_out banish.v.01 discard.v.01
+ghostwrite ghost.v.03
+cheapen degrade.v.03
+cumulate accumulate.v.02
+bucket_along rush.v.01
+silver-plate silverplate.v.01
+take_account appreciate.v.02
+handstamp rubberstamp.v.01
+lodge_in occupy.v.02
+break_loose explode.v.04 escape.v.01
+reconnoitre scout.v.01
+hold_in enclose.v.02 control.v.02 conceal.v.02
+divvy_up share.v.04
+write_in_code code.v.02
+pen write.v.01
+lie_in_wait ambush.v.01
+date_back go_back.v.01
+bolt_down toss_off.v.02 garbage_down.v.01
+blob spot.v.04
+lift_off take_off.v.03
+rain_buckets pour.v.06
+gussy_up overdress.v.02
+fete celebrate.v.02
+cross_out cross_off.v.01
+bemire dirty.v.01
+haze_over obscure.v.01
+overgeneralise overgeneralize.v.01
+take_chances gamble.v.01
+tergiversate beat_around_the_bush.v.01 apostatize.v.01
+cross-pollinate pollinate.v.01
+take_for deem.v.01
+hunt_down hunt.v.01
+swing_out swing.v.05
+give_suck breastfeed.v.01
+universalise universalize.v.01
+besmirch defame.v.01 smirch.v.01
+fig_out overdress.v.02
+leave_out exclude.v.01 neglect.v.01
+bug tease.v.01 wiretap.v.01
+keep_one's_hands_off stand_back.v.01
+chip_in contribute.v.02
+beat_back repel.v.01
+rankle eat_into.v.01
+buoy_up lighten.v.03 lighten.v.01 buoy.v.02
+disfranchise disenfranchise.v.01
+louse_up botch.v.01
+go_along play_along.v.01 continue.v.01 elapse.v.01
+yarn-dye impress.v.07
+sympathise sympathize.v.01 commiserate.v.01 sympathize.v.02
+move_on advance.v.01
+hybridize crossbreed.v.01
+arbitrate intercede.v.01
+coronate crown.v.01
+conk_out fail.v.04 poop_out.v.01
+woolgather dream.v.01
+turn_the_tide turn_the_tables.v.01
+toot honk.v.01
+give_the_gate give_the_axe.v.02
+evangelise evangelize.v.01 evangelize.v.02
+have_a_good_time have_a_ball.v.01
+splash_around dabble.v.02
+improve better.v.02 better.v.03
+lessen decrease.v.01 decrease.v.02 subside.v.01
+wound injure.v.01 hurt.v.05 weave.v.04 wind.v.02 wind.v.03 scent.v.02 wind.v.05 wreathe.v.03 hoist.v.01
+pull_up_stakes leave.v.08
+monumentalise monumentalize.v.01
+gift endow.v.01 give.v.08
+dawdle linger.v.04 dally.v.02 lag.v.01
+counsel rede.v.02
+centralise centralize.v.01
+lark_about frolic.v.01
+complot conspire.v.01
+pay_for invite.v.05
+double_birdie eagle.v.01
+unfreeze dissolve.v.09 unblock.v.03
+drag_one's_feet procrastinate.v.01
+rescind revoke.v.02
+realise gain.v.08 realize.v.05 realize.v.06 realize.v.03 recognize.v.02 understand.v.02
+matt-up felt.v.03
+fundraise fund-raise.v.01
+start_out get_down.v.07 depart.v.03
+catalyse catalyze.v.01
+make_unnecessary save.v.06
+couple_on couple.v.02
+keep_one's_eyes_skinned keep_one's_eyes_peeled.v.01
+realine realign.v.01
+lay_to_rest bury.v.02
+except demur.v.01 exclude.v.01
+diagonalise diagonalize.v.01
+beat_about cast_about.v.01
+wrawl howl.v.02
+tick_off check.v.06
+peter_out taper_off.v.01 poop_out.v.01
+caponise caponize.v.01
+condone excuse.v.06
+jut stick_out.v.01
+assuage pacify.v.01 quench.v.01 relieve.v.01
+backslide lapse.v.03
+turn_up come_on.v.01 fold.v.01 locate.v.01 prove.v.01 excavate.v.02
+add_together total.v.02 add.v.04
+pack_together compress.v.01
+belt_up close_up.v.04
+hold_open keep_open.v.01
+moan groan.v.01
+deputise substitute.v.03 depute.v.02
+twirp tweet.v.01
+chairman chair.v.01
+pillage plunder.v.03
+bind_off tie_up.v.05
+aggravate worsen.v.02 exacerbate.v.02
+enwrap envelop.v.01
+whelm overwhelm.v.01
+quail flinch.v.01
+box_up box_in.v.01
+true_up true.v.01
+put_one_across gull.v.02
+rip_up shred.v.01
+chirp peep.v.03 tweedle.v.01
+set_afire set_ablaze.v.01
+gold_plate goldplate.v.01
+toenail toe.v.02
+overclothe overdress.v.01
+cast_anchor anchor.v.02
+subedit copyread.v.01
+dishevel tousle.v.01
+semi-automatise semi-automatize.v.01
+batter buffet.v.01 clobber.v.01 dinge.v.01
+quiesce quieten.v.01
+arse_about bum.v.02
+liquify liquefy.v.02 liquefy.v.03
+cocker pamper.v.01
+virilise masculinize.v.02
+flip-flop interchange.v.04
+detribalise detribalize.v.01
+vilipend deprecate.v.02
+dry_up exsiccate.v.01 mummify.v.03
+animalise animalize.v.01 brutalize.v.02 brutalize.v.03
+sentimentize sentimentalise.v.03
+linearise linearize.v.01
+have_a_fit flip_one's_lid.v.01
+get_married marry.v.01
+outstare stare_down.v.01
+cognize know.v.01
+galvanise startle.v.01 galvanize.v.02 galvanize.v.03
+jewel bejewel.v.01
+leaven raise.v.15
+preface precede.v.05
+hit_the_hay go_to_bed.v.01
+drop_away slip.v.04
+set_ashore land.v.06
+lay_in store.v.01
+italicise italicize.v.01
+reword paraphrase.v.01
+trim_back reduce.v.01
+overextend overstrain.v.01
+labialise round.v.03
+utilise use.v.01
+outcry outshout.v.01 exclaim.v.01
+pick_apart knock.v.06
+march_out debouch.v.01
+get_a_look catch_sight.v.01
+exudate exude.v.01
+powderise powderize.v.01 powderize.v.02
+elegise elegize.v.01
+reconstitute restructure.v.01
+disdain contemn.v.01 reject.v.04
+apprize advise.v.02 instruct.v.03 appreciate.v.04 appreciate.v.05
+titivate spruce_up.v.01
+log_z's sleep.v.01
+use_up consume.v.05 take.v.02
+hit_the_deck hit_the_dirt.v.01
+phlebotomize bleed.v.02
+micro-cook microwave.v.01
+roister carouse.v.01
+altercate quarrel.v.01
+fend_off debar.v.02
+exhort cheer.v.05 urge.v.01
+bolster_up bolster.v.01
+pull_a_face grimace.v.01
+flush_down wash_down.v.02
+pee make.v.49
+sterilise sterilize.v.01 sterilize.v.02
+accoutre accouter.v.01
+sublease sublet.v.01
+be_sick vomit.v.01
+malign badmouth.v.01
+deliver_the_goods succeed.v.01
+abide bide.v.01 digest.v.03
+intermix blend.v.01
+intermit pause.v.02
+dumbfound perplex.v.01
+change_form change_shape.v.01
+call_forth provoke.v.02 raise.v.07
+uniformise uniformize.v.01
+dole_out distribute.v.01
+energize stimulate.v.04 excite.v.07
+merit deserve.v.01
+signalise signalize.v.01 sign.v.05 signalize.v.03 signalize.v.04
+cross-fertilise cross-fertilize.v.01 cross-fertilize.v.02
+take_it_easy sit_back.v.01
+decoke decarbonize.v.01
+drive_away chase_away.v.01
+glamourize glamorize.v.02
+profane corrupt.v.01 desecrate.v.01
+bowdlerise bowdlerize.v.01
+look_sharp rush.v.04
+sellotape scotch_tape.v.01
+inter bury.v.02
+fuck_off bum.v.02 scram.v.01 masturbate.v.02
+asperse defame.v.01
+pluralise pluralize.v.01
+throw_overboard forfeit.v.01 deep-six.v.02
+fertilise fertilize.v.02 fertilize.v.01 inseminate.v.02
+unitise unitize.v.01 unitize.v.02 unitize.v.03
+snitch hook.v.05 denounce.v.04
+mash squash.v.01 chat_up.v.01 grind.v.05
+save_up save.v.05
+paint_the_lily gild_the_lily.v.01 gild_the_lily.v.02
+call_the_tune call_the_shots.v.01
+sop_up absorb.v.04 take_in.v.14
+alkalify alkalize.v.01
+scrub_up scrub.v.02
+give-up_the_ghost die.v.01
+pay_heed attend.v.05
+televise telecast.v.01
+drone_on drone.v.02
+found establish.v.01 establish.v.02 establish.v.08 find.v.01 detect.v.01 find.v.03 determine.v.01 find.v.05 witness.v.02 line_up.v.02 discover.v.03 discover.v.04 find.v.10 rule.v.04 receive.v.02 find.v.13 recover.v.01 find.v.15 find_oneself.v.01
+pop_the_question propose.v.05
+exposit set_forth.v.01 elaborate.v.01
+look_up consult.v.02
+retrovert revert.v.01
+swig slug.v.01 gulp.v.01
+sail_through breeze_through.v.01
+blackjack blackmail.v.01
+poke_fun ridicule.v.01
+fress gluttonize.v.01
+take_a_crap stool.v.04
+licence license.v.01
+repugn contest.v.01
+saw_logs snore.v.01
+slim reduce.v.20
+cabbage pilfer.v.01
+fossilise fossilize.v.01 fossilize.v.02
+hand-build handbuild.v.01
+key_out identify.v.05
+chagrin humiliate.v.01
+beseem befit.v.01
+fall_into_place click.v.07
+incarcerate imprison.v.01
+economise save.v.09 conserve.v.03
+disillusion disenchant.v.01
+soak_up absorb.v.04 steep.v.01
+reexamine review.v.01
+crowd_out force_out.v.04
+supervise oversee.v.01 monitor.v.01
+matte felt.v.03
+trump_out trump.v.04
+cumber restrain.v.04
+whirl_around whirl.v.05
+demobilise demobilize.v.01 demobilize.v.02
+compute calculate.v.01
+appraise measure.v.04 survey.v.01
+change_over switch.v.04 convert.v.01
+defraud victimize.v.03
+bike bicycle.v.01
+daze dazzle.v.01 stun.v.03
+triumph prevail.v.04 wallow.v.04 gloat.v.01 exuberate.v.01
+tenderise tender.v.04
+discase undress.v.01
+conglomerate accumulate.v.02
+negative veto.v.01
+canalise canal.v.01 channel.v.02
+shoo_away shoo_off.v.01
+overcultivate overcrop.v.01
+kink_up crimp.v.02
+enamor capture.v.02
+effectuate effect.v.01
+laden ladle.v.02 load.v.01 ladle.v.02 load.v.01
+chalk_out sketch.v.01
+tog_out overdress.v.02
+blossom_out blossom.v.02
+simmer_down calm.v.03
+fraternise fraternize.v.01
+league_together band_oneself.v.01
+deodorise deodorize.v.01
+aid help.v.01 help.v.02
+contact reach.v.04 touch.v.05
+restitute restore.v.03 renovate.v.01
+build_upon repose_on.v.01
+comminate accurse.v.01
+encrypt code.v.02
+cannibalise cannibalize.v.01 cannibalize.v.02
+anatomise anatomize.v.01
+subtilise subtilize.v.03
+wrap_up wrap.v.01 get_through.v.01 roll_up.v.06 cover.v.26
+seaplane hydroplane.v.01
+pop_up crop_up.v.01
+coagulate clot.v.01 clot.v.02
+stymie obstruct.v.01
+cognise know.v.01
+tell_apart spot.v.02 distinguish.v.01
+pull_ahead gain.v.05
+carp cavil.v.01
+cark perturb.v.01
+prologise prologize.v.01
+boot_out oust.v.01 eject.v.01
+kibbitz kibitz.v.01
+telepathise telepathize.v.01
+entomb bury.v.02
+crawfish retreat.v.04
+smooth_out smooth.v.03
+lean_against lean_on.v.01
+untangle extricate.v.01 unravel.v.01
+sluice_down sluice.v.01
+enrapture enchant.v.01
+hit_the_ceiling flip_one's_lid.v.01
+swosh lap.v.03
+shut_in enclose.v.03
+quantise quantize.v.01 quantize.v.02
+penalise punish.v.01
+iodise iodize.v.01 iodize.v.02
+buy_in stock.v.05
+chamfer bevel.v.01 furrow.v.03
+thrust_out push_out.v.01
+lay_on_the_line risk.v.01
+pick_out choose.v.01 spot.v.02
+outlast outlive.v.01
+show_off flaunt.v.01
+fight_off repel.v.03
+becloud obscure.v.01
+burn_out blow_out.v.01
+confound confuse.v.02 confuse.v.01
+ready cook.v.02 fix.v.12
+get_it_on sleep_together.v.01
+resole sole.v.01
+crock_up crack_up.v.01
+becalm steady.v.01
+sashay sidle.v.02 tittup.v.01 chasse.v.01
+capitalise capitalize.v.02 capitalize.v.01 capitalize.v.03 capitalize.v.04 capitalize.v.05 capitalize.v.06
+ball_up botch.v.01
+mouth_off rant.v.01
+core_out hollow.v.02
+behead decapitate.v.01
+come_alive wake_up.v.02
+romanticise romanticize.v.01 romanticize.v.02
+embrocate anoint.v.02
+go_to_pieces fall_apart.v.01
+atone expiate.v.01 repent.v.01
+fatigue tire.v.01 tire.v.02
+look_across look_out_on.v.01
+deplete consume.v.05
+beshrew curse.v.03
+sensualise sensualize.v.03
+throw_out_of_kilter perturb.v.04
+desalinize desalinate.v.01
+reallocate reapportion.v.01
+raise_up agitate.v.06
+clog_up clog.v.01
+take_root settle.v.07
+pullulate_with abound_in.v.01
+gush spurt.v.01 rave.v.03 jet.v.01
+metastasise metastasize.v.01
+break_one's_back slave.v.01
+take_note note.v.03
+christen baptize.v.01
+invite_out ask_out.v.01
+zipper zip_up.v.01
+yap yelp.v.01
+anthologise anthologize.v.01
+muster_up muster.v.01
+rinse_off rinse.v.01
+cloud_up overcloud.v.01
+out_in call_at.v.01
+slosh_around slosh.v.03
+fly_off_the_handle flip_one's_lid.v.01
+individualise individualize.v.01 personalize.v.01
+denominate designate.v.01
+romanise romanize.v.01
+fluoridise fluoridate.v.01
+wreck bust_up.v.01
+mill_around loiter.v.01 mill.v.01
+wee-wee make.v.49
+have_sex sleep_together.v.01
+bemock mock.v.01
+construe interpret.v.01
+bedazzle dazzle.v.01
+crop_out basset.v.01
+psych_up hype_up.v.01
+bonk sleep_together.v.01 sock.v.01
+instigate incite.v.02 prompt.v.02
+ransack plunder.v.03 comb.v.02
+conduce contribute.v.03
+raiment dress.v.02
+talk_about discourse.v.01 talk_of.v.01
+fig_up overdress.v.02
+weight_down burden.v.01
+agonise agonize.v.01 agonize.v.02
+fluff botch.v.01 ruffle.v.07 tease.v.09
+erect raise.v.09 rear.v.04
+conflagrate kindle.v.02 erupt.v.03
+kip sleep.v.01
+curry_favour curry_favor.v.01
+whicker neigh.v.01
+rule_in rule_out.v.02
+powerwash pressure-wash.v.01
+coeducate co-educate.v.01
+de-ice defrost.v.01
+drudge labor.v.02
+hygienize sanitize.v.01
+syllabicate syllabify.v.01
+carve_up divide.v.01
+cool_it calm.v.03
+carnalise sensualize.v.03
+give_out emit.v.02 distribute.v.04 fail.v.10 fail.v.04
+keep_in_line manipulate.v.05
+sight-read sightread.v.01
+debone bone.v.02
+progress_to reach.v.07
+mat entangle.v.02 felt.v.03
+tread_on step_on.v.01
+lollygag loiter.v.01
+basify alkalize.v.01
+melt_down melt.v.01
+spout spurt.v.01 rant.v.01
+bash sock.v.01
+colorise color.v.01
+elevate promote.v.02 raise.v.02 lift.v.10
+manoeuvre maneuver.v.02 steer.v.01 manoeuver.v.03
+retick tick.v.03
+take_hold_of catch.v.04
+glide_by elapse.v.01
+circularise circularize.v.01 circularize.v.03 circulate.v.02
+throw_off shed.v.01 shake.v.07
+fatten_up fatten.v.01
+categorise categorize.v.01
+freeze_out freeze.v.07
+drop_a_line write.v.04
+delimitate specify.v.03 demarcate.v.02
+masculinise masculinize.v.02
+get_stuck grind_to_a_halt.v.01
+prise pry.v.01 pry.v.04 respect.v.01
+mope_around mope.v.01
+ritualise ritualize.v.01
+spreadeagle spread-eagle.v.05
+trounce flog.v.01 beat.v.01 call_on_the_carpet.v.01
+coop_in coop_up.v.01
+edge_up edge_in.v.01
+attain achieve.v.01 reach.v.02 fall_upon.v.01 reach.v.01
+bear_down_upon bear_down_on.v.01
+dong ding.v.01
+part separate.v.09 separate.v.08 depart.v.03 separate.v.12 separate.v.02
+doze_off fall_asleep.v.01
+place_upright stand.v.10
+pauperize beggar.v.02
+express_mirth laugh.v.01
+slack_off abate.v.02
+trick_up overdress.v.02
+acetylize acetylate.v.01 acetylate.v.02
+scuttle scurry.v.01
+bluff_out bluff.v.01
+gad gallivant.v.01
+gab yak.v.01
+measure_out measure.v.01
+unlax relax.v.04
+mesmerise magnetize.v.02 hypnotize.v.01
+wage engage.v.07
+hive_up hoard.v.01
+expunge strike.v.14
+lark frolic.v.01
+rig_out overdress.v.02
+jimmy pry.v.01
+vamoose decamp.v.03
+discomfit upset.v.02
+single_stitch single_crochet.v.01
+foregather meet.v.07
+adjudicate judge.v.05 decide.v.02
+pass_out faint.v.01 distribute.v.04 zonk_out.v.01
+take_aim aim.v.01
+abominate abhor.v.01
+reprize reprise.v.01
+remain_down take_the_count.v.01
+ghettoise ghettoize.v.01
+synchronise synchronize.v.02 synchronize.v.03 synchronize.v.04 synchronize.v.05 synchronize.v.06 synchronize.v.01
+lame cripple.v.02
+literalise literalize.v.01
+rise_up surface.v.01 rebel.v.01 rear.v.01
+moon_about mope.v.02
+mate copulate.v.01 match.v.03 checkmate.v.01
+turn_turtle capsize.v.01
+savour taste.v.01 savor.v.04 savor.v.03 enjoy.v.01
+surface_mine strip_mine.v.01
+eavesdrop listen_in.v.02
+take_aback shock.v.01
+gambol frolic.v.01
+put_aside put_away.v.04 put_away.v.07
+queen_it_over lord_it_over.v.01
+industrialise industrialize.v.01 industrialize.v.02
+recidivate relapse.v.02
+unsubstantialise immaterialize.v.01
+curtail restrict.v.01 clip.v.05
+unionise unionize.v.01 unionize.v.02
+oink squeal.v.01
+go_through experience.v.01 work_through.v.01 pass.v.01 devour.v.03 follow_through.v.02
+unlade unload.v.02
+tear_off tear_away.v.01
+apostatise apostatize.v.01
+renormalise normalize.v.02
+unarm disarm.v.03
+pig_out gorge.v.01
+keep_pace keep_step.v.01
+aerify gasify.v.01
+cooccur coincide.v.01
+evoke arouse.v.01 provoke.v.02 educe.v.01 raise.v.07 suggest.v.05
+derecognise decertify.v.01
+lay_eyes_on behold.v.01
+patinize patinate.v.01
+fess_up make_a_clean_breast_of.v.01
+thurify cense.v.01
+burglarise burglarize.v.01
+throw_up vomit.v.01
+etherise etherize.v.01
+aggrandize embroider.v.02
+reason_out reason.v.01
+send_on forward.v.01
+aspire draw_a_bead_on.v.02
+rub_out erase.v.02
+communalise communalize.v.01
+back_down back_up.v.02 chicken_out.v.01
+disembroil disinvolve.v.01
+tone_up tone.v.05
+felt_up felt.v.03
+overstep transgress.v.04 exceed.v.02
+gabble chatter.v.04
+bugger sodomize.v.02
+appease pacify.v.01 quell.v.02 propitiate.v.01
+dismount unhorse.v.01
+haul_away cart_off.v.01
+enshroud shroud.v.01
+counterbalance compensate.v.01 oppose.v.03 counteract.v.03
+filter_out filter.v.01
+have_words call_on_the_carpet.v.01
+serve_well serve.v.08
+stereotype pigeonhole.v.02
+inunct anoint.v.02
+metabolise metabolize.v.01
+fly_the_coop scat.v.01
+honour honor.v.01 respect.v.02 honor.v.03
+empathize sympathize.v.02
+quash repress.v.01 invalidate.v.01
+assoil acquit.v.01
+tittle-tattle chatter.v.04
+humour humor.v.01
+brush_up review.v.04 polish.v.03
+sensitise sensitize.v.02 sensitize.v.03 sensitize.v.04 sensitize.v.01
+tittivate spruce_up.v.01
+epitomise typify.v.01
+climb_on hop_on.v.01
+colourize color.v.01
+tranquilize calm.v.01 sedate.v.01
+array range.v.05 align.v.03
+liquidize sell_out.v.01 liquefy.v.02
+come_off detach.v.03 go_off.v.05 chip.v.01
+flood_out overwhelm.v.02
+blossom_forth blossom.v.02
+swoop_up swoop.v.03
+file_away file.v.05 archive.v.01
+adorn decorate.v.01 deck.v.01 invest.v.03
+cabal conspire.v.01
+rein_in rein.v.02 harness.v.03 rein.v.03
+break-dance break_dance.v.01
+contrive plan.v.03 invent.v.01 project.v.10
+kick_the_bucket die.v.01
+portion_out share.v.04
+garb dress.v.02
+show_up come_on.v.01 show.v.08
+stick_in slip_in.v.01 insert.v.02
+synthesise synthesize.v.01
+write_of write_on.v.01
+encompass embrace.v.01
+misspeak mispronounce.v.01
+go_over review.v.03 go_off.v.05 check.v.01 fall_over.v.01
+sully defile.v.01 tarnish.v.01 defame.v.01
+back_away retreat.v.04
+recognise recognize.v.09 accredit.v.01 spot.v.02 greet.v.01 acknowledge.v.04 recognize.v.02 recognize.v.04 acknowledge.v.06
+programme program.v.02 program.v.01
+disfigure deface.v.01
+square_off settle.v.03
+subscribe_to subscribe.v.05
+somnambulate sleepwalk.v.01
+wink_at connive_at.v.01
+unsubstantialize immaterialize.v.01
+frig_around bum.v.02
+stash hoard.v.01
+recrudesce break.v.53 erupt.v.08
+abseil rappel.v.01
+garotte garrote.v.01
+swill_down swill.v.02
+breathalyse breathalyze.v.01
+arterialise arterialize.v.01
+interiorize internalize.v.01
+bushel repair.v.01
+brisken brisk.v.01
+flyfish fly-fish.v.01
+narcotise narcotize.v.01
+outfit equip.v.01
+deice defrost.v.01
+exculpate acquit.v.01
+send_off dispatch.v.01 project.v.11 send.v.06
+barricado barricade.v.03
+cop_out opt_out.v.01
+cheep peep.v.03
+particularise specify.v.04
+sympathize_with feel_for.v.01
+shower_down shower.v.04
+stigmatise stigmatize.v.01 stigmatize.v.02
+scrunch crump.v.01 squat.v.01 wrinkle.v.02
+glamour hex.v.01
+sleep_in sleep_late.v.01 live_in.v.01
+skydive sky_dive.v.01
+tantalise tease.v.02
+posture pose.v.04 model.v.03
+make_full fill.v.01
+deaminize deaminate.v.01
+blither babble.v.02
+monkey_around putter.v.02
+live_up_to satisfy.v.01
+beguile juggle.v.01 capture.v.02
+wawl squall.v.01
+skip_over jump.v.13
+pass_across transit.v.01
+glisten glitter.v.01
+home_in range_in.v.01
+keep_one's_distance stand_back.v.01
+sleek_down slick.v.02
+vesicate blister.v.01
+enamour capture.v.02
+allegorise allegorize.v.01 allegorize.v.02
+block_up barricade.v.01
+impanel empanel.v.01 empanel.v.02
+nicker neigh.v.01
+laugh_softly chuckle.v.01
+stack_up pile_up.v.02
+pressurise supercharge.v.02 pressurize.v.02 pressurize.v.03
+psychoanalyse analyze.v.04
+weigh_the_anchor weigh_anchor.v.01
+bull_through bull.v.01
+interdepend hang_together.v.01
+cool_down cool.v.01 cool.v.03 cool.v.02
+sentimentise sentimentalise.v.03
+jut_out stick_out.v.01
+convolute convolve.v.01 twist.v.09
+bear_out corroborate.v.03
+ravel_out ravel.v.01
+specialise specialize.v.04 specify.v.04 specialize.v.03 specialize.v.01 speciate.v.01
+soak_through sop.v.02
+outscore outpoint.v.02
+overstress overemphasize.v.01
+phlebotomise bleed.v.02
+fiddle_with twiddle.v.02
+whir whizz.v.01
+tidy_up tidy.v.01
+peril endanger.v.01 queer.v.02
+disaffect estrange.v.02
+concentre concenter.v.01
+buss snog.v.01 bus.v.01 bus.v.02 bus.v.03
+bust break.v.04 raid.v.01 tear.v.01 break.v.42 burst.v.08
+pull_through survive.v.02 save.v.03
+know_apart discriminate.v.01
+pity feel_for.v.01
+sanitise sanitize.v.01 sanitize.v.02
+schmooze shmooze.v.01
+stick_with stick_to.v.02
+brisk_up brisk.v.01
+offsaddle unsaddle.v.01
+hold_dear care_for.v.02
+make_whoopie revel.v.02
+bolshevise communize.v.01
+palm_off foist_off.v.01
+inhume bury.v.02
+slim_down reduce.v.20
+hoof_it foot.v.02
+blow_over evanesce.v.01
+floor shock.v.01 deck.v.03
+valuate measure.v.04
+frost_over ice_up.v.01
+wriggle writhe.v.01
+lip-read lipread.v.01
+fade_away dissolve.v.01
+polemise polemize.v.01
+close_down close_up.v.01
+slush splash.v.05 slosh.v.03
+thumb hitchhike.v.01 flick.v.02 finger.v.01
+englut gorge.v.01
+jounce bounce.v.03
+besprinkle sprinkle.v.04
+traduce badmouth.v.01
+blue-pencil edit.v.04
+cower huddle.v.02 fawn.v.01
+pan_off pan.v.02
+keep_one's_mouth_shut keep_quiet.v.01
+propagandise propagandize.v.01 propagandize.v.02
+spend_a_penny make.v.49
+diddle victimize.v.03 toy.v.02
+slander defame.v.01
+twaddle chatter.v.04
+eternalize immortalize.v.02
+leave_alone leave.v.04
+bring_outside exteriorize.v.01
+enfold envelop.v.01
+excogitate invent.v.01 chew_over.v.01
+grub_out grub_up.v.01
+count_on calculate.v.02
+amalgamate mix.v.05
+scamper scurry.v.01
+saw_wood snore.v.01
+string_along string.v.03
+cerebrate think.v.03
+localise place.v.12 localize.v.02 localize.v.03 set.v.09
+ebb_out ebb.v.01
+give_full_measure go_all_out.v.01
+objurgate condemn.v.01 chastise.v.01
+take_the_fifth_amendment take_the_fifth.v.01
+holler_out holler.v.01
+odourise odorize.v.01
+gossip dish_the_dirt.v.01 chew_the_fat.v.01
+perforate punch.v.03 penetrate.v.01
+maltreat mistreat.v.01
+know_what's_going_on know_the_score.v.01
+chip_off chip.v.01
+roll_in_the_hay sleep_together.v.01
+spear_up spear.v.02
+desulphurize desulfurize.v.01
+lead_astray lead_off.v.01 mislead.v.01 deceive.v.02
+loaf bum.v.02 loiter.v.01
+snarl_up snarl.v.04
+bespeckle speckle.v.02
+gobble_up garbage_down.v.01
+colonise colonize.v.01 colonize.v.02
+hash_over retrograde.v.04
+abye expiate.v.01 expiate.v.01
+start_up start.v.08 start.v.06
+thrash_about convulse.v.03
+bituminise bituminize.v.01
+mat_up felt.v.03
+countervail offset.v.01 counteract.v.03
+brutalise brutalize.v.01 brutalize.v.02 brutalize.v.03
+derange unbalance.v.02 perturb.v.04
+swing_about swing_around.v.01
+slice_through slice_into.v.01
+stylise stylize.v.01
+bouse bowse.v.01
+die_hard prevail.v.03
+persist_in continue.v.06
+spike_out spike.v.04
+root_out uproot.v.03 uproot.v.02
+mensurate measure.v.01
+fulfill carry_through.v.01 satisfy.v.01 meet.v.04
+liaise intercede.v.01
+get_a_load take_a_look.v.01
+diabolize devilize.v.01
+set_ahead advance.v.11
+motorcycle motorbike.v.01
+shut close.v.01 close.v.02 exclude.v.02
+perish die.v.01
+scare frighten.v.01 daunt.v.01
+concretise concretize.v.02
+pull_round survive.v.02
+terminate end.v.02 end.v.01 end.v.03 displace.v.03
+typewrite type.v.01
+withstand defy.v.01 resist.v.02
+re-explain reinterpret.v.01
+legitimize legalize.v.01
+weary tire.v.02 tire.v.01
+neighbour neighbor.v.01 neighbor.v.02
+pin_up pin_down.v.03
+stay_off keep_off.v.02
+figure_out solve.v.01
+chickenfight chicken-fight.v.01
+tailor-make sew.v.02 custom-make.v.01
+encamp camp.v.01
+head_home go_home.v.01
+gasconade boast.v.01
+chock_up jam.v.06
+whittle_down whittle_away.v.01
+channel-surf surf.v.03
+rub_off abrade.v.01
+look_for search.v.01 anticipate.v.05
+pooch_out pooch.v.01
+worm writhe.v.01
+contredanse contradance.v.01
+natter chew_the_fat.v.01
+misconduct misbehave.v.01 mismanage.v.01
+skreak whine.v.03 squawk.v.01
+raffle_off raffle.v.01
+pull_up draw_up.v.05 draw_up.v.02 draw_up.v.03 extract.v.01
+claxon honk.v.01 honk.v.02
+take_flight flee.v.01
+rebroadcast rerun.v.01
+clap_together clap_up.v.01
+ponder chew_over.v.01
+yen ache.v.02
+plump_up fluff_up.v.01
+devitalise devitalize.v.01
+humanise humanize.v.01
+load_up load.v.01
+dower endow.v.02
+quest_after quest_for.v.01
+sodomise sodomize.v.01 sodomize.v.02
+leech bleed.v.02
+emphasise underscore.v.01 stress.v.01
+sack_up net.v.01
+wear_thin wear.v.04
+idealise idealize.v.01 idealize.v.02
+congest clog.v.01
+brave weather.v.01
+hook_on take_up.v.02
+make_grow develop.v.12
+superintend oversee.v.01
+wiggle jiggle.v.01
+spit_up cough_up.v.01 expectorate.v.02
+symmetrise symmetrize.v.01
+degauss demagnetize.v.02
+obturate obstruct.v.02
+sleek_over whitewash.v.01
+purloin pilfer.v.01
+turn_tail scat.v.01
+default_on default.v.01
+slaver drivel.v.01
+bum_around bum.v.02
+winterise winterize.v.01
+drydock dry-dock.v.01
+fob_off foist_off.v.01
+de-energise de-energize.v.01
+unfit disqualify.v.01
+sudate sweat.v.01
+hold_water stand_up.v.06
+conflate blend.v.03
+spirt spurt.v.01 forge.v.05
+keep_company company.v.01
+nol.pros. nolle_pros.v.01
+cranch crunch.v.02
+commove agitate.v.02 agitate.v.06
+take_for_granted assume.v.01
+let_up abate.v.02 ease_up.v.03
+come_to_hand come_to_light.v.01
+vaccinate immunize.v.02
+mix_in blend_in.v.02 mix.v.04
+bow_down prostrate.v.01 bow.v.01
+tussle scuffle.v.02 muss.v.01
+give_tongue_to express.v.02
+stand_sentinel stand_guard.v.01
+obtrude push_out.v.01 intrude.v.04
+send_away dismiss.v.03 displace.v.03
+transcend exceed.v.01 exceed.v.02
+aliment nutrify.v.01
+jazz_around gallivant.v.01
+terrorise terrorize.v.01 terrify.v.01
+coiffure dress.v.16
+execrate abhor.v.01 accurse.v.01
+bower embower.v.01
+preassemble prefabricate.v.01
+smoulder smolder.v.02 smolder.v.01
+illegalize outlaw.v.01
+go_bad fail.v.04 spoil.v.02
+grass_over grass.v.04
+despatch dispatch.v.01
+parcel_out distribute.v.01
+gormandize gorge.v.01
+steal_away slip_away.v.01
+go_under sink.v.04 set.v.10 go_by.v.03
+get_about get_around.v.04
+get_dressed dress.v.01
+steam_clean steam.v.05
+keep_one's_shoulder_to_the_wheel plug_away.v.01
+climax culminate.v.01
+sound_out pronounce.v.01 check_out.v.07
+snoop spy.v.02
+hotfoot rush.v.01
+fall_by_the_wayside drop_out.v.01
+beleaguer tease.v.01 besiege.v.01
+perspire sweat.v.01
+hyperbolise overstate.v.01
+give_notice displace.v.03 advise.v.02
+gourmandize gorge.v.01
+apologise apologize.v.02 apologize.v.01
+westernise occidentalize.v.01
+bear_on refer.v.02 affect.v.01 push.v.02 continue.v.03
+track_down hunt.v.01
+kowtow scrape.v.04 fawn.v.02
+lop_off cut_off.v.03
+titter giggle.v.01
+come_short fall_short.v.01
+ramp_up build_up.v.04
+shut_out exclude.v.02
+twitter chitter.v.01
+decarburise decarbonize.v.01
+redress right.v.01
+outgo surpass.v.02
+pass_around circulate.v.03 circulate.v.02
+yack_away yack.v.01
+begild gild.v.01
+wolf_down wolf.v.01
+well_out stream.v.05
+putter_around putter.v.03
+appal shock.v.02 dismay.v.02
+beat_in hammer_in.v.01
+transistorise transistorize.v.01
+scranch crunch.v.01
+welch welsh.v.01
+circumvent besiege.v.01 outwit.v.01 hedge.v.01
+overhear catch.v.14
+purchase buy.v.01
+step_on_it rush.v.01
+encounter meet.v.01 find.v.01 run_into.v.01 meet.v.11 meet.v.10
+glass_in glass.v.03
+gaol imprison.v.01
+overgorge gorge.v.01
+mistrust distrust.v.01
+entrap ensnare.v.01 trap.v.02
+glance_over scan.v.02
+ruffle_up ruffle.v.08
+slur_over gloss_over.v.01
+enthral enchant.v.01
+take_a_leak make.v.49
+mete_out distribute.v.01
+subvent underwrite.v.01
+luck_through luck_it.v.01
+tip_over overturn.v.02 overturn.v.01
+bear_in_mind mind.v.06
+chin_up chin.v.01
+blot_out obscure.v.05
+view_as deem.v.01
+pass_along communicate.v.01
+cordon_off rope_in.v.01
+verbalise verbalize.v.01 talk.v.02 express.v.02 verbalize.v.04
+put_one_over gull.v.02
+run_across meet.v.01
+get_ahead gain.v.05
+commix mix.v.05
+americanise americanize.v.01 americanize.v.02
+disaccord disagree.v.02
+do_away_with extinguish.v.04
+bullyrag strong-arm.v.02
+favour favor.v.03 privilege.v.01 prefer.v.03 favor.v.02
+extemporize improvise.v.02 improvise.v.01
+shove_along shove_off.v.01
+speech-read lipread.v.01
+give_back refund.v.01
+absquatulate abscond.v.01
+vagabond roll.v.12
+push_forward barge.v.01
+luge toboggan.v.01
+counterpoise counterweight.v.01
+pound_off pound.v.05
+beseech bid.v.03
+scratch_up scratch.v.02
+block_off blockade.v.03 barricade.v.01 shut_off.v.03
+maximise maximize.v.02 maximize.v.01
+cocainise cocainize.v.01
+slumber sleep.v.01
+hunch_forward hunch.v.01
+take_a_powder skip_town.v.01
+form_bubbles foam.v.01
+crystalise clear.v.10 crystallize.v.03 crystallize.v.04 crystallize.v.01
+let_loose utter.v.02 unleash.v.03
+look_on watch.v.04 think_of.v.03
+decentralise decentralize.v.01
+paganise paganize.v.01
+bedim benight.v.03 obscure.v.03
+vaporize zap.v.02 gasify.v.01 evaporate.v.01 vanish.v.05
+hollow_out hollow.v.02
+winnow_out rule_out.v.03
+brown-nose butter_up.v.01
+hide_out hide.v.02
+editorialise editorialize.v.01
+collide_with hit.v.02
+get_rolling get_cracking.v.01
+drink_up drain_the_cup.v.01
+unchurch excommunicate.v.01
+materialise happen.v.04
+flower bloom.v.01
+cicatrise cicatrize.v.01
+pull_someone's_leg hoax.v.01
+kit_up kit_out.v.01
+take_a_hop bounce.v.01
+draw_a_blank forget.v.02
+marginalise marginalize.v.01
+assault assail.v.01 rape.v.01 attack.v.02
+customise custom-make.v.01 customize.v.02
+supersede supplant.v.01
+reproof call_on_the_carpet.v.01
+pass_water make.v.49
+touch_a_chord strike_a_chord.v.03
+be_at_pains take_pains.v.01
+redo remake.v.01 remodel.v.01
+affiance betroth.v.01
+quaff gulp.v.01
+bear_witness testify.v.02 testify.v.01
+clock_off clock_out.v.01
+turn_a_loss lose.v.07
+conceptualise gestate.v.01
+miniaturise miniaturize.v.01
+head_off debar.v.02
+mewl wail.v.02
+prang_up impregnate.v.04
+limn delineate.v.03 portray.v.02
+tangle_with get_into.v.01
+jack_up jack.v.01
+subvocalise subvocalize.v.01
+disregard ignore.v.01 dismiss.v.01 neglect.v.04
+move_around turn.v.06 travel.v.06
+jack_off masturbate.v.02
+upbraid reproach.v.01
+waitress wait.v.04
+circumvolve rotate.v.04
+zero_in range_in.v.01 zero.v.02
+beak peck.v.01
+be_given tend.v.01
+partner_off pair.v.01
+vend peddle.v.01
+minify decrease.v.02
+travel_along follow.v.04
+stand_in substitute.v.02
+novelise novelize.v.01
+ostracise banish.v.01 ostracize.v.02
+memorise memorize.v.01
+get_a_whiff get_a_noseful.v.01
+noise make_noise.v.01
+fight_down fight.v.02
+tune_up tune.v.01 tune.v.02
+sensibilise sensitize.v.01
+bobble botch.v.01
+plague blight.v.01 harass.v.01
+pull_the_wool_over_someone's_eyes bamboozle.v.01
+pip shoot.v.02 shoot.v.01 worst.v.01
+stone-wash stonewash.v.01
+balkanise balkanize.v.01
+jampack jam.v.06
+come_along appear.v.05 progress.v.01
+phone call.v.03
+dwindle_down dwindle.v.01
+scoop_up scoop.v.01
+fork_over hand_over.v.01
+prohibit forbid.v.01
+snatch_up snatch.v.01
+comb_out weed_out.v.01 comb.v.03
+desexualise desexualize.v.01 sterilize.v.02
+cotton_up cozy_up.v.01
+check_up_on check.v.01
+bestride hop_on.v.01
+hold_still_for stand_for.v.04
+tattle chatter.v.04 spill_the_beans.v.01
+binge gorge.v.01
+butt_on border.v.05
+sink_in click.v.07 percolate.v.05
+comminute grind.v.05
+cash_in_one's_chips die.v.01
+follow_up_on pursue.v.04
+accost address.v.09 hook.v.12
+twist_around twist.v.09
+log_off log_out.v.01
+pitch_into lam_into.v.01
+demonetise demonetize.v.01
+take_a_shit stool.v.04
+rile annoy.v.01 roil.v.02
+bring_forth generate.v.01 produce.v.04 produce.v.01 beget.v.01
+waylay ambush.v.01
+reply answer.v.01
+wear_off wear.v.04 wear_away.v.02
+slobber_over drool_over.v.01
+blotch mottle.v.01
+thrum hum.v.03 strum.v.01 drum.v.01
+throw_a_fit flip_one's_lid.v.01
+outvie outrival.v.01
+send_back remit.v.04
+blare blast.v.01 honk.v.01
+occidentalise occidentalize.v.01
+ruck pucker.v.03
+gruntle pacify.v.01
+molder decompose.v.03
+quetch complain.v.01
+come_together close.v.11
+domiciliate reside.v.01 house.v.02
+forfend debar.v.02
+corrade abrade.v.01
+baronetise baronetize.v.01
+acclimate acclimatize.v.01
+umpire referee.v.01
+palliate extenuate.v.01 relieve.v.01
+drive_out chase_away.v.01 rout_out.v.02 expectorate.v.01
+puke vomit.v.01
+shrine enshrine.v.01
+deduct subtract.v.01 withhold.v.02 deduce.v.01
+retrace trace.v.03 reconstruct.v.01
+renounce abdicate.v.01 vacate.v.01 foreswear.v.02 disown.v.02
+gibe match.v.01 jeer.v.01
+betoken bespeak.v.01 bode.v.01
+intransitivize detransitivize.v.01
+lack miss.v.06
+whimper wail.v.02
+plonk plank.v.02
+disenable disable.v.01
+make_up_one's_mind decide.v.01
+even_out compensate.v.01 flush.v.04 even.v.02 even.v.03
+plagiarise plagiarize.v.01
+empale transfix.v.02
+womanise philander.v.01
+uncase undress.v.01
+ebonise ebonize.v.01
+trim_down reduce.v.01
+bedhop bed-hop.v.01
+slenderise slenderize.v.01
+feed_upon feed_on.v.01
+matte_up felt.v.03
+banquet feast.v.02 feast.v.01
+bard caparison.v.01
+barf vomit.v.01
+score_out erase.v.02
+turn_a_profit profit.v.02
+whop whack.v.01 sock.v.01
+bodge botch.v.01
+be_adrift float.v.01
+burble ripple.v.02
+chequer check.v.16 checker.v.02
+hand-wash handwash.v.01
+endeavour endeavor.v.01
+waste_one's_time bum.v.02
+shoot_one's_mouth_off lip_off.v.01
+kip_down go_to_bed.v.01
+anagrammatize anagram.v.01
+commercialise commercialize.v.02
+demagnetise demagnetize.v.01 demagnetize.v.02
+blandish flatter.v.01
+bedeck deck.v.02
+attire overdress.v.02
+peck_at pick_at.v.02
+pitter-patter sprinkle.v.03 patter.v.02
+prim_up prim.v.03
+condole_with feel_for.v.01
+civilise educate.v.03 civilize.v.02
+fill_the_bill fit_the_bill.v.01
+scandalise shock.v.02
+decolourize bleach.v.01
+flout scoff.v.02 jeer.v.01
+muddy_up muddy.v.01
+pal_up pal.v.01
+reformulate redevelop.v.02
+pip_out buy_it.v.01
+make_a_face grimace.v.01
+commence get_down.v.07 begin.v.03 start.v.06
+filch pilfer.v.01
+delve dig.v.01
+cork_up cork.v.01
+cache hoard.v.01
+watercolor watercolour.v.01
+premiss premise.v.03
+seize_with_teeth bite.v.01
+co-occur_with collocate_with.v.01
+overspecialise overspecialize.v.01
+be_with_it know_the_score.v.01
+potter_around putter.v.03
+premiere premier.v.01 premier.v.02
+put_to_death execute.v.01
+hitch_up hike_up.v.01
+wrick twist.v.10
+slue swerve.v.01 skid.v.04
+excel_at shine_at.v.01
+scold call_on_the_carpet.v.01 grouch.v.01
+formularise formularize.v.01
+shamble shuffle.v.01
+climb_up climb.v.01 ascend.v.04 rise.v.11
+dulcorate sweeten.v.01
+compartmentalise compartmentalize.v.01
+crawfish_out retreat.v.04
+simper smirk.v.01
+see_to_it see.v.10
+pull_along shlep.v.02
+set_upon beset.v.02
+turn_up_the_pressure turn_up_the_heat.v.01
+confute disprove.v.01
+churn_up disgust.v.02
+defecate stool.v.04
+allay still.v.03 quench.v.01
+internalise internalize.v.01
+fragmentise break_up.v.16
+imprecate curse.v.03 curse.v.01
+miaow miaou.v.01
+dress_out dress.v.06
+run_aground ground.v.05 ground.v.06
+expound elaborate.v.01 set_forth.v.01
+screak whine.v.03 squawk.v.01
+ostentate flaunt.v.01
+disorganise disorganize.v.01
+scent_out sniff_out.v.01
+incense cense.v.01 infuriate.v.01
+eradicate eliminate.v.03 uproot.v.02
+retrospect review.v.05
+employ use.v.01 hire.v.01
+split divide.v.01 cleave.v.01 separate.v.08 separate.v.09 burst.v.01
+settle_on fixate.v.04
+confection confect.v.02
+unnerve faze.v.01
+vamp_up vamp.v.01 vamp.v.02
+take_place happen.v.01
+ionise ionize.v.01 ionize.v.02
+muck_about putter.v.02
+anodise anodize.v.01
+mobilise call_up.v.04 mobilize.v.03 mobilize.v.01 mobilize.v.04
+set_on_fire set_ablaze.v.01
+abash embarrass.v.01
+abase humiliate.v.01
+parachute chute.v.01
+look_at consider.v.03 view.v.02
+place_down set_down.v.04
+fall_down fall.v.23
+plunk clop.v.01 plank.v.02 dive.v.01 pluck.v.04
+diphthongise diphthongize.v.01
+lose_it break_down.v.03
+level_off level.v.06
+bedamn curse.v.03
+parti-color motley.v.02
+disconcert confuse.v.03 upset.v.02
+draw_a_line draw_the_line.v.01
+vulcanise vulcanize.v.01 vulcanize.v.02
+debilitate enfeeble.v.01
+squabble quibble.v.02
+plump_for back.v.01
+bristle_up bristle_at.v.01
+kotow fawn.v.02
+whinny neigh.v.01
+pule wail.v.02
+take_turns alternate.v.05
+conceptualize gestate.v.01
+breathe_in inhale.v.02
+burnish buff.v.02
+proselytise proselytize.v.01
+hive_away store.v.01
+dilly-dally procrastinate.v.01
+procreate reproduce.v.02
+drop_dead die.v.01
+beetle_off run_off.v.02
+spot-weld spotweld.v.01
+cavern_out cavern.v.01
+lucubrate elaborate.v.01
+euphemise euphemize.v.01
+crush_out stub_out.v.01
+bend_over_backwards fall_over_backwards.v.01
+aver allege.v.01 affirm.v.02
+subsidise subsidize.v.02 subsidize.v.01
+blunder_out blurt_out.v.01
+tag_on append.v.02
+tease_apart tease.v.06
+hit_the_books study.v.05
+deracinate uproot.v.01 uproot.v.03
+enlace intertwine.v.01
+legitimatise legalize.v.01
+decolour bleach.v.01
+abduce adduce.v.01
+summarise summarize.v.02 sum_up.v.01
+engross steep.v.01 absorb.v.09
+court_favour curry_favor.v.01
+buy_up take_over.v.05
+span cross.v.05
+spay alter.v.05
+go_to_sleep go_to_bed.v.01
+put_down set_down.v.04 lay.v.02 land.v.02 take_down.v.02 drop.v.08 destroy.v.04 write_down.v.01 record.v.01
+chat chew_the_fat.v.01
+push_away push_aside.v.01
+come_about happen.v.01
+calm_down calm.v.03 calm.v.01 lull.v.02
+nonplus perplex.v.01
+ask_round invite.v.02
+plunk_for back.v.01
+baby pamper.v.01
+antedate predate.v.01 predate.v.04
+date-mark dateline.v.01
+mute muffle.v.02
+date_stamp date.v.02
+sneak_away slip_away.v.01
+bawl_out call_on_the_carpet.v.01
+philosophise philosophize.v.01
+jaw chew_the_fat.v.01 yack.v.01 chew.v.01 call_on_the_carpet.v.01
+antagonise antagonize.v.02 antagonize.v.01
+heave_up heave.v.04
+clap_on slap_on.v.01
+catholicise catholicize.v.01
+tucker_out exhaust.v.01
+paint_a_picture suggest.v.05
+symphonise symphonize.v.01
+machine-wash machine_wash.v.01
+anthropomorphise anthropomorphize.v.01
+bridle_up bristle_at.v.01
+cry_out exclaim.v.01
+wed marry.v.01 marry.v.02
+normalise normalize.v.01 normalize.v.02
+drive_back repel.v.03
+drag_a_bunt bunt.v.01
+breathe_out exhale.v.01
+pressure coerce.v.01 blackmail.v.01
+anathemise curse.v.03 accurse.v.01
+spring_up originate.v.01
+phonate vocalize.v.05
+hang_around loiter.v.01
+repeal revoke.v.02
+catheterise catheterize.v.01
+exaggerate overstate.v.01 overdo.v.01
+hygienise sanitize.v.01
+throw_away discard.v.01 shed.v.01
+plod slog.v.02
+go_forward proceed.v.02
+sponge_off sponge_down.v.01
+overspread spread.v.03
+flunk fail.v.07
+slew swerve.v.01 skid.v.04 murder.v.01
+jest_at ridicule.v.01
+renew regenerate.v.01 reincarnate.v.02
+buckle_under yield.v.13
+go_in enter.v.01
+had_best do_well.v.01
+batten_down batten.v.01
+finagle wangle.v.01
+grave sculpt.v.02 scratch.v.07
+square_away tidy.v.01
+dig_into probe.v.02
+hemagglutinate haemagglutinate.v.01
+begrime dirty.v.01
+lionise lionize.v.01
+huddle_together huddle.v.01
+tissue weave.v.02
+spirit_off spirit_away.v.01
+mud-wrestle mudwrestle.v.01
+josh kid.v.02
+smash_up bang_up.v.01
+warm_the_bench ride_the_bench.v.01
+discolourise bleach.v.01
+put_under anesthetize.v.01
+hassle harass.v.01
+lose_one's_temper flip_one's_lid.v.01
+peek glance.v.01
+pulverize powderize.v.02 demolish.v.01 powderize.v.01
+elucidate clarify.v.01 clear.v.10
+tack_together assemble.v.01
+take_the_stand testify.v.01
+cut_into dig.v.01
+re-arm rearm.v.02
+captivate capture.v.02
+shoot_for draw_a_bead_on.v.02
+systematise systematize.v.01
+bollix botch.v.01
+repossess reclaim.v.01 take_back.v.02
+snack nosh.v.01
+shrill shriek.v.01
+blow_a_fuse flip_one's_lid.v.01
+rephrase paraphrase.v.01
+pettifog quibble.v.02
+bring_home_the_bacon succeed.v.01 provide.v.06
+separate_out filter.v.01
+inquire ask.v.01 wonder.v.01 investigate.v.02
+alleviate relieve.v.01 facilitate.v.01
+stay_put stay.v.02
+hemorrhage shed_blood.v.02
+solemnise solemnize.v.01 solemnize.v.02 solemnize.v.03
+revivify animate.v.04
+ordinate ordain.v.02 align.v.04
+take_to_the_woods scat.v.01
+finish_out round_out.v.01
+lay_claim claim.v.02
+recoil flinch.v.01 backfire.v.01 bounce.v.01 kick_back.v.02
+dwindle_away dwindle.v.01
+stockpile stock.v.01
+walk_away walk_off.v.02
+take_up_arms go_to_war.v.01
+equilibrize balance.v.01
+tear_into lam_into.v.01
+publicise advertise.v.01 publicize.v.01
+get_hold_of take.v.04 reach.v.04 seize.v.07
+anaesthetise anesthetize.v.01
+polarise polarize.v.01 polarize.v.02 polarize.v.03
+alkalise alkalize.v.01
+tack_on append.v.02
+set_aflame set_ablaze.v.01
+strut tittup.v.01
+slow_up slow.v.02 slow.v.03 decelerate.v.01
+venerate reverence.v.01
+conjoin join.v.04 marry.v.01
+vitaminise vitaminize.v.01
+liven enliven.v.02
+misconceive misconstrue.v.01
+give_a_hang care_a_hang.v.01
+smart ache.v.03
+banter kid.v.02
+disseminate circulate.v.02
+kill_off exterminate.v.01
+ruff trump.v.03
+fake forge.v.02 fudge.v.01 talk_through_one's_hat.v.01
+buckle_down slave.v.01
+wear_round tack.v.02
+moisturise humidify.v.01
+cut_through traverse.v.01
+higgle haggle.v.01
+slap_together clap_up.v.01
+canonise canonize.v.02 canonize.v.01
+orbit orb.v.01
+frighten_away daunt.v.01
+compassionate feel_for.v.01
+solarise solarize.v.01 solarize.v.02 solarize.v.03 sun.v.02
+cave_in collapse.v.01
+renegue_on renege.v.01
+feed_in feed.v.04
+shut_up close_up.v.04 lock_in.v.02 hush.v.02
+prioritise prioritize.v.01
+see_the_light reform.v.06
+pour_cold_water_on throw_cold_water_on.v.01
+contemporize synchronize.v.02 synchronize.v.04
+get_wind learn.v.02
+jaunt travel.v.03
+energise excite.v.07 stimulate.v.04
+lay_away hoard.v.01
+constrain restrain.v.04 stiffen.v.03
+tent camp.v.01
+ballyrag strong-arm.v.02
+malversate embezzle.v.01
+sag_down sag.v.02
+slick_up spruce_up.v.01 spruce_up.v.02
+hearten cheer.v.01
+unloosen free.v.01 unloose.v.02
+fuddle befuddle.v.02 drink.v.02 confuse.v.02
+give_rise produce.v.03
+rumba rhumba.v.01
+spice_up zest.v.01 spice.v.01
+colligate associate.v.01 subsume.v.02
+territorialise territorialize.v.01 territorialize.v.02 territorialize.v.03
+alchemise alchemize.v.01
+draw_near approach.v.01
+loathe abhor.v.01
+gimp limp.v.01
+obtrude_upon intrude_on.v.01
+incrust encrust.v.02 encrust.v.01 encrust.v.03
+take_exception challenge.v.04
+besmear bedaub.v.01
+discompose upset.v.02
+peer_review referee.v.02
+catch_a_wink nap.v.01
+bargain_down beat_down.v.01
+soar_upwards soar.v.01
+reassert confirm.v.02
+draggle bedraggle.v.01
+run_short run_low.v.01
+collectivise collectivize.v.01
+allure tempt.v.01
+globalise globalize.v.01
+remediate rectify.v.04
+downplay understate.v.01 background.v.01
+move_reflexively move_involuntarily.v.01
+make_love sleep_together.v.01
+get_weaving get_cracking.v.01
+shade_off shadow.v.02
+mop_up wipe_up.v.01 worst.v.01 get_through.v.01
+deputize substitute.v.03 depute.v.02
+engraft graft.v.01 implant.v.01
+lower_oneself condescend.v.03
+enclothe dress.v.02
+maledict curse.v.03
+journey travel.v.02 travel.v.04
+bustle_about bustle.v.01
+give_ear attend.v.05
+mess_up botch.v.01 ruffle.v.08 mess.v.02
+remain_firm stand.v.04
+bleach_out bleach.v.01
+moralise moralize.v.01 sermonize.v.01 moralize.v.03
+stitch sew.v.01
+tump_over overturn.v.02 overturn.v.01
+lambaste cane.v.01 call_on_the_carpet.v.01
+blackguard ridicule.v.01 abuse.v.03
+let_the_cat_out_of_the_bag spill_the_beans.v.01
+barrage bombard.v.03
+chuck_out discard.v.01 eject.v.01
+shake_off shake.v.07 shed.v.01
+adjudge declare.v.04
+make_happy revel.v.02
+ptyalise spit.v.01
+fence_in fence.v.01 wall.v.01
+belie contradict.v.01 misrepresent.v.01
+companion company.v.01
+calumniate defame.v.01
+ride_out last_out.v.01
+seal_in lock_in.v.01
+bonderise bonderize.v.01
+lie_around lie_about.v.01
+flake_out fall_asleep.v.01
+cage_in cage.v.01
+push_down down.v.05
+actuate trip.v.04 motivate.v.01
+virilize masculinize.v.02
+annihilate eliminate.v.03
+eschew shun.v.01
+automatise automatize.v.01 automatize.v.02
+crimson blush.v.01
+allow_for leave.v.06
+revolutionise revolutionize.v.03 revolutionize.v.01
+intrench entrench.v.01
+nod_off fall_asleep.v.01
+tenderize tender.v.04
+take_arms go_to_war.v.01
+bob_up arise.v.02
+sleep_around bed-hop.v.01
+move_back withdraw.v.01
+ancylose ankylose.v.01 ankylose.v.02
+apotheosise apotheosize.v.01
+wither shrivel.v.01 fade.v.02
+jabber rant.v.01
+monger peddle.v.01
+allow_in admit.v.02
+couch frame.v.04
+stick_on plaster.v.01 affix.v.01
+look_backward look_back.v.01
+personalise personalize.v.01
+acetify sour.v.02 acidify.v.02
+hop-skip hop.v.01
+equivocate beat_around_the_bush.v.01
+adulterate load.v.05
+bump_into run_into.v.02
+lace_into lam_into.v.01
+astound amaze.v.01
+snare trap.v.02 hook.v.11
+cue prompt.v.03
+assort consort.v.01 classify.v.01
+send_out send.v.02
+check_into check.v.01
+catechise catechize.v.02 catechize.v.01
+plough_on press_on.v.01
+buttweld butt-weld.v.01
+act_upon influence.v.01
+flat-hat hedgehop.v.01
+circle_around revolve_around.v.02
+end_up finish_up.v.02
+capsulate capsule.v.01
+give_forth exhale.v.02
+patch_up patch.v.03 reconcile.v.03
+footslog slog.v.02
+turn_a_nice_dollar turn_a_nice_dime.v.01
+denigrate minimize.v.03 defame.v.01
+keep_guard stand_guard.v.01
+autotomise autotomize.v.01
+proctor invigilate.v.01
+sneak_out slip_away.v.01
+reflectorise reflectorize.v.01
+overindulge gorge.v.01
+rove roll.v.12 reeve.v.01 reeve.v.02 reeve.v.03
+whizz_along zoom.v.01
+average_out average.v.03 average.v.01
+chromium-plate chrome.v.01
+communise communize.v.01 communize.v.02
+pulverise demolish.v.01 powderize.v.01 powderize.v.02
+blate bleat.v.02
+beaver_away beaver.v.01
+sorrow grieve.v.01
+disport amuse.v.01 frolic.v.01
+flump_down flump.v.01
+make_a_stink raise_hell.v.01
+caddy caddie.v.01
+draw_and_quarter draw.v.23
+inveigle wheedle.v.01
+snuggle cuddle.v.01 nestle.v.03
+severalise severalize.v.01 distinguish.v.01
+stop_over lay_over.v.01 stop.v.04
+retch vomit.v.01 gag.v.07
+reprocess recycle.v.02
+get_away escape.v.01 get_off.v.05 escape.v.05
+adumbrate sketch.v.02 intimate.v.01
+poke_at nudge.v.01
+blub snivel.v.03
+ravish rape.v.01 enchant.v.01
+drowse_off fall_asleep.v.01
+deck_up overdress.v.02
+walk_on_air exult.v.01
+run_around frolic.v.01
+shake_up jar.v.03 reorganize.v.01 succuss.v.01 stimulate.v.03 agitate.v.06 fluff_up.v.01
+sneak_up creep_up.v.01
+dig_in entrench.v.03 pitch_in.v.01
+mollycoddle pamper.v.01
+scare_away daunt.v.01
+dulcify sweeten.v.01
+herald announce.v.04 acclaim.v.01 hail.v.04
+maturate mature.v.01 senesce.v.01 fester.v.01
+theologise theologize.v.01 theologize.v.02
+bring_forward advance.v.05 call_up.v.01
+strike_a_note hit_home.v.01
+spite hurt.v.05
+go_down_on fellate.v.01
+body_forth incarnate.v.02
+preordain predestine.v.03
+spark_off trip.v.04
+quail_at apprehend.v.03
+demoralise corrupt.v.01 depress.v.01
+win_over convert.v.09
+goffer gauffer.v.01
+scrabble grope_for.v.01 scribble.v.01
+ensure guarantee.v.02 see.v.10
+inveigh rail.v.01 declaim.v.02
+encumber restrain.v.04
+decrypt decode.v.01
+effervesce foam.v.01
+liberalise liberalize.v.02 liberalize.v.01
+disarticulate disjoint.v.02
+hold_firm stand_pat.v.01
+lever pry.v.01
+factor_out factor.v.03 factor.v.01
+pore concentrate.v.02
+polemicize polemize.v.01
+befool fool.v.01 gull.v.02
+syllogise syllogize.v.01
+be_on_the_ball know_the_score.v.01
+lay_off discontinue.v.01 furlough.v.01
+trammel trap.v.02 restrict.v.03
+grime dirty.v.01
+play_hooky bunk_off.v.01
+fill_out complete.v.05 round_out.v.02 eke_out.v.01 pad.v.03 fatten.v.01 round.v.07
+shnorr schnorr.v.01
+bewitch capture.v.02 magnetize.v.02 hex.v.01
+posit situate.v.02 submit.v.02 postulate.v.02
+jump_for_joy exult.v.01
+arrive_at reach.v.01
+happen_upon fall_upon.v.01
+jump_out leap_out.v.01
+beautify fancify.v.01 deck.v.01 decorate.v.01
+outperform surpass.v.02
+flirt_with entertain.v.02
+screen_out screen.v.03
+shine_up cozy_up.v.01
+pilot fly.v.03 navigate.v.02
+weep cry.v.02
+hang_by_a_hair hang_by_a_thread.v.01
+moot consider.v.05
+rouse bestir.v.01 rout_out.v.02 agitate.v.02 awaken.v.01
+have_got have.v.01
+gainsay challenge.v.01
+eat_away erode.v.02 fret.v.12
+hit_the_jackpot luck_out.v.01
+take_the_air walk.v.10
+focalize localize.v.02 concenter.v.01 focus.v.04 focus.v.05
+foolproof goofproof.v.01
+fill_again replenish.v.01
+amass accumulate.v.02 roll_up.v.02
+wager bet.v.02 bet.v.01
+triple-tongue double_tongue.v.01
+cringe flinch.v.01 fawn.v.01
+inebriate exhilarate.v.01 intoxicate.v.02 souse.v.03
+bunch_up bunch_together.v.01 bunch.v.02
+harbour harbor.v.02 harbor.v.03 harbor.v.04 harbor.v.01
+homologise homologize.v.02
+roll_around come_around.v.02
+put_on_the_line risk.v.01
+do_good benefit.v.02
+retry rehear.v.01
+heft_up heave.v.04
+glam_up doll_up.v.01
+abrase abrade.v.01
+shew prove.v.02
+detransitivise detransitivize.v.01
+peach spill_the_beans.v.01
+brush_aside dismiss.v.01
+inconvenience_oneself trouble_oneself.v.01
+theorise speculate.v.01
+breach transgress.v.01 gap.v.01
+foretell announce.v.04 predict.v.01 bode.v.01
+bottle_up inhibit.v.04
+slack_up slack.v.04
+filtrate filter.v.01
+militarise militarize.v.01 militarize.v.02
+pluck_at pick_at.v.01
+detusk tusk.v.02
+cotton_on catch_on.v.01
+fustigate cudgel.v.01
+xerox photocopy.v.01
+toss_out discard.v.01
+tinct tint.v.01
+get_moving get_cracking.v.01
+succour succor.v.01
+come_home click.v.07
+ball_over shock.v.01
+chronologise chronologize.v.01
+misfunction malfunction.v.01
+maculate tarnish.v.01 foul.v.05
+calliper caliper.v.01
+do_the_dishes wash_up.v.03
+pull_in_one's_horns retreat.v.04
+ca-ca stool.v.04
+cake coat.v.03
+hornswoggle victimize.v.03
+button_up close_up.v.04
+deport behave.v.02 extradite.v.01 expatriate.v.01
+swivel pivot.v.01
+buttonhole lobby.v.01
+spread_out diffuse.v.01 string_out.v.01 spread.v.07 expand.v.01 turn_out.v.10 disperse.v.04 unfold.v.04
+summons summon.v.01 summon.v.01 summon.v.02 muster.v.01 mobilize.v.01
+unroll unwind.v.01 unfurl.v.01
+sign_over sign_away.v.01
+dyke dike.v.01
+put_to_work work.v.12
+hold_fast adhere.v.06
+hand_out distribute.v.04
+alert alarm.v.02
+freshen_up refurbish.v.01 freshen.v.02
+come_through break_through.v.02 get_through.v.03 survive.v.02 succeed.v.01
+ambuscade ambush.v.01
+rid_of obviate.v.01
+bowl_over overturn.v.02 flabbergast.v.01
+practice_bundling bundle.v.04
+hunker squat.v.01
+federalise federalize.v.02 federate.v.01 federate.v.02
+penalize punish.v.01
+incommode trouble.v.02
+step_down leave_office.v.01 de-escalate.v.02
+unstrain relax.v.04
+tope drink.v.05
+hew_out hew.v.01
+fog obscure.v.01
+fob flim-flam.v.01
+rebut refute.v.01 refute.v.02
+gnaw_at erode.v.01
+bollocks botch.v.01
+straggle sidetrack.v.01 sprawl.v.02
+objectify exteriorize.v.02 depersonalize.v.01
+overweary overtire.v.01
+reinvigorate invigorate.v.04
+argufy quarrel.v.01
+scratch_off dash_off.v.01
+rush_out leap_out.v.02
+gang_up gang.v.01
+inspissate thicken.v.03 thicken.v.01 thicken.v.02
+deign condescend.v.02
+burn_up flare.v.01 burn_off.v.01 burn_down.v.01
+hush_up whitewash.v.01 hush.v.02
+solace comfort.v.01
+sate satiate.v.01
+bestialise bestialize.v.01
+fictionalise fictionalize.v.01 novelize.v.01
+edify enlighten.v.01
+drop_anchor anchor.v.02
+go_for apply.v.02 accept.v.03 hope.v.03 fancy.v.02 try_for.v.01
+soar_up soar.v.01
+make_believe make.v.42
+recompense compensate.v.02 compensate.v.06
+butt_against border.v.05 run_into.v.02
+give_a_hoot care_a_hang.v.01
+fecundate fertilize.v.02 inseminate.v.02
+subvention underwrite.v.01
+round_down round_off.v.03
+reenforce reinforce.v.01
+nictate blink.v.01
+yammer howl.v.02 whine.v.04
+catenulate catenate.v.01
+blaze_up flare.v.01
+presage bode.v.01
+scrutinise size_up.v.01 audit.v.01
+undermine sabotage.v.01 cave.v.01
+renormalize normalize.v.02
+nip_off nip.v.03
+strike_hard knock.v.01
+photosensitise photosensitize.v.01
+neuter alter.v.05
+facsimile fax.v.01
+section segment.v.01
+razz tease.v.02
+skyrocket rocket.v.01
+raze level.v.02
+computerise computerize.v.01 computerize.v.02 cybernate.v.01
+implore beg.v.01
+yaup howl.v.01
+oxygenise oxygenize.v.01 oxygenize.v.02 oxygenate.v.01
+apportion allocate.v.01 share.v.04
+singularise singularize.v.01
+vote_out kill.v.02
+edit_out edit.v.03
+totalise totalize.v.01
+hightail_it scat.v.01
+palter beat_around_the_bush.v.01
+constringe constrict.v.02
+hose_down hose.v.01
+grace decorate.v.01 deck.v.01
+try_out test.v.01 experiment.v.02 audition.v.01 sample.v.01
+go_about set_about.v.01
+yawl howl.v.01
+take_a_chance gamble.v.01
+effeminise feminize.v.02
+firm tauten.v.01 tauten.v.02
+screech whine.v.03 squawk.v.01
+bruit rumor.v.01
+colour_in color.v.01
+containerise containerize.v.01
+hatchel heckle.v.01
+blench pale.v.01
+chide call_on_the_carpet.v.01
+brush_off dismiss.v.01
+nationalise nationalize.v.02 nationalize.v.01
+swirl twirl.v.01 eddy.v.01
+knock_against run_into.v.02
+comfit confect.v.02
+know_what's_what know_the_score.v.01
+ruck_up pucker.v.03
+disencumber extricate.v.01
+birr whizz.v.01
+proffer offer.v.02
+netmail e-mail.v.01
+construe_with collocate_with.v.01
+playact act.v.10
+confiscate impound.v.01
+trade_in trade.v.02
+await expect.v.03
+allot assign.v.02 accord.v.02 distribute.v.01
+lactate breastfeed.v.01
+interlink complect.v.01 interconnect.v.02
+belch burp.v.01 erupt.v.05
+baa bleat.v.02
+shovel_in rake_in.v.01 garbage_down.v.01
+peg_down peg.v.03 pin_down.v.01
+thresh convulse.v.03 flail.v.02 thrash.v.06 thrash.v.01
+misunderstand misconstrue.v.01
+flap_down slam.v.04
+tranquillize calm.v.01 sedate.v.01
+dam_up dam.v.01
+eyeball eye.v.01
+burthen burden.v.01
+tear_apart pan.v.03
+leg_it foot.v.02
+stretch_out unfold.v.03 stretch.v.06 exsert.v.01 stretch.v.11 crane.v.01
+dishonour dishonor.v.01 rape.v.01 dishonor.v.03
+demilitarise demilitarize.v.01 disarm.v.01
+drag_one's_heels procrastinate.v.01
+flummox perplex.v.01
+hackle heckle.v.01
+bunk_down bed_down.v.01
+cry_for cry_out_for.v.01
+advocate recommend.v.01 preach.v.02
+brace_up undergird.v.02
+partition_off partition.v.01
+face_up confront.v.02
+cope_with meet.v.06
+branch_out diversify.v.03
+hole_out hole.v.01
+underprice dump.v.03
+consent accept.v.03
+cook_up concoct.v.02 fabricate.v.02
+disafforest deforest.v.01
+airt redirect.v.01
+shellack shellac.v.01
+put_off postpone.v.01 turn_off.v.03 dishearten.v.01 confuse.v.03 hedge.v.01
+put_right iron_out.v.01
+dj disk-jockey.v.01
+compere emcee.v.01
+bicker quibble.v.02
+cow overawe.v.01
+cod gull.v.02 tease.v.02
+deal_out distribute.v.01
+con victimize.v.03 memorize.v.01
+push_back repel.v.01
+stack_away store.v.01
+crack_down clamp_down.v.01
+critique review.v.02
+trip_the_light_fantastic_toe dance.v.02
+go_with attach_to.v.01 collocate_with.v.01
+print_over overprint.v.01
+clomp clump.v.03
+evidence attest.v.01 testify.v.02 tell.v.07
+dingdong ding.v.01
+outmanoeuvre outmaneuver.v.01
+fool_around horse_around.v.01 play_around.v.01
+datemark dateline.v.01
+slam_on slap_on.v.01
+pauperise beggar.v.02
+chuff puff.v.08
+guide_on guide.v.04
+run_a_risk gamble.v.01
+immunise immunize.v.01 immunize.v.02
+stay_fresh keep.v.12
+head_for_the_hills scat.v.01
+farm_out subcontract.v.01 hire_out.v.01
+do_one's_best go_all_out.v.01
+flourish boom.v.05 thrive.v.02 brandish.v.01
+pull_down level.v.02 down.v.05
+offend pique.v.01 transgress.v.01 shock.v.02 hurt.v.05
+waggle wag.v.01 wamble.v.01
+swing_over swing.v.04
+mow_down massacre.v.01
+sizz hiss.v.03 hiss.v.01
+fall_behind fall_back.v.04 lag.v.01
+optimise optimize.v.01 optimize.v.02 optimize.v.03
+back_off back_up.v.02 chicken_out.v.01
+pull_strings manipulate.v.01
+mildew mold.v.02
+transude exude.v.01
+husband conserve.v.03
+stay_on stay.v.04
+walk_about perambulate.v.02
+hypophysectomise hypophysectomize.v.01
+peptise peptize.v.01
+chuck_up_the_sponge drop_out.v.01
+bird-nest birdnest.v.01
+actualise realize.v.03 actualize.v.02
+soil dirty.v.01
+tot_up total.v.02
+lade ladle.v.02 load.v.01
+take_time_off take_off.v.04
+weight burden.v.01 slant.v.02
+demonise demonize.v.01
+gain_vigor perk_up.v.01
+bring_through save.v.03
+airfreight air-ship.v.01
+crowd_together crowd.v.03
+stock_up stock.v.05
+sight-sing sightsing.v.01
+larrup spank.v.01
+hurry travel_rapidly.v.01 rush.v.04 rush.v.03
+symbolise symbolize.v.02 typify.v.02
+thieve hook.v.05
+clabber curdle.v.01
+nolle_prosequi nolle_pros.v.01
+fool_away fritter.v.01
+astonish amaze.v.01
+animise animize.v.01
+take_into_account allow.v.06
+oppugn question.v.01
+hot_up heat.v.04 heat_up.v.03 soup_up.v.01
+auctioneer auction.v.01
+buy_food take_out.v.07
+deoxidise deoxidize.v.01
+plough plow.v.03 plow.v.01
+piss make.v.49
+suspire sigh.v.01 breathe.v.01
+overplay overact.v.01
+shoot_the_breeze chew_the_fat.v.01
+shackle pinion.v.01 fetter.v.01
+forefend debar.v.02
+behove behoove.v.01
+characterise characterize.v.02 qualify.v.06
+signal sign.v.05 bespeak.v.01
+bulge_out start.v.14
+jump_on hop_on.v.01
+ensue result.v.01
+previse forewarn.v.01 anticipate.v.03
+desensitise desensitize.v.01 desensitize.v.02
+forgo waive.v.01 predate.v.01 forfeit.v.01
+disfavour disadvantage.v.01
+trip_the_light_fantastic dance.v.02
+castrate emasculate.v.01 bowdlerize.v.01 emasculate.v.02 alter.v.05
+knock_off neutralize.v.04 shave.v.03 hook.v.05 dash_off.v.01 drop.v.07
+poetise verse.v.01
+cantillate chant.v.01
+prettify fancify.v.01
+pasteurise pasteurize.v.01
+shut_down close_up.v.01
+keel stagger.v.01
+soliloquise monologuize.v.01
+spurn reject.v.04
+point_out comment.v.01 signalize.v.03 remonstrate.v.02
+wreak bring.v.03
+digitise digitize.v.01
+empathise sympathize.v.02
+baptise baptize.v.01
+foreshadow bode.v.01
+slip_by elapse.v.01
+minimise understate.v.01 minimize.v.01
+make_clean clean.v.01
+transpirate transpire.v.01
+hit_it_up souse.v.03
+cock_up prick_up.v.01
+draw_together bond.v.04
+knock_over overturn.v.02
+shape_up progress.v.01
+epitomize typify.v.01
+chance_on fall_upon.v.01
+standardise standardize.v.02 standardize.v.01
+booze drink.v.02
+loll droop.v.02 bum.v.02
+disembarrass rid.v.01
+naturalise naturalize.v.03 naturalize.v.04 naturalize.v.01 domesticate.v.01
+fag_out tire.v.02
+teetertotter teeter-totter.v.01
+regorge vomit.v.01
+tighten_up stiffen.v.03
+moulder decompose.v.03
+dapple mottle.v.02
+chum_up pal.v.01
+blacken_out black_out.v.02
+run_roughshod ride_roughshod.v.01
+ensnarl enmesh.v.01
+toady fawn.v.02
+polychromize polychrome.v.01
+link_up connect.v.03 connect.v.01 associate.v.01
+schematise schematize.v.02
+rush_along rush.v.01
+etymologise etymologize.v.01 etymologize.v.02
+exonerate acquit.v.01
+pay_out disburse.v.01
+slick_down slick.v.02
+knock_up impregnate.v.04
+break_off cut_short.v.01 break.v.10 chip.v.01 break.v.43 chip.v.05
+sell_up sell_out.v.01
+scrag garrote.v.01 choke.v.03
+lash_out attack.v.02
+pass_by travel_by.v.01
+discommode trouble.v.02
+nitrogenise nitrify.v.02
+look_upon think_of.v.03
+opt choose.v.02
+palisade wall.v.01
+nerve steel.v.01
+separate_off screen_off.v.01
+dogmatise dogmatize.v.01 dogmatize.v.02
+shin clamber.v.01
+shit denounce.v.04 stool.v.04
+drink_down toss_off.v.02
+detest hate.v.01
+macadamise macadamize.v.01
+relinquish release.v.08 waive.v.01 foreswear.v.02 let_go_of.v.01
+outline sketch.v.02 draft.v.01 delineate.v.03
+jail imprison.v.01
+bullshit talk_through_one's_hat.v.01
+diabolise devilize.v.01
+cast_around cast_about.v.01
+acquiesce assent.v.01
+pollard poll.v.04
+stash_away store.v.01
+felicitate congratulate.v.02
+tantalize tease.v.02
+biff pummel.v.01
+tut tsk.v.01
+give_thanks thank.v.01
+malnourish undernourish.v.01
+legitimise legalize.v.01
+aggroup group.v.02
+ratchet_down ratchet.v.01
+foul_up botch.v.01
+wash_off wash.v.09
+crystalize clear.v.10 crystallize.v.03 crystallize.v.04 crystallize.v.01
+haul_off cart_off.v.01
+gear_up fix.v.12
+clangour clangor.v.01
+snap_off break.v.43
+log-in log_in.v.01
+regularise regulate.v.02 regularize.v.02
+medicine medicate.v.02
+come_apart break.v.02
+pat chuck.v.03 dab.v.02
+pour_forth spill.v.04
+cash_in cash.v.01
+suck_out aspirate.v.01
+glycerolise glycerolize.v.01
+prehend seize.v.01
+fatten_out fatten.v.01
+fancy_up overdress.v.02
+supercede supplant.v.01
+overfatigue overtire.v.01
+knock_about buffet.v.01 kick_around.v.01
+rub_along scrape_along.v.01
+systemize systematize.v.01
+streetwalk street-walk.v.01
+emphasize stress.v.01 underscore.v.01
+recant abjure.v.01
+bar_hop pub-crawl.v.01
+cronk croak.v.02 honk.v.03
+fire_up inflame.v.04 light_up.v.05
+hedge_in hedge.v.03
+query question.v.03
+rail_off rail.v.04
+strike_back retaliate.v.02
+co-occur coincide.v.01
+famish starve.v.01 starve.v.03 starve.v.02
+remark note.v.01 comment.v.01
+hypostatise hypostatize.v.01
+nullify invalidate.v.01 invalidate.v.03 neutralize.v.02
+bunco victimize.v.03
+catabolise catabolize.v.01
+fondle caress.v.01
+mock_up model.v.06
+monkey tamper.v.01 putter.v.02
+clutter_up clutter.v.01
+waken awaken.v.01 wake_up.v.02
+get_together assemble.v.03 meet.v.02 collaborate.v.01 join.v.01
+feel_like_a_million_dollars feel_like_a_million.v.01
+muster_out discharge.v.10
+benumb numb.v.01
+holiday vacation.v.01
+make_pass pass.v.22
+get_to_grips come_to_grips.v.01
+flip_over flip.v.08
+escallop scallop.v.02
+edulcorate sweeten.v.01
+conjure raise.v.07 bid.v.03 conspire.v.01
+make_it survive.v.02 arrive.v.02 pass.v.14
+draught blueprint.v.01
+vitalise vitalize.v.01 vitalize.v.02
+rough_out rough_in.v.01
+enounce pronounce.v.01
+gather_up pick_up.v.01 collect.v.05
+descale scale.v.06
+blather babble.v.02
+hydrolise hydrolize.v.01
+collude conspire.v.02
+eternalise immortalize.v.02
+environ surround.v.01
+remold recast.v.02 reshape.v.02 retread.v.02
+comprehend grok.v.01 perceive.v.01 embrace.v.01
+mist_over mist.v.01
+scrunch_up squat.v.01 wrinkle.v.02
+march_on advance.v.01
+protract prolong.v.01
+toy_with entertain.v.02
+slip_up stumble.v.04
+chivvy harass.v.01
+mug_up cram.v.03
+have_young calve.v.02
+boss emboss.v.01
+evince express.v.01
+beef gripe.v.01
+schlep shlep.v.02
+pull_together gather.v.01
+bridle_at bristle_at.v.01
+work_over beat.v.02
+harmonise harmonize.v.01 harmonize.v.02 harmonize.v.03 harmonize.v.04 harmonize.v.05 harmonize.v.06
+pipe_down quieten.v.01
+manducate chew.v.01
+defalcate embezzle.v.01
+rely trust.v.01
+snip_off nip.v.03
+hinge_upon depend_on.v.01
+ululate howl.v.01
+terrasse terrace.v.01
+dispirit depress.v.01
+steady_down settle.v.07
+tarmac macadamize.v.01
+go_back_on renege.v.01
+bivouac camp.v.01
+anagrammatise anagram.v.01
+squeeze_by scrape_along.v.01
+demasculinize emasculate.v.02
+dethaw dissolve.v.09
+blear blur.v.05
+impose enforce.v.02 inflict.v.01 levy.v.01
+require necessitate.v.01 ask.v.04 command.v.02 want.v.02
+waltz_around waltz.v.01
+get_the_hang master.v.01
+bear_away take_away.v.01
+outguess second-guess.v.01
+decolor bleach.v.01
+westernize occidentalize.v.01
+hen-peck nag.v.01
+root_on cheer.v.05
+play_off pit.v.01
+serialise serialize.v.01
+demythologise demythologize.v.01
+shop_at patronize.v.02
+excruciate torment.v.01 torture.v.02
+cover_up cover.v.11
+curve swerve.v.01 wind.v.02 arch.v.01 crook.v.01 curl.v.01
+fizzle taper_off.v.01
+skreigh squawk.v.01
+foot_up foot.v.03
+throw_out expel.v.01 discard.v.01 oust.v.01 advance.v.02 dismiss.v.02
+put_behind_bars imprison.v.01
+snub ignore.v.01 rebuff.v.01
+purpurate purple.v.02
+freeze_off reject.v.04
+fizzle_out taper_off.v.01
+make_vibrant_sounds purr.v.02
+yap_away yack.v.01
+ricochet bounce.v.01
+chip_at carve.v.02
+rhapsodise rhapsodize.v.01 rhapsodize.v.02
+belittle minimize.v.03 disparage.v.01 diminish.v.02
+drop_in drop_by.v.01
+drift_away drift_apart.v.01
+swarm teem.v.01 pour.v.02
+eff sleep_together.v.01
+traumatise traumatize.v.01
+tabularize table.v.02
+dig_up excavate.v.02 dig.v.04
+rip_off cheat.v.01
+waul squall.v.01
+chauffeur drive_around.v.01
+earmark allow.v.04
+fork_out hand_over.v.01
+glamorise glamorize.v.02
+live_on survive.v.01
+protrude stick_out.v.01 start.v.14 bulge.v.01
+relent yield.v.05
+cab taxi.v.02
+interiorise internalize.v.01
+fee tip.v.03
+muck_around putter.v.02
+sort screen.v.03 classify.v.01
+hazard guess.v.02 venture.v.03 gamble.v.01
+retrogress regress.v.03 relapse.v.02
+cold_work coldwork.v.01
+disarray disorder.v.02
+depend_upon depend_on.v.01 depend_on.v.02
+overeat gorge.v.01
+deprave corrupt.v.01
+combat battle.v.01
+fend_for defend.v.01
+spue spit.v.01 vomit.v.01
+decolourise bleach.v.01
+coggle toddle.v.01 wobble.v.01
+predestinate predestine.v.02
+tote_up total.v.02
+locomote travel.v.01
+make_do cope.v.01
+plicate pleat.v.02
+o.d. overdose.v.01
+brag boast.v.01
+politicise politicize.v.01
+simonise simonize.v.01
+settle_down settle.v.01 settle.v.07 calm.v.03
+denaturalise denaturalize.v.01 denaturalize.v.02
+skimp_over gloss_over.v.01
+forgather meet.v.07
+befoul foul.v.05
+go_off_at_half-cock go_off_half-cocked.v.01
+exuviate shed.v.04
+criticise knock.v.06 criticize.v.02
+call_attention signalize.v.03
+feature have.v.02 sport.v.01
+mull_over chew_over.v.01
+polish_up polish.v.03
+contuse bruise.v.01
+drum_up beat_up.v.02
+ebb_away ebb.v.01
+fetch_up finish_up.v.02
+exhume disinter.v.01
+play_tricks flim-flam.v.01
+decry condemn.v.01
+slow_down decelerate.v.01 slow.v.02 slow.v.03 decelerate.v.02 relax.v.01
+relish enjoy.v.01
+hasten rush.v.04 rush.v.01 expedite.v.01 induce.v.03
+take_advantage capitalize.v.01 trespass.v.02
+conglobe conglobate.v.01
+slay murder.v.01
+advert attend.v.05 allude.v.01 mention.v.01
+tear_up shred.v.01
+lay_aside save.v.05
+court_favor curry_favor.v.01
+blackleg fink.v.01
+crank_up crank.v.02 crank.v.03
+slide_by elapse.v.01
+magnetise magnetize.v.02 magnetize.v.01
+eulogise eulogize.v.01
+rely_on depend_on.v.02 depend_on.v.03
+etherialise etherealize.v.01
+fine ticket.v.01
+frivol_away fritter.v.01
+horrify dismay.v.02
+spiritualise spiritualize.v.01 spiritualize.v.03
+make_water make.v.49
+eat_on eat.v.04
+slice_up slice.v.03
+enkindle kindle.v.02 arouse.v.01
+climb_down alight.v.02
+cite mention.v.01 mention.v.03 reference.v.01 quote.v.01 quote.v.03 adduce.v.01 summon.v.01
+antic clown.v.01
+live_together cohabit.v.01
+stammer bumble.v.03
+smutch smear.v.02
+nix forbid.v.01
+wing fly.v.01
+take_issue disagree.v.01
+outrage shock.v.02 desecrate.v.01 rape.v.01
+copyedit copyread.v.01
+rubberise rubberize.v.01
+glamourise romanticize.v.01 glamorize.v.02
+dredge_up drag_up.v.01
+sow_one's_wild_oats sow_one's_oats.v.01
+snarf pilfer.v.01
+touch_base get_in_touch.v.01
+mercerise mercerize.v.01
+stretch_along stretch.v.01
+package box.v.01
+do_work work.v.02
+catch_some_z's sleep.v.01
+squeak whine.v.03
+centrifugate centrifuge.v.01
+re-introduce reintroduce.v.01
+light_upon fall_upon.v.01
+pussyfoot sneak.v.01
+stave_off debar.v.02
+bechance befall.v.01 happen.v.02
+heist burglarize.v.01
+asphyxiate smother.v.02 suffocate.v.02 suffocate.v.05
+scam victimize.v.03
+hit_the_sack go_to_bed.v.01
+cajole wheedle.v.01
+wet-nurse breastfeed.v.01
+have-to_doe_with refer.v.02
+moon_on moon.v.02
+laugh_at ridicule.v.01
+catch_out find_out.v.04
+decarburize decarbonize.v.01
+boom_out boom.v.04
+aah ooh.v.01
+jeopardize endanger.v.01 venture.v.03
+martyrize martyr.v.02
+institutionalize commit.v.03
+put_on_airs lord_it_over.v.01
+desynchronise desynchronize.v.01
+jade tire.v.01 tire.v.02
+spiel_off rattle_down.v.01
+straighten_out iron_out.v.01 disentangle.v.02 reform.v.06 straighten.v.02 clear.v.10 tidy.v.01
+comport behave.v.03 behave.v.02
+expend use.v.03 spend.v.02
+run_through work_through.v.01 consume.v.05
+palm handle.v.04
+crinkle wrinkle.v.02 rumple.v.03
+sex_up eroticize.v.01
+vowelize vocalize.v.03
+devaluate devalue.v.01 depreciate.v.03
+choke_back choke_off.v.01
+well_over overflow.v.01
+bedaze stun.v.03
+roll_off rattle_down.v.01
+shut_away lock_in.v.02
+stand_fast stand_pat.v.01
+flow_from be_due.v.01
+ham_it_up overact.v.01
+slip_one's_mind slip.v.10
+queue_up line_up.v.03
+aerate air_out.v.01 activate.v.04 oxygenate.v.01
+transitivise transitivize.v.01
+tranquillise calm.v.01 sedate.v.01
+conciliate pacify.v.01 reconcile.v.03 accommodate.v.07
+ram_down ram.v.01 hammer_in.v.01
+generalise generalize.v.02 generalize.v.01 popularize.v.01 generalize.v.04
+scorn contemn.v.01 reject.v.04
+boss_around strong-arm.v.02
+ticktock tick.v.02
+break_away break.v.07 chip.v.01 break.v.18 secede.v.01 scat.v.01
+buzz_off scram.v.01
+discolorize bleach.v.01
+date_from go_back.v.01
+bugger_off scram.v.01
+site locate.v.03
+move_up ascend.v.08 rise.v.01
+depersonalise depersonalize.v.01
+fantasise fantasy.v.01 fantasize.v.02
+tire_out tire.v.02
+ruggedise ruggedize.v.01
+belt_along rush.v.01
+convince convert.v.09
+insolate sun.v.02
+intransitivise detransitivize.v.01
+victimise victimize.v.01 victimize.v.02
+excoriate condemn.v.01 chafe.v.04
+expatiate elaborate.v.01
+play_a_trick_on flim-flam.v.01
+sexualise sexualize.v.01
+keratinise keratinize.v.01 keratinize.v.02
+deliberate consider.v.05 debate.v.03
+canulate cannulate.v.01
+stop_dead freeze.v.01
+flake_off peel_off.v.04
+feel_out check_out.v.07
+butt_in chime_in.v.01
+spiritise spiritize.v.01
+nett net.v.04
+buy_the_farm die.v.01
+let_fly loose_off.v.01
+mess_around putter.v.02
+sneak_off slip_away.v.01
+prune snip.v.02 cut.v.33
+o.k. approve.v.01
+refill replenish.v.01
+accentuate stress.v.01 stress.v.02
+spellbind fascinate.v.02 magnetize.v.02 entrance.v.02
+press_home drive_home.v.02
+authorise empower.v.01 authorize.v.01
+sweet-talk wheedle.v.01
+come_after follow.v.06 succeed.v.02
+seize_on take_up.v.02
+demasculinise emasculate.v.02
+overfly pass_over.v.04
+chaff kid.v.02
+wad pack.v.03 jam.v.06
+bespatter spatter.v.03
+run_for run.v.30
+hero-worship idolize.v.01
+debauch corrupt.v.01
+raise_a_stink raise_hell.v.01
+sunbathe sun.v.01
+finger-spell fingerspell.v.01
+rebuke call_on_the_carpet.v.01
+defeat get_the_better_of.v.01 kill.v.02
+wipe_away wipe_off.v.01
+meliorate better.v.02 better.v.03
+crawl_in go_to_bed.v.01
+nigrify blacken.v.01
+attribute impute.v.01 assign.v.08
+eternise immortalize.v.02
+countermand revoke.v.02
+weightlift weight-lift.v.01
+crumple crumble.v.01 buckle.v.02 pucker.v.01 rumple.v.03
+misappropriate embezzle.v.01
+make_a_motion move.v.16
+scandalize shock.v.02
+go_to_the_dogs go_to_pot.v.01
+repurchase buy_back.v.01
+yip yelp.v.01
+go_after chase.v.01 quest_for.v.01
+exteriorise exteriorize.v.02
+bump_around jar.v.03
+wassail revel.v.02 toast.v.02
+chicane cheat.v.02 cavil.v.01
+trick flim-flam.v.01
+armour armor.v.01
+domicile reside.v.01
+deconcentrate decentralize.v.01
+refreshen freshen.v.02 refresh.v.04
+criminate accuse.v.01 reprimand.v.01
+lop discerp.v.02 snip.v.02
+low moo.v.01
+garrotte garrote.v.01
+play_false bamboozle.v.01
+camp_down camp.v.02
+peak top_out.v.03
+skim_off skim.v.06 cream_off.v.02
+ask_over invite.v.02
+reave plunder.v.03
+dummy_up dummy.v.01 close_up.v.04
+dread fear.v.02
+get_under_one's_skin get.v.28
+double_stitch double_crochet.v.01
+sphacelate necrose.v.01
+knock_down down.v.05 deck.v.03 blast.v.09
+take_to_heart attend_to.v.01
+stopple stopper.v.01
+trance capture.v.02
+keep_on retain.v.02
+renegotiate renegociate.v.01 renegociate.v.02
+rejig re-equip.v.01
+fragmentize break_up.v.16
+damn curse.v.03
+socialise socialize.v.01 socialize.v.02 socialize.v.03 socialize.v.04
+seal_off seal.v.01 blockade.v.04
+surface-mine strip_mine.v.01
+game bet_on.v.01
+sleigh sled.v.01
+flush_it fail.v.07
+arborise arborize.v.01
+chisel_in chime_in.v.01
+cannulise cannulate.v.01
+re-start restart.v.01 resume.v.01
+clitter stridulate.v.01
+fall_under fall_into.v.01
+trip_out trip.v.05
+reestablish restore.v.05
+carry_on conduct.v.01 continue.v.03 continue.v.02 act_up.v.01
+linger_over dwell_on.v.01
+chitchat chew_the_fat.v.01
+avianise avianize.v.01
+advertize advertise.v.02 advertise.v.01
+come_forward come_to_the_fore.v.01
+unsettle faze.v.01
+come_upon fall_upon.v.01 enter_upon.v.01
+part_with spare.v.03
+gray grey.v.01 grey.v.02
+sweep_off sweep_away.v.02
+take_in_water bilge.v.02
+plunk_down plank.v.02
+quit discontinue.v.01 leave_office.v.01 depart.v.04 foreswear.v.02 drop_out.v.01
+quip gag.v.04
+demo show.v.01
+take_control take_hold.v.01
+conjure_up raise.v.07
+asseverate assert.v.01
+bring_back return.v.05 bring_to.v.01
+prologuize prologize.v.01
+strike_off cross_off.v.01
+quiet_down quieten.v.01
+die_away abate.v.02
+vascularise vascularize.v.01 vascularize.v.02
+warp falsify.v.01 heave.v.07
+ware consume.v.03
+attempt try.v.01 undertake.v.01
+do_by treat.v.01
+swot_up cram.v.03
+inosculate anastomose.v.01 anastomose.v.02
+dodder toddle.v.01
+censure reprimand.v.01
+fleck spot.v.04
+scare_off daunt.v.01
+swear_out serve.v.11
+gyp victimize.v.03
+buy_at patronize.v.02
+heap_up pile_up.v.02
+blazon emblazon.v.02
+die_off die_out.v.01
+tog_up overdress.v.02
+don wear.v.09
+dog chase.v.01
+sensibilize sensitize.v.01
+visualise visualize.v.02 visualize.v.03 visualize.v.01 visualize.v.04
+keep_back restrain.v.01 retain.v.03 withhold.v.01
+laze idle.v.02
+bring_off pull_off.v.03
+convalesce recuperate.v.04
+give_vent vent.v.01
+plash pleach.v.02 spatter.v.01
+legitimatize legalize.v.01
+highjack commandeer.v.01
+restate repeat.v.01
+shell_out distribute.v.01
+lampoon satirize.v.01
+congeal jell.v.01
+remilitarise remilitarize.v.01
+muse chew_over.v.01
+bracket_out bracket.v.02
+bolt_out run_off.v.02
+jolly_up cheer.v.03
+overwinter winter.v.01
+decease die.v.01
+idolise idolize.v.01
+decolorize bleach.v.01
+pock scar.v.01
+smudge smear.v.02
+pelt_along rush.v.01
+modernise modernize.v.02 overhaul.v.02
+latinise romanize.v.01 catholicize.v.01
+pretty_up doll_up.v.01
+ooze_out exude.v.01
+harbinger announce.v.04
+re-emerge reappear.v.01
+ideate imagine.v.01
+burst_upon burst_in_on.v.01
+make_merry revel.v.02
+vacuum-clean vacuum.v.01
+bite_off snap_at.v.01
+sidle_up cozy_up.v.01
+huckster peddle.v.01 haggle.v.01
+have_in_mind think_of.v.04
+pasture crop.v.04 crop.v.05
+swell_up swell.v.03
+disorientate disorient.v.01
+outmatch surpass.v.02
+see_red anger.v.02
+bridge_over tide_over.v.01 bridge.v.01
+whoop_it_up revel.v.02
+defog demist.v.01
+reharmonise reharmonize.v.01
+shack reside.v.01 trail.v.03
+wheel_around wheel.v.02 wheel.v.01
+lose_weight reduce.v.20
+botanise botanize.v.01
+fall_open drop_open.v.01
+zoom_along zoom.v.01
+blunder drop_the_ball.v.01 fumble.v.02 blurt_out.v.01
+depone swear.v.04
+snuff_it die.v.01
+plug_into plug_in.v.01
+shoal shallow.v.01 shallow.v.02
+leash rope.v.02
+travail labor.v.02
+rebound bounce.v.01 rally.v.04
+flitter flicker.v.01
+cough_out expectorate.v.02
+mosh slam_dance.v.01
+satisfise satisfice.v.01
+merchandise trade.v.01
+temporise temporize.v.01
+flesh_out fatten.v.01 elaborate.v.01 round.v.07
+reverse change_by_reversal.v.01 turn_back.v.05 overrule.v.01 revoke.v.02 invert.v.02
+spume froth.v.02
+externalize project.v.12 exteriorize.v.02
+give_a_damn care_a_hang.v.01
+swish lap.v.03
+get_onto catch_on.v.01
+buy_out take_over.v.05
+stick_around stand_by.v.02 stay.v.02
+beg_off excuse.v.05
+flub botch.v.01
+flux flow.v.01 liquefy.v.03 blend.v.03
+goldbrick victimize.v.03 fiddle.v.01
+devolve_on depend_on.v.01
+crap stool.v.04
+sniffle snivel.v.03 sniff.v.02
+clack clatter.v.01 cluck.v.01 chatter.v.04
+bring_together join.v.02 bond.v.04
+mussitate mumble.v.01
+charge_up agitate.v.02
+destalinise destalinize.v.01
+gelatinise gelatinize.v.02 gelatinize.v.03
+aviate fly.v.03
+leak_out leak.v.02
+deglycerolise deglycerolize.v.01
+neaten tidy.v.01 groom.v.03
+hoodwink juggle.v.01 bamboozle.v.01
+be_on_cloud_nine exult.v.01
+mislay misplace.v.01
+escape_from shake.v.07
+turn_a_nice_penny turn_a_nice_dime.v.01
+fork_up hand_over.v.01
+cypher code.v.02 calculate.v.01
+ratify sign.v.02
+set_on assail.v.01
+tiller stool.v.03
+chip_away_at chip_away.v.01
+toss_away discard.v.01
+beplaster plaster.v.02
+entreat bid.v.03
+conjecture speculate.v.01
+equilibrise balance.v.01
+foreknow anticipate.v.03
+swinge singe.v.01
+keep_going run_on.v.02 tide_over.v.01 patronize.v.04
+broider embroider.v.01
+clamour clamor.v.02 clamor.v.01
+find_fault blame.v.02
+give_the_sack displace.v.03
+barde caparison.v.01
+analogise analogize.v.01
+scupper ambush.v.01 queer.v.02
+suburbanise suburbanize.v.01 suburbanize.v.02
+jump-start jumpstart.v.01 jumpstart.v.02
+salt_away store.v.01
+clear_away clear_off.v.01
+run_over run_down.v.03 overflow.v.01
+backlash backfire.v.01
+shore_up prop_up.v.01
+domesticise domesticate.v.02
+burgeon_forth shoot.v.19
+enunciate pronounce.v.01 articulate.v.05
+press_down_on drag_down.v.01
+metricise metricize.v.01 metricize.v.02
+gip victimize.v.03
+furl roll_up.v.01
+hinge_on depend_on.v.01
+window-dress dress_up.v.02
+cast_aside discard.v.01
+dine_in eat_in.v.01
+discern spot.v.02
+monish caution.v.01 warn.v.02
+brave_out weather.v.01
+fade_out dissolve.v.01
+rase level.v.02
+play_up foreground.v.01 cozy_up.v.01
+clutch seize.v.01 cling_to.v.01 seize.v.07
+hypothesise speculate.v.01
+contemporise synchronize.v.02 synchronize.v.04
+counterpose counterweight.v.01
+re-emphasize re-emphasise.v.01
+whomp_up whip_up.v.01
+district zone.v.01
+portend bode.v.01
+stick_by stand_by.v.03
+saunter stroll.v.01
+tool_around joyride.v.01
+desex sterilize.v.02
+hold_tight cling_to.v.01
+instrumentate instrument.v.02
+check_over check.v.01
+carry-the_can face_the_music.v.01
+misuse misapply.v.01 pervert.v.03
+polymerise polymerize.v.01 polymerize.v.02
+pig_it pig.v.01
+cinematise cinematize.v.01
+revile vilify.v.01
+dope_off fall_asleep.v.01
+toss_back throw_back.v.01
+despoil plunder.v.03 rape.v.02
+apparel dress.v.02
+call_off cancel.v.01 call.v.16
+set_in_motion launch.v.05
+agnise recognize.v.02
+loll_around bum.v.02
+whap sock.v.01
+wham whack.v.01
+infringe conflict.v.02 encroach.v.01
+domineer tyrannize.v.02
+resorb reabsorb.v.01
+resort fall_back.v.05 repair.v.03
+air-freight air-ship.v.01
+chaffer haggle.v.01 chew_the_fat.v.01
+color_in color.v.01
+anathemize curse.v.03 accurse.v.01
+spew_out spew.v.02
+take_to_task call_on_the_carpet.v.01
+anathematize accurse.v.01
+drift_off fall_asleep.v.01
+shed_light_on clear.v.10
+spread_over cover.v.02
+squirrel_away hoard.v.01
+flame_up flare.v.01
+call_for request.v.01 necessitate.v.01 invite.v.07 collect.v.05
+immingle blend.v.01
+grease_one's_palms bribe.v.01
+lyophilise lyophilize.v.01
+metallize metalize.v.01
+give_the_bounce give_the_axe.v.02
+gain_ground gain.v.05
+filet fillet.v.01 fillet.v.02
+ticktack tick.v.02
+strike_home hit_home.v.01
+step_in intervene.v.01 substitute.v.03
+let_drive loose_off.v.01
+live_down unlive.v.01
+miscall misname.v.01
+hinder impede.v.01 obstruct.v.01 handicap.v.03
+clock_on clock_in.v.01
+run_afoul conflict.v.02
+have_a_look take_a_look.v.01
+counterfeit forge.v.02
+peg_away plug_away.v.01
+ebb_off ebb.v.01
+quake quiver.v.01 tremor.v.01
+cobble_up cobble_together.v.01
+suss_out check.v.01
+immortalise commemorate.v.03 immortalize.v.02
+ginger_up jazz_up.v.01
+check_off check.v.06
+turf_out eject.v.01
+hybridise crossbreed.v.01
+familiarise familiarize.v.01
+knap rap.v.01 chip.v.05
+make_sure make_a_point.v.01
+dematerialise dematerialize.v.01
+swank flaunt.v.01
+bully_off face_off.v.01
+sanctify consecrate.v.04 purify.v.02
+inch edge.v.01
+stock-take inventory.v.01
+console comfort.v.01
+flash-freeze quick-freeze.v.01
+stamp_down suppress.v.01
+lenify pacify.v.01
+mutter mumble.v.01 murmur.v.02
+pantomime mime.v.02
+frustrate thwart.v.01 torment.v.02
+antecede predate.v.01
+suck_up absorb.v.04 cozy_up.v.01 fawn.v.02
+babble_out spill_the_beans.v.01
+create_from_raw_stuff create_from_raw_material.v.01
+frame_in frame.v.01
+lead_by_the_nose bamboozle.v.01
+cascade_down cascade.v.01
+load_down pack.v.12
+orientate orient.v.02
+have_it_off sleep_together.v.01
+kayo knock_cold.v.01
+indite write.v.01
+let_off excuse.v.02
+clew clue.v.01
+laugh_away laugh_off.v.01
+take_stock size_up.v.01 inventory.v.01
+rely_upon depend_on.v.02
+step_forward come_to_the_fore.v.01
+recollect remember.v.01
+concertise concertize.v.01
+asterisk star.v.03
+bewray betray.v.01
+ward guard.v.02
+rationalise_away rationalize_away.v.01
+shmoose shmooze.v.01
+immaterialise immaterialize.v.01
+skate_over gloss_over.v.01
+itemise itemize.v.02 enumerate.v.01
+sign_in check_in.v.01
+frown_upon frown_on.v.01
+confer_with consult.v.01
+build_on repose_on.v.01
+link associate.v.01 connect.v.01 connect.v.03 yoke.v.02
+take_part participate.v.01
+dispute challenge.v.01 quarrel.v.01
+primp preen.v.03
+forsake abandon.v.05
+discolour discolor.v.03
+throw_in_the_towel drop_out.v.01
+blat bleat.v.02
+blab spill_the_beans.v.01 chatter.v.04
+vandalise vandalize.v.01
+brandmark brand.v.03
+lech_after lust_after.v.01
+bound_off skip.v.05
+gluttonise gluttonize.v.01
+tote lug.v.01
+hypnotise hypnotize.v.01
+flirt chat_up.v.01 dally.v.01
+esteem respect.v.01 think_of.v.03
+carburise carbonize.v.01
+cart_away cart_off.v.01
+sovietise sovietize.v.01 sovietize.v.02
+blink_away wink.v.04
+sow_in inseminate.v.01
+forestall prevent.v.01 anticipate.v.02
+vie compete.v.01
+handcolour handcolor.v.01
+select choose.v.01
+birle birl.v.01
+scrape_by scrape_along.v.01
+telephone call.v.03
+dehumanise dehumanize.v.01 dehumanize.v.02
+take_leave depart.v.04
+blarney wheedle.v.01
+aluminise aluminize.v.01
+imperil endanger.v.01
+vocalise vocalize.v.02 vocalize.v.03 articulate.v.05 voice.v.02 vocalize.v.05
+clean_house houseclean.v.01
+bulk_large brood.v.02
+ingurgitate gorge.v.01
+contra_danse contradance.v.01
+illume light.v.01
+trick_out overdress.v.02
+scraunch crunch.v.01
+despise contemn.v.01
+regard_as think_of.v.03
+foreordain predestine.v.02 predestine.v.03
+affront diss.v.01
+disallow forbid.v.01
+loan lend.v.02
+imbed implant.v.01
+flatten_out flatten.v.02
+faggot_up faggot.v.03
+call_into_question question.v.01
+divulge unwrap.v.02
+cut_up carve.v.03 mutilate.v.01 compartmentalize.v.01 hack.v.07
+double_back backtrack.v.01
+destress de-emphasize.v.01
+country-dance contradance.v.01
+deplumate pluck.v.05
+randomise randomize.v.01
+cuckold cheat_on.v.01
+earth_up land_up.v.01
+improvize improvise.v.01
+cuss curse.v.01
+stabilise brace.v.02 stabilize.v.03 stabilize.v.01
+get_word learn.v.02
+apprise advise.v.02 instruct.v.03 appreciate.v.04 appreciate.v.05
+shrink_from fiddle.v.01
+aphorise aphorize.v.01
+craunch crunch.v.02
+reheel heel.v.05
+ask_for invite.v.01
+arrest collar.v.01 check.v.18 catch.v.07 halt.v.01
+nose_out sniff_out.v.01
+engorge gorge.v.01
+dismantle level.v.02 disassemble.v.01 strip.v.11
+string_up hang.v.03 string.v.02
+get_a_line learn.v.02
+gather_in take_in.v.08
+nauseate sicken.v.03 disgust.v.02
+juice_up jazz_up.v.01
+insult diss.v.01
+womanize philander.v.01 feminize.v.02
+sweep_through breeze_through.v.01
+lounge_about bum.v.02
+versify verse.v.01
+make_for bring.v.03
+betide befall.v.01
+secern distinguish.v.01
+ptyalize spit.v.01
+countersink set.v.17
+lam scat.v.01 thrash.v.01
+blaze_out blaze.v.04
+deconsecrate desecrate.v.02
+bale_out bail_out.v.02
+tangle embroil.v.01 ravel.v.02 tousle.v.01 entangle.v.02
+draw_back withdraw.v.01 retract.v.03
+paralyse paralyze.v.01 paralyze.v.02
+coldcock deck.v.03
+christianise christianize.v.02
+disincline indispose.v.01
+monetise monetize.v.01
+dream_up think_up.v.01
+lap_up lap.v.04
+officialise officialize.v.01
+exile expatriate.v.01
+reuse recycle.v.02
+ingraft graft.v.01
+jangle jingle.v.01
+interweave weave.v.01
+kick_down kick_in.v.03
+cede concede.v.03 surrender.v.02
+muck_up botch.v.01 mire.v.04
+stir_up agitate.v.01 inflame.v.04 agitate.v.06 incite.v.02
+carry_away take_away.v.01
+break_short cut_short.v.01
+blow_one's_stack flip_one's_lid.v.01
+go_deep go_far.v.02
+dry_out dry.v.02 run_dry.v.01 dry.v.01
+shout_out shout.v.02 vociferate.v.01
+stupefy besot.v.01 perplex.v.01 stun.v.01
+avouch avow.v.02
+uncompress decompress.v.01
+aline align.v.01
+gawk goggle.v.01
+gawp goggle.v.01
+talk_over hash_out.v.01
+come_with attach_to.v.01
+misaddress misdirect.v.03
+lace_up lace.v.04
+trifle piddle.v.01 frivol.v.01 dally.v.04
+discuss discourse.v.01 hash_out.v.01
+accomplish carry_through.v.01 achieve.v.01
+moult shed.v.04
+replete satiate.v.01
+thaw dissolve.v.09
+gangrene necrose.v.01
+claver chew_the_fat.v.01
+title entitle.v.02 style.v.01
+alcoholise alcoholize.v.02 alcoholize.v.03
+email e-mail.v.01
+melanise melanize.v.01 blacken.v.01
+labialize round.v.03
+rush_away rush_off.v.01
+drop_behind drag.v.05
+interlard intersperse.v.02
+squirm writhe.v.01
+vacillate hover.v.01 fluctuate.v.02
+go_away go.v.03 leave.v.01 vanish.v.02 disappear.v.01
+glaze_over film_over.v.01 glaze.v.02
+repay refund.v.01 requite.v.01 reward.v.03 retort.v.01
+drum_out oust.v.01
+hearken hark.v.01
+think_back remember.v.03
+lighten_up lighten.v.01 lighten.v.03 brighten.v.01 lighten.v.05
+misdemean misbehave.v.01
+aggress attack.v.03
+splosh splash.v.05 squelch.v.03 sprinkle.v.02 spatter.v.01
+strip_down undress.v.01
+take_form form.v.03
+decollate decapitate.v.01
+buck_up take_heart.v.01
+desiccate dehydrate.v.01 dehydrate.v.02 exsiccate.v.01
+curtsey curtsy.v.01
+purvey provision.v.01
+answer_for account.v.04
+trudge slog.v.02
+controvert oppose.v.06 refute.v.02
+hospitalise hospitalize.v.01
+barbarise barbarize.v.01 barbarize.v.02
+anesthetise anesthetize.v.01
+kick_upstairs promote.v.02
+reorganise reorganize.v.02 reorganize.v.01
+delimit specify.v.03 subtend.v.01 demarcate.v.02
+fleet flit.v.01 evanesce.v.01
+grow_over overgrow.v.03
+lock_away lock_in.v.02
+savvy grok.v.01
+ride_away ride_off.v.01
+freeze_down freeze.v.07
+wrack bust_up.v.01
+wish_well wish.v.04
+bump_off murder.v.01
+spit_out splutter.v.02 spit.v.02 expectorate.v.02
+notify advise.v.02
+barbecue barbeque.v.01
+alkalinise alkalinize.v.01 alkalinize.v.02
+pour_down toss_off.v.02
+reconnoiter scout.v.01
+intromit admit.v.02
+do_in neutralize.v.04
+do_it sleep_together.v.01
+ingest consume.v.02 absorb.v.02
+hie rush.v.01
+brook digest.v.03
+set_aside allow.v.04 suspend.v.05
+misidentify mistake.v.01
+carry_off pull_off.v.03 take_away.v.01 eliminate.v.03
+whisk_by zip_by.v.01
+cavort frolic.v.01
+plow_ahead go_ahead.v.01
+undercoat prime.v.02
+ebb_down ebb.v.01
+take_to_be think_of.v.03
+polemicise polemize.v.01
+opalise opalize.v.01 opalize.v.02
+rootle rout.v.02
+portion assign.v.02
+rollick frolic.v.01
+immix blend.v.03
+urbanise urbanize.v.02 urbanize.v.01
+degenerate devolve.v.03
+notarise notarize.v.01
+reforge recast.v.03
+be_intimate sleep_together.v.01
+speed_up accelerate.v.01 accelerate.v.02
+shoot_a_line boast.v.01
+flash_back cut_back.v.01
+even_up compensate.v.01 square_up.v.02
+desist abstain.v.02
+infract transgress.v.01
+moon_around moon.v.02 mope.v.02
+blow_out_of_the_water shock.v.01
+personate pose.v.03 personify.v.03
+dillydally procrastinate.v.01
+growl grumble.v.03
+let_in admit.v.03 admit.v.02
+pound_up pound.v.06
+sign_on sign.v.04
+disrobe undress.v.01
+inspirit spirit.v.01
+cannonball_along rush.v.01
+focalise localize.v.02 concenter.v.01 focus.v.04 focus.v.05
+belly_out belly.v.01
+touch_off trip.v.04
+close_off shut_off.v.01 shut_off.v.02 shut_off.v.03
+materialize happen.v.04
+economize conserve.v.03 save.v.09
+atomise atomize.v.01 nuke.v.01 atomize.v.03
+horn_in intrude.v.03
+metricate metricize.v.02
+omen bode.v.01
+defer postpone.v.01 submit.v.06
+move_into enter.v.01
+she-bop masturbate.v.02
+trifle_away wanton.v.03
+clunk clop.v.01
+rattle_off rattle_down.v.01
+break_wind fart.v.01
+go_wrong fail.v.02
+over-refine overrefine.v.01
+gage bet_on.v.01
+parent rear.v.02
+countenance permit.v.01
+ease_off ease_up.v.02 ease_up.v.03
+overdramatise overdramatize.v.01
+devilise devilize.v.01
+disesteem disrespect.v.02
+supervene_upon supplant.v.01
+spirit_up spirit.v.01
+ration_out ration.v.02
+mop wipe_up.v.01 pout.v.02
+mob throng.v.01
+fulfil carry_through.v.01 meet.v.04 satisfy.v.01
+roam roll.v.12
+cold-shoulder slight.v.01
+scarper scat.v.01
+peculate embezzle.v.01
+paginate foliate.v.04
+encroach_upon intrude_on.v.01
+further foster.v.01 promote.v.01
+aby expiate.v.01
+apostrophise apostrophize.v.01
+intumesce bubble_up.v.01 swell.v.03
+cheer_up cheer.v.03 cheer.v.04
+revitalise revitalize.v.02
+birdwatch bird.v.01
+goof drop_the_ball.v.01
+tyrannise tyrannize.v.01 tyrannize.v.02
+give_in submit.v.06 yield.v.13
+bully strong-arm.v.02 browbeat.v.02
+hunch_over hunch.v.01
+chevvy harass.v.01
+spondaise spondaize.v.01
+drag_in embroil.v.01
+gate-crash barge_in.v.01
+bourgeon shoot.v.19
+sweep_up embroil.v.01 espouse.v.03
+organise organize.v.04 form.v.01 unionize.v.02 organize.v.02 organize.v.05 mastermind.v.01
+desalinise desalinate.v.01
+larn learn.v.01
+luck_into enter_upon.v.01
+prepare_for steel_oneself_against.v.01
+rupture tear.v.01
+contravene conflict.v.02 contradict.v.02
+smooth_over gloss_over.v.01
+wear_upon tire.v.02
+bib tipple.v.01
+divagate digress.v.01
+fagot faggot.v.01 faggot.v.02 faggot.v.03
+rachet_up ratchet.v.01
+set_apart assign.v.04 sequester.v.05
+poke_out extend.v.06
+anaesthetize anesthetize.v.01
+stay_over sleep_over.v.01
+egress issue.v.04
+tread_down tramp_down.v.01
+billet quarter.v.01
+give_the_once_over give_the_eye.v.01
+anglicize anglicise.v.01
+factorise factorize.v.01
+occlude obstruct.v.02
+envisage imagine.v.01
+scratch_along scrape_along.v.01
+vasectomise vasectomize.v.01
+rarify complicate.v.02
+shut_one's_mouth keep_quiet.v.01
+drop_down sink.v.01
+siss hiss.v.03 hiss.v.01
+resubmit feed_back.v.01
+trice_up trice.v.01 trice.v.02
+keep_mum close_up.v.04
+piddle_away piddle.v.01
+summerise summerize.v.01
+take_stage take_the_stage.v.01
+cop hook.v.05 collar.v.01
+plain complain.v.01
+disc-jockey disk-jockey.v.01
+lie_with sleep_together.v.01
+regain recover.v.01 find.v.03
+expire run_out.v.04 die.v.01 exhale.v.01
+chance_upon fall_upon.v.01
+skylark frolic.v.01
+destabilise destabilize.v.01 destabilize.v.02
+straighten_up draw_up.v.02
+carbonise carbonize.v.01 carbonize.v.02
+offer_up offer.v.09
+sleek slick.v.01
+upchuck vomit.v.01
+denationalise denationalize.v.01
+lure entice.v.01
+copolymerise copolymerize.v.01
+repoint point.v.14
+scrutinize size_up.v.01 audit.v.01
+hydrolyse hydrolyze.v.01
+interlace intertwine.v.01 lock.v.04
+rail_in rail.v.02
+unreel reel_off.v.01
+own_up make_a_clean_breast_of.v.01
+take_a_breath breathe.v.01
+taint defile.v.01 infect.v.02
+jactitate convulse.v.03
+snigger snicker.v.01
+brim_over overflow.v.01
+map_out map.v.04
+make_off abscond.v.01
+put_forward submit.v.02 assert.v.03 raise.v.07 nominate.v.01
+jelly jellify.v.02
+fund_raise fund-raise.v.01
+plasticise plasticize.v.01 plasticize.v.02
+outface stare_down.v.01
+rabbit_on rant.v.01
+squeak_through squeak_by.v.02
+bob_about bob_around.v.01
+have_on wear.v.01
+effeminize feminize.v.02
+pick_over sieve_out.v.01
+steel_onself_for steel_oneself_against.v.01
+catnap nap.v.01
+pull_wires manipulate.v.01
+sleuth spy.v.02
+ravage harry.v.02 lay_waste_to.v.01
+hold_close cling_to.v.01
+whirlpool eddy.v.01
+smell_up stink_up.v.01
+hulk loom.v.02
+delude deceive.v.01
+motion gesticulate.v.01
+scollop scallop.v.03 scallop.v.04 scallop.v.05
+unfrock defrock.v.01
+get_one's_lumps take_one's_lumps.v.01
+fluoridize fluoridate.v.01
+sequestrate seclude.v.01 sequester.v.05
+let_down lower.v.01 disappoint.v.01
+take_a_firm_stand insist.v.01
+watch_out watch.v.05
+desolate abandon.v.05 depopulate.v.01 lay_waste_to.v.01
+take_heed listen.v.02
+chivy harass.v.01
+foredate predate.v.04
+luxate dislocate.v.01
+derogate minimize.v.03
+ad-lib improvise.v.01
+blat_out blare_out.v.01
+vitiate corrupt.v.01 mar.v.01 invalidate.v.04
+plump_down plonk_down.v.01 plank.v.02
+canalize canal.v.01 channel.v.02
+deck_out overdress.v.02
+mould model.v.02 cast.v.07 shape.v.02
+engild gild.v.01
+brace_oneself_for steel_oneself_against.v.01
+jollify revel.v.02
+wall_up wall_in.v.01
+throw_together fudge_together.v.01 scramble.v.03
+chew_out call_on_the_carpet.v.01
+toil labor.v.02
+throttle restrict.v.03 strangle.v.01 choke.v.13
+run_along line.v.01
+carnalize sensualize.v.01 sensualize.v.02 sensualize.v.03
+affright frighten.v.01
+pride_oneself take_pride.v.01
+crenelate crenel.v.01
+doctor_up sophisticate.v.03
+nitrogenize nitrify.v.02
+de-emphasise de-emphasize.v.01
+orientalise orientalize.v.01
+cannulize cannulate.v.01
+urge_on cheer.v.05 urge.v.01
+achromatise achromatize.v.01
+colorize color.v.01
+factor_analyze factor_analyse.v.01
+get_behind drag.v.05
+move_through transit.v.01
+unhallow desecrate.v.02
+spelunk cave.v.02
+chop_up chop.v.01
+go_ballistic flip_one's_lid.v.01
+motor drive.v.02
+cauterise cauterize.v.01 callous.v.01
+froth_at_the_mouth foam_at_the_mouth.v.01
+cooperate collaborate.v.01
+thwack smack.v.01
+dine_out eat_out.v.01
+accent stress.v.01 stress.v.02
+drool salivate.v.02 drivel.v.01
+misestimate miscalculate.v.01 miscalculate.v.02
+sculpture sculpt.v.01 sculpt.v.02
+thrust_ahead barge.v.01
+outstrip surpass.v.02 outdistance.v.01
+centre center.v.03 concentrate.v.02
+ablactate wean.v.01
+syncretise syncretize.v.01 syncretize.v.02
+dent indent.v.03
+coiffe dress.v.16
+gold-plate goldplate.v.01
+beef_up strengthen.v.01
+drag_through_the_mud badmouth.v.01
+democratise democratize.v.01 democratize.v.02
+relativise relativize.v.01
+deep-fry french-fry.v.01
+factor_in factor.v.03 factor.v.01
+eruct spew.v.02 burp.v.01
+knock_back set_back.v.03
+sky flip.v.06
+act_reflexively act_involuntarily.v.01
+overmaster overpower.v.01
+boob drop_the_ball.v.01
+spin_around spin.v.01
+junk trash.v.01
+come_up_to address.v.09
+roleplay act.v.10
+fall_flat fall_through.v.01
+jawbone shmooze.v.01

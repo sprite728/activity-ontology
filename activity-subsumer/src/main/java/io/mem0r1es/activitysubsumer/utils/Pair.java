@@ -1,4 +1,4 @@
-package io.mem0r1es.activitysubsumer.useractivitytree.utils;
+package io.mem0r1es.activitysubsumer.utils;
 
 /**
  * @author Sebastian Claici

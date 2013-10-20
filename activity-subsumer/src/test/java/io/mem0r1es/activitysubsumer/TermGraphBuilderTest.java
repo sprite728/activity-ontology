@@ -1,9 +1,9 @@
 package io.mem0r1es.activitysubsumer;
 
-import io.mem0r1es.activitysubsumer.useractivitytree.core.UserActivity;
+import io.mem0r1es.activitysubsumer.activities.UserActivity;
+import io.mem0r1es.activitysubsumer.activities.UserActivityClusters;
 import io.mem0r1es.activitysubsumer.utils.TermGraphBuilder;
 import io.mem0r1es.activitysubsumer.wordnet.TermGraph;
-import io.mem0r1es.activitysubsumer.wordnet.UserActivityClusters;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

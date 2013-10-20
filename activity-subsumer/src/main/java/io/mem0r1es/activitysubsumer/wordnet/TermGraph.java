@@ -11,6 +11,11 @@ import org.jgrapht.EdgeFactory;
 import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
 import org.jgrapht.graph.DefaultEdge;
 
+/**
+ * Class which represents a WordNet sub-graph.
+ * 
+ * @author horiaradu
+ */
 public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
 	private static long ID = 0;
 
@@ -27,6 +32,71 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
 
 	public long getID() {
 		return id;
+	}
+
+	/**
+	 * @return - the set of words in the sub-graph.
+	 */
+	public Set<String> getWords() {
+		Set<String> result = new HashSet<String>();
+		for (WordNetNode node : graph.vertexSet()) {
+			result.addAll(node.getWords());
+		}
+		return result;
+	}
+
+	/**
+	 * @param word
+	 * @return - the set of nodes which contain that word.
+	 */
+	public Set<WordNetNode> getNodes(String word) {
+		Set<WordNetNode> result = new HashSet<WordNetNode>();
+		for (WordNetNode node : graph.vertexSet()) {
+			if (node.hasWord(word)) {
+				result.add(node);
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @return the root of the sub-graph.
+	 */
+	public WordNetNode getRoot() {
+		return root;
+	}
+
+	/**
+	 * @param nonSenseWord
+	 * @return true if the sub-graph contains a sense of the given word (without a sense), false
+	 *         otherwise
+	 */
+	public boolean containsNonSenseTerm(String nonSenseWord) {
+		for (WordNetNode node : graph.vertexSet()) {
+			for (String word : node.getWords()) {
+				if (Utils.wordName(word).equals(nonSenseWord)) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * @param nonSenseWord
+	 * @return - the set of nodes which contain a sense of the given word (without a sense)
+	 */
+	public Set<WordNetNode> getSensesForNonSenseTerm(String nonSenseWord) {
+		Set<WordNetNode> result = new HashSet<WordNetNode>();
+
+		for (WordNetNode node : graph.vertexSet()) {
+			for (String word : node.getWords()) {
+				if (Utils.wordName(word).equals(nonSenseWord)) {
+					result.add(node);
+				}
+			}
+		}
+		return result;
 	}
 
 	@Override
@@ -153,51 +223,4 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
 	public Set<DefaultEdge> outgoingEdgesOf(WordNetNode vertex) {
 		return graph.outgoingEdgesOf(vertex);
 	}
-
-	public Set<String> getWords() {
-		Set<String> result = new HashSet<String>();
-		for (WordNetNode node : graph.vertexSet()) {
-			result.addAll(node.getWords());
-		}
-		return result;
-	}
-
-	public Set<WordNetNode> getNodes(String word) {
-		Set<WordNetNode> result = new HashSet<WordNetNode>();
-		for (WordNetNode node : graph.vertexSet()) {
-			if (node.hasWord(word)) {
-				result.add(node);
-			}
-		}
-		return result;
-	}
-
-	public WordNetNode getRoot() {
-		return root;
-	}
-
-	public boolean containsNonSenseTerm(String nonSenseWord) {
-		for (WordNetNode node : graph.vertexSet()) {
-			for (String word : node.getWords()) {
-				if (Utils.wordName(word).equals(nonSenseWord)) {
-					return true;
-				}
-			}
-		}
-		return false;
-	}
-
-	public Set<WordNetNode> getSensesForNonSenseTerm(String nonSenseWord) {
-		Set<WordNetNode> result = new HashSet<WordNetNode>();
-
-		for (WordNetNode node : graph.vertexSet()) {
-			for (String word : node.getWords()) {
-				if (Utils.wordName(word).equals(nonSenseWord)) {
-					result.add(node);
-				}
-			}
-		}
-		return result;
-	}
-
 }

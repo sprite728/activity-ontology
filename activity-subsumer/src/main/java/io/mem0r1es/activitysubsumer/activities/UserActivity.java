@@ -1,4 +1,4 @@
-package io.mem0r1es.activitysubsumer.useractivitytree.core;
+package io.mem0r1es.activitysubsumer.activities;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -19,8 +19,6 @@ public final class UserActivity implements Serializable {
 	private String avgDuration;
 
 	private static final long serialVersionUID = 7526471156722776147L;
-
-	public static final UserActivity DEFAULT_NODE = new UserActivity("XXX", "XXX");
 
 	/**
 	 * <p>
