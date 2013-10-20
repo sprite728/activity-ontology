@@ -26,14 +26,14 @@ public class TermGraphBuilderTest {
 	private static final String NOUN_ROOTS = "src/test/resources/noun_roots";
 	private static final String NOUN_NODES_GEPHI = "out/nouns_nodes.csv";
 	private static final String NOUN_EDGES_GEPHI = "out/nouns_edges.csv";
-	private static final String NOUN_OUT = "out/nouns_out.csv";
+	private static final String NOUN_OUT = "out/nouns_out_syn_final.csv";
 
 	private static final String VERBS_GRAPH = "src/test/resources/verbs.graph";
 	private static final String VERB_SYNONIMS = "src/test/resources/verb_senses.txt";
 	private static final String VERB_ROOTS = "src/test/resources/verb_roots";
 	private static final String VERB_NODES_GEPHI = "out/verbs_nodes.csv";
 	private static final String VERB_EDGES_GEPHI = "out/verbs_edges.csv";
-	private static final String VERB_OUT = "out/verbs_out.csv";
+	private static final String VERB_OUT = "out/verbs_out_syn_final.csv";
 
 	@Test
 	public void main() throws IOException {
