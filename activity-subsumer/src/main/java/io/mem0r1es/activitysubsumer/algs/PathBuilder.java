@@ -1,5 +1,7 @@
 package io.mem0r1es.activitysubsumer.algs;
 
+import io.mem0r1es.activitysubsumer.wordnet.WordNetNode;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -19,7 +21,7 @@ public class PathBuilder<V, E> {
 	private Map<V, Set<List<V>>> pathsToDestinations = new HashMap<V, Set<List<V>>>();
 
 	private Set<V> destinations = new HashSet<V>();
-	
+
 	private Set<V> currentDestinations = new HashSet<V>();
 	private List<V> currentPath = new LinkedList<V>();
 	private V startVertex;
@@ -51,10 +53,10 @@ public class PathBuilder<V, E> {
 	 */
 	public void computePaths(Set<V> destinations) {
 		currentDestinations.clear();
-		
+
 		currentDestinations.addAll(destinations);
 		currentDestinations.removeAll(this.destinations);
-		
+
 		dfs(startVertex);
 		this.destinations.addAll(currentDestinations);
 	}
@@ -101,5 +103,12 @@ public class PathBuilder<V, E> {
 	 */
 	public Map<V, Set<List<V>>> getAllPaths() {
 		return pathsToDestinations;
+	}
+
+	public WordNetNode getLCA(Set<WordNetNode> destinationVerbs) {
+		// All the paths are in the same sub-graph => we care about the DEEPEST common ancestor. We
+		// need to find all the possible combinations of paths that reach the destinations and see
+		// who is the LCA. Then select the deepest LCA.
+		return null;
 	}
 }

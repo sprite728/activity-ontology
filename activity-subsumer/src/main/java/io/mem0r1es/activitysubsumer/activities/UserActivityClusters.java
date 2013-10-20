@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.jgrapht.graph.DefaultEdge;
@@ -49,6 +50,108 @@ public class UserActivityClusters {
 		}
 	}
 
+	public UserActivity subsume(Set<UserActivity> activities) {
+		long bestVerbCluserID = -1;
+		long bestNounCluserID = -1;
+		double bestOverallScore = 0;
+
+		Set<String> mandatoryNouns = new HashSet<String>();
+		for (UserActivity activity : activities) {
+			mandatoryNouns.add(activity.getNoun());
+		}
+
+		for (Entry<Long, Set<UserActivity>> entry : activityClusters.entrySet()) {
+			if (entry.getValue().containsAll(activities)) {
+				long cluserID = entry.getKey();
+
+				Set<String> nounsInCluser = new HashSet<String>();
+				for (UserActivity activity : entry.getValue()) {
+					nounsInCluser.add(activity.getNoun());
+				}
+
+				double bestScore = 0;
+				long bestNounCluser = -1;
+				for (TermGraph nounGraph : nounGraphs) {
+					Set<String> mandatoryNounsTemp = new HashSet<String>();
+					mandatoryNounsTemp.addAll(mandatoryNouns);
+
+					double count = 0;
+					Set<String> words = nounGraph.getWords();
+
+					for (String nounInCluser : nounsInCluser) {
+						for (String word : words) {
+							if (nounInCluser.equals(Utils.wordName(word))) {
+								if (mandatoryNounsTemp.contains(nounInCluser)) {
+									mandatoryNounsTemp.remove(nounInCluser);
+								}
+								count++;
+							}
+						}
+					}
+
+					double score = mandatoryNounsTemp.isEmpty() ? count / words.size() : 0;
+					if (score > bestScore) {
+						bestScore = score;
+						bestNounCluser = nounGraph.getID();
+					}
+				}
+
+				if (bestOverallScore < bestScore) {
+					bestOverallScore = bestScore;
+					bestVerbCluserID = cluserID;
+					bestNounCluserID = bestNounCluser;
+				}
+			}
+		}
+
+		TermGraph bestVerbCluser = null;
+		TermGraph bestNounCluser = null;
+		for (TermGraph graph : verbGraphs) {
+			if (graph.getID() == bestVerbCluserID) {
+				bestVerbCluser = graph;
+			}
+		}
+		for (TermGraph graph : nounGraphs) {
+			if (graph.getID() == bestNounCluserID) {
+				bestNounCluser = graph;
+			}
+		}
+
+		Set<WordNetNode> destinationVerbs = new HashSet<WordNetNode>();
+		Set<WordNetNode> destinationNouns = new HashSet<WordNetNode>();
+		for (WordNetNode node : bestVerbCluser.vertexSet()) {
+			for (String word : node.getWords()) {
+				for (UserActivity activity : activities) {
+					if (activity.getVerb().equals(Utils.wordName(word))) {
+						destinationVerbs.add(node);
+					}
+				}
+			}
+		}
+		for (WordNetNode node : bestNounCluser.vertexSet()) {
+			for (String word : node.getWords()) {
+				for (UserActivity activity : activities) {
+					if (activity.getNoun().equals(Utils.wordName(word))) {
+						destinationNouns.add(node);
+					}
+				}
+			}
+		}
+
+		PathBuilder<WordNetNode, DefaultEdge> verbPaths = new PathBuilder<WordNetNode, DefaultEdge>(bestVerbCluser, bestVerbCluser.getRoot(), destinationVerbs);
+		PathBuilder<WordNetNode, DefaultEdge> nounPaths = new PathBuilder<WordNetNode, DefaultEdge>(bestNounCluser, bestNounCluser.getRoot(), destinationNouns);
+
+		WordNetNode verbLCA = verbPaths.getLCA(destinationVerbs);
+		WordNetNode nounLCA = nounPaths.getLCA(destinationNouns);
+
+		for (String verb : verbLCA.getWords()) {
+			for (String noun : nounLCA.getWords()) {
+				return new UserActivity(verb, noun);
+			}
+		}
+		return null;
+	}
+
 	/**
 	 * Find the set of activities which are "specializations" of the given general activity.
 	 * 
@@ -60,6 +163,8 @@ public class UserActivityClusters {
 
 		String generalVerb = generalActivity.getVerb();
 		String generalNoun = generalActivity.getNoun();
+
+		// Set<Map<Long>>
 
 		for (TermGraph graph : verbGraphs) {
 			if (graph.containsNonSenseTerm(generalVerb)) {

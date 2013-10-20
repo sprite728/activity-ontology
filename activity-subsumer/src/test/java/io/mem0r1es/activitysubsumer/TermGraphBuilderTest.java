@@ -89,6 +89,15 @@ public class TermGraphBuilderTest {
 			System.out.println(entry.getKey() + " -> " + entry.getValue().size());
 		}
 
+		startTime = System.currentTimeMillis();
 		System.out.println(activityClusters.findActivities(new UserActivity("eat", "food")));
+		stopTime = System.currentTimeMillis();
+		elapsedTime = stopTime - startTime;
+		System.out.println(new Date() + " " + "search Time:" + elapsedTime);
+
+		Set<UserActivity> toSubsume = new HashSet<UserActivity>();
+		toSubsume.add(new UserActivity("eat", "bread"));
+		toSubsume.add(new UserActivity("eat", "candy"));
+		System.out.println(new Date() + " subsume: " + toSubsume + ": " + activityClusters.subsume(toSubsume));
 	}
 }
