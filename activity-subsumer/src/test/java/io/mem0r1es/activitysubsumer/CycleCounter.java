@@ -6,6 +6,7 @@ import io.mem0r1es.activitysubsumer.wordnet.TermGraph;
 import io.mem0r1es.activitysubsumer.wordnet.WordNetNode;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -37,10 +38,12 @@ public class CycleCounter {
 
 	@Test
 	public void main() throws IOException {
-		// new TermGraphBuilder().buildFiles(NOUN_SYNONIMS, NOUN_ROOTS, NOUNS_GRAPH,
-		// NOUN_NODES_GEPHI, NOUN_EDGES_GEPHI, NOUN_OUT);
-		// new TermGraphBuilder().buildFiles(VERB_SYNONIMS, VERB_ROOTS, VERBS_GRAPH,
-		// VERB_NODES_GEPHI, VERB_EDGES_GEPHI, VERB_OUT);
+		long startTime = System.currentTimeMillis();
+		new TermGraphBuilder().buildFiles(NOUN_SYNONIMS, NOUN_ROOTS, NOUNS_GRAPH, NOUN_NODES_GEPHI, NOUN_EDGES_GEPHI, NOUN_OUT);
+		new TermGraphBuilder().buildFiles(VERB_SYNONIMS, VERB_ROOTS, VERBS_GRAPH, VERB_NODES_GEPHI, VERB_EDGES_GEPHI, VERB_OUT);
+		long stopTime = System.currentTimeMillis();
+		Object elapsedTime = stopTime - startTime;
+		System.out.println(new Date() + " " + "Add activities Time:" + elapsedTime);
 
 		Set<TermGraph> nounGraphs = new TermGraphBuilder().readFromCSV(NOUN_OUT);
 		Set<TermGraph> verbSubGraphs = new TermGraphBuilder().readFromCSV(VERB_OUT);

@@ -97,7 +97,14 @@ public class TermGraphBuilderTest {
 
 		Set<UserActivity> toSubsume = new HashSet<UserActivity>();
 		toSubsume.add(new UserActivity("eat", "bread"));
-		toSubsume.add(new UserActivity("eat", "candy"));
+		// toSubsume.add(new UserActivity("eat", "candy"));
+
+		toSubsume.add(new UserActivity("drink", "brandy"));
+		// toSubsume.add(new UserActivity("drink", "coffee"));
+		startTime = System.currentTimeMillis();
 		System.out.println(new Date() + " subsume: " + toSubsume + ": " + activityClusters.subsume(toSubsume));
+		stopTime = System.currentTimeMillis();
+		elapsedTime = stopTime - startTime;
+		System.out.println(new Date() + " " + "subsume Time:" + elapsedTime);
 	}
 }

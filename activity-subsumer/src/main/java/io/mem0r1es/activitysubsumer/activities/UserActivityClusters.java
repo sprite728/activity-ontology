@@ -50,7 +50,8 @@ public class UserActivityClusters {
 		}
 	}
 
-	public UserActivity subsume(Set<UserActivity> activities) {
+	public Set<UserActivity> subsume(Set<UserActivity> activities) {
+		Set<UserActivity> result = new HashSet<UserActivity>();
 		long bestVerbCluserID = -1;
 		long bestNounCluserID = -1;
 		double bestOverallScore = 0;
@@ -104,6 +105,10 @@ public class UserActivityClusters {
 			}
 		}
 
+		if (bestVerbCluserID == -1 || bestNounCluserID == -1) {
+			return result;
+		}
+
 		TermGraph bestVerbCluser = null;
 		TermGraph bestNounCluser = null;
 		for (TermGraph graph : verbGraphs) {
@@ -141,15 +146,16 @@ public class UserActivityClusters {
 		PathBuilder<WordNetNode, DefaultEdge> verbPaths = new PathBuilder<WordNetNode, DefaultEdge>(bestVerbCluser, bestVerbCluser.getRoot(), destinationVerbs);
 		PathBuilder<WordNetNode, DefaultEdge> nounPaths = new PathBuilder<WordNetNode, DefaultEdge>(bestNounCluser, bestNounCluser.getRoot(), destinationNouns);
 
-		WordNetNode verbLCA = verbPaths.getLCA(destinationVerbs);
-		WordNetNode nounLCA = nounPaths.getLCA(destinationNouns);
-
-		for (String verb : verbLCA.getWords()) {
-			for (String noun : nounLCA.getWords()) {
-				return new UserActivity(verb, noun);
+		for (WordNetNode verbLCA : verbPaths.getLCA(destinationVerbs)) {
+			for (WordNetNode nounLCA : nounPaths.getLCA(destinationNouns)) {
+				for (String verb : verbLCA.getWords()) {
+					for (String noun : nounLCA.getWords()) {
+						result.add(new UserActivity(verb, noun));
+					}
+				}
 			}
 		}
-		return null;
+		return result;
 	}
 
 	/**

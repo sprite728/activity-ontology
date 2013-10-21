@@ -27,6 +27,35 @@ public class PathBuildingTest {
 	}
 
 	@Test
+	public void unreachableTest() {
+		DirectedAcyclicGraph<String, DefaultEdge> graph = new DirectedAcyclicGraph<String, DefaultEdge>(DefaultEdge.class);
+		graph.addVertex("a");
+		graph.addVertex("b");
+		graph.addVertex("c");
+		graph.addVertex("d");
+		graph.addEdge("a", "b");
+		graph.addEdge("b", "c");
+		graph.addEdge("c", "d");
+
+		Set<String> destinations = new HashSet<String>();
+		destinations.add("e");
+		destinations.add("d");
+
+		PathBuilder<String, DefaultEdge> pathBuilder = new PathBuilder<String, DefaultEdge>(graph, "a", destinations);
+
+		Map<String, Set<List<String>>> allPaths = pathBuilder.getAllPaths();
+		Assert.assertEquals(1, allPaths.size());
+
+		Assert.assertEquals(1, allPaths.get("d").size());
+		List<String> computedPath = allPaths.get("d").iterator().next();
+		Assert.assertEquals(path("a", "b", "c", "d"), computedPath);
+
+		Assert.assertNull(allPaths.get("e"));
+
+		Assert.assertNull(pathBuilder.getLCA(destinations));
+	}
+
+	@Test
 	public void chainTest() {
 		DirectedAcyclicGraph<String, DefaultEdge> graph = new DirectedAcyclicGraph<String, DefaultEdge>(DefaultEdge.class);
 		graph.addVertex("a");
@@ -74,6 +103,8 @@ public class PathBuildingTest {
 
 		Assert.assertEquals(1, allPaths.get("c").size());
 		Assert.assertTrue(allPaths.get("c").contains(path("a", "c")));
+
+		Assert.assertEquals(Collections.singleton("a"), pathBuilder.getLCA(destinations));
 	}
 
 	@Test
@@ -102,8 +133,10 @@ public class PathBuildingTest {
 
 		Assert.assertEquals(1, allPaths.get("c").size());
 		Assert.assertTrue(allPaths.get("c").contains(path("a", "c")));
+
+		Assert.assertEquals(Collections.singleton("c"), pathBuilder.getLCA(destinations));
 	}
-	
+
 	@Test
 	public void testComplicatedStuff() {
 		DirectedAcyclicGraph<String, DefaultEdge> graph = new DirectedAcyclicGraph<String, DefaultEdge>(DefaultEdge.class);
@@ -131,7 +164,7 @@ public class PathBuildingTest {
 
 		Assert.assertEquals(1, allPaths.get("b").size());
 		Assert.assertTrue(allPaths.get("b").contains(path("a", "b")));
-		
+
 		Assert.assertEquals(2, allPaths.get("d").size());
 		Assert.assertTrue(allPaths.get("d").contains(path("a", "b", "d")));
 		Assert.assertTrue(allPaths.get("d").contains(path("a", "c", "d")));
@@ -139,5 +172,10 @@ public class PathBuildingTest {
 		Assert.assertEquals(2, allPaths.get("f").size());
 		Assert.assertTrue(allPaths.get("f").contains(path("a", "b", "d", "f")));
 		Assert.assertTrue(allPaths.get("f").contains(path("a", "c", "d", "f")));
+
+		Assert.assertEquals(Collections.singleton("b"), pathBuilder.getLCA(destinations));
+
+		destinations.remove("b");
+		Assert.assertEquals(Collections.singleton("d"), pathBuilder.getLCA(destinations));
 	}
 }

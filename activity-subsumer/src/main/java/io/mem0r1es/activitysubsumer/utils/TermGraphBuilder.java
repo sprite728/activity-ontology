@@ -167,6 +167,9 @@ public class TermGraphBuilder {
 
 		System.out.println("start building subgraphs");
 		for (TermGraph graph : graphs) {
+			if (graph.getRoot().getWords().contains("consume.v.02")) {
+				System.out.println();
+			}
 			System.out.println("start building subgraph " + graph.getID());
 			nodesToBeMerged.clear();
 
@@ -384,9 +387,8 @@ public class TermGraphBuilder {
 							}
 						}
 					}
-
-					dfs(target, termGraph);
 				}
+				dfs(target, termGraph);
 			}
 		}
 	}

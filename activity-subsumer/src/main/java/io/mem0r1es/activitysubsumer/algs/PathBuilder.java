@@ -1,7 +1,7 @@
 package io.mem0r1es.activitysubsumer.algs;
 
-import io.mem0r1es.activitysubsumer.wordnet.WordNetNode;
-
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.jgrapht.Graph;
+import org.testng.internal.collections.Pair;
 
 /**
  * Class which encompasses the algorithm for finding all the paths from a given start vertex to a
@@ -105,10 +106,75 @@ public class PathBuilder<V, E> {
 		return pathsToDestinations;
 	}
 
-	public WordNetNode getLCA(Set<WordNetNode> destinationVerbs) {
+	public Set<V> getLCA(Set<V> destinations) {
 		// All the paths are in the same sub-graph => we care about the DEEPEST common ancestor. We
 		// need to find all the possible combinations of paths that reach the destinations and see
 		// who is the LCA. Then select the deepest LCA.
+		bestCommonAncestor = null;
+
+		List<V> nodes = new ArrayList<V>();
+		for (V destination : destinations) {
+			nodes.add(destination);
+		}
+
+		recursiveCrap(nodes, 0, new HashSet<List<V>>());
+
+		if (bestCommonAncestor != null) {
+			return bestCommonAncestor.first();
+		}
 		return null;
 	}
+
+	public void recursiveCrap(List<V> nodes, int depth, Set<List<V>> solution) {
+		V current = nodes.get(depth);
+		Set<List<V>> paths = pathsToDestinations.get(current);
+		if (paths == null) {
+			return;
+		}
+		for (List<V> path : paths) {
+			solution.add(path);
+			if (depth == nodes.size() - 1) {
+				findLCA(solution);
+			} else {
+				recursiveCrap(nodes, depth + 1, solution);
+			}
+			solution.remove(path);
+		}
+	}
+
+	private void findLCA(Set<List<V>> solution) {
+		boolean over = false;
+		int i;
+		for (i = 0; over == false; i++) {
+			V currentNode = null;
+
+			for (List<V> path : solution) {
+				if (i == path.size()) {
+					over = true;
+					break;
+				} else {
+					if (currentNode == null) {
+						currentNode = path.get(i);
+					} else if (path.get(i).equals(currentNode) == false) {
+						over = true;
+						break;
+					}
+				}
+			}
+		}
+
+		List<V> firstPath = solution.iterator().next();
+		if (0 <= i - 2) {
+			V lca = firstPath.get(i - 2);
+			if (bestCommonAncestor == null || bestCommonAncestor.second() < i - 2) {
+				bestCommonAncestor = new Pair<Set<V>, Integer>(new HashSet<V>(), i - 2);
+				bestCommonAncestor.first().add(lca);
+			} else if (bestCommonAncestor != null && bestCommonAncestor.second() == i - 2) {
+				bestCommonAncestor.first().add(lca);
+			}
+		}
+	}
+
+	private Pair<Set<V>, Integer> bestCommonAncestor = null;
+
 }
