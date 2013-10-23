@@ -22,14 +22,14 @@ import org.testng.annotations.Test;
 @Test
 public class TermGraphBuilderTest {
 	private static final String NOUNS_GRAPH = "src/test/resources/nouns.graph";
-	private static final String NOUN_SYNONIMS = "src/test/resources/noun_senses.txt";
+	private static final String NOUN_SYNONYMS = "src/test/resources/noun_senses.txt";
 	private static final String NOUN_ROOTS = "src/test/resources/noun_roots";
 	private static final String NOUN_NODES_GEPHI = "out/nouns_nodes.csv";
 	private static final String NOUN_EDGES_GEPHI = "out/nouns_edges.csv";
 	private static final String NOUN_OUT = "out/nouns_out_syn_final.csv";
 
 	private static final String VERBS_GRAPH = "src/test/resources/verbs.graph";
-	private static final String VERB_SYNONIMS = "src/test/resources/verb_senses.txt";
+	private static final String VERB_SYNONYMS = "src/test/resources/verb_senses.txt";
 	private static final String VERB_ROOTS = "src/test/resources/verb_roots";
 	private static final String VERB_NODES_GEPHI = "out/verbs_nodes.csv";
 	private static final String VERB_EDGES_GEPHI = "out/verbs_edges.csv";
@@ -37,9 +37,9 @@ public class TermGraphBuilderTest {
 
 	@Test
 	public void main() throws IOException {
-		// new TermGraphBuilder().buildFiles(NOUN_SYNONIMS, NOUN_ROOTS, NOUNS_GRAPH,
+		// new TermGraphBuilder().buildFiles(NOUN_SYNONYMS, NOUN_ROOTS, NOUNS_GRAPH,
 		// NOUN_NODES_GEPHI, NOUN_EDGES_GEPHI, NOUN_OUT);
-		// new TermGraphBuilder().buildFiles(VERB_SYNONIMS, VERB_ROOTS, VERBS_GRAPH,
+		// new TermGraphBuilder().buildFiles(VERB_SYNONYMS, VERB_ROOTS, VERBS_GRAPH,
 		// VERB_NODES_GEPHI, VERB_EDGES_GEPHI, VERB_OUT);
 
 		Set<TermGraph> nounGraphs = new TermGraphBuilder().readFromCSV(NOUN_OUT);
