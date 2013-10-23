@@ -5,7 +5,7 @@ package io.mem0r1es.activitysubsumer.utils;
  */
 public class Pair<S, T> {
 	public S first;
-	public final T second;
+	public T second;
 
 	public Pair(S first, T second) {
 		this.first = first;

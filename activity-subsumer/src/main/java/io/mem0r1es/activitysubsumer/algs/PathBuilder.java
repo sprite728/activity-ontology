@@ -1,7 +1,8 @@
 package io.mem0r1es.activitysubsumer.algs;
 
+import io.mem0r1es.activitysubsumer.utils.Pair;
+
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -10,7 +11,6 @@ import java.util.Map;
 import java.util.Set;
 
 import org.jgrapht.Graph;
-import org.testng.internal.collections.Pair;
 
 /**
  * Class which encompasses the algorithm for finding all the paths from a given start vertex to a
@@ -120,7 +120,7 @@ public class PathBuilder<V, E> {
 		recursiveCrap(nodes, 0, new HashSet<List<V>>());
 
 		if (bestCommonAncestor != null) {
-			return bestCommonAncestor.first();
+			return bestCommonAncestor.first;
 		}
 		return null;
 	}
@@ -166,11 +166,11 @@ public class PathBuilder<V, E> {
 		List<V> firstPath = solution.iterator().next();
 		if (0 <= i - 2) {
 			V lca = firstPath.get(i - 2);
-			if (bestCommonAncestor == null || bestCommonAncestor.second() < i - 2) {
+			if (bestCommonAncestor == null || bestCommonAncestor.second < i - 2) {
 				bestCommonAncestor = new Pair<Set<V>, Integer>(new HashSet<V>(), i - 2);
-				bestCommonAncestor.first().add(lca);
-			} else if (bestCommonAncestor != null && bestCommonAncestor.second() == i - 2) {
-				bestCommonAncestor.first().add(lca);
+				bestCommonAncestor.first.add(lca);
+			} else if (bestCommonAncestor != null && bestCommonAncestor.second == i - 2) {
+				bestCommonAncestor.first.add(lca);
 			}
 		}
 	}
