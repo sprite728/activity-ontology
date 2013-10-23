@@ -64,8 +64,9 @@ public class TermGraphBuilder {
 			if (line.startsWith("!root")) {
 				StringTokenizer tokenizer = new StringTokenizer(line);
 				tokenizer.nextToken();
+				String id = tokenizer.nextToken();
 				String key = tokenizer.nextToken();
-				current = new TermGraph(vertexFromCSV(key));
+				current = new TermGraph(vertexFromCSV(key), Long.parseLong(id));
 				result.add(current);
 			} else {
 				String[] tokens = line.split(";");
@@ -192,7 +193,7 @@ public class TermGraphBuilder {
 
 		StringBuilder outBuilder = new StringBuilder();
 		for (TermGraph graph : graphs) {
-			outBuilder.append("!root ");
+			outBuilder.append("!root " + graph.getID() + " ");
 			outBuilder.append(vertexToCSV(graph.getRoot()));
 			outBuilder.append("\n");
 			for (DefaultEdge edge : graph.edgeSet()) {

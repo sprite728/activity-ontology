@@ -30,6 +30,16 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
 		graph.addVertex(root);
 	}
 
+	public TermGraph(WordNetNode root, long id) {
+		if (ID <= id) {
+			ID = id + 1;
+		}
+		this.id = id;
+		this.root = root;
+		graph = new DirectedAcyclicGraph<WordNetNode, DefaultEdge>(DefaultEdge.class);
+		graph.addVertex(root);
+	}
+
 	public long getID() {
 		return id;
 	}
