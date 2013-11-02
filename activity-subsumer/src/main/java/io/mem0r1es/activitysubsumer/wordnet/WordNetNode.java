@@ -7,13 +7,13 @@ import java.util.Set;
  * Node in the WordNet sub-graphs. A node contains multiple words (with senses) based on synonym
  * sets and on eventual cycles in the WordNet graph.
  * 
- * @author horiaradu
+ * @author Horia Radu
  */
 public class WordNetNode {
 	/**
 	 * set of synonyms
 	 */
-	private Set<String> words = new HashSet<String>();
+	private final Set<String> words = new HashSet<String>();
 
 	public WordNetNode(String... words) {
 		for (String word : words) {

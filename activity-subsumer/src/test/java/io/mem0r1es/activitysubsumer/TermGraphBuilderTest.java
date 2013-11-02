@@ -84,6 +84,8 @@ public class TermGraphBuilderTest {
 			}
 		}
 
+		System.out.println(reverseMapping.size());
+		
 		for (Entry<UserActivity, Set<Long>> entry : reverseMapping.entrySet()) {
 			System.out.println(entry.getKey() + " -> " + entry.getValue().size());
 		}

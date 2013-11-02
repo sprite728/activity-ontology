@@ -10,6 +10,7 @@ import java.util.Set;
  * @author Sebastian Claici
  */
 public final class UserActivity implements Serializable {
+	private long id;
 	private final String verb;
 	private final String noun;
 	private final Set<String> locations = new HashSet<String>();
@@ -58,6 +59,12 @@ public final class UserActivity implements Serializable {
 		this.noun = noun;
 	}
 
+	public UserActivity(long id, String verb, String noun) {
+		this.id = id;
+		this.verb = verb;
+		this.noun = noun;
+	}
+
 	public String getVerb() {
 		return verb;
 	}
@@ -96,6 +103,10 @@ public final class UserActivity implements Serializable {
 
 	public void augmentScore(double factor) {
 		score = score * factor;
+	}
+
+	public long getID() {
+		return id;
 	}
 
 	@Override

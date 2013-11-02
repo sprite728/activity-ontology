@@ -16,7 +16,7 @@ import org.jgrapht.Graph;
  * Class which encompasses the algorithm for finding all the paths from a given start vertex to a
  * given set of destination vertices.
  * 
- * @author horiaradu
+ * @author Horia Radu
  */
 public class PathBuilder<V, E> {
 	private Map<V, Set<List<V>>> pathsToDestinations = new HashMap<V, Set<List<V>>>();
@@ -49,8 +49,7 @@ public class PathBuilder<V, E> {
 	 * Computes all the paths from the startVertex to each destination in the set of
 	 * destinationVertices.
 	 * 
-	 * @param startVertex
-	 * @param destinationVertices
+	 * @param destinations
 	 */
 	public void computePaths(Set<V> destinations) {
 		currentDestinations.clear();
@@ -105,6 +104,8 @@ public class PathBuilder<V, E> {
 	public Map<V, Set<List<V>>> getAllPaths() {
 		return pathsToDestinations;
 	}
+
+	private Pair<Set<V>, Integer> bestCommonAncestor = null;
 
 	public Set<V> getLCA(Set<V> destinations) {
 		// All the paths are in the same sub-graph => we care about the DEEPEST common ancestor. We
@@ -174,7 +175,4 @@ public class PathBuilder<V, E> {
 			}
 		}
 	}
-
-	private Pair<Set<V>, Integer> bestCommonAncestor = null;
-
 }

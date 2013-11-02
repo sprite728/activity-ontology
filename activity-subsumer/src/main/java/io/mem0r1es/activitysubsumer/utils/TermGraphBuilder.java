@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Collections;
 import java.util.HashMap;
@@ -24,9 +25,10 @@ import org.jgrapht.graph.DefaultEdge;
 /**
  * Class responsible for building a subgraph based on the WordNet network
  * 
- * @author horiaradu
+ * @author Horia Radu
  */
 public class TermGraphBuilder {
+	private static final String TAG = TermGraphBuilder.class.getCanonicalName();
 	public static int NR_CYCLES = 0;
 	public static int NR_SELF_CYCLES = 0;
 
@@ -53,10 +55,21 @@ public class TermGraphBuilder {
 	 * @throws IOException
 	 */
 	public Set<TermGraph> readFromCSV(String inCSV) throws IOException {
+		return readFromCSV(new FileInputStream(inCSV));
+	}
+
+	/**
+	 * reads the sub-graph from a given CSV file
+	 * 
+	 * @param inputStream
+	 * @return
+	 * @throws IOException
+	 */
+	public Set<TermGraph> readFromCSV(InputStream inputStream) throws IOException {
 		Set<TermGraph> result = new HashSet<TermGraph>();
 
 		TermGraph current = null;
-		BufferedReader buf = new BufferedReader(new InputStreamReader(new FileInputStream(inCSV)));
+		BufferedReader buf = new BufferedReader(new InputStreamReader(inputStream));
 		for (String line = buf.readLine(); line != null; line = buf.readLine()) {
 			if (line.startsWith("#"))
 				continue;
@@ -77,7 +90,7 @@ public class TermGraphBuilder {
 				try {
 					current.addEdge(source, target);
 				} catch (Exception e) {
-					System.out.println();
+					e.printStackTrace();
 				}
 			}
 		}

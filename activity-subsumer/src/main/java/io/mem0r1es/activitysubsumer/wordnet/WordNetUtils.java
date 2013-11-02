@@ -1,4 +1,4 @@
-package io.mem0r1es.activitysubsumer.utils;
+package io.mem0r1es.activitysubsumer.wordnet;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -8,8 +8,8 @@ import java.util.Set;
 import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
 import org.jgrapht.graph.DefaultEdge;
 
-public final class Utils {
-	private Utils() {
+public final class WordNetUtils {
+	private WordNetUtils() {
 	}
 
 	public static String wordName(String word) {

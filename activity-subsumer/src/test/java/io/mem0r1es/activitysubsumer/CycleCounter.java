@@ -1,9 +1,9 @@
 package io.mem0r1es.activitysubsumer;
 
 import io.mem0r1es.activitysubsumer.utils.TermGraphBuilder;
-import io.mem0r1es.activitysubsumer.utils.Utils;
 import io.mem0r1es.activitysubsumer.wordnet.TermGraph;
 import io.mem0r1es.activitysubsumer.wordnet.WordNetNode;
+import io.mem0r1es.activitysubsumer.wordnet.WordNetUtils;
 
 import java.io.IOException;
 import java.util.Date;
@@ -70,7 +70,7 @@ public class CycleCounter {
 
 		for (WordNetNode node : graph.vertexSet()) {
 			for (String wordWithSense : node.getWords()) {
-				String word = Utils.wordName(wordWithSense);
+				String word = WordNetUtils.wordName(wordWithSense);
 				if (words.contains(word)) {
 					Integer integer = repeatMap.get(word);
 					if (integer == null) {

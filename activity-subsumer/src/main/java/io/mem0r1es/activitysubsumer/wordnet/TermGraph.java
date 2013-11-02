@@ -1,8 +1,7 @@
 package io.mem0r1es.activitysubsumer.wordnet;
 
-import io.mem0r1es.activitysubsumer.utils.Utils;
-
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,7 +13,7 @@ import org.jgrapht.graph.DefaultEdge;
 /**
  * Class which represents a WordNet sub-graph.
  * 
- * @author horiaradu
+ * @author Horia Radu
  */
 public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
 	private static long ID = 0;
@@ -30,10 +29,8 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
 		graph.addVertex(root);
 	}
 
+	// TEMP CODE: helps for testing
 	public TermGraph(WordNetNode root, long id) {
-		if (ID <= id) {
-			ID = id + 1;
-		}
 		this.id = id;
 		this.root = root;
 		graph = new DirectedAcyclicGraph<WordNetNode, DefaultEdge>(DefaultEdge.class);
@@ -60,10 +57,16 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
 	 * @return - the set of nodes which contain that word.
 	 */
 	public Set<WordNetNode> getNodes(String word) {
+		return getNodesForNonSenseTerms(Collections.singleton(word));
+	}
+
+	public Set<WordNetNode> getNodesForNonSenseTerms(Set<String> words) {
 		Set<WordNetNode> result = new HashSet<WordNetNode>();
 		for (WordNetNode node : graph.vertexSet()) {
-			if (node.hasWord(word)) {
-				result.add(node);
+			for (String word : node.getWords()) {
+				if (words.contains(WordNetUtils.wordName(word))) {
+					result.add(node);
+				}
 			}
 		}
 		return result;
@@ -84,7 +87,7 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
 	public boolean containsNonSenseTerm(String nonSenseWord) {
 		for (WordNetNode node : graph.vertexSet()) {
 			for (String word : node.getWords()) {
-				if (Utils.wordName(word).equals(nonSenseWord)) {
+				if (WordNetUtils.wordName(word).equals(nonSenseWord)) {
 					return true;
 				}
 			}
@@ -97,11 +100,15 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
 	 * @return - the set of nodes which contain a sense of the given word (without a sense)
 	 */
 	public Set<WordNetNode> getSensesForNonSenseTerm(String nonSenseWord) {
+		return getSensesForNonSenseTerms(Collections.singleton(nonSenseWord));
+	}
+
+	public Set<WordNetNode> getSensesForNonSenseTerms(Set<String> nonSenseWords) {
 		Set<WordNetNode> result = new HashSet<WordNetNode>();
 
 		for (WordNetNode node : graph.vertexSet()) {
 			for (String word : node.getWords()) {
-				if (Utils.wordName(word).equals(nonSenseWord)) {
+				if (nonSenseWords.contains(WordNetUtils.wordName(word))) {
 					result.add(node);
 				}
 			}

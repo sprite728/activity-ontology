@@ -11,7 +11,7 @@ import java.util.Set;
 /**
  * Class which encompasses the algorithm to measure the distance between two vertices.
  * 
- * @author horiaradu
+ * @author Horia Radu
  */
 public class DistanceMeasurer<V, E> {
 

@@ -1,7 +1,6 @@
 package io.mem0r1es.activitysubsumer.wordnet;
 
 import io.mem0r1es.activitysubsumer.utils.GraphUtils;
-import io.mem0r1es.activitysubsumer.utils.Utils;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +14,7 @@ import org.jgrapht.graph.DefaultEdge;
  * Singleton which wraps the WordNet nouns and verbs graphs. Also, it maintains a map from each noun
  * or verb to all the available senses for that noun or verb.
  * 
- * @author horiaradu
+ * @author Horia Radu
  */
 public class WordNetGraphs {
 	private final DirectedAcyclicGraph<String, DefaultEdge> nouns;
@@ -29,8 +28,8 @@ public class WordNetGraphs {
 		nouns = GraphUtils.buildDAG(nounIS, DefaultEdge.class);
 		verbs = GraphUtils.buildDAG(verbIS, DefaultEdge.class);
 
-		senseMapVerbs = Utils.buildSenseMap(verbs);
-		senseMapNouns = Utils.buildSenseMap(nouns);
+		senseMapVerbs = WordNetUtils.buildSenseMap(verbs);
+		senseMapNouns = WordNetUtils.buildSenseMap(nouns);
 	}
 
 	private static WordNetGraphs INSTANCE;
