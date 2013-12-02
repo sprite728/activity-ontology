@@ -37,9 +37,8 @@ public class TermGraphBuilderTest {
 
 	@Test
 	public void main() throws IOException {
-		// new TermGraphBuilder().buildFiles(NOUN_SYNONYMS, NOUN_ROOTS, NOUNS_GRAPH,
-		// NOUN_NODES_GEPHI, NOUN_EDGES_GEPHI, NOUN_OUT);
-		// new TermGraphBuilder().buildFiles(VERB_SYNONYMS, VERB_ROOTS, VERBS_GRAPH, VERB_NODES_GEPHI, VERB_EDGES_GEPHI, VERB_OUT);
+		new TermGraphBuilder().buildFiles(NOUN_SYNONYMS, NOUN_ROOTS, NOUNS_GRAPH, NOUN_NODES_GEPHI, NOUN_EDGES_GEPHI, NOUN_OUT);
+		new TermGraphBuilder().buildFiles(VERB_SYNONYMS, VERB_ROOTS, VERBS_GRAPH, VERB_NODES_GEPHI, VERB_EDGES_GEPHI, VERB_OUT);
 
 		Set<TermGraph> nounGraphs = new TermGraphBuilder().readFromCSV(NOUN_OUT);
 		Set<TermGraph> verbSubGraphs = new TermGraphBuilder().readFromCSV(VERB_OUT);

@@ -57,7 +57,19 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
 	 * @return - the set of nodes which contain that word.
 	 */
 	public Set<WordNetNode> getNodes(String word) {
-		return getNodesForNonSenseTerms(Collections.singleton(word));
+		return getNodes(Collections.singleton(word));
+	}
+
+	public Set<WordNetNode> getNodes(Set<String> words) {
+		Set<WordNetNode> result = new HashSet<WordNetNode>();
+		for (WordNetNode node : graph.vertexSet()) {
+			for (String word : node.getWords()) {
+				if (words.contains(word)) {
+					result.add(node);
+				}
+			}
+		}
+		return result;
 	}
 
 	public Set<WordNetNode> getNodesForNonSenseTerms(Set<String> words) {

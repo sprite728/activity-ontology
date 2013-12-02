@@ -13,9 +13,9 @@ be.v.01
 madden.v.01
 be.v.03
 issue.v.04
-originate_in.v.01
+originate in.v.01
 storm.v.03
-stay_in_place.v.01
+stay in place.v.01
 go.v.28
 splash.v.07
 precede.v.03
@@ -25,27 +25,27 @@ settle.v.21
 greet.v.04
 prevent.v.01
 be.v.11
-bring_on.v.03
-be_full.v.01
+bring on.v.03
+be full.v.01
 say.v.09
 percolate.v.04
 need.v.03
 rest.v.03
 break.v.44
 protuberate.v.01
-reach_one's_nostrils.v.01
+reach one's nostrils.v.01
 prevent.v.02
 absorb.v.04
 absorb.v.06
 break.v.46
 bring.v.06
-break_even.v.01
-get_down.v.07
+break even.v.01
+get down.v.07
 ignore.v.05
 play.v.11
 keep.v.01
 ignore.v.03
-issue_forth.v.01
+issue forth.v.01
 check.v.08
 play.v.18
 induce.v.02
@@ -58,15 +58,15 @@ survive.v.01
 down.v.04
 settle.v.04
 play.v.26
-bring_in.v.01
+bring in.v.01
 play.v.22
 enjoy.v.01
 record.v.04
 function.v.01
-belong_to.v.01
+belong to.v.01
 fetch.v.02
 mingle.v.02
-come_near.v.01
+come near.v.01
 begrudge.v.02
 end.v.01
 overlay.v.01
@@ -85,12 +85,12 @@ free.v.07
 free.v.06
 predominate.v.01
 attract.v.02
-rule_out.v.03
+rule out.v.03
 repent.v.01
 nod.v.03
 confront.v.03
 photograph.v.02
-take_the_floor.v.02
+take the floor.v.02
 stampede.v.02
 stampede.v.01
 detonate.v.02
@@ -123,7 +123,7 @@ dislike.v.01
 exempt.v.01
 exist.v.01
 exist.v.02
-snuff_out.v.02
+snuff out.v.02
 free.v.01
 desegregate.v.01
 notice.v.02
@@ -138,7 +138,7 @@ break.v.25
 identify.v.05
 sit.v.01
 exhaust.v.05
-give_up.v.11
+give up.v.11
 address.v.02
 embitter.v.01
 collapse.v.05
@@ -146,7 +146,7 @@ satisfy.v.02
 kill.v.09
 despair.v.01
 derive.v.05
-get_it.v.02
+get it.v.02
 receive.v.05
 admit.v.06
 choose.v.02
@@ -165,8 +165,8 @@ welter.v.03
 feel.v.01
 kill.v.10
 metabolize.v.01
-sniff_out.v.01
-send_in.v.02
+sniff out.v.01
+send in.v.02
 consume.v.02
 persist.v.03
 expect.v.03
@@ -177,25 +177,25 @@ travel.v.01
 travel.v.03
 perceive.v.01
 port.v.02
-fall_asleep.v.01
+fall asleep.v.01
 designate.v.01
 dismiss.v.02
-close_up.v.04
+close up.v.04
 complete.v.05
 own.v.01
 fruit.v.01
 sulk.v.01
-close_up.v.01
+close up.v.01
 concern.v.02
 constitute.v.01
-take_to.v.02
+take to.v.02
 trip.v.02
 trip.v.05
 leak.v.04
 connect.v.01
 produce.v.02
 connect.v.03
-lose_sight_of.v.01
+lose sight of.v.01
 waive.v.01
 campaign.v.03
 lead.v.08
@@ -209,24 +209,24 @@ consider.v.04
 lead.v.01
 wake.v.01
 beat.v.16
-keep_up.v.05
-keep_up.v.04
-keep_up.v.01
+keep up.v.05
+keep up.v.04
+keep up.v.01
 use.v.03
 insist.v.01
-get_off.v.02
+get off.v.02
 use.v.01
-get_off.v.04
+get off.v.04
 range.v.03
 clear.v.07
-go_to_bed.v.01
+go to bed.v.01
 study.v.02
 get.v.20
 prod.v.02
 mean.v.03
 mean.v.05
 gather.v.01
-last_out.v.01
+last out.v.01
 hide.v.01
 owe.v.01
 hide.v.02
@@ -236,7 +236,7 @@ vote.v.04
 remove.v.01
 remove.v.02
 bethink.v.01
-film_over.v.01
+film over.v.01
 get.v.25
 assemble.v.03
 arraign.v.01
@@ -245,17 +245,17 @@ remove.v.08
 excel.v.01
 lie.v.02
 discourage.v.02
-attach_to.v.01
+attach to.v.01
 worry.v.01
-lend_oneself.v.01
+lend oneself.v.01
 back.v.04
 hold.v.02
 flow.v.03
 degrade.v.01
-go_into.v.02
+go into.v.02
 support.v.01
 gain.v.05
-take_orders.v.02
+take orders.v.02
 rise.v.12
 examine.v.02
 out.v.03
@@ -284,13 +284,13 @@ itch.v.03
 disarm.v.01
 freeze.v.06
 shine.v.02
-lie_in.v.02
+lie in.v.02
 trail.v.04
 install.v.02
 install.v.03
 work.v.01
 work.v.02
-hold_one's_own.v.01
+hold one's own.v.01
 burn.v.05
 blind.v.01
 rear.v.02
@@ -319,13 +319,13 @@ necessitate.v.01
 overload.v.01
 shine.v.07
 change.v.01
-stand_still.v.01
+stand still.v.01
 note.v.03
 have.v.10
 enter.v.01
-go_by.v.03
-carry_to_term.v.01
-keep_to_oneself.v.01
+go by.v.03
+carry to term.v.01
+keep to oneself.v.01
 avoid.v.01
 pronounce.v.01
 collide.v.02
@@ -333,7 +333,7 @@ avoid.v.03
 open.v.08
 enter.v.02
 have.v.02
-check_out.v.05
+check out.v.05
 rage.v.03
 succeed.v.01
 enter.v.06
@@ -343,18 +343,18 @@ succeed.v.02
 stop.v.01
 remind.v.01
 entrench.v.03
-cause_to_be_perceived.v.01
+cause to be perceived.v.01
 neglect.v.04
 overtake.v.01
 prosecute.v.02
 uncover.v.02
-be_active.v.01
+be active.v.01
 offer.v.07
 stop.v.05
 cover.v.01
-depend_on.v.01
-depend_on.v.02
-depend_on.v.03
+depend on.v.01
+depend on.v.02
+depend on.v.03
 interpose.v.01
 open.v.01
 open.v.02
@@ -378,15 +378,15 @@ fear.v.04
 tithe.v.03
 bristle.v.02
 appear.v.05
-keep_quiet.v.01
+keep quiet.v.01
 understand.v.01
 understand.v.02
 arm.v.01
 establish.v.08
 live.v.07
-take_the_stage.v.01
-fall_short_of.v.01
-let_go_of.v.01
+take the stage.v.01
+fall short of.v.01
+let go of.v.01
 straddle.v.03
 delight.v.02
 fly.v.05
@@ -395,7 +395,7 @@ conform.v.01
 visit.v.04
 sensitize.v.02
 refer.v.02
-take_out.v.01
+take out.v.01
 plunge.v.05
 reject.v.06
 fall.v.14
@@ -403,18 +403,18 @@ blow.v.02
 perform.v.01
 agree.v.01
 live.v.02
-put_away.v.04
+put away.v.04
 observe.v.08
 observe.v.09
-get_rid_of.v.01
+get rid of.v.01
 observe.v.06
 surveil.v.01
 resonate.v.02
 agree.v.05
 learn.v.01
 fall.v.18
-leave_behind.v.01
-keep_down.v.03
+leave behind.v.01
+keep down.v.03
 fall.v.17
 conceal.v.02
 learn.v.04
@@ -441,7 +441,7 @@ confirm.v.01
 lose.v.01
 lose.v.02
 lose.v.05
-care_a_hang.v.01
+care a hang.v.01
 lose.v.06
 lose.v.07
 lose.v.08
@@ -454,11 +454,11 @@ hang.v.05
 hang.v.01
 decide.v.01
 make.v.03
-drive_in.v.01
+drive in.v.01
 make.v.01
-express_emotion.v.01
+express emotion.v.01
 cancel.v.01
-get_up.v.02
+get up.v.02
 move.v.15
 begin.v.10
 begin.v.03
@@ -478,7 +478,7 @@ fail.v.07
 fail.v.01
 fail.v.02
 spend.v.01
-catch_it.v.01
+catch it.v.01
 look.v.01
 outlive.v.01
 disorganize.v.01
@@ -491,10 +491,10 @@ sound.v.06
 fail.v.10
 ascend.v.04
 abolish.v.01
-get_the_better_of.v.01
+get the better of.v.01
 take.v.39
 destroy.v.02
-set_in.v.03
+set in.v.03
 take.v.34
 go.v.16
 correspond.v.03
@@ -510,7 +510,7 @@ complain.v.01
 meet.v.08
 disrupt.v.02
 meet.v.02
-drop_out.v.01
+drop out.v.01
 utter.v.02
 meet.v.01
 obviate.v.01
@@ -523,20 +523,20 @@ analyze.v.01
 analyze.v.03
 analyze.v.02
 meet.v.10
-stick_out.v.01
-turn_to.v.02
+stick out.v.01
+turn to.v.02
 bore.v.01
 move.v.04
 move.v.03
 taste.v.01
-lie_dormant.v.01
+lie dormant.v.01
 discontinue.v.01
 move.v.02
-go_down.v.04
-go_down.v.05
-clear_up.v.04
+go down.v.04
+go down.v.05
+clear up.v.04
 refuse.v.02
-fall_in.v.02
+fall in.v.02
 idle.v.01
 idle.v.02
 take.v.20
@@ -545,7 +545,7 @@ take.v.04
 comfort.v.01
 act.v.08
 take.v.08
-take_a_dare.v.01
+take a dare.v.01
 act.v.01
 act.v.02
 hang.v.10

@@ -29,6 +29,7 @@ import org.jgrapht.graph.DefaultEdge;
  */
 public class TermGraphBuilder {
 	private static final String TAG = TermGraphBuilder.class.getCanonicalName();
+	public static final String SEPARATOR = ";";
 	public static int NR_CYCLES = 0;
 	public static int NR_SELF_CYCLES = 0;
 
@@ -75,14 +76,14 @@ public class TermGraphBuilder {
 				continue;
 
 			if (line.startsWith("!root")) {
-				StringTokenizer tokenizer = new StringTokenizer(line);
+				StringTokenizer tokenizer = new StringTokenizer(line, SEPARATOR);
 				tokenizer.nextToken();
 				String id = tokenizer.nextToken();
 				String key = tokenizer.nextToken();
 				current = new TermGraph(vertexFromCSV(key), Long.parseLong(id));
 				result.add(current);
 			} else {
-				String[] tokens = line.split(";");
+				String[] tokens = line.split(SEPARATOR);
 				WordNetNode source = vertexFromCSV(tokens[1]);
 				WordNetNode target = vertexFromCSV(tokens[2]);
 				current.addVertex(source);
@@ -125,7 +126,7 @@ public class TermGraphBuilder {
 			if (line.startsWith("#"))
 				continue;
 
-			StringTokenizer tokenizer = new StringTokenizer(line);
+			StringTokenizer tokenizer = new StringTokenizer(line, SEPARATOR);
 			String key = tokenizer.nextToken();
 
 			Set<String> syns = new HashSet<String>();
@@ -144,7 +145,7 @@ public class TermGraphBuilder {
 			if (line.startsWith("#"))
 				continue;
 
-			StringTokenizer tokenizer = new StringTokenizer(line);
+			StringTokenizer tokenizer = new StringTokenizer(line, SEPARATOR);
 			String key = tokenizer.nextToken();
 
 			for (Set<String> words : getSynonims(key)) {
@@ -163,7 +164,7 @@ public class TermGraphBuilder {
 			if (line.startsWith("#"))
 				continue;
 
-			StringTokenizer tokenizer = new StringTokenizer(line);
+			StringTokenizer tokenizer = new StringTokenizer(line, SEPARATOR);
 			String node = tokenizer.nextToken();
 			wordDag.addVertex(node);
 
@@ -181,9 +182,6 @@ public class TermGraphBuilder {
 
 		System.out.println("start building subgraphs");
 		for (TermGraph graph : graphs) {
-			if (graph.getRoot().getWords().contains("consume.v.02")) {
-				System.out.println();
-			}
 			System.out.println("start building subgraph " + graph.getID());
 			nodesToBeMerged.clear();
 
@@ -206,14 +204,14 @@ public class TermGraphBuilder {
 
 		StringBuilder outBuilder = new StringBuilder();
 		for (TermGraph graph : graphs) {
-			outBuilder.append("!root " + graph.getID() + " ");
+			outBuilder.append("!root" + SEPARATOR + graph.getID() + SEPARATOR);
 			outBuilder.append(vertexToCSV(graph.getRoot()));
 			outBuilder.append("\n");
 			for (DefaultEdge edge : graph.edgeSet()) {
 				outBuilder.append(graph.getID());
-				outBuilder.append(";");
+				outBuilder.append(SEPARATOR);
 				outBuilder.append(vertexToCSV(graph.getEdgeSource(edge)));
-				outBuilder.append(";");
+				outBuilder.append(SEPARATOR);
 				outBuilder.append(vertexToCSV(graph.getEdgeTarget(edge)));
 				outBuilder.append("\n");
 			}
@@ -411,7 +409,7 @@ public class TermGraphBuilder {
 		StringBuilder result = new StringBuilder();
 		for (DefaultEdge edge : graph.edgeSet()) {
 			result.append(vertexToCSV(graph.getEdgeSource(edge)));
-			result.append(";");
+			result.append(SEPARATOR);
 			result.append(vertexToCSV(graph.getEdgeTarget(edge)));
 			result.append("\n");
 		}
@@ -421,13 +419,6 @@ public class TermGraphBuilder {
 	private String vertexSetToCSV(TermGraph graph) {
 		StringBuilder result = new StringBuilder();
 		for (WordNetNode node : graph.vertexSet()) {
-			String line = "";
-			for (String word : node.getWords()) {
-				if (line.equals("") == false) {
-					line += "|";
-				}
-				line += word;
-			}
 			result.append(vertexToCSV(node));
 			result.append("\n");
 		}
