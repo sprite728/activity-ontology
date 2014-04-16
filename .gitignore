@@ -48,3 +48,10 @@ local.properties
 
 # Vim swap files
 *.swp
+
+# Gradle
+.gradle
+build/
+gradle/
+gradlew
+gradlew.bat

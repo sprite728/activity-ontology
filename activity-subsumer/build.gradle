@@ -1,0 +1,19 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies{
+    //compile fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    compile 'net.sf.jgrapht:jgrapht:0.8.3'
+    compile 'org.testng:testng:6.8.7'
+}
+
+test{
+    useTestNG()
+}
+
+task compile{
+    compileJava
+}
