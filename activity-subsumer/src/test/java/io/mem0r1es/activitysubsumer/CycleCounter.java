@@ -1,18 +1,14 @@
 package io.mem0r1es.activitysubsumer;
 
+import io.mem0r1es.activitysubsumer.utils.Cons;
 import io.mem0r1es.activitysubsumer.utils.TermGraphBuilder;
 import io.mem0r1es.activitysubsumer.wordnet.TermGraph;
 import io.mem0r1es.activitysubsumer.wordnet.WordNetNode;
 import io.mem0r1es.activitysubsumer.wordnet.WordNetUtils;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-
-import org.testng.annotations.Test;
+import java.util.*;
 
 /**
  * Helper class used to count the number of cycles and the number of occurences of different senses
@@ -20,44 +16,31 @@ import org.testng.annotations.Test;
  * 
  * @author horia
  */
-@Test
 public class CycleCounter {
-	private static final String NOUNS_GRAPH = "src/test/resources/nouns.graph";
-	private static final String NOUN_SYNONYMS = "src/test/resources/noun_senses.txt";
-	private static final String NOUN_ROOTS = "src/test/resources/noun_roots";
-	private static final String NOUN_NODES_GEPHI = "out/nouns_nodes.csv";
-	private static final String NOUN_EDGES_GEPHI = "out/nouns_edges.csv";
-	private static final String NOUN_OUT = "out/nouns_out_syn_final.csv";
 
-	private static final String VERBS_GRAPH = "src/test/resources/verbs.graph";
-	private static final String VERB_SYNONYMS = "src/test/resources/verb_senses.txt";
-	private static final String VERB_ROOTS = "src/test/resources/verb_roots";
-	private static final String VERB_NODES_GEPHI = "out/verbs_nodes.csv";
-	private static final String VERB_EDGES_GEPHI = "out/verbs_edges.csv";
-	private static final String VERB_OUT = "out/verbs_out_syn_final.csv";
 
 	@Test
 	public void main() throws IOException {
 		long startTime = System.currentTimeMillis();
-		new TermGraphBuilder().buildFiles(NOUN_SYNONYMS, NOUN_ROOTS, NOUNS_GRAPH, NOUN_NODES_GEPHI, NOUN_EDGES_GEPHI, NOUN_OUT);
-		new TermGraphBuilder().buildFiles(VERB_SYNONYMS, VERB_ROOTS, VERBS_GRAPH, VERB_NODES_GEPHI, VERB_EDGES_GEPHI, VERB_OUT);
+		new TermGraphBuilder().buildFiles(Cons.NOUN_SYNONYMS, Cons.NOUN_ROOTS, Cons.NOUNS_GRAPH, Cons.NOUN_NODES_GEPHI, Cons.NOUN_EDGES_GEPHI, Cons.NOUN_OUT);
+		new TermGraphBuilder().buildFiles(Cons.VERB_SYNONYMS, Cons.VERB_ROOTS, Cons.VERBS_GRAPH, Cons.VERB_NODES_GEPHI, Cons.VERB_EDGES_GEPHI, Cons.VERB_OUT);
 		long stopTime = System.currentTimeMillis();
 		Object elapsedTime = stopTime - startTime;
 		System.out.println(new Date() + " " + "Add activities Time:" + elapsedTime);
 
-		Set<TermGraph> nounGraphs = new TermGraphBuilder().readFromCSV(NOUN_OUT);
-		Set<TermGraph> verbSubGraphs = new TermGraphBuilder().readFromCSV(VERB_OUT);
+		Set<TermGraph> nounGraphs = new TermGraphBuilder().readFromCSV(Cons.NOUN_OUT);
+		Set<TermGraph> verbSubGraphs = new TermGraphBuilder().readFromCSV(Cons.VERB_OUT);
 
 		for (TermGraph graph : nounGraphs) {
 			Map<String, Integer> repeatMap = getRepeats(graph);
-			if (repeatMap.isEmpty() == false) {
+			if (!repeatMap.isEmpty()) {
 				System.out.println("noun graph " + graph.getID() + ", rooted in " + graph.getRoot() + ": " + repeatMap);
 			}
 		}
 
 		for (TermGraph graph : verbSubGraphs) {
 			Map<String, Integer> repeatMap = getRepeats(graph);
-			if (repeatMap.isEmpty() == false) {
+			if (!repeatMap.isEmpty()) {
 				System.out.println("verb graph " + graph.getID() + ", rooted in " + graph.getRoot() + ": " + repeatMap);
 			}
 		}

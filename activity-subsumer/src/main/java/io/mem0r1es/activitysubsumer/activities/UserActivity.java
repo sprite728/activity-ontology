@@ -1,5 +1,7 @@
 package io.mem0r1es.activitysubsumer.activities;
 
+import io.mem0r1es.activitysubsumer.utils.Cons;
+
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -35,12 +37,12 @@ public final class UserActivity implements Serializable {
 		this.noun = noun;
 		this.avgDuration = avgDuration;
 
-		String[] locations = location.split("[|]");
+		String[] locations = location.split(Cons.ENTRY_SEPARATOR);
 		for (int i = 0; i < locations.length; i++) {
 			this.locations.add(locations[i]);
 		}
 
-		String[] timeOfDays = timeOfDay.split("[|]");
+		String[] timeOfDays = timeOfDay.split(Cons.ENTRY_SEPARATOR);
 		for (int i = 0; i < timeOfDays.length; i++) {
 			this.timeOfDay.add(timeOfDays[i]);
 		}

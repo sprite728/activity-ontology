@@ -15,7 +15,6 @@ import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.testng.annotations.Test;
 
-@Test
 public class PathBuildingTest {
 
 	private static List<String> path(String... vertices) {

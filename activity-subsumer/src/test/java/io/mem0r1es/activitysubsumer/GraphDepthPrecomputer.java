@@ -1,6 +1,7 @@
 package io.mem0r1es.activitysubsumer;
 
 import io.mem0r1es.activitysubsumer.algs.PathBuilder;
+import io.mem0r1es.activitysubsumer.utils.Cons;
 import io.mem0r1es.activitysubsumer.utils.GraphUtils;
 import io.mem0r1es.activitysubsumer.wordnet.WordNetGraphs;
 
@@ -24,7 +25,7 @@ import org.testng.annotations.Test;
 public class GraphDepthPrecomputer {
 	@Test
 	public void testJavaSerialization() throws Exception {
-		WordNetGraphs.initialize(new FileInputStream("src/test/resources/nouns.graph"), new FileInputStream("src/test/resources/verbs.graph"));
+		WordNetGraphs.initialize(new FileInputStream(Cons.NOUNS_GRAPH), new FileInputStream(Cons.VERBS_GRAPH));
 		Map<String, Integer> subtreeHeights = new HashMap<String, Integer>();
 
 		DirectedAcyclicGraph<String, DefaultEdge> nouns = WordNetGraphs.instance().getNouns();
