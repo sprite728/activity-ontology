@@ -16,7 +16,6 @@ import java.util.*;
  * @author Horia Radu
  */
 public class TermGraphBuilder {
-    private static final String TAG = TermGraphBuilder.class.getCanonicalName();
     private static final String SEPARATOR = ";";
     public static int NR_CYCLES = 0;
     public static int NR_SELF_CYCLES = 0;
@@ -160,7 +159,7 @@ public class TermGraphBuilder {
             }
         }
         buf.close();
-        System.out.println("start reading dag");
+        System.out.println("end reading dag");
 
         StringBuilder vertices = new StringBuilder("Id\n");
         StringBuilder edges = new StringBuilder("Source;Target\n");
@@ -359,48 +358,47 @@ public class TermGraphBuilder {
      * @param termGraph the term graph
      */
     private void dfs(String vertex, TermGraph termGraph) {
+        // all nodes that contain the vertex word
         Set<WordNetNode> nodes = termGraph.getNodes(vertex);
         for (WordNetNode node : nodes) {
             System.out.println("visiting" + node + " in graph " + termGraph.getID());
         }
 
-        for (DefaultEdge edge : wordDag.edgesOf(vertex)) {
+        for (DefaultEdge edge : wordDag.outgoingEdgesOf(vertex)) {
             String target = wordDag.getEdgeTarget(edge);
-            String source = wordDag.getEdgeSource(edge);
-            if (source.equals(vertex)) {
-                // only look at forward edges
-                Set<Set<String>> targetSynSets = getSynonyms(target);
-                for (Set<String> targetSyns : targetSynSets) {
-                    WordNetNode targetNode = new WordNetNode(targetSyns);
-                    System.out.println("add node " + targetNode + " to graph " + termGraph.getID());
-                    termGraph.addVertex(targetNode);
 
-                    for (WordNetNode node : nodes) {
-                        if (!node.equals(targetNode)) {
-                            System.out.println("add edge " + node + " -> " + targetNode
-                                    + " to graph " + termGraph.getID());
-                            try {
-                                termGraph.addEdge(node, targetNode);
-                            } catch (IllegalArgumentException e) {
-                                System.out.println("cycle: " + node + " -> " + targetNode);
-                                Set<List<WordNetNode>> pathsToDestination =
-                                        new PathBuilder<WordNetNode, DefaultEdge>(termGraph,
-                                                targetNode, Collections.singleton(node))
-                                                .getPathsToDestination(node);
+            // only look at forward edges
+            Set<Set<String>> targetSynSets = getSynonyms(target);
+            for (Set<String> targetSyns : targetSynSets) {
+                WordNetNode targetNode = new WordNetNode(targetSyns);
+                System.out.println("add node " + targetNode + " to graph " + termGraph.getID());
+                termGraph.addVertex(targetNode);
 
-                                Set<WordNetNode> innerNodes = new HashSet<WordNetNode>();
-                                for (List<WordNetNode> path : pathsToDestination) {
-                                    System.out.println(path);
-                                    innerNodes.addAll(path);
-                                }
-                                nodesToBeMerged.add(innerNodes);
-                                NR_CYCLES++;
+                for (WordNetNode node : nodes) {
+                    if (!node.equals(targetNode)) {
+                        System.out.println("add edge " + node + " -> " + targetNode
+                                + " to graph " + termGraph.getID());
+                        try {
+                            termGraph.addEdge(node, targetNode);
+                        } catch (IllegalArgumentException e) {
+                            System.out.println("cycle: " + node + " -> " + targetNode);
+                            Set<List<WordNetNode>> pathsToDestination =
+                                    new PathBuilder<WordNetNode, DefaultEdge>(termGraph,
+                                            targetNode, Collections.singleton(node))
+                                            .getPathsToDestination(node);
+
+                            Set<WordNetNode> innerNodes = new HashSet<WordNetNode>();
+                            for (List<WordNetNode> path : pathsToDestination) {
+                                System.out.println(path);
+                                innerNodes.addAll(path);
                             }
+                            nodesToBeMerged.add(innerNodes);
+                            NR_CYCLES++;
                         }
                     }
                 }
-                dfs(target, termGraph);
             }
+            dfs(target, termGraph);
         }
     }
 

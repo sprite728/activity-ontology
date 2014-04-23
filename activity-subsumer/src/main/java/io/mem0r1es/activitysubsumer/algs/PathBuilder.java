@@ -17,7 +17,7 @@ public class PathBuilder<V, E> {
     private Set<V> destinations = new HashSet<V>();
 
     private Set<V> currentDestinations = new HashSet<V>();
-    private List<V> currentPath = new LinkedList<V>();
+    private Deque<V> currentPath = new LinkedList<V>();
     private V startVertex;
     private Graph<V, E> graph;
 
@@ -65,14 +65,14 @@ public class PathBuilder<V, E> {
      *            the current vertex
      */
     private void dfs(V vertex) {
-        currentPath.add(vertex);
+        currentPath.addLast(vertex);
         if (currentDestinations.contains(vertex)) {
             Set<List<V>> paths = pathsToDestinations.get(vertex);
             if (paths == null) {
                 paths = new HashSet<List<V>>();
-                pathsToDestinations.put(vertex, paths);
             }
             paths.add(new LinkedList<V>(currentPath));
+            pathsToDestinations.put(vertex, paths);
         }
 
         for (E edge : graph.edgesOf(vertex)) {
@@ -84,7 +84,7 @@ public class PathBuilder<V, E> {
             }
         }
 
-        currentPath.remove(currentPath.size() - 1);
+        currentPath.removeLast();
     }
 
     /**

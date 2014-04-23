@@ -21,4 +21,13 @@ public class Cons {
     public static final String ACTIVITIES = "src/test/resources/activities.graph";
 
     public static final String ENTRY_SEPARATOR = "[|]";
+
+    public static final String RDF_WN = "src/test/resources/wn31_sample";
+    public static final String OUTPUT_RDF_WN = "src/test/resources/word_net";
+
+
+    public static final String PRED_HYPONYM = "hyponym";
+    public static final String PRED_SYNSET= "synset_member";
+
+    public static final String PREFIX = "<word_net_3.1/";
 }

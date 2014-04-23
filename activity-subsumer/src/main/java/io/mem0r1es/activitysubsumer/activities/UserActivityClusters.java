@@ -99,12 +99,9 @@ public class UserActivityClusters {
                     nounsInVerbCluster.add(activity.getNoun());
                 }
 
-                double bestScore = 0;
-                long bestNounSubGraphIDForVerbSubGraph = -1;
                 for (TermGraph nounGraph : nounGraphs) {
                     // temporary set of the mandatory nouns
-                    Set<String> mandatoryNounsTemp = new HashSet<String>();
-                    mandatoryNounsTemp.addAll(mandatoryNouns);
+                    Set<String> mandatoryNounsTemp = new HashSet<String>(mandatoryNouns);
 
                     // count of how many nouns from the activity cluster we find in the noun
                     // sub-graph
@@ -128,18 +125,13 @@ public class UserActivityClusters {
 
                     // score is 0 if we didn't find all the mandatory nouns
                     double score = mandatoryNounsTemp.isEmpty() ? count / words.size() : 0;
-                    // keep best noun sub-graph score
-                    if (score > bestScore) {
-                        bestScore = score;
-                        bestNounSubGraphIDForVerbSubGraph = nounGraph.getID();
-                    }
-                }
 
-                // keep the best verb sub-graph and the corresponding noun sub-graph
-                if (bestOverallScore < bestScore) {
-                    bestOverallScore = bestScore;
-                    bestVerbSubGraphID = verbSubGraphID;
-                    bestNounSubGraphID = bestNounSubGraphIDForVerbSubGraph;
+                    // keep the best verb sub-graph and the corresponding noun sub-graph
+                    if (bestOverallScore < score) {
+                        bestOverallScore = score;
+                        bestVerbSubGraphID = verbSubGraphID;
+                        bestNounSubGraphID = nounGraph.getID();
+                    }
                 }
             }
         }
@@ -148,11 +140,11 @@ public class UserActivityClusters {
             return result;
         }
 
-        TermGraph bestVernSubGraph = null;
+        TermGraph bestVerbSubGraph = null;
         TermGraph bestNounSubGraph = null;
         for (TermGraph graph : verbGraphs) {
             if (graph.getID() == bestVerbSubGraphID) {
-                bestVernSubGraph = graph;
+                bestVerbSubGraph = graph;
             }
         }
         for (TermGraph graph : nounGraphs) {
@@ -167,14 +159,14 @@ public class UserActivityClusters {
             mandatoryVerbs.add(activity.getVerb());
         }
         Set<WordNetNode> destinationVerbs =
-                bestVernSubGraph.getNodesForNonSenseTerms(mandatoryVerbs);
+                bestVerbSubGraph.getNodesForNonSenseTerms(mandatoryVerbs);
         Set<WordNetNode> destinationNouns =
                 bestNounSubGraph.getNodesForNonSenseTerms(mandatoryNouns);
 
         // find all the paths to those destinations
         PathBuilder<WordNetNode, DefaultEdge> verbPaths =
-                new PathBuilder<WordNetNode, DefaultEdge>(bestVernSubGraph,
-                        bestVernSubGraph.getRoot(), destinationVerbs);
+                new PathBuilder<WordNetNode, DefaultEdge>(bestVerbSubGraph,
+                        bestVerbSubGraph.getRoot(), destinationVerbs);
         PathBuilder<WordNetNode, DefaultEdge> nounPaths =
                 new PathBuilder<WordNetNode, DefaultEdge>(bestNounSubGraph,
                         bestNounSubGraph.getRoot(), destinationNouns);

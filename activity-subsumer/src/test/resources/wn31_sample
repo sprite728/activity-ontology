@@ -1,0 +1,1000 @@
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "hakikat"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entit\u00E9"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "cosa"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "kokonaisuus"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "kewujudan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "sesuatu"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "sesuatu"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entit\u00E0"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/104431553-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entiteetti"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2006/03/wn/wn20/instances/synset-entity-noun-1> .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "tablet"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "tablet"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entiti"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entidade"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "izaki"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100001930-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/entity-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u5B9F\u4F53"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://www.w3.org/2000/01/rdf-schema#label> "entity"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u05D9\u05B5\u05E9\u05C1\u05D5\u05BC\u05EA"@heb .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entitas"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ser"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entitet"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100002137-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "sorkari"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entidad"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entiti"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "hakikat"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entitat"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "kewujudan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "that which is perceived or known or inferred to have its own distinct existence (living or nonliving)"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entidade"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entitate"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_0> .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0643\u064E\u064A\u0652\u0646\u064F\u0648\u0646\u064E\u0629"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E40\u0E2D\u0E01\u0E25\u0E31\u0E01\u0E29\u0E13\u0E4C"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0648\u064F\u062C\u064F\u0648\u062F"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100001740-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ente"@por .
+
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100007347-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100029976-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ujud fisik"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100001740-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E23\u0E39\u0E1B\u0E18\u0E23\u0E23\u0E21"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://www.w3.org/2000/01/rdf-schema#label> "physical entity"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entidad f\u00EDsica"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100002684-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/114604577-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "an entity that has physical existence"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100002452-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/physical+entity-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "fyysinen entiteetti"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E2A\u0E34\u0E48\u0E07\u0E17\u0E35\u0E48\u0E40\u0E1B\u0E47\u0E19\u0E23\u0E39\u0E1B\u0E18\u0E23\u0E23\u0E21"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_1> .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100021007-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100001930-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entitat f\u00EDsica"@cat .
+
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u062A\u064E\u062C\u0652\u0631\u0650\u064A\u062F"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100023280-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "pengabstrakan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100024444-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "abstraksi"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/abstraction-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_2> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/108016141-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "abstracci\u00F3"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "pengasingan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "abstraksi"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "pemujaradan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "pemujaradan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entidade abstrata"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100031563-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2006/03/wn/wn20/instances/synset-abstraction-noun-6> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u05D4\u05B7\u05E4\u05B0\u05E9\u05C1\u05B8\u05D8\u05B8\u05D4"@heb .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "abstrahointi"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E19\u0E32\u0E21\u0E18\u0E23\u0E23\u0E21"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "abstraksion"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "abstra\u00E7\u00E3o"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "astrazione"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "abstrakzio"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://www.w3.org/2000/01/rdf-schema#label> "abstract entity"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100033319-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "k\u00E4sitteellist\u00E4minen"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100033914-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/abstract+entity-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "peniskalaan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "abstrakti entiteetti"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "abstracci\u00F3n"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "id\u00E9ia abstrata"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "peniskalaan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100032220-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "pengabstrakan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100001740-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u62BD\u8C61\u7684\u5B9F\u4F53"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://www.w3.org/2000/01/rdf-schema#label> "abstraction"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "abstraction"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "a general concept formed by extracting common features from specific examples"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105818169-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E2A\u0E34\u0E48\u0E07\u0E17\u0E35\u0E48\u0E40\u0E1B\u0E47\u0E19\u0E19\u0E32\u0E21\u0E18\u0E23\u0E23\u0E21"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100002137-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "pengasingan"@ind .
+
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109488589-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "cosa"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/thing-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "a separate and self-contained entity"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://www.w3.org/2000/01/rdf-schema#label> "thing"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E02\u0E2D\u0E07"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/104354303-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2006/03/wn/wn20/instances/synset-thing-noun-12> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "benda"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109408804-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_3> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "cosa"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "esine"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0634\u064E\u064A\u0621"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109335551-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109248053-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109430745-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "chose"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100001930-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "benda"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E2A\u0E34\u0E48\u0E07"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objet"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109390100-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109492089-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002452-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "cause"@fra .
+
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109331304-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#sample> "it was full of rackets, balls and other objects"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100001930-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "obxecto"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "send"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109432081-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109391121-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/103537260-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/104018636-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u7269"@zho .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objekt fizik"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "gauza"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109491367-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/object-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E02\u0E2D\u0E07"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "gauzaki"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://www.w3.org/2000/01/rdf-schema#label> "object"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objek"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109358146-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u062C\u0650\u0633\u0652\u0645 \u0641\u0650\u064A\u0632\u0652\u064A\u0627\u0626\u0650\u064A"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_4> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109381447-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "genstand"@dan .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ting"@dan .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objecte"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109310874-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objeto"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/103013287-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "effekt"@nob .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://www.w3.org/2000/01/rdf-schema#label> "physical object"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109318244-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objecte f\u00EDsic"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109274595-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/103154617-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E27\u0E31\u0E15\u0E16\u0E38"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objek"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109357302-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "cousa"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "benda"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "gjenstand"@nno .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109290396-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "effekt"@dan .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objektu"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objek fisik"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "effekt"@nno .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objet"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0634\u064E\u064A\u0652\u0621"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/104352366-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/104255138-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "gjenstand"@nob .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u05D7\u05B5\u05E4\u05B6\u05E5"@heb .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ting"@nno .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "barang"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/103238126-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u062C\u0650\u0633\u0652\u0645"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100003553-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109430224-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objekt"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u05D0\u05D5\u05B9\u05D1\u05BC\u05B0\u05D9\u05B6\u05E7\u05B0\u05D8"@heb .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/103343593-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109306099-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/physical+object-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109323811-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/103615483-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "obxecto inanimado"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ting"@nob .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/104493701-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "obxecto f\u00EDsico"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "fyysinen esine"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "chose"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "esine"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objecte inanimat"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "benda"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "cosa"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109500167-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "oggetto"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109455894-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/107867030-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objeto f\u00EDsico"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u7269"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "cosa"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/103720260-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/103600372-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/103898588-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109497292-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objeto f\u00EDsico"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u3082\u306E"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109304683-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objeto inanimado"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "objeto"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "a tangible and visible entity; an entity that can cast a shadow"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2006/03/wn/wn20/instances/synset-object-noun-1> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "cosa"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100027365-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109324937-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109302364-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "barang"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100002684-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109261049-n> .
+
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "tout"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "seluruhnya"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "unitat completa"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100019308-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "conjunto"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u7DCF\u4F53"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u062C\u064E\u0645\u0650\u064A\u0639"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "unit\u00E9"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "totalit\u00E9"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "unitat"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "unidade"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "einskap"@nno .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0645\u064E\u062C\u0652\u0645\u064F\u0648\u0639"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100004258-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2006/03/wn/wn20/instances/synset-whole-noun-2> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0648\u064E\u062D\u0652\u062F\u064E\u0629"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/103593583-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#part_holonym> <http://wordnet-rdf.princeton.edu/wn31/104172050-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "an assemblage of parts that is regarded as a single entity"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/102752958-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "seluruhnya"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u5168\u822C"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "nj\u00EBsi"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100002684-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "insieme"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "unit"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://www.w3.org/2000/01/rdf-schema#label> "unit"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "unit"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u4E00\u7D71"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "tutto"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://www.w3.org/2000/01/rdf-schema#label> "whole"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "conjunt"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#sample> "how big is that part compared to the whole?"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "semuanya"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "unidad"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0643\u064F\u0644\u0651"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "e plote"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u05DE\u05B4\u05DB\u05B0\u05DC\u05D5\u05B9\u05DC"@heb .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#part_holonym> <http://wordnet-rdf.princeton.edu/wn31/103898588-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/whole-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "i gjith\u00EB"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/unit-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "unitate"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "kokonaisuus"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100022119-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#sample> "the team is a unit"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ensemble"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/104360881-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "semuanya"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "unidad completa"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "todo"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_5> .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u5168\u4F53"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100003553-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100003993-n> .
+
+<http://wordnet-rdf.princeton.edu/wn31/100003993-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "samanlainen"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100003993-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100003993-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100003553-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100003993-n> <http://www.w3.org/2000/01/rdf-schema#label> "congener"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100003993-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100003993-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_6> .
+<http://wordnet-rdf.princeton.edu/wn31/100003993-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E02\u0E2D\u0E07\u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\u0E40\u0E14\u0E35\u0E22\u0E27\u0E01\u0E31\u0E19"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100003993-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "cong\u00EAnere"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100003993-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100003993-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "a whole (a thing or person) of the same kind or category as another"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100003993-n> <http://wordnet-rdf.princeton.edu/ontology#sample> "lard was also used, though its congener, butter, was more frequently employed"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100003993-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/congener-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100003993-n> <http://wordnet-rdf.princeton.edu/ontology#sample> "the American shopkeeper differs from his European congener"@eng .
+
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organismo"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#domain_member_category> <http://wordnet-rdf.princeton.edu/wn31/301651383-a> .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "izaki bizidun"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ser vivo"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100006269-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://www.w3.org/2000/01/rdf-schema#label> "living thing"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "bizidun"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u00E9sser viu"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "mahluk hidup"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_7> .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/animate+thing-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organismo"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "entitat viva"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u751F\u304D\u7269"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100004475-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organisme"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ser"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E2A\u0E34\u0E48\u0E07\u0E21\u0E35\u0E0A\u0E35\u0E27\u0E34\u0E34\u0E15"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0643\u064E\u0627\u0626\u0650\u0646 \u062D\u064E\u064A\u0651"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://www.w3.org/2000/01/rdf-schema#label> "animate thing"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100006400-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2006/03/wn/wn20/instances/synset-living_thing-noun-1> .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "a living (or once living) entity"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#domain_member_category> <http://wordnet-rdf.princeton.edu/wn31/105063385-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "el\u00E4v\u00E4 olio"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100003553-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100006484-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004258-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/living+thing-n> .
+
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110223458-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101323183-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100006150-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E2A\u0E34\u0E48\u0E07\u0E21\u0E35\u0E0A\u0E35\u0E27\u0E34\u0E15"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110623367-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organizm"@pol .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101386954-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#substance_holonym> <http://wordnet-rdf.princeton.edu/wn31/105274844-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "a living thing that has (or can develop) the ability to act or function independently"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u751F\u7269"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organismo"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/107956482-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "osobnik"@pol .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0645\u064F\u062A\u064E\u0639\u064E\u0636\u0651"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "essere vivente"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101326660-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/organism-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "eli\u00F6"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u05D7\u05B7\u05D9"@heb .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/113145288-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/113145117-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "makhluk"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101330762-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "egzemplarz"@pol .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "olento"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100005787-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#domain_member_category> <http://wordnet-rdf.princeton.edu/wn31/113535517-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ser"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "orang"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u00E9sser viu"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u062A\u0631\u06A9\u06CC\u0628 \u0645\u0648\u062C\u0648\u062F \u0632\u0646\u062F\u0647"@fas .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101388823-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0641\u0631\u062A\u0627\u0634"@fas .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u00EAtre"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "orang"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101322805-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100006024-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101329963-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101388168-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101322970-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#domain_member_category> <http://wordnet-rdf.princeton.edu/wn31/300327929-a> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "indywiduum"@pol .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110476169-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#domain_member_category> <http://wordnet-rdf.princeton.edu/wn31/300271722-s> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101316517-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#domain_member_category> <http://wordnet-rdf.princeton.edu/wn31/105439502-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "manusia"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/113105393-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organisma"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#part_holonym> <http://wordnet-rdf.princeton.edu/wn31/105227735-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101329669-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ser vivo"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organisme"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/113144923-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "badan yg menjalankan tugas"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0633\u0627\u0632\u0645\u0627\u0646"@fas .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110361391-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101322584-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#domain_member_category> <http://wordnet-rdf.princeton.edu/wn31/301670069-a> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u6709\u6A5F\u4F53"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101329538-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100015568-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://www.w3.org/2000/01/rdf-schema#label> "being"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101386279-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ser vivo"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organisme"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "jednostka"@pol .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://www.w3.org/2000/01/rdf-schema#label> "organism"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u751F\u304D\u7269"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100007846-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101418854-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organisme vivant"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0627\u0644\u0645\u064F\u062A\u064E\u0639\u064E\u0636\u0651\u0650\u064A"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "badan yg menjalankan tugas"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101322423-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101388995-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101418561-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organisme"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0633\u0627\u0632\u0648\u0627\u0631\u0647"@fas .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organismo"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#domain_member_category> <http://wordnet-rdf.princeton.edu/wn31/105440199-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101418267-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#part_holonym> <http://wordnet-rdf.princeton.edu/wn31/100006484-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2006/03/wn/wn20/instances/synset-organism-noun-1> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100019226-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0645\u0648\u062C\u0648\u062F \u0632\u0646\u062F\u0647"@fas .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_8> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organismo"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/113013628-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109839265-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101316379-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "insan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110667472-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "insan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100005930-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organisme"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/being-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "manusia"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/113105239-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0643\u064E\u0627\u0626\u0650\u0646"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "makhluk"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100017402-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#domain_member_category> <http://wordnet-rdf.princeton.edu/wn31/113538756-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101328932-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0643\u064E\u0627\u0626\u0650\u0646 \u062D\u064E\u064A"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#domain_member_category> <http://wordnet-rdf.princeton.edu/wn31/106098583-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u751F\u4F53"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#domain_member_category> <http://wordnet-rdf.princeton.edu/wn31/108674880-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "benda hidup"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110316895-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101330943-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organismo vivente"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "te qenit"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110763332-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101317553-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ser"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101387328-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organisma"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organismo"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "organiz\u00EBm"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "benda hidup"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101316636-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100004258-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u751F\u6D3B\u4F53"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100004475-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u00E9sser"@cat .
+
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u062A\u0647 \u062F\u0631\u06CC\u0627"@fas .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "bentos"@pol .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E2A\u0E34\u0E48\u0E07\u0E21\u0E35\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E43\u0E15\u0E49\u0E17\u0E30\u0E40\u0E25"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/benthos-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "bentos"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "pohjaeli\u00F6st\u00F6"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "bentos"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2006/03/wn/wn20/instances/synset-benthos-noun-2> .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "organisms (plants and animals) that live at or near the bottom of a sea"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u5E95\u751F\u52D5\u7269"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "bentos"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100004475-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "bentos"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://www.w3.org/2000/01/rdf-schema#label> "benthos"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_9> .
+<http://wordnet-rdf.princeton.edu/wn31/100005787-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+
+<http://wordnet-rdf.princeton.edu/wn31/100005930-n> <http://www.w3.org/2000/01/rdf-schema#label> "dwarf"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100005930-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/dwarf-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100005930-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u06A9\u0648\u062A\u0648\u0644\u0647"@fas .
+<http://wordnet-rdf.princeton.edu/wn31/100005930-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100005930-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_10> .
+<http://wordnet-rdf.princeton.edu/wn31/100005930-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "kerdil"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100005930-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "k\u00E4\u00E4pi\u00F6"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100005930-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100004475-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100005930-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100005930-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E2A\u0E31\u0E15\u0E27\u0E4C\u0E2B\u0E23\u0E37\u0E2D\u0E1E\u0E37\u0E0A\u0E41\u0E04\u0E23\u0E30\u0E41\u0E01\u0E23\u0E47\u0E19"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100005930-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100005930-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "kerdil"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100005930-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "a plant or animal that is atypically small"@eng .
+
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "h\u00E9t\u00E9rotrophie"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "an organism that depends on complex organic substances for nutrition"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "heterotrof"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "toisenvarainen"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/heterotroph-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E2A\u0E34\u0E48\u0E07\u0E21\u0E35\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E17\u0E35\u0E48\u0E2A\u0E23\u0E49\u0E32\u0E07\u0E2D\u0E32\u0E2B\u0E32\u0E23\u0E40\u0E2D\u0E07\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "H\u00E9t\u00E9rotrophie"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2006/03/wn/wn20/instances/synset-heterotroph-noun-1> .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100004475-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "heterotr\u00F2fia"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://www.w3.org/2000/01/rdf-schema#label> "heterotroph"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u5F93\u5C5E\u6804\u990A\u4F53"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "heterotrofi"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "heterotrof"@pol .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_11> .
+<http://wordnet-rdf.princeton.edu/wn31/100006024-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "Heterotrofismo"@por .
+
+<http://wordnet-rdf.princeton.edu/wn31/100006150-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_12> .
+<http://wordnet-rdf.princeton.edu/wn31/100006150-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100006150-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/parent-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006150-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "em\u00E4"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100006150-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E1E\u0E48\u0E2D\u0E41\u0E21\u0E48"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100006150-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100004475-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006150-n> <http://www.w3.org/2000/01/rdf-schema#label> "parent"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100006150-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "an organism (plant or animal) from which younger ones are obtained"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100006150-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "emokasvi"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100006150-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100006150-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "vida"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#sample> "the oceans are teeming with life"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "hidupan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "hidup"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2006/03/wn/wn20/instances/synset-life-noun-11> .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "kehidupan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_13> .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ekzistenc\u00EB jete"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u05D7\u05B7\u05D9\u05BC\u05B4\u05D9\u05DD"@heb .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u062D\u064E\u064A\u064E\u0627\u0629"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/108010218-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100004258-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "vie"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "el\u00E4m\u00E4"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "vita"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "kehidupan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/life-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "vida"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "takdir"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "bizitza"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u751F\u304D\u7269"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E2A\u0E34\u0E48\u0E07\u0E21\u0E35\u0E0A\u0E35\u0E27\u0E34\u0E15"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "takdir"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u751F\u547D"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u751F\u7269"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "bizi"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "hidup"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "hidupan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://www.w3.org/2000/01/rdf-schema#label> "life"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "vida"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100006269-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "living things collectively"@eng .
+
+<http://wordnet-rdf.princeton.edu/wn31/100006400-n> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2006/03/wn/wn20/instances/synset-biont-noun-1> .
+<http://wordnet-rdf.princeton.edu/wn31/100006400-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "a discrete unit of living matter"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100006400-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100006400-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "unitate bizidun berezitu"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100006400-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100006400-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_14> .
+<http://wordnet-rdf.princeton.edu/wn31/100006400-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100004258-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006400-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0643\u064E\u0627\u0626\u0650\u0646 \u062D\u064E\u064A"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100006400-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "biont"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100006400-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/biont-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006400-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0633\u0644\u0648\u0644"@fas .
+<http://wordnet-rdf.princeton.edu/wn31/100006400-n> <http://www.w3.org/2000/01/rdf-schema#label> "biont"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100006400-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "celle"@dan .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105467033-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#part_holonym> <http://wordnet-rdf.princeton.edu/wn31/105442503-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105250095-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105438978-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/111708847-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "zelula"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2006/03/wn/wn20/instances/synset-cell-noun-2> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://www.w3.org/2000/01/rdf-schema#label> "cell"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_15> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E40\u0E0B\u0E25\u0E25\u0E4C"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101909790-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105467166-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#part_holonym> <http://wordnet-rdf.princeton.edu/wn31/105439161-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105439502-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "c\u00E9lula"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/113113144-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "c\u00E9lula"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "sel"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "kom\u00F3rka"@pol .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#part_holonym> <http://wordnet-rdf.princeton.edu/wn31/105320307-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100004258-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#part_meronym> <http://wordnet-rdf.princeton.edu/wn31/100004475-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#part_holonym> <http://wordnet-rdf.princeton.edu/wn31/105453244-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u05EA\u05BC\u05B8\u05D0"@heb .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "sel"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105236952-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/111709219-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105275882-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "celle"@nno .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/113113307-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105455333-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105464308-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u30BB\u30EB"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u7D30\u80DE"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "c\u00E8l\u00B7lula"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#domain_member_category> <http://wordnet-rdf.princeton.edu/wn31/302829341-a> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105457114-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/111550600-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105466279-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#part_holonym> <http://wordnet-rdf.princeton.edu/wn31/105454663-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "(biology) the basic structural and functional unit of all organisms; they may exist as independent units of life (as in monads) or may form colonies or tissues as in higher plants and animals"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105440199-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/cell-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#part_holonym> <http://wordnet-rdf.princeton.edu/wn31/105440524-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105465988-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "celle"@nob .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101316379-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "qeliz\u00EB"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/101462305-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/105438205-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u062E\u064E\u0644\u0650\u064A\u0651\u064E\u064E\u0629"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "cellule"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "solu"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#domain_category> <http://wordnet-rdf.princeton.edu/wn31/106047178-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/111709021-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "cellula"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100006484-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "c\u00E9lula"@por .
+
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2006/03/wn/wn20/instances/synset-causal_agent-noun-1> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109920164-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/111437675-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menimbulkan sesuatu"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "mula"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menyebabkan timbulnya sst"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "syy"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "cause"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menetaskan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#gloss> "any entity that produces an effect or is responsible for events or results"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menyebabkan timbulnya sst"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menimbulkan sst"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#lexical_domain> <http://wordnet-rdf.princeton.edu/ontology#noun.tops> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109527009-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "causa"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "sebab"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u539F\u56E0\u7269"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "causa"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "agente causal"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109527735-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/causal+agent-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109528047-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "mengakibatkan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/causal+agency-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E1C\u0E39\u0E49\u0E01\u0E48\u0E2D\u0E43\u0E2B\u0E49\u0E40\u0E01\u0E34\u0E14\u0E40\u0E2B\u0E15\u0E38\u0E01\u0E32\u0E23\u0E13\u0E4C"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109526814-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E1C\u0E39\u0E49\u0E40\u0E1B\u0E47\u0E19\u0E2A\u0E32\u0E40\u0E2B\u0E15\u0E38"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u00E5rsag"@dan .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "sebab"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "datangkan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/114802595-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u05D9\u05B5\u05E9\u05C1\u05D5\u05BC\u05EA-\u05D2\u05BC\u05D5\u05B9\u05E8\u05B6\u05DE\u05B6\u05EA"@heb .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "causador"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menyebabkan timbulnya sesuatu"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110029580-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menetaskan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "causa"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menimbulkan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menimbulkan sst"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "causa"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/cause-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "fasal"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "hasilkan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "mendatangkan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menimbulkan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "mengakibatkan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "penyebab"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "raison"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "causa"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "agent causal"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "agente causador"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "datangkan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menyebab"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/114564166-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "pokok kalimat"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "zyr\u00EB e \u00E7\u00EBshtjeve gjyq\u00EBsore"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "penyebab"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "jadikan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "mula"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110398111-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://www.w3.org/2000/01/rdf-schema#label> "causal agency"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110480990-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "punca"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "pokok kalimat"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "punca"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menyebab"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "kausa"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://www.w3.org/2000/01/rdf-schema#label> "causal agent"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/100007846-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100001930-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_16> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110777586-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0633\u064E\u0628\u064E\u0628"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109213796-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "jadikan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "axente causal"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109527596-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u00E7\u00EBshtje"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menyebabkan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menyebabkan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "hasilkan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "aiheuttaja"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://www.w3.org/2000/01/rdf-schema#label> "cause"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menyebabkan timbulnya sesuatu"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "menimbulkan sesuatu"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "kausaalinen agentti"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0645\u064F\u0633\u064E\u0628\u0651\u0650\u0628"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "mendatangkan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u00E5rsak"@nno .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "agjent i \u00E7\u00EBshtjeve gjyq\u00EBsor\u00EB"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u00E5rsak"@nob .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E1C\u0E39\u0E49\u0E01\u0E23\u0E30\u0E17\u0E33\u0E40\u0E2B\u0E15\u0E38\u0E01\u0E32\u0E23\u0E13\u0E4C"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100007347-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/114564646-n> .
+
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110563352-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110708307-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109696262-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u4EBA"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110343657-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110387108-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110382018-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109923389-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110728446-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109649219-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110096558-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109772396-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109649777-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110772729-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109660255-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110776309-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109664887-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110259458-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110348654-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110457939-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109949922-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109640726-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110656272-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "individ"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109771988-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110416161-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110009953-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0641\u064E\u0631\u0652\u062F"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110422569-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hypernym> <http://wordnet-rdf.princeton.edu/wn31/100007347-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110415089-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110105843-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110304662-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110632319-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "osoba"@pol .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110202544-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109789059-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "mortal"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "essere umano"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110786688-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110406317-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110719401-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110290575-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109918344-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110616642-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "anima"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E04\u0E19"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109647338-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110385098-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "henkil\u00F6"@fin .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109844921-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109865673-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110451389-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109632901-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/someone-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110557711-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0631\u064F\u0648\u062D"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110636295-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110095687-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110341412-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110422162-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110477343-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109642482-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110438480-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110761247-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109897322-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110655186-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "personne"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110748650-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109773382-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110166782-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "individ"@dan .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109970753-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109823653-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110783964-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110533416-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110604529-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109644715-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109637345-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110246936-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109651570-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110537942-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109628155-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "jednostka"@pol .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110204565-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ndokush"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110132360-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109795702-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110141957-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109938012-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109791753-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110078970-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109979794-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u00E9sser hum\u00E0"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109834481-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109877258-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110445710-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110014481-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "insan"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110381224-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110560213-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "sso yg dipandang tinggi"@ind .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110066335-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "mortal"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110017160-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109771712-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://www.w3.org/2000/01/rdf-schema#label> "mortal"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "individu"@fra .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110783393-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110250784-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109771577-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "umano"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109851102-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110595038-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110094629-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110210364-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109880693-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110052950-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109777275-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109636221-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109638837-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://www.w3.org/2002/07/owl#sameAs> <http://lemon-model.net/lexica/uby/wn/WN_Synset_17> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110055991-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110298363-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110193566-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110700507-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "mann"@nno .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110460154-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110675662-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "humano"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110346217-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110287996-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110777293-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109918741-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110158287-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109882251-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110785693-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109956078-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110811530-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#part_of_speech> <http://wordnet-rdf.princeton.edu/ontology#noun> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "ser humano"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110266741-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "-\u4EBA"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110062653-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109996258-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109941131-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109771850-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109655706-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109793590-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109806026-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "cz\u0142owiek"@pol .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110639008-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u4EBA\u58EB"@zho .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110772148-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110675927-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109820525-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110053388-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u4EBA\u9593"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110163245-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110618762-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "individuo"@glg .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110267577-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110753007-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110613451-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109640897-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109629903-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110168956-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "person"@nno .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109853385-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "manusia"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110271476-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110283916-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110791304-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "njeri"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109847846-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110310771-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110700830-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109836941-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "-\u54E1"@jpn .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#synset_member> <http://wordnet-rdf.princeton.edu/wn31/soul-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109644529-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110381089-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109969936-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109851208-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0645\u064E\u062E\u0652\u0644\u064F\u0648\u0642"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "alguien"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110075538-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110791658-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "individuo"@ita .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109629719-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110333840-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "insan"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110550534-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109783207-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "dikush"@sqi .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0634\u064E\u062E\u0652\u0635 \u0645\u064E\u0627"@ara .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110546109-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109784323-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#part_holonym> <http://wordnet-rdf.princeton.edu/wn31/104624919-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110141785-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "hoved"@dan .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110281880-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109632262-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110822797-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110381702-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110745529-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "hovud"@nno .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u06CC\u06A9 \u06A9\u0633\u06CC"@fas .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110595667-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "seorang"@zsm .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110544727-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "humano"@spa .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u0E1A\u0E38\u0E04\u0E04\u0E25"@tha .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110633879-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110745683-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109643964-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109902904-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110405770-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u05D0\u05B8\u05D3\u05B8\u05DD"@heb .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110085354-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109659294-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109772258-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "\u05DE\u05B4\u05D9\u05E9\u05C1\u05B6\u05D4\u05D5\u05BC"@heb .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110364653-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "persona"@cat .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110783546-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109772679-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110072651-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109698566-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110409097-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110405406-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109782244-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110157889-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110233099-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109989021-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110239549-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109629201-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110291222-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "pessoa"@por .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110019527-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109633285-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "person"@nob .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110637420-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110766014-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110404195-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://www.w3.org/2000/01/rdf-schema#label> "individual"@eng .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110658445-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110374841-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/109855548-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110523045-n> .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#translation> "gizabanako"@eus .
+<http://wordnet-rdf.princeton.edu/wn31/100007846-n> <http://wordnet-rdf.princeton.edu/ontology#hyponym> <http://wordnet-rdf.princeton.edu/wn31/110684741-n> .

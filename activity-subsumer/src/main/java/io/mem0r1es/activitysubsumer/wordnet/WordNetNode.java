@@ -5,9 +5,15 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * <p>
  * Node in the WordNet sub-graphs. A node contains multiple words (with senses) based on synonym
  * sets and on eventual cycles in the WordNet graph.
- *
+ * </p>
+ * <p>
+ * Example usage:
+ * <br />
+ * {@code new WordNet("manner.n.01", "mode.n.01", "style.n.01", "way.n.01", "fashion.n.01")}
+ * </p>
  * @author Horia Radu
  */
 public class WordNetNode {

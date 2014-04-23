@@ -22,12 +22,7 @@ public class Pair<S, T> {
 
 		Pair pair = (Pair) o;
 
-		if (!first.equals(pair.first))
-			return false;
-		if (!second.equals(pair.second))
-			return false;
-
-		return true;
+        return first.equals(pair.first) && second.equals(pair.second);
 	}
 
 	@Override
