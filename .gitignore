@@ -55,3 +55,5 @@ build/
 gradle/
 gradlew
 gradlew.bat
+
+activity-subsumer/src/test/resources

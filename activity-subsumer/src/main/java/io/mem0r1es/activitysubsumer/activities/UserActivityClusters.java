@@ -1,8 +1,8 @@
 package io.mem0r1es.activitysubsumer.activities;
 
 import io.mem0r1es.activitysubsumer.algs.PathBuilder;
+import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
 import io.mem0r1es.activitysubsumer.wordnet.TermGraph;
-import io.mem0r1es.activitysubsumer.wordnet.WordNetNode;
 import io.mem0r1es.activitysubsumer.wordnet.WordNetUtils;
 import org.jgrapht.graph.DefaultEdge;
 
@@ -109,10 +109,10 @@ public class UserActivityClusters {
 
                     Set<String> words = nounGraph.getWords();
                     // all the noun senses in the sub-graph for the given nouns
-                    Set<WordNetNode> foundNounSenses =
+                    Set<SynsetNode> foundNounSenses =
                             nounGraph.getSensesForNonSenseTerms(nounsInVerbCluster);
-                    for (WordNetNode node : foundNounSenses) {
-                        for (String word : node.getWords()) {
+                    for (SynsetNode node : foundNounSenses) {
+                        for (String word : node.getSynset()) {
                             String wordNoSense = WordNetUtils.wordName(word);
                             // remove from mandatory nouns (if it's the case)
                             mandatoryNounsTemp.remove(wordNoSense);
@@ -158,25 +158,25 @@ public class UserActivityClusters {
         for (UserActivity activity : activities) {
             mandatoryVerbs.add(activity.getVerb());
         }
-        Set<WordNetNode> destinationVerbs =
+        Set<SynsetNode> destinationVerbs =
                 bestVerbSubGraph.getNodesForNonSenseTerms(mandatoryVerbs);
-        Set<WordNetNode> destinationNouns =
+        Set<SynsetNode> destinationNouns =
                 bestNounSubGraph.getNodesForNonSenseTerms(mandatoryNouns);
 
         // find all the paths to those destinations
-        PathBuilder<WordNetNode, DefaultEdge> verbPaths =
-                new PathBuilder<WordNetNode, DefaultEdge>(bestVerbSubGraph,
+        PathBuilder<SynsetNode, DefaultEdge> verbPaths =
+                new PathBuilder<SynsetNode, DefaultEdge>(bestVerbSubGraph,
                         bestVerbSubGraph.getRoot(), destinationVerbs);
-        PathBuilder<WordNetNode, DefaultEdge> nounPaths =
-                new PathBuilder<WordNetNode, DefaultEdge>(bestNounSubGraph,
+        PathBuilder<SynsetNode, DefaultEdge> nounPaths =
+                new PathBuilder<SynsetNode, DefaultEdge>(bestNounSubGraph,
                         bestNounSubGraph.getRoot(), destinationNouns);
 
         // for each possible combination, build the activities
-        for (WordNetNode verbLCA : verbPaths.getLCA(destinationVerbs)) {
-            for (WordNetNode nounLCA : nounPaths.getLCA(destinationNouns)) {
-                for (String verb : verbLCA.getWords()) {
-                    for (String noun : nounLCA.getWords()) {
-                        result.add(new UserActivity(verb, noun));
+        for (SynsetNode verbLCA : verbPaths.getLCA(destinationVerbs)) {
+            for (SynsetNode nounLCA : nounPaths.getLCA(destinationNouns)) {
+                for (String verb : verbLCA.getSynset()) {
+                    for (String noun : nounLCA.getSynset()) {
+                        result.add(new UserActivity("0", verb, noun));
                     }
                 }
             }
@@ -202,10 +202,10 @@ public class UserActivityClusters {
         String generalVerb = generalActivity.getVerb();
         String generalNoun = generalActivity.getNoun();
 
-        Map<Long, Set<WordNetNode>> nounSubGraphIDToSensesMap =
-                new HashMap<Long, Set<WordNetNode>>();
+        Map<Long, Set<SynsetNode>> nounSubGraphIDToSensesMap =
+                new HashMap<Long, Set<SynsetNode>>();
         for (TermGraph nounSubGraph : nounGraphs) {
-            Set<WordNetNode> foundSenses = nounSubGraph.getSensesForNonSenseTerm(generalNoun);
+            Set<SynsetNode> foundSenses = nounSubGraph.getSensesForNonSenseTerm(generalNoun);
             nounSubGraphIDToSensesMap.put(nounSubGraph.getID(), foundSenses);
         }
 
@@ -238,7 +238,7 @@ public class UserActivityClusters {
      */
     protected static Set<UserActivity> findActivitiesInVerbGraph(long verbGraphID,
                                                                  Set<TermGraph> nounGraphs, Set<UserActivity> activitiesInCluster,
-                                                                 Map<Long, Set<WordNetNode>> nounSubGraphIDToSensesMap) {
+                                                                 Map<Long, Set<SynsetNode>> nounSubGraphIDToSensesMap) {
         System.out.println("start findActivitiesInVerbGraph()");
         Set<UserActivity> result = new HashSet<UserActivity>();
 
@@ -251,25 +251,25 @@ public class UserActivityClusters {
 
         for (TermGraph nounSubGraph : nounGraphs) {
             System.out.println("start noun sub-graph" + nounSubGraph.getID());
-            Set<WordNetNode> foundSenses = nounSubGraphIDToSensesMap.get(nounSubGraph.getID());
+            Set<SynsetNode> foundSenses = nounSubGraphIDToSensesMap.get(nounSubGraph.getID());
             System.out.println("found senses in noun sub-graph");
 
-            Set<WordNetNode> destinations = nounSubGraph.getSensesForNonSenseTerms(nouns);
+            Set<SynsetNode> destinations = nounSubGraph.getSensesForNonSenseTerms(nouns);
             System.out.println("found destinations noun sub-graph");
 
-            for (WordNetNode node : foundSenses) {
+            for (SynsetNode node : foundSenses) {
                 System.out.println("start bfs in noun sub-graph");
-                PathBuilder<WordNetNode, DefaultEdge> pathBuilder =
-                        new PathBuilder<WordNetNode, DefaultEdge>(nounSubGraph, node, destinations);
+                PathBuilder<SynsetNode, DefaultEdge> pathBuilder =
+                        new PathBuilder<SynsetNode, DefaultEdge>(nounSubGraph, node, destinations);
                 System.out.println("end bfs in noun sub-graph");
 
-                for (WordNetNode destination : destinations) {
-                    Set<List<WordNetNode>> pathsToDestination =
+                for (SynsetNode destination : destinations) {
+                    Set<List<SynsetNode>> pathsToDestination =
                             pathBuilder.getPathsToDestination(destination);
                     if (pathsToDestination != null && !pathsToDestination.isEmpty()) {
                         // we have reached this destination
                         for (UserActivity activity : activitiesInCluster) {
-                            for (String word : destination.getWords()) {
+                            for (String word : destination.getSynset()) {
                                 if (WordNetUtils.wordName(word).equals(activity.getNoun())) {
                                     result.add(activity);
                                 }

@@ -5,8 +5,9 @@ repositories {
 }
 
 dependencies{
-    //compile fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
-    compile 'net.sf.jgrapht:jgrapht:0.8.3'
+    compile fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    // currently, custom jgrapht jar is built
+    //compile 'org.jgrapht:jgrapht-core:0.9.0'
     compile 'org.testng:testng:6.8.8'
     compile 'com.hp.hpl.jena:jena:2.6.4'
 }

@@ -15,25 +15,25 @@ import org.jgrapht.graph.DefaultEdge;
  *
  * @author Horia Radu
  */
-public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
+public class TermGraph implements DirectedGraph<SynsetNode, DefaultEdge> {
     private static long ID = 0;
 
     private long id;
-    private DirectedAcyclicGraph<WordNetNode, DefaultEdge> graph;
-    private WordNetNode root = null;
+    private DirectedAcyclicGraph<SynsetNode, DefaultEdge> graph;
+    private SynsetNode root = null;
 
-    public TermGraph(WordNetNode root) {
+    public TermGraph(SynsetNode root) {
         this.id = ID++;
         this.root = root;
-        graph = new DirectedAcyclicGraph<WordNetNode, DefaultEdge>(DefaultEdge.class);
+        graph = new DirectedAcyclicGraph<SynsetNode, DefaultEdge>(DefaultEdge.class);
         graph.addVertex(root);
     }
 
     // TEMP CODE: helps for testing
-    public TermGraph(WordNetNode root, long id) {
+    public TermGraph(SynsetNode root, long id) {
         this.id = id;
         this.root = root;
-        graph = new DirectedAcyclicGraph<WordNetNode, DefaultEdge>(DefaultEdge.class);
+        graph = new DirectedAcyclicGraph<SynsetNode, DefaultEdge>(DefaultEdge.class);
         graph.addVertex(root);
     }
 
@@ -46,8 +46,8 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
      */
     public Set<String> getWords() {
         Set<String> result = new HashSet<String>();
-        for (WordNetNode node : graph.vertexSet()) {
-            result.addAll(node.getWords());
+        for (SynsetNode node : graph.vertexSet()) {
+            result.addAll(node.getSynset());
         }
         return result;
     }
@@ -57,14 +57,14 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
      *            the given word (without sense)
      * @return - the set of nodes which contain that word.
      */
-    public Set<WordNetNode> getNodes(String word) {
+    public Set<SynsetNode> getNodes(String word) {
         return getNodes(Collections.singleton(word));
     }
 
-    public Set<WordNetNode> getNodes(Set<String> words) {
-        Set<WordNetNode> result = new HashSet<WordNetNode>();
-        for (WordNetNode node : graph.vertexSet()) {
-            for (String word : node.getWords()) {
+    public Set<SynsetNode> getNodes(Set<String> words) {
+        Set<SynsetNode> result = new HashSet<SynsetNode>();
+        for (SynsetNode node : graph.vertexSet()) {
+            for (String word : node.getSynset()) {
                 if (words.contains(word)) {
                     result.add(node);
                 }
@@ -78,7 +78,7 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
      *            the given word (without sense)
      * @return the set of nodes which contain that word.
      */
-    public Set<WordNetNode> getNodesForNonSenseTerm(String word) {
+    public Set<SynsetNode> getNodesForNonSenseTerm(String word) {
         return getNodesForNonSenseTerms(Collections.singleton(word));
     }
 
@@ -87,10 +87,10 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
      *            the give words (without senses)
      * @return the set of nodes which contain that word.
      */
-    public Set<WordNetNode> getNodesForNonSenseTerms(Set<String> words) {
-        Set<WordNetNode> result = new HashSet<WordNetNode>();
-        for (WordNetNode node : graph.vertexSet()) {
-            for (String word : node.getWords()) {
+    public Set<SynsetNode> getNodesForNonSenseTerms(Set<String> words) {
+        Set<SynsetNode> result = new HashSet<SynsetNode>();
+        for (SynsetNode node : graph.vertexSet()) {
+            for (String word : node.getSynset()) {
                 if (words.contains(WordNetUtils.wordName(word))) {
                     result.add(node);
                 }
@@ -102,7 +102,7 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
     /**
      * @return the root of the sub-graph.
      */
-    public WordNetNode getRoot() {
+    public SynsetNode getRoot() {
         return root;
     }
 
@@ -113,8 +113,8 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
      *         otherwise
      */
     public boolean containsNonSenseTerm(String nonSenseWord) {
-        for (WordNetNode node : graph.vertexSet()) {
-            for (String word : node.getWords()) {
+        for (SynsetNode node : graph.vertexSet()) {
+            for (String word : node.getSynset()) {
                 if (WordNetUtils.wordName(word).equals(nonSenseWord)) {
                     return true;
                 }
@@ -128,7 +128,7 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
      *            the word (without sense)
      * @return the set of nodes which contain a sense of the given word (without a sense)
      */
-    public Set<WordNetNode> getSensesForNonSenseTerm(String nonSenseWord) {
+    public Set<SynsetNode> getSensesForNonSenseTerm(String nonSenseWord) {
         return getSensesForNonSenseTerms(Collections.singleton(nonSenseWord));
     }
 
@@ -137,11 +137,11 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
      *            the words (without sense)
      * @return the set of nodes which contain a sense of the given word (without a sense)
      */
-    public Set<WordNetNode> getSensesForNonSenseTerms(Set<String> nonSenseWords) {
-        Set<WordNetNode> result = new HashSet<WordNetNode>();
+    public Set<SynsetNode> getSensesForNonSenseTerms(Set<String> nonSenseWords) {
+        Set<SynsetNode> result = new HashSet<SynsetNode>();
 
-        for (WordNetNode node : graph.vertexSet()) {
-            for (String word : node.getWords()) {
+        for (SynsetNode node : graph.vertexSet()) {
+            for (String word : node.getSynset()) {
                 if (nonSenseWords.contains(WordNetUtils.wordName(word))) {
                     result.add(node);
                 }
@@ -151,37 +151,37 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
     }
 
     @Override
-    public Set<DefaultEdge> getAllEdges(WordNetNode sourceVertex, WordNetNode targetVertex) {
+    public Set<DefaultEdge> getAllEdges(SynsetNode sourceVertex, SynsetNode targetVertex) {
         return graph.getAllEdges(sourceVertex, targetVertex);
     }
 
     @Override
-    public DefaultEdge getEdge(WordNetNode sourceVertex, WordNetNode targetVertex) {
+    public DefaultEdge getEdge(SynsetNode sourceVertex, SynsetNode targetVertex) {
         return graph.getEdge(sourceVertex, targetVertex);
     }
 
     @Override
-    public EdgeFactory<WordNetNode, DefaultEdge> getEdgeFactory() {
+    public EdgeFactory<SynsetNode, DefaultEdge> getEdgeFactory() {
         return graph.getEdgeFactory();
     }
 
     @Override
-    public DefaultEdge addEdge(WordNetNode sourceVertex, WordNetNode targetVertex) {
+    public DefaultEdge addEdge(SynsetNode sourceVertex, SynsetNode targetVertex) {
         return graph.addEdge(sourceVertex, targetVertex);
     }
 
     @Override
-    public boolean addEdge(WordNetNode sourceVertex, WordNetNode targetVertex, DefaultEdge e) {
+    public boolean addEdge(SynsetNode sourceVertex, SynsetNode targetVertex, DefaultEdge e) {
         return graph.addEdge(sourceVertex, targetVertex, e);
     }
 
     @Override
-    public boolean addVertex(WordNetNode v) {
+    public boolean addVertex(SynsetNode v) {
         return graph.addVertex(v);
     }
 
     @Override
-    public boolean containsEdge(WordNetNode sourceVertex, WordNetNode targetVertex) {
+    public boolean containsEdge(SynsetNode sourceVertex, SynsetNode targetVertex) {
         return graph.containsEdge(sourceVertex, targetVertex);
     }
 
@@ -191,7 +191,7 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
     }
 
     @Override
-    public boolean containsVertex(WordNetNode v) {
+    public boolean containsVertex(SynsetNode v) {
         return graph.containsVertex(v);
     }
 
@@ -201,7 +201,7 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
     }
 
     @Override
-    public Set<DefaultEdge> edgesOf(WordNetNode vertex) {
+    public Set<DefaultEdge> edgesOf(SynsetNode vertex) {
         return graph.edgesOf(vertex);
     }
 
@@ -211,17 +211,17 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
     }
 
     @Override
-    public Set<DefaultEdge> removeAllEdges(WordNetNode sourceVertex, WordNetNode targetVertex) {
+    public Set<DefaultEdge> removeAllEdges(SynsetNode sourceVertex, SynsetNode targetVertex) {
         return graph.removeAllEdges(sourceVertex, targetVertex);
     }
 
     @Override
-    public boolean removeAllVertices(Collection<? extends WordNetNode> vertices) {
+    public boolean removeAllVertices(Collection<? extends SynsetNode> vertices) {
         return graph.removeAllVertices(vertices);
     }
 
     @Override
-    public DefaultEdge removeEdge(WordNetNode sourceVertex, WordNetNode targetVertex) {
+    public DefaultEdge removeEdge(SynsetNode sourceVertex, SynsetNode targetVertex) {
         return graph.removeEdge(sourceVertex, targetVertex);
     }
 
@@ -231,22 +231,22 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
     }
 
     @Override
-    public boolean removeVertex(WordNetNode v) {
+    public boolean removeVertex(SynsetNode v) {
         return graph.removeVertex(v);
     }
 
     @Override
-    public Set<WordNetNode> vertexSet() {
+    public Set<SynsetNode> vertexSet() {
         return graph.vertexSet();
     }
 
     @Override
-    public WordNetNode getEdgeSource(DefaultEdge e) {
+    public SynsetNode getEdgeSource(DefaultEdge e) {
         return graph.getEdgeSource(e);
     }
 
     @Override
-    public WordNetNode getEdgeTarget(DefaultEdge e) {
+    public SynsetNode getEdgeTarget(DefaultEdge e) {
         return graph.getEdgeTarget(e);
     }
 
@@ -256,22 +256,22 @@ public class TermGraph implements DirectedGraph<WordNetNode, DefaultEdge> {
     }
 
     @Override
-    public int inDegreeOf(WordNetNode vertex) {
+    public int inDegreeOf(SynsetNode vertex) {
         return graph.inDegreeOf(vertex);
     }
 
     @Override
-    public Set<DefaultEdge> incomingEdgesOf(WordNetNode vertex) {
+    public Set<DefaultEdge> incomingEdgesOf(SynsetNode vertex) {
         return graph.incomingEdgesOf(vertex);
     }
 
     @Override
-    public int outDegreeOf(WordNetNode vertex) {
+    public int outDegreeOf(SynsetNode vertex) {
         return graph.outDegreeOf(vertex);
     }
 
     @Override
-    public Set<DefaultEdge> outgoingEdgesOf(WordNetNode vertex) {
+    public Set<DefaultEdge> outgoingEdgesOf(SynsetNode vertex) {
         return graph.outgoingEdgesOf(vertex);
     }
 }
