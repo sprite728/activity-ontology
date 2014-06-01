@@ -22,9 +22,6 @@ public class ActivityClusterTest {
         VerbsSynsetForest verbs = new VerbsSynsetForest(Cons.VERBS_HYPONYM, Cons.VERBS_SYNSET);
         NounsSynsetForest nouns = new NounsSynsetForest(Cons.NOUNS_HYPONYM, Cons.NOUNS_SYNSET);
 
-        System.out.println("Found: "+verbs.findSubgraphs("munch"));
-        System.out.println("Found: "+verbs.findSubgraphs("eat"));
-
         ActivityClusters activityClusters = new ActivityClusters(verbs, nouns, new ActivityIO(Cons.ACTIVITIES_GRAPH, Cons.ACTIVITIES_MAPPINGS));
         SubsumedActivity sa = new SubsumedActivity(Long.toString(System.nanoTime()), "have", "pizza");
         activityClusters.addActivity(sa);
@@ -37,6 +34,11 @@ public class ActivityClusterTest {
 
         System.out.println("Subsumed: ");
         for(AbstractActivity a:subAct){
+            System.out.println(a.getVerb()+" - "+a.getNoun());
+        }
+
+        System.out.println("Find activities for have-food: ");
+        for(AbstractActivity a:activityClusters.findActivities("have", "food")){
             System.out.println(a.getVerb()+" - "+a.getNoun());
         }
 

@@ -5,6 +5,7 @@ import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
 import org.jgrapht.graph.DefaultEdge;
 
 /**
+ * Verbs graph with synsets as nodes
  * @author Ivan Gavrilović
  */
 public class VerbsSynsetGraph extends SynsetGraph {

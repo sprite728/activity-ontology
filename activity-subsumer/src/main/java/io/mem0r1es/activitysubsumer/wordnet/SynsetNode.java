@@ -73,6 +73,12 @@ public class SynsetNode {
     public boolean contains(String word) {
         return synset.contains(word);
     }
+    public boolean containsAny(Set<String> words) {
+        for (String w:words){
+            if (synset.contains(w)) return true;
+        }
+        return false;
+    }
 
     public String getCode() {
         return code;

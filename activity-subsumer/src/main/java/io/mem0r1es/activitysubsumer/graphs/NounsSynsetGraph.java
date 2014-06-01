@@ -6,6 +6,7 @@ import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
 import org.jgrapht.graph.DefaultEdge;
 
 /**
+ * Representing the nouns synset graph
  * @author Ivan Gavrilović
  */
 public class NounsSynsetGraph extends SynsetGraph {

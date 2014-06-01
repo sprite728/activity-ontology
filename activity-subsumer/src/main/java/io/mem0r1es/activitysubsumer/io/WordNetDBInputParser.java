@@ -8,6 +8,7 @@ import java.util.*;
 /**
  * Used to parse word net data.noun and data.verb files, downloaded from
  * <a href ="http://wordnetcode.princeton.edu/wn3.1.dict.tar.gz">http://wordnetcode.princeton.edu/wn3.1.dict.tar.gz</a>
+ * Remove the copyright info from the file header when parsing.
  *
  * @author Ivan Gavrilović
  */
@@ -26,8 +27,6 @@ public class WordNetDBInputParser extends WordNetParser {
 
             while (s.hasNextLine()) {
                 String line = s.nextLine();
-                if (line.startsWith("\\s")) continue;
-
                 StringTokenizer tokenizer = new StringTokenizer(line);
 
                 // first symbol is the synset code
@@ -39,18 +38,16 @@ public class WordNetDBInputParser extends WordNetParser {
                 // this one is either n or v; if noun we prepend 1 to the code, if verb 2 (like in the RDF version)
                 // this is a nice way create namespaces for different types of words
                 String prefix = tokenizer.nextToken().toLowerCase().equals("n") ? "1" : "2";
-                int cntSynsetMembers = 0;
-                try {
-                    cntSynsetMembers = Integer.parseInt(tokenizer.nextToken(), 16);
-                } catch (Exception e) {
-                    System.out.println("Line: " + line);
-                }
+                int cntSynsetMembers = Integer.parseInt(tokenizer.nextToken(), 16);
+
+                // get synset members
                 Set<String> members = new HashSet<String>();
                 for (int i = 0; i < cntSynsetMembers; i++) {
                     members.add(URLEncoder.encode(tokenizer.nextToken().replace("_", " "), "UTF-8"));
                     tokenizer.nextToken();
                 }
 
+                // find all hyponym and instance hyponym relationships
                 int cntRelationships = Integer.parseInt(tokenizer.nextToken());
                 Set<String> rels = new HashSet<String>();
                 for (int i = 0; i < cntRelationships; i++) {

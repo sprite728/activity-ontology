@@ -6,16 +6,22 @@ import java.io.Serializable;
 import java.util.*;
 
 /**
- * Wrapper class for activities.
+ * Class representing the user activity.
  *
  * @author Sebastian Claici
+ *
+ * Changes: Ivan Gavrilovic
  */
 public final class UserActivity extends AbstractActivity{
-    private final Set<String> locations = new HashSet<String>();
-    private final Set<String> timeOfDay = new HashSet<String>();
+    private Set<String> locations;
+    private Set<String> timeOfDay;
 
+    private String avgDuration;
+    /**
+     * Default value for the score
+     */
     private double score = 1;
-    private String avgDuration = "n/a";
+
 
     /**
      * <p>
@@ -29,13 +35,18 @@ public final class UserActivity extends AbstractActivity{
     public UserActivity(String id, String verb, String noun, String location, String timeOfDay, String avgDuration) {
         super(id, verb, noun);
 
-        Collections.addAll(this.locations, location.split(Cons.ENTRY_SEPARATOR));
-        Collections.addAll(this.timeOfDay, location.split(Cons.ENTRY_SEPARATOR));
+        this.locations = new HashSet<String>();
+        this.timeOfDay = new HashSet<String>();
+        Collections.addAll(this.locations, location.split(Cons.ENTRY_SEPARATOR_REG));
+        Collections.addAll(this.timeOfDay, timeOfDay.split(Cons.ENTRY_SEPARATOR_REG));
         this.avgDuration = avgDuration;
     }
 
     public UserActivity(String id, String verb, String noun, Set<String> locations, Set<String> timesOfDay, String avgDuration) {
         super(id, verb, noun);
+
+        this.locations = new HashSet<String>();
+        this.timeOfDay = new HashSet<String>();
         this.locations.addAll(locations);
         this.timeOfDay.addAll(timesOfDay);
         this.avgDuration = avgDuration;
@@ -43,6 +54,10 @@ public final class UserActivity extends AbstractActivity{
 
     public UserActivity(String id, String verb, String noun) {
         super(id, verb, noun);
+
+        this.locations = new HashSet<String>();
+        this.timeOfDay = new HashSet<String>();
+        this.avgDuration = "n/a";
     }
 
     public UserActivity(String serializedInput) {
@@ -50,33 +65,30 @@ public final class UserActivity extends AbstractActivity{
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        UserActivity other = (UserActivity) obj;
-        if (noun == null) {
-            if (other.noun != null)
-                return false;
-        } else if (!noun.equals(other.noun))
-            return false;
-        if (verb == null) {
-            if (other.verb != null)
-                return false;
-        } else if (!verb.equals(other.verb))
-            return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        UserActivity that = (UserActivity) o;
+
+        if (Double.compare(that.score, score) != 0) return false;
+        if (!avgDuration.equals(that.avgDuration)) return false;
+        if (!locations.equals(that.locations)) return false;
+        if (!timeOfDay.equals(that.timeOfDay)) return false;
+
         return true;
     }
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((noun == null) ? 0 : noun.hashCode());
-        result = prime * result + ((verb == null) ? 0 : verb.hashCode());
+        int result = super.hashCode();
+        long temp;
+        result = 31 * result + locations.hashCode();
+        result = 31 * result + timeOfDay.hashCode();
+        result = 31 * result + avgDuration.hashCode();
+        temp = Double.doubleToLongBits(score);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
 
@@ -84,7 +96,7 @@ public final class UserActivity extends AbstractActivity{
     public void deSerialize(String input) {
         String parts[] = decodeParts(input);
 
-        if (!parts[0].equals(UserActivity.class.getCanonicalName())){
+        if (!parts[0].equals(UserActivity.class.getSimpleName())){
             System.err.println("Deserializing to UserActivity ERROR for: "+input);
 
         }
@@ -93,8 +105,10 @@ public final class UserActivity extends AbstractActivity{
         verb = parts[2];
         noun = parts[3];
 
-        Collections.addAll(locations, parts[4].split(Cons.ENTRY_SEPARATOR));
-        Collections.addAll(timeOfDay, parts[5].split(Cons.ENTRY_SEPARATOR));
+        this.locations = new HashSet<String>();
+        this.timeOfDay = new HashSet<String>();
+        Collections.addAll(locations, parts[4].split(Cons.ENTRY_SEPARATOR_REG));
+        Collections.addAll(timeOfDay, parts[5].split(Cons.ENTRY_SEPARATOR_REG));
 
         score = Double.parseDouble(parts[6]);
         avgDuration = parts[7];

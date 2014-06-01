@@ -1,6 +1,7 @@
 package io.mem0r1es.activitysubsumer.activities;
 
 /**
+ * Represents the subsumed activity
  * @author Ivan Gavrilović
  */
 public class SubsumedActivity extends AbstractActivity {
@@ -16,7 +17,7 @@ public class SubsumedActivity extends AbstractActivity {
     public void deSerialize(String input) {
         String parts[] = decodeParts(input);
 
-        if (!parts[0].equals(SubsumedActivity.class.getCanonicalName())) {
+        if (!parts[0].equals(SubsumedActivity.class.getSimpleName())) {
             System.err.println("Deserializing to SubsumedActivity ERROR for: " + input);
         }
 
