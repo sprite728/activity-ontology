@@ -1,67 +1,51 @@
 package io.mem0r1es.activitysubsumer.activities;
 
 import io.mem0r1es.activitysubsumer.utils.Cons;
+import io.mem0r1es.activitysubsumer.utils.TimeOfDay;
+import io.mem0r1es.activitysubsumer.utils.Utils;
 
-import java.io.Serializable;
 import java.util.*;
 
 /**
  * Class representing the user activity.
  *
  * @author Sebastian Claici
- *
- * Changes: Ivan Gavrilovic
+ *         <p/>
+ *         Changes: Ivan Gavrilovic
  */
-public final class UserActivity extends AbstractActivity{
-    private Set<String> locations;
-    private Set<String> timeOfDay;
+public class UserActivity extends BasicActivity implements ContextualActivity {
+    private String id;
+    private Set<String> locCategories;
+    private Set<TimeOfDay> timeOfDay;
 
-    private String avgDuration;
+    private String duration;
     /**
      * Default value for the score
      */
     private double score = 1;
 
-
     /**
-     * <p>
-     * Creates an <b>UserActivity</b> object with all the required data.
-     * </p>
-     * <p>
-     * Note that this constructor assumes each activity is specified as in the
-     * <i>activities.graph</i> file.
-     * </p>
+     * Creates new user activity
+     * @param id if of this activity, it should be unique. For instance it could be {@code System#nanoTime()}
+     * @param verb activity verb
+     * @param noun activity noun
+     * @param locCategories location categories
+     * @param timesOfDay times of day when the activity occured (it is possible that spreads across two or more periods
+     * @param duration duration of the activity in minutes
      */
-    public UserActivity(String id, String verb, String noun, String location, String timeOfDay, String avgDuration) {
-        super(id, verb, noun);
+    public UserActivity(String id, String verb, String noun, Set<String> locCategories, Set<TimeOfDay> timesOfDay, String duration) {
+        super(verb, noun);
 
-        this.locations = new HashSet<String>();
-        this.timeOfDay = new HashSet<String>();
-        Collections.addAll(this.locations, location.split(Cons.ENTRY_SEPARATOR_REG));
-        Collections.addAll(this.timeOfDay, timeOfDay.split(Cons.ENTRY_SEPARATOR_REG));
-        this.avgDuration = avgDuration;
-    }
-
-    public UserActivity(String id, String verb, String noun, Set<String> locations, Set<String> timesOfDay, String avgDuration) {
-        super(id, verb, noun);
-
-        this.locations = new HashSet<String>();
-        this.timeOfDay = new HashSet<String>();
-        this.locations.addAll(locations);
+        this.id = id;
+        this.locCategories = new HashSet<String>();
+        this.timeOfDay = new HashSet<TimeOfDay>();
+        this.locCategories.addAll(locCategories);
         this.timeOfDay.addAll(timesOfDay);
-        this.avgDuration = avgDuration;
-    }
-
-    public UserActivity(String id, String verb, String noun) {
-        super(id, verb, noun);
-
-        this.locations = new HashSet<String>();
-        this.timeOfDay = new HashSet<String>();
-        this.avgDuration = "n/a";
+        this.duration = duration;
     }
 
     public UserActivity(String serializedInput) {
-        super(serializedInput);
+       deSerialize(serializedInput);
     }
 
     @Override
@@ -73,8 +57,9 @@ public final class UserActivity extends AbstractActivity{
         UserActivity that = (UserActivity) o;
 
         if (Double.compare(that.score, score) != 0) return false;
-        if (!avgDuration.equals(that.avgDuration)) return false;
-        if (!locations.equals(that.locations)) return false;
+        if (!duration.equals(that.duration)) return false;
+        if (!id.equals(that.id)) return false;
+        if (!locCategories.equals(that.locCategories)) return false;
         if (!timeOfDay.equals(that.timeOfDay)) return false;
 
         return true;
@@ -84,59 +69,81 @@ public final class UserActivity extends AbstractActivity{
     public int hashCode() {
         int result = super.hashCode();
         long temp;
-        result = 31 * result + locations.hashCode();
+        result = 31 * result + id.hashCode();
+        result = 31 * result + locCategories.hashCode();
         result = 31 * result + timeOfDay.hashCode();
-        result = 31 * result + avgDuration.hashCode();
+        result = 31 * result + duration.hashCode();
         temp = Double.doubleToLongBits(score);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
 
-    @Override
     public void deSerialize(String input) {
-        String parts[] = decodeParts(input);
-
-        if (!parts[0].equals(UserActivity.class.getSimpleName())){
-            System.err.println("Deserializing to UserActivity ERROR for: "+input);
-
-        }
+        String parts[] = Utils.decodeParts(input);
 
         id = parts[1];
         verb = parts[2];
         noun = parts[3];
 
-        this.locations = new HashSet<String>();
-        this.timeOfDay = new HashSet<String>();
-        Collections.addAll(locations, parts[4].split(Cons.ENTRY_SEPARATOR_REG));
-        Collections.addAll(timeOfDay, parts[5].split(Cons.ENTRY_SEPARATOR_REG));
+        this.locCategories = new HashSet<String>();
+        Collections.addAll(locCategories, parts[4].split(Cons.ENTRY_SEPARATOR_REG));
+
+        this.timeOfDay = new HashSet<TimeOfDay>();
+        for(String s:parts[5].split(Cons.ENTRY_SEPARATOR_REG)){
+            timeOfDay.add(TimeOfDay.valueOf(s));
+        }
 
         score = Double.parseDouble(parts[6]);
-        avgDuration = parts[7];
+        duration = parts[7];
     }
 
-    @Override
     public String serialize() {
-        String output = super.serialize();
         List<String> parts = new LinkedList<String>();
+        parts.add(this.getClass().getSimpleName());
+        parts.add(id);
+        parts.add(verb);
+        parts.add(noun);
 
-        // add all locations
+        // add all locCategories
         String locs = "";
-        for (String s : locations) {
+        for (String s : locCategories) {
             locs += s + Cons.ENTRY_SEPARATOR;
         }
         parts.add(locs);
 
         // add all time periods
         String tms = "";
-        for (String s : timeOfDay) {
+        for (TimeOfDay s : timeOfDay) {
             tms += s + Cons.ENTRY_SEPARATOR;
         }
         parts.add(tms);
 
         // add score and avg duration
         parts.add(Double.toString(score));
-        parts.add(avgDuration);
+        parts.add(duration);
 
-        return output + encodeParts(parts);
+        return Utils.encodeParts(parts);
+    }
+
+    @Override
+    public int getMinDuration() {
+        if (duration.equals("none")) return 0;
+        return Utils.parseMinutes(duration);
+    }
+
+    @Override
+    public int getMaxDuration() {
+        if (duration.equals("none")) return Integer.MAX_VALUE;
+        return Utils.parseMinutes(duration);
+    }
+
+    @Override
+    public Set<String> getLocCategories() {
+        return locCategories;
+    }
+
+    @Override
+    public Set<TimeOfDay> getTimesOfDay() {
+        return timeOfDay;
     }
 }

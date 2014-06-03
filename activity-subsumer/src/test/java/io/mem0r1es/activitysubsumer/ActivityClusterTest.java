@@ -1,16 +1,19 @@
 package io.mem0r1es.activitysubsumer;
 
-import io.mem0r1es.activitysubsumer.activities.AbstractActivity;
-import io.mem0r1es.activitysubsumer.activities.ActivityClusters;
-import io.mem0r1es.activitysubsumer.activities.SubsumedActivity;
+import io.mem0r1es.activitysubsumer.activities.BasicActivity;
 import io.mem0r1es.activitysubsumer.activities.UserActivity;
+import io.mem0r1es.activitysubsumer.classifier.ActivityClassifier;
+import io.mem0r1es.activitysubsumer.classifier.FoursquareHierarchy;
 import io.mem0r1es.activitysubsumer.graphs.NounsSynsetForest;
 import io.mem0r1es.activitysubsumer.graphs.VerbsSynsetForest;
-import io.mem0r1es.activitysubsumer.io.ActivityIO;
+import io.mem0r1es.activitysubsumer.io.FoursquareCategoriesCSV;
 import io.mem0r1es.activitysubsumer.utils.Cons;
+import io.mem0r1es.activitysubsumer.utils.TimeOfDay;
 import org.testng.annotations.Test;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -21,27 +24,24 @@ public class ActivityClusterTest {
     public void activityTest() {
         VerbsSynsetForest verbs = new VerbsSynsetForest(Cons.VERBS_HYPONYM, Cons.VERBS_SYNSET);
         NounsSynsetForest nouns = new NounsSynsetForest(Cons.NOUNS_HYPONYM, Cons.NOUNS_SYNSET);
+        FoursquareHierarchy hierarchy = new FoursquareHierarchy(new FoursquareCategoriesCSV(Cons.CATEGORIES_CSV));
 
-        ActivityClusters activityClusters = new ActivityClusters(verbs, nouns, new ActivityIO(Cons.ACTIVITIES_GRAPH, Cons.ACTIVITIES_MAPPINGS));
-        SubsumedActivity sa = new SubsumedActivity(Long.toString(System.nanoTime()), "have", "pizza");
-        activityClusters.addActivity(sa);
-        UserActivity ua = new UserActivity(Long.toString(System.nanoTime()), "eat", "pizza", "food stand", "noon|evening", "1h2h");
-        activityClusters.addActivity(ua);
+        ActivityClassifier classifier = new ActivityClassifier(verbs, nouns, hierarchy);
+        Set<TimeOfDay> times = new HashSet<TimeOfDay>();
+        times.add(TimeOfDay.EVENING);
 
-        Set<AbstractActivity> toSubsume = new HashSet<AbstractActivity>();
-        toSubsume.add(ua); toSubsume.add(sa);
-        Set<AbstractActivity> subAct = activityClusters.subsume(toSubsume);
+        Set<String> locs = new HashSet<String>();
+        locs.add("Steakhouse");
+        UserActivity ua = new UserActivity("0", "eat", "food", locs, times, "10");
+        UserActivity ub = new UserActivity("1", "eat", "food", locs, times, "10");
 
-        System.out.println("Subsumed: ");
-        for(AbstractActivity a:subAct){
-            System.out.println(a.getVerb()+" - "+a.getNoun());
+        classifier.addActivity(ua);
+        classifier.addActivity(ub);
+
+        for(Set<BasicActivity> ba: classifier.subsume("Steakhouse")){
+            for(BasicActivity bba: ba) {
+                System.out.println(bba.getVerb() + " " + bba.getNoun());
+            }
         }
-
-        System.out.println("Find activities for have-food: ");
-        for(AbstractActivity a:activityClusters.findActivities("have", "food")){
-            System.out.println(a.getVerb()+" - "+a.getNoun());
-        }
-
-        activityClusters.saveClusters();
     }
 }

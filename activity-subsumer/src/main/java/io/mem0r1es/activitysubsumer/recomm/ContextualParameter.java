@@ -1,6 +1,6 @@
 package io.mem0r1es.activitysubsumer.recomm;
 
-import io.mem0r1es.activitysubsumer.activities.AbstractActivity;
+import io.mem0r1es.activitysubsumer.activities.ContextualActivity;
 
 /**
  * @author Ivan Gavrilović
@@ -8,8 +8,9 @@ import io.mem0r1es.activitysubsumer.activities.AbstractActivity;
 public interface ContextualParameter {
     /**
      * Get the value of how much the specified activity is aligned with the contextual parameter
-     * @param abstractActivity activity to check
+     *
+     * @param contextualActivity activity to check
      * @return how much activity is possible
      */
-    double getScore(AbstractActivity abstractActivity);
+    double getScore(ContextualActivity contextualActivity);
 }

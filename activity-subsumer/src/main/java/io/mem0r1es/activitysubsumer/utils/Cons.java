@@ -8,8 +8,6 @@ public class Cons {
 
     public static final String VERB_ROOTS = "src/test/resources/verb_roots";
 
-    public static final String ACTIVITIES = "src/test/resources/activities.graph";
-
     public static final String ENTRY_SEPARATOR = "|";
     public static final String ENTRY_SEPARATOR_REG = "[|]";
     public static final String NEW_LINE = System.getProperty("line.separator");
@@ -21,8 +19,12 @@ public class Cons {
     public static final String VERBS_HYPONYM = "src/test/resources/word_net_verbs_hyponym";
     public static final String VERBS_SYNSET = "src/test/resources/word_net_verbs_synset";
     public static final String VERBS = "src/test/resources/word_net_verbs";
+
     public static final String ACTIVITIES_GRAPH = "src/test/resources/activities_graph";
     public static final String ACTIVITIES_MAPPINGS = "src/test/resources/activities_mappings";
+    public static final String ACTIVITIES_DEFAULT = "src/test/resources/default.activities";
+
+    public static final String CATEGORIES_CSV = "src/test/resources/categories.csv";
 
     public static final String DB_NOUN_IN = "src/test/resources/data.noun";
     public static final String DB_VERB_IN = "src/test/resources/data.verb";

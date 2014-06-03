@@ -40,9 +40,8 @@ public class SynsetGraphBuilder {
      * @return graph containing {@link SynsetNode} as nodes
      */
     public DirectedAcyclicGraph<SynsetNode, DefaultEdge> getGraph() {
-        CSVImporter<Integer> importer = new CSVImporter<Integer>(" ", new IntegerVertexParser());
+        CSVImporter<Integer> importer = new CSVImporter<Integer>(" ", new IntegerVertexParser(), graphPath);
         // get all vertices and edges
-        importer.processCSV(graphPath);
         Set<Integer> vertices = importer.getVertices();
         Set<VertexPair<Integer>> edges = importer.getEdges();
 
@@ -82,8 +81,7 @@ public class SynsetGraphBuilder {
      * @return {@link java.util.HashMap} containing the mapping
      */
     private HashMap<Integer, SynsetNode> parseSynsets() {
-        CSVImporter<String> importer = new CSVImporter<String>(" ", new StringVertexParser());
-        importer.processCSV(synsetPath);
+        CSVImporter<String> importer = new CSVImporter<String>(" ", new StringVertexParser(), synsetPath);
         // each edge is synsetCode --> word
         Set<VertexPair<String>> edges = importer.getEdges();
 

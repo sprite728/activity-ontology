@@ -1,6 +1,6 @@
 package io.mem0r1es.activitysubsumer.recomm;
 
-import io.mem0r1es.activitysubsumer.activities.AbstractActivity;
+import io.mem0r1es.activitysubsumer.activities.ContextualActivity;
 
 import java.util.*;
 
@@ -11,10 +11,10 @@ import java.util.*;
  * @author Ivan Gavrilović
  */
 public class ActivityRecognizer {
-    private Set<AbstractActivity> allActivities;
+    private Set<ContextualActivity> allActivities;
     private Set<ContextualParameter> contextualParameters;
 
-    public ActivityRecognizer(Set<AbstractActivity> allActivities, Set<ContextualParameter> contextualParameters) {
+    public ActivityRecognizer(Set<ContextualActivity> allActivities, Set<ContextualParameter> contextualParameters) {
         this.allActivities = allActivities;
         this.contextualParameters = contextualParameters;
     }
@@ -23,38 +23,38 @@ public class ActivityRecognizer {
      * Applies the contextual parameters and returns the list of candidate activities sorted descending
      * @return set of sorted candidate activities
      */
-    public Set<AbstractActivity> apply() {
-        List<AbstractActivitySortable> activitiesSortable = new LinkedList<AbstractActivitySortable>();
+    public Set<ContextualActivity> candidates() {
+        List<ContextualActivitySortable> activitiesSortable = new LinkedList<ContextualActivitySortable>();
 
-        for(AbstractActivity aa:allActivities){
+        for(ContextualActivity aa:allActivities){
             double score = 0;
             for(ContextualParameter cp:contextualParameters){
                 score += cp.getScore(aa);
             }
-            activitiesSortable.add(new AbstractActivitySortable(aa, score));
+            activitiesSortable.add(new ContextualActivitySortable(aa, score));
         }
 
         Collections.sort(activitiesSortable);
 
-        Set<AbstractActivity> result = new HashSet<AbstractActivity>();
-        for(AbstractActivitySortable aas: activitiesSortable){
+        Set<ContextualActivity> result = new HashSet<ContextualActivity>();
+        for(ContextualActivitySortable aas: activitiesSortable){
             result.add(aas.activity);
         }
         return result;
     }
 
-    class AbstractActivitySortable implements Comparable {
-        private AbstractActivity activity;
+    class ContextualActivitySortable implements Comparable {
+        private ContextualActivity activity;
         private double score;
 
-        AbstractActivitySortable(AbstractActivity activity, double score) {
+        ContextualActivitySortable(ContextualActivity activity, double score) {
             this.activity = activity;
             this.score = score;
         }
 
         @Override
         public int compareTo(Object o) {
-            AbstractActivitySortable other = (AbstractActivitySortable) o;
+            ContextualActivitySortable other = (ContextualActivitySortable) o;
             return score > other.score ? 1 : (score == other.score ? 0 : -1);
         }
     }
