@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * @author Ivan Gavrilović
  */
-public abstract class WordNetParser {
+public abstract class WordNetProvider {
     /**
      * Parses the WordNet file and leaves only nouns and verbs with hyponym
      * and synset_member predicates

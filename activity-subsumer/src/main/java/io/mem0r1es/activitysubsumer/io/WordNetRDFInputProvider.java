@@ -26,7 +26,7 @@ import java.util.Set;
  *
  * @author Ivan Gavrilović
  */
-public class WordNetRDFInputParser extends WordNetParser {
+public class WordNetRDFInputProvider extends WordNetProvider {
     class Tuple4 {
         String subject;
         String predicate;
@@ -93,7 +93,7 @@ public class WordNetRDFInputParser extends WordNetParser {
      * Parse single statement, return null if we are not interested in this type of statement
      *
      * @param stmt statement
-     * @return {@link WordNetRDFInputParser.Tuple4} with values or {@code null}
+     * @return {@link WordNetRDFInputProvider.Tuple4} with values or {@code null}
      */
     private Tuple4 parseStatement(Statement stmt) {
         String predicate = stmt.getPredicate().getLocalName();

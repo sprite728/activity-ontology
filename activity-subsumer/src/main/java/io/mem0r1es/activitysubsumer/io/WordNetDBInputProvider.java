@@ -12,7 +12,7 @@ import java.util.*;
  *
  * @author Ivan Gavrilović
  */
-public class WordNetDBInputParser extends WordNetParser {
+public class WordNetDBInputProvider extends WordNetProvider {
     // the symbol for hyponym relation in the WordNet file
     private static final String HYPONYM = "~";
     private static final String INSTANCE_HYPONYM = "~i";

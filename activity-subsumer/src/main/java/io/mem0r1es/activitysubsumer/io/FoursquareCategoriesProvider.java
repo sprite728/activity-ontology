@@ -6,6 +6,6 @@ import org.jgrapht.graph.DefaultEdge;
 /**
  * @author Ivan Gavrilović
  */
-public interface FoursquareCategoriesParser {
+public interface FoursquareCategoriesProvider {
     DirectedAcyclicGraph<String, DefaultEdge> readGraph();
 }
