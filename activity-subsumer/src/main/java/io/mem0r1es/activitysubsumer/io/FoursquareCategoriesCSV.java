@@ -12,7 +12,7 @@ import java.util.Set;
 /**
  * @author Ivan Gavrilović
  */
-public class FoursquareCategoriesCSV implements FoursquareCategoriesParser {
+public class FoursquareCategoriesCSV implements FoursquareCategoriesProvider {
 
     private String path;
     public FoursquareCategoriesCSV(String path){
@@ -23,7 +23,6 @@ public class FoursquareCategoriesCSV implements FoursquareCategoriesParser {
         CSVImporter<String> importer = new CSVImporter<String>(" ", new StringVertexParser(), path);
         Set<String> vertices = importer.getVertices();
         Set<VertexPair<String>> edges = importer.getEdges();
-        System.out.println("Parser v size e size "+ vertices.size() + " - "+edges.size());
 
         DirectedAcyclicGraph<String, DefaultEdge> dag = new DirectedAcyclicGraph<String, DefaultEdge>(DefaultEdge.class);
         try {

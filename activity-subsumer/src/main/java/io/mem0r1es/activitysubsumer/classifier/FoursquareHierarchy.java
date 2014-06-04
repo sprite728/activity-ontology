@@ -1,6 +1,6 @@
 package io.mem0r1es.activitysubsumer.classifier;
 
-import io.mem0r1es.activitysubsumer.io.FoursquareCategoriesParser;
+import io.mem0r1es.activitysubsumer.io.FoursquareCategoriesProvider;
 import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
 import org.jgrapht.graph.DefaultEdge;
 
@@ -12,9 +12,9 @@ import java.util.Set;
  */
 public class FoursquareHierarchy {
     private DirectedAcyclicGraph<String, DefaultEdge> categories = null;
-    private FoursquareCategoriesParser parser;
+    private FoursquareCategoriesProvider parser;
 
-    public FoursquareHierarchy(FoursquareCategoriesParser parser) {
+    public FoursquareHierarchy(FoursquareCategoriesProvider parser) {
         this.parser = parser;
     }
 

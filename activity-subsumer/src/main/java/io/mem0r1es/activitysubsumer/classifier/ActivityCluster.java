@@ -2,16 +2,11 @@ package io.mem0r1es.activitysubsumer.classifier;
 
 import io.mem0r1es.activitysubsumer.activities.BasicActivity;
 import io.mem0r1es.activitysubsumer.activities.ContextualActivity;
-import io.mem0r1es.activitysubsumer.activities.UserActivity;
 import io.mem0r1es.activitysubsumer.graphs.NounsSynsetForest;
 import io.mem0r1es.activitysubsumer.graphs.SynsetForest;
 import io.mem0r1es.activitysubsumer.graphs.VerbsSynsetForest;
-import io.mem0r1es.activitysubsumer.io.ActivityIO;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
-import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
-import org.jgrapht.graph.DefaultEdge;
 
-import javax.naming.Context;
 import java.util.*;
 
 /**
@@ -20,23 +15,36 @@ import java.util.*;
  * @author Ivan Gavrilović
  */
 public class ActivityCluster {
-    Map<SynsetNode, Set<ContextualActivity>> activities = new HashMap<SynsetNode, Set<ContextualActivity>>();
+
+    Map<SynsetNode, Set<ContextualActivity>> activities;
 
     /**
      * Forests of verbs and nouns
      */
-    private VerbsSynsetForest verbs;
-    private NounsSynsetForest nouns;
+    private SynsetForest verbs;
+    private SynsetForest nouns;
 
     /**
      * Creates a new activity cluster
      *
-     * @param verbs  verbs forest
-     * @param nouns  nouns forest
+     * @param verbs      verbs forest
+     * @param nouns      nouns forest
+     * @param activities nouns forest
      */
-    public ActivityCluster(VerbsSynsetForest verbs, NounsSynsetForest nouns) {
+    public ActivityCluster(SynsetForest verbs, SynsetForest nouns, Map<SynsetNode, Set<ContextualActivity>> activities) {
         this.verbs = verbs;
         this.nouns = nouns;
+        this.activities = activities;
+    }
+
+    /**
+     * Creates a new activity cluster
+     *
+     * @param verbs verbs forest
+     * @param nouns nouns forest
+     */
+    public ActivityCluster(VerbsSynsetForest verbs, NounsSynsetForest nouns) {
+        this(verbs, nouns, new HashMap<SynsetNode, Set<ContextualActivity>>());
     }
 
     /**
@@ -46,7 +54,10 @@ public class ActivityCluster {
      */
     public void addActivity(ContextualActivity activity) {
         Set<SynsetNode> subgraphs = verbs.findSubgraphs(activity.getVerb());
+
+        System.out.println("Adding activity " + activity.getVerb() + " - " + activity.getNoun());
         for (SynsetNode s : subgraphs) {
+            System.out.println("To node " + s);
             Set<ContextualActivity> verbActivities = activities.get(s);
             if (verbActivities == null) {
                 verbActivities = new HashSet<ContextualActivity>();
@@ -55,18 +66,25 @@ public class ActivityCluster {
             verbActivities.add(activity);
             activities.put(s, verbActivities);
         }
+        System.out.println("Current situation  " + activities);
     }
 
     /**
      * Subsume the specified clusters (including {@code this} one) by subsuming the activities in the specified verbs sub-graph
+     *
      * @param clusters clusters to subsume
-     * @param root verb sub-graph root
+     * @param root     verb sub-graph root
      * @return set of activities that subsume everything, or empty if there are no such activities
      */
-    public Set<BasicActivity> subsume(Set<ActivityCluster> clusters, SynsetNode root){
+    public Set<BasicActivity> subsume(Set<ActivityCluster> clusters, SynsetNode root) {
         Set<ContextualActivity> subgraphActivities = activities.get(root);
 
         if (subgraphActivities == null || subgraphActivities.isEmpty()) return new HashSet<BasicActivity>();
+
+        System.out.println("Subsuming now: ");
+        for (ContextualActivity ca : subgraphActivities) {
+            System.out.println(ca.getVerb() + " " + ca.getNoun());
+        }
 
         Set<SynsetNode> subgraphRoots = findActivityClusters(subgraphActivities);
 
@@ -81,9 +99,9 @@ public class ActivityCluster {
         for (SynsetNode subRoot : subgraphRoots) {
 
             // get nouns from this one
-            Set<String> clusterNouns =  getActivitiesNouns(activities.get(subRoot));
+            Set<String> clusterNouns = getActivitiesNouns(activities.get(subRoot));
             // get nouns from all others
-            for(ActivityCluster c: clusters){
+            for (ActivityCluster c : clusters) {
                 if (c != null && c.activities != null) {
                     clusterNouns.addAll(getActivitiesNouns(c.activities.get(subRoot)));
                 }
@@ -202,7 +220,7 @@ public class ActivityCluster {
             Set<ContextualActivity> subgraphActivities = activities.get(s);
 
             if (subgraphActivities != null && subgraphActivities.containsAll(acts)) {
-                    roots.add(s);
+                roots.add(s);
             }
         }
 
@@ -269,6 +287,7 @@ public class ActivityCluster {
 
     /**
      * Finds all activities that are children to the activity with the specified verb and noun
+     *
      * @param verb verb of the activity
      * @param noun noun of the activity
      * @return set of activities that match the search terms
@@ -290,5 +309,26 @@ public class ActivityCluster {
         }
 
         return resultActivities;
+    }
+
+    public boolean alreadyProcessed(SynsetNode toProcess, Set<SynsetNode> processed) {
+        Set<ContextualActivity> subgraphActivities = activities.get(toProcess);
+        if (subgraphActivities == null) return true;
+
+        for (SynsetNode s : processed) {
+            Set<ContextualActivity> otherSubgraph = activities.get(s);
+
+            if (subgraphActivities.equals(otherSubgraph)) return true;
+        }
+
+        return false;
+    }
+
+    public Map<SynsetNode, Set<ContextualActivity>> getActivities() {
+        return activities;
+    }
+
+    public void setActivities(Map<SynsetNode, Set<ContextualActivity>> activities) {
+        this.activities = activities;
     }
 }

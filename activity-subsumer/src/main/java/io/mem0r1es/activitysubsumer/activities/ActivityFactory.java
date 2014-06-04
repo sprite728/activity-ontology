@@ -17,7 +17,7 @@ public class ActivityFactory {
      * @return co-responding activity object
      * @throws Exception in case that the input is not serializable
      */
-    public static BasicActivity deserialize(String input) throws Exception {
+    public static ContextualActivity deserialize(String input) throws Exception {
         String type = input.substring(0, input.indexOf(" "));
 
         if (type.equals(UserActivity.class.getSimpleName())) {
@@ -27,7 +27,7 @@ public class ActivityFactory {
         }
     }
 
-    public static String serialize(BasicActivity activity){
+    public static String serialize(ContextualActivity activity){
         if (activity instanceof UserActivity){
             return ((UserActivity) activity).serialize();
         }

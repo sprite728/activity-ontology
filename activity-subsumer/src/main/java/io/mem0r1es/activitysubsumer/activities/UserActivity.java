@@ -14,6 +14,7 @@ import java.util.*;
  *         Changes: Ivan Gavrilovic
  */
 public class UserActivity extends BasicActivity implements ContextualActivity {
+
     private String id;
     private Set<String> locCategories;
     private Set<TimeOfDay> timeOfDay;
@@ -26,12 +27,13 @@ public class UserActivity extends BasicActivity implements ContextualActivity {
 
     /**
      * Creates new user activity
-     * @param id if of this activity, it should be unique. For instance it could be {@code System#nanoTime()}
-     * @param verb activity verb
-     * @param noun activity noun
+     *
+     * @param id            if of this activity, it should be unique. For instance it could be {@code System#nanoTime()}
+     * @param verb          activity verb
+     * @param noun          activity noun
      * @param locCategories location categories
-     * @param timesOfDay times of day when the activity occured (it is possible that spreads across two or more periods
-     * @param duration duration of the activity in minutes
+     * @param timesOfDay    times of day when the activity occured (it is possible that spreads across two or more periods
+     * @param duration      duration of the activity in minutes
      */
     public UserActivity(String id, String verb, String noun, Set<String> locCategories, Set<TimeOfDay> timesOfDay, String duration) {
         super(verb, noun);
@@ -45,7 +47,7 @@ public class UserActivity extends BasicActivity implements ContextualActivity {
     }
 
     public UserActivity(String serializedInput) {
-       deSerialize(serializedInput);
+        deSerialize(serializedInput);
     }
 
     @Override
@@ -89,7 +91,7 @@ public class UserActivity extends BasicActivity implements ContextualActivity {
         Collections.addAll(locCategories, parts[4].split(Cons.ENTRY_SEPARATOR_REG));
 
         this.timeOfDay = new HashSet<TimeOfDay>();
-        for(String s:parts[5].split(Cons.ENTRY_SEPARATOR_REG)){
+        for (String s : parts[5].split(Cons.ENTRY_SEPARATOR_REG)) {
             timeOfDay.add(TimeOfDay.valueOf(s));
         }
 
@@ -145,5 +147,10 @@ public class UserActivity extends BasicActivity implements ContextualActivity {
     @Override
     public Set<TimeOfDay> getTimesOfDay() {
         return timeOfDay;
+    }
+
+    @Override
+    public String toString() {
+        return getVerb() + " - " + getNoun();
     }
 }
