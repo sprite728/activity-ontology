@@ -33,6 +33,10 @@ public class SynsetNode {
     private String code;
 
 
+    private Set<SynsetNode> parents = new HashSet<SynsetNode>();
+    private Set<SynsetNode> children = new HashSet<SynsetNode>();
+
+
     public SynsetNode(String code, String... synset) {
         this.code = code;
         Collections.addAll(this.synset, synset);
@@ -115,5 +119,21 @@ public class SynsetNode {
             }
         }
         return print;
+    }
+
+    public void addParent(SynsetNode sn) {
+        parents.add(sn);
+    }
+
+    public void addChild(SynsetNode sn){
+        children.add(sn);
+    }
+
+    public Set<SynsetNode> getParents() {
+        return parents;
+    }
+
+    public Set<SynsetNode> getChildren() {
+        return children;
     }
 }

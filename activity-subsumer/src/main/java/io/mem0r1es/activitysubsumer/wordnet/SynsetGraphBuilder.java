@@ -10,6 +10,7 @@ import org.jgrapht.util.VertexPair;
 import java.io.InputStream;
 import java.net.URLDecoder;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -72,6 +73,38 @@ public class SynsetGraphBuilder {
         }
 
         return graph;
+    }
+
+    /**
+     * Triggers the graph creation, and returns all nodes with data
+     *
+     * @return graph containing {@link SynsetNode} as nodes
+     */
+    public Set<SynsetNode> getGraphAdjecencyList() {
+        CSVImporter<Integer> importer = new CSVImporter<Integer>(" ", new IntegerVertexParser(), graphStream, cntHypoVertices, cntHypoEdges);
+        // get all vertices and edges
+        Set<Integer> vertices = importer.getVertices();
+        List<VertexPair<Integer>> edges = importer.getEdges();
+
+        Set<SynsetNode> allNodes = new HashSet<SynsetNode>();
+        // now add all to the graph
+        for (Integer v : vertices) {
+            allNodes.add(codeToSynset(v));
+        }
+        for (VertexPair<Integer> edg : edges) {
+            try {
+                SynsetNode fst = codeToSynset(edg.getFirst());
+                SynsetNode snd = codeToSynset(edg.getSecond());
+                fst.addChild(snd);
+                snd.addParent(fst);
+                allNodes.add(fst);
+                allNodes.add(snd);
+            } catch (Exception e) {
+                System.out.println("Graph creating exception: " + edg);
+            }
+        }
+
+        return allNodes;
     }
 
     /**

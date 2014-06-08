@@ -1,11 +1,10 @@
 package io.mem0r1es.activitysubsumer.graphs;
 
 import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
+import io.mem0r1es.activitysubsumer.utils.Utils;
+import io.mem0r1es.activitysubsumer.wordnet.BFSSynsetNode;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
 import org.apache.log4j.Logger;
-import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
-import org.jgrapht.graph.DefaultEdge;
-import org.jgrapht.traverse.BreadthFirstIterator;
 
 import java.util.*;
 
@@ -18,11 +17,31 @@ import java.util.*;
 public class SynsetGraph {
     static Logger logger = SubsumerLogger.getLogger(SynsetGraph.class);
     protected SynsetNode root;
-    protected DirectedAcyclicGraph<SynsetNode, DefaultEdge> graph;
+    protected Set<SynsetNode> graph;
 
-    public SynsetGraph(SynsetNode root, DirectedAcyclicGraph<SynsetNode, DefaultEdge> graph) {
+    /**
+     * Backing structures to improver the performance of the search related operations
+     */
+    // words in this sub-graph
+    protected Set<String> words;
+    // mapping from words to all synsets containing the word
+    protected Map<String, Set<SynsetNode>> synsets;
+
+    public SynsetGraph(SynsetNode root, Set<SynsetNode> graph) {
         this.root = root;
         this.graph = graph;
+
+        words = new HashSet<String>();
+        synsets = new HashMap<String, Set<SynsetNode>>();
+        BFSSynsetNode bfs = new BFSSynsetNode(root);
+        while (bfs.hasNext()) {
+            SynsetNode node = bfs.next();
+
+            Set<String> currWords = node.getSynset();
+            words.addAll(currWords);
+
+            for (String s:currWords) Utils.addToMap(synsets, s, node);
+        }
     }
 
     /**
@@ -32,7 +51,7 @@ public class SynsetGraph {
      * @return set of {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode} containing the word
      */
     public Set<SynsetNode> find(String word) {
-        return find(word, root);
+        return  synsets.get(word);
     }
 
     /**
@@ -45,7 +64,7 @@ public class SynsetGraph {
     public Set<SynsetNode> find(String word, SynsetNode startNode) {
         Set<SynsetNode> resultSet = new HashSet<SynsetNode>();
 
-        BreadthFirstIterator<SynsetNode, DefaultEdge> bfs = new BreadthFirstIterator<SynsetNode, DefaultEdge>(graph, startNode);
+        BFSSynsetNode bfs = new BFSSynsetNode(startNode);
         while (bfs.hasNext()) {
             SynsetNode node = bfs.next();
             if (node.contains(word)) resultSet.add(node);
@@ -62,9 +81,10 @@ public class SynsetGraph {
     public Set<SynsetNode> getAllFrom(SynsetNode startNode) {
         Set<SynsetNode> resultSet = new HashSet<SynsetNode>();
 
-        BreadthFirstIterator<SynsetNode, DefaultEdge> bfs = new BreadthFirstIterator<SynsetNode, DefaultEdge>(graph, startNode);
+        BFSSynsetNode bfs = new BFSSynsetNode(startNode);
         while (bfs.hasNext()) {
-            resultSet.add(bfs.next());
+            SynsetNode node = bfs.next();
+            resultSet.add(node);
         }
         return resultSet;
     }
@@ -77,11 +97,7 @@ public class SynsetGraph {
      */
     public Set<SynsetNode> findAll(Set<String> words) {
         Set<SynsetNode> resultSet = new HashSet<SynsetNode>();
-        BreadthFirstIterator<SynsetNode, DefaultEdge> bfs = new BreadthFirstIterator<SynsetNode, DefaultEdge>(graph, root);
-        while (bfs.hasNext()) {
-            SynsetNode node = bfs.next();
-            if (node.containsAny(words)) resultSet.add(node);
-        }
+        for (String w:words) if (synsets.containsKey(w)) resultSet.addAll(synsets.get(w));
         return resultSet;
     }
 
@@ -92,12 +108,7 @@ public class SynsetGraph {
      * @return {@code true} if sub-graph contains it, {@code false} otherwise
      */
     public boolean contains(String word) {
-        BreadthFirstIterator<SynsetNode, DefaultEdge> bfs = new BreadthFirstIterator<SynsetNode, DefaultEdge>(graph, root);
-        while (bfs.hasNext()) {
-            SynsetNode node = bfs.next();
-            if (node.contains(word)) return true;
-        }
-        return false;
+        return words.contains(word);
     }
 
     /**
@@ -181,9 +192,8 @@ public class SynsetGraph {
 
         }
 
-        for (DefaultEdge e : graph.incomingEdgesOf(startNode)) {
-            SynsetNode next = graph.getEdgeSource(e);
-            for (List<SynsetNode> c : getAllPathsToRoot(next)) {
+        for (SynsetNode parent : startNode.getParents()) {
+            for (List<SynsetNode> c : getAllPathsToRoot(parent)) {
                 List<SynsetNode> myPath = new LinkedList<SynsetNode>(c);
                 myPath.add(0, startNode);
                 paths.add(myPath);
@@ -198,7 +208,7 @@ public class SynsetGraph {
         return root;
     }
 
-    public DirectedAcyclicGraph<SynsetNode, DefaultEdge> getGraph() {
+    public Set<SynsetNode> getSubgraphSynsets() {
         return graph;
     }
 }

@@ -223,22 +223,17 @@ public class ActivityCluster {
     /**
      * Finds all activities that are children to the activity with the specified verb and noun
      *
-     * @param verb verb of the activity
-     * @param noun noun of the activity
+     * @param possibleVerbs all possible verbs of the activity
+     * @param possibleNouns all possible nouns of the activity
      * @return set of activities that match the search terms
      */
-    public Set<ContextualActivity> findActivities(String verb, String noun) {
+    public Set<ContextualActivity> findActivities(Set<String> possibleVerbs, Set<String> possibleNouns) {
         HashSet<ContextualActivity> resultActivities = new HashSet<ContextualActivity>();
-
-        // all possible child words for the specified verb and noun
-        Set<String> childVerbs = verbs.childWords(verb);
-
-        Set<String> childNouns = nouns.childWords(noun);
 
         for (Set<ContextualActivity> subActivities : activities.values()) {
 
             for (ContextualActivity aa : subActivities) {
-                if (childVerbs.contains(aa.getVerb()) && childNouns.contains(aa.getNoun())) resultActivities.add(aa);
+                if (possibleVerbs.contains(aa.getVerb()) && possibleNouns.contains(aa.getNoun())) resultActivities.add(aa);
             }
 
         }

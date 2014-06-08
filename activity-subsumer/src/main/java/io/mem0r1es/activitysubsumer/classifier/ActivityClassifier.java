@@ -114,8 +114,12 @@ public class ActivityClassifier {
     public Set<ContextualActivity> findActivities(String verb, String noun) {
         Set<ContextualActivity> resultSet = new HashSet<ContextualActivity>();
 
+        // all possible child words for the specified verb and noun
+        Set<String> childVerbs = verbs.childWords(verb);
+        Set<String> childNouns = nouns.childWords(noun);
+
         for (ActivityCluster ac : activities.values()) {
-            resultSet.addAll(ac.findActivities(verb, noun));
+            resultSet.addAll(ac.findActivities(childVerbs, childNouns));
         }
         return resultSet;
     }

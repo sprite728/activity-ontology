@@ -2,13 +2,10 @@ package io.mem0r1es.activitysubsumer.graphs;
 
 import io.mem0r1es.activitysubsumer.concurrent.ActivityOpsExecutor;
 import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
+import io.mem0r1es.activitysubsumer.wordnet.BFSSynsetNode;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetGraphBuilder;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
 import org.apache.log4j.Logger;
-import org.jgrapht.Graphs;
-import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
-import org.jgrapht.graph.DefaultEdge;
-import org.jgrapht.traverse.BreadthFirstIterator;
 
 import java.io.InputStream;
 import java.util.*;
@@ -40,7 +37,7 @@ public class SynsetForest {
 
     private void init(InputStream hyponym, InputStream synset, int rootLevel, int cntSynVertices, int cntHypoVertices, int cntSynEdges, int cntHypoEdges) {
         SynsetGraphBuilder builder = new SynsetGraphBuilder(hyponym, synset, cntSynVertices, cntHypoVertices, cntSynEdges, cntHypoEdges);
-        DirectedAcyclicGraph<SynsetNode, DefaultEdge> builderGraph = builder.getGraph();
+        Set<SynsetNode> builderGraph = builder.getGraphAdjecencyList();
 
         Set<SynsetNode> roots = nodesAtLevel(builderGraph, rootLevel);
         logger.info("Num of sub-graphs created: " + roots.size());
@@ -141,11 +138,11 @@ public class SynsetForest {
      * @param level until which level to go
      * @return set of {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode} that are found at the specified level
      */
-    private Set<SynsetNode> nodesAtLevel(DirectedAcyclicGraph<SynsetNode, DefaultEdge> graph, int level) {
+    private Set<SynsetNode> nodesAtLevel(Set<SynsetNode> graph, int level) {
         Set<SynsetNode> roots = new HashSet<SynsetNode>();
 
-        for (SynsetNode s : graph.vertexSet()) {
-            if (graph.inDegreeOf(s) == 0) {
+        for (SynsetNode s : graph) {
+            if (s.getParents().isEmpty()) {
                 roots.add(s);
             }
         }
@@ -153,11 +150,10 @@ public class SynsetForest {
         for (int i = 1; i < (level + 1); i++) {
             Set<SynsetNode> nextLevel = new HashSet<SynsetNode>();
             for (SynsetNode start : roots) {
-                List<SynsetNode> neighbours = Graphs.neighborListOf(graph, start);
-                if (neighbours.isEmpty()) {
+                if (start.getChildren().isEmpty()) {
                     nextLevel.add(start);
                 } else {
-                    nextLevel.addAll(neighbours);
+                    nextLevel.addAll(start.getChildren());
                 }
             }
             roots.clear();
@@ -186,11 +182,11 @@ public class SynsetForest {
     public int getSubgraphSize(SynsetNode root) {
         if (subgraphSizes.containsKey(root)) return subgraphSizes.get(root);
 
-        BreadthFirstIterator<SynsetNode, DefaultEdge> bfs = new BreadthFirstIterator<SynsetNode, DefaultEdge>(graphs.get(root).getGraph(), root);
         int cnt = 0;
+        BFSSynsetNode bfs = new BFSSynsetNode(root);
         while (bfs.hasNext()) {
-            cnt++;
             bfs.next();
+            cnt++;
         }
 
         subgraphSizes.put(root, cnt);
