@@ -1,16 +1,17 @@
 package io.mem0r1es.activitysubsumer.wordnet;
 
+import gnu.trove.map.hash.TIntObjectHashMap;
+import gnu.trove.set.hash.THashSet;
 import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.imp.CSVImporter;
 import org.jgrapht.imp.IntegerVertexParser;
-import org.jgrapht.imp.StringVertexParser;
 import org.jgrapht.util.VertexPair;
 
+import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URLDecoder;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -22,7 +23,7 @@ import java.util.Set;
  * @author Ivan Gavrilović
  */
 public class SynsetGraphBuilder {
-    private HashMap<Integer, SynsetNode> synsets = null;
+    private TIntObjectHashMap<SynsetNode> synsets = null;
 
     private int cntSynVertices;
     private int cntHypoVertices;
@@ -81,27 +82,27 @@ public class SynsetGraphBuilder {
      * @return graph containing {@link SynsetNode} as nodes
      */
     public Set<SynsetNode> getGraphAdjecencyList() {
-        CSVImporter<Integer> importer = new CSVImporter<Integer>(" ", new IntegerVertexParser(), graphStream, cntHypoVertices, cntHypoEdges);
-        // get all vertices and edges
-        Set<Integer> vertices = importer.getVertices();
-        List<VertexPair<Integer>> edges = importer.getEdges();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(graphStream));
 
-        Set<SynsetNode> allNodes = new HashSet<SynsetNode>();
-        // now add all to the graph
-        for (Integer v : vertices) {
-            allNodes.add(codeToSynset(v));
-        }
-        for (VertexPair<Integer> edg : edges) {
-            try {
-                SynsetNode fst = codeToSynset(edg.getFirst());
-                SynsetNode snd = codeToSynset(edg.getSecond());
-                fst.addChild(snd);
-                snd.addParent(fst);
-                allNodes.add(fst);
-                allNodes.add(snd);
-            } catch (Exception e) {
-                System.out.println("Graph creating exception: " + edg);
+        THashSet<SynsetNode> allNodes = new THashSet<SynsetNode>(cntSynVertices);
+        try {
+            String line = reader.readLine();
+            while (line != null) {
+                String[] parts = line.split(" ");
+                if (parts.length == 1) allNodes.add(codeToSynset(Integer.parseInt(parts[0])));
+                else if (parts.length == 2){
+                    SynsetNode fst = codeToSynset(Integer.parseInt(parts[0]));
+                    SynsetNode snd = codeToSynset(Integer.parseInt(parts[1]));
+                    fst.addChild(snd);
+                    snd.addParent(fst);
+                    allNodes.add(fst);
+                    allNodes.add(snd);
+                }
+
+                line = reader.readLine();
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         return allNodes;
@@ -125,30 +126,38 @@ public class SynsetGraphBuilder {
      *
      * @return {@link java.util.HashMap} containing the mapping
      */
-    private HashMap<Integer, SynsetNode> parseSynsets() {
-        CSVImporter<String> importer = new CSVImporter<String>(" ", new StringVertexParser(), synsetStream, cntSynVertices, cntSynEdges);
-        // each edge is synsetCode --> word
-        List<VertexPair<String>> edges = importer.getEdges();
+    private TIntObjectHashMap<SynsetNode> parseSynsets() {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(synsetStream));
 
         // for each edge, start vertex is synset code, end vertex is the synset member (word)
-        HashMap<Integer, SynsetNode> synsets = new HashMap<Integer, SynsetNode>();
-        for (VertexPair<String> edg : edges) {
-            Integer synsetCode = Integer.parseInt(edg.getFirst());
+        TIntObjectHashMap<SynsetNode> synsets = new TIntObjectHashMap<SynsetNode>(cntSynVertices);
+        try {
+            String line = reader.readLine();
+            while (line != null) {
+                String[] parts = line.split(" ");
+                if (parts.length == 2){
+                    Integer synsetCode= Integer.parseInt(parts[0]);
 
-            SynsetNode node = synsets.get(synsetCode);
-            try {
-                String newWord = URLDecoder.decode(edg.getSecond(), "UTF-8");
-                if (node == null) {
-                    node = new SynsetNode(synsetCode.toString(), newWord);
-                } else {
-                    node.addWords(newWord);
+                    SynsetNode node = synsets.get(synsetCode);
+                    try {
+                        String newWord = URLDecoder.decode(parts[1], "UTF-8");
+                        if (node == null) {
+                            node = new SynsetNode(synsetCode.toString(), newWord);
+                        } else {
+                            node.addWords(newWord);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                    synsets.put(synsetCode, node);
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+                line = reader.readLine();
             }
-
-            synsets.put(synsetCode, node);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
         return synsets;
     }
 }

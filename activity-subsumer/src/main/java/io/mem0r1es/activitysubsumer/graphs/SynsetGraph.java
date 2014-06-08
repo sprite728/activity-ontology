@@ -1,5 +1,6 @@
 package io.mem0r1es.activitysubsumer.graphs;
 
+import gnu.trove.set.hash.THashSet;
 import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
 import io.mem0r1es.activitysubsumer.utils.Utils;
 import io.mem0r1es.activitysubsumer.wordnet.BFSSynsetNode;
@@ -31,7 +32,7 @@ public class SynsetGraph {
         this.root = root;
         this.graph = graph;
 
-        words = new HashSet<String>();
+        words = new THashSet<String>();
         synsets = new HashMap<String, Set<SynsetNode>>();
         BFSSynsetNode bfs = new BFSSynsetNode(root);
         while (bfs.hasNext()) {
