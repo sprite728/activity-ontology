@@ -2,12 +2,18 @@ package io.mem0r1es.activitysubsumer.classifier;
 
 import io.mem0r1es.activitysubsumer.activities.BasicActivity;
 import io.mem0r1es.activitysubsumer.activities.ContextualActivity;
+import io.mem0r1es.activitysubsumer.concurrent.ActivityOpsExecutor;
+import io.mem0r1es.activitysubsumer.concurrent.LCAFinder;
+import io.mem0r1es.activitysubsumer.concurrent.SubgraphEvaluator;
 import io.mem0r1es.activitysubsumer.graphs.NounsSynsetForest;
 import io.mem0r1es.activitysubsumer.graphs.SynsetForest;
 import io.mem0r1es.activitysubsumer.graphs.VerbsSynsetForest;
+import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
+import org.apache.log4j.Logger;
 
 import java.util.*;
+import java.util.concurrent.Future;
 
 /**
  * Activities clusters. It stores activities based on the verbs sub-graphs
@@ -15,14 +21,16 @@ import java.util.*;
  * @author Ivan Gavrilović
  */
 public class ActivityCluster {
+    static Logger logger = SubsumerLogger.getLogger(ActivityCluster.class);
 
     Map<SynsetNode, Set<ContextualActivity>> activities;
-
     /**
      * Forests of verbs and nouns
      */
     private SynsetForest verbs;
     private SynsetForest nouns;
+
+    private ActivityOpsExecutor executor;
 
     /**
      * Creates a new activity cluster
@@ -35,6 +43,8 @@ public class ActivityCluster {
         this.verbs = verbs;
         this.nouns = nouns;
         this.activities = activities;
+
+        this.executor = ActivityOpsExecutor.get();
     }
 
     /**
@@ -54,10 +64,8 @@ public class ActivityCluster {
      */
     public void addActivity(ContextualActivity activity) {
         Set<SynsetNode> subgraphs = verbs.findSubgraphs(activity.getVerb());
-
-        System.out.println("Adding activity " + activity.getVerb() + " - " + activity.getNoun());
+        logger.debug("Adding activity "+ activity +" to "+subgraphs.size()+" clusters");
         for (SynsetNode s : subgraphs) {
-            System.out.println("To node " + s);
             Set<ContextualActivity> verbActivities = activities.get(s);
             if (verbActivities == null) {
                 verbActivities = new HashSet<ContextualActivity>();
@@ -66,7 +74,6 @@ public class ActivityCluster {
             verbActivities.add(activity);
             activities.put(s, verbActivities);
         }
-        System.out.println("Current situation  " + activities);
     }
 
     /**
@@ -78,23 +85,16 @@ public class ActivityCluster {
      */
     public Set<BasicActivity> subsume(Set<ActivityCluster> clusters, SynsetNode root) {
         Set<ContextualActivity> subgraphActivities = activities.get(root);
-
+        // if nothing to subsume return empty set
         if (subgraphActivities == null || subgraphActivities.isEmpty()) return new HashSet<BasicActivity>();
 
-        System.out.println("Subsuming now: ");
-        for (ContextualActivity ca : subgraphActivities) {
-            System.out.println(ca.getVerb() + " " + ca.getNoun());
-        }
-
+        // find all sub-graphs containing the same activities
         Set<SynsetNode> subgraphRoots = findActivityClusters(subgraphActivities);
 
         // set of mandatory nouns which we must find in a noun sub-graph
         Set<String> mandatoryNouns = getActivitiesNouns(subgraphActivities);
 
-        List<SynsetNode> bestVerbs = new LinkedList<SynsetNode>();
-        List<SynsetNode> bestNouns = new LinkedList<SynsetNode>();
-        double maxScore = Double.MIN_VALUE;
-
+        Map<SubgraphEvaluator, Future<Double>> workers = new HashMap<SubgraphEvaluator, Future<Double>>();
         // iterate over every verb subgraph - noun subgraph pair, and find the ones with the max score
         for (SynsetNode subRoot : subgraphRoots) {
 
@@ -108,8 +108,20 @@ public class ActivityCluster {
             }
 
             for (SynsetNode nounSubgraph : nouns.getGraphs().keySet()) {
+                SubgraphEvaluator evaluator = new SubgraphEvaluator(mandatoryNouns, clusterNouns, nounSubgraph, nouns, subRoot);
 
-                double current = evaluateSubgraph(mandatoryNouns, clusterNouns, nounSubgraph, nouns);
+                workers.put(evaluator, executor.submit(evaluator));
+            }
+        }
+        logger.debug("Evaluating subg-raphs for root "+ root);
+
+        // find the ones with the highest scores
+        List<SynsetNode> bestVerbs = new LinkedList<SynsetNode>();
+        List<SynsetNode> bestNouns = new LinkedList<SynsetNode>();
+        double maxScore = Double.MIN_VALUE;
+        try {
+            for (SubgraphEvaluator se : workers.keySet()) {
+                double current = workers.get(se).get();
 
                 if (maxScore <= current) {
                     if (maxScore < current) {
@@ -117,56 +129,16 @@ public class ActivityCluster {
                         bestVerbs.clear();
                         bestNouns.clear();
                     }
-                    bestVerbs.add(subRoot);
-                    bestNouns.add(nounSubgraph);
+                    bestVerbs.add(se.getVerbRoot());
+                    bestNouns.add(se.getNounRoot());
                 }
             }
-        }
-        return generateActivities(bestVerbs, bestNouns, mandatoryNouns, getActivitiesVerbs(subgraphActivities));
-    }
-
-    /**
-     * Subsumes the set of specified activities or returns an empty set if there is no such activity
-     *
-     * @param acts set of activities to subsume
-     * @return set of subsumed activities
-     */
-    public Set<BasicActivity> subsume(Set<ContextualActivity> acts) {
-        Set<BasicActivity> subsumed = new HashSet<BasicActivity>();
-        // find the clusters containing these activities
-        Set<SynsetNode> clusterRoots = findActivityClusters(acts);
-
-        if (!clusterRoots.isEmpty()) {
-            // set of mandatory nouns which we must find in a noun sub-graph
-            Set<String> mandatoryNouns = getActivitiesNouns(acts);
-
-            List<SynsetNode> bestVerbs = new LinkedList<SynsetNode>();
-            List<SynsetNode> bestNouns = new LinkedList<SynsetNode>();
-            double maxScore = Double.MIN_VALUE;
-
-            // iterate over every verb subgraph - noun subgraph pair, and find the ones with the max score
-            for (SynsetNode actCluster : clusterRoots) {
-                Set<String> clusterNouns = getActivitiesNouns(activities.get(actCluster));
-                for (SynsetNode nounSubgraph : nouns.getGraphs().keySet()) {
-
-                    double current = evaluateSubgraph(mandatoryNouns, clusterNouns, nounSubgraph, nouns);
-
-                    if (maxScore <= current) {
-                        if (maxScore < current) {
-                            maxScore = current;
-                            bestVerbs.clear();
-                            bestNouns.clear();
-                        }
-                        bestVerbs.add(actCluster);
-                        bestNouns.add(nounSubgraph);
-                    }
-                }
-            }
-
-            subsumed = generateActivities(bestVerbs, bestNouns, mandatoryNouns, getActivitiesVerbs(acts));
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
-        return subsumed;
+
+        return generateActivities(bestVerbs, bestNouns, getActivitiesVerbs(subgraphActivities), mandatoryNouns);
     }
 
     /**
@@ -178,32 +150,27 @@ public class ActivityCluster {
      * @return set containing the generated activities
      */
     public Set<BasicActivity> generateActivities(List<SynsetNode> verbSynsets, List<SynsetNode> nounSynsets,
-                                                 Set<String> nounsToFind, Set<String> verbsToFind) {
+                                                 Set<String> verbsToFind, Set<String> nounsToFind) {
         Set<BasicActivity> generated = new HashSet<BasicActivity>();
         if (verbSynsets.isEmpty() || nounSynsets.isEmpty()) return generated;
 
+        List<Future<Set<BasicActivity>>> workers = new LinkedList<Future<Set<BasicActivity>>>();
         for (int i = 0; i < nounSynsets.size(); i++) {
             SynsetNode bestVerb = verbSynsets.get(i);
             SynsetNode bestNoun = nounSynsets.get(i);
 
-            Set<SynsetNode> matchVerb = verbs.findAllInSubgraph(bestVerb, verbsToFind);
-            Set<SynsetNode> matchNouns = nouns.findAllInSubgraph(bestNoun, nounsToFind);
-
-            Set<String> possibleVerbs = new HashSet<String>();
-            for (SynsetNode s : verbs.getLCA(bestVerb, matchVerb)) {
-                possibleVerbs.addAll(s.getSynset());
-            }
-            Set<String> possibleNouns = new HashSet<String>();
-            for (SynsetNode s : nouns.getLCA(bestNoun, matchNouns)) {
-                possibleNouns.addAll(s.getSynset());
-            }
-            System.out.println("Combine verbs - nouns: " + possibleVerbs + " - " + possibleNouns);
-            for (String v : possibleVerbs) {
-                for (String n : possibleNouns) {
-                    generated.add(new BasicActivity(v, n));
-                }
-            }
+            LCAFinder worker = new LCAFinder(verbs, nouns, verbsToFind, nounsToFind, bestVerb, bestNoun);
+            workers.add(executor.submit(worker));
         }
+
+        try {
+            for (Future<Set<BasicActivity>> lca : workers) {
+                generated.addAll(lca.get());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return generated;
     }
 
@@ -254,38 +221,6 @@ public class ActivityCluster {
     }
 
     /**
-     * Evaluates the subgraph according to he
-     *
-     * @param mandatoryWords set of words that must be found, otherwise, the score is {@code 0}
-     * @param clusterWords   set of words that are within the activity cluster; for instance set of nouns
-     * @param subgraphRoot   root of the verbs/nouns subgraph that we are evaluating
-     * @return the score is {@value 0} if not all mandatory words are found; otherview is it
-     * {@code num_words_in_subgraph_that_are_in_cluster / total_number_of_words_in_subgrah}
-     */
-    private double evaluateSubgraph(Set<String> mandatoryWords, Set<String> clusterWords, SynsetNode subgraphRoot, SynsetForest forest) {
-        // find all the synsets that contain any of the nouns from the cluster
-        Set<SynsetNode> clusterSynsets = forest.findAllInSubgraph(subgraphRoot, clusterWords);
-
-        Set<String> synsetWords = new HashSet<String>();
-        for (SynsetNode s : clusterSynsets) {
-            synsetWords.addAll(s.getSynset());
-        }
-
-        // check that all mandatory
-        for (String m : mandatoryWords) {
-            if (!synsetWords.contains(m)) {
-                return Double.MIN_VALUE;
-            }
-        }
-
-        int cnt = 0;
-        for (String cw : clusterWords) {
-            if (clusterWords.contains(cw)) cnt++;
-        }
-        return cnt / (1.0 * forest.getSubgraphSize(subgraphRoot));
-    }
-
-    /**
      * Finds all activities that are children to the activity with the specified verb and noun
      *
      * @param verb verb of the activity
@@ -330,5 +265,13 @@ public class ActivityCluster {
 
     public void setActivities(Map<SynsetNode, Set<ContextualActivity>> activities) {
         this.activities = activities;
+    }
+
+    public Set<ContextualActivity> getAllActivities() {
+        Set<ContextualActivity> resultSet = new HashSet<ContextualActivity>();
+        for (Set<ContextualActivity> cas : activities.values()) {
+            resultSet.addAll(cas);
+        }
+        return resultSet;
     }
 }

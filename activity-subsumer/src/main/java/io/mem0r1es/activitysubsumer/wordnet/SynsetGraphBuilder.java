@@ -7,8 +7,10 @@ import org.jgrapht.imp.IntegerVertexParser;
 import org.jgrapht.imp.StringVertexParser;
 import org.jgrapht.util.VertexPair;
 
+import java.io.InputStream;
 import java.net.URLDecoder;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -20,18 +22,28 @@ import java.util.Set;
  */
 public class SynsetGraphBuilder {
     private HashMap<Integer, SynsetNode> synsets = null;
-    private String graphPath;
-    private String synsetPath;
+
+    private int cntSynVertices;
+    private int cntHypoVertices;
+    private int cntSynEdges;
+    private int cntHypoEdges;
+
+    private InputStream graphStream;
+    private InputStream synsetStream;
 
     /**
      * Creates new {@link SynsetGraphBuilder}
      *
-     * @param graphPath  path to the file with hyponyms graph
-     * @param synsetPath path that contains the mappings from synset codes to words
+     * @param graphStream  path to the file with hyponyms graph
+     * @param synsetStream path that contains the mappings from synset codes to words
      */
-    public SynsetGraphBuilder(String graphPath, String synsetPath) {
-        this.graphPath = graphPath;
-        this.synsetPath = synsetPath;
+    public SynsetGraphBuilder(InputStream graphStream, InputStream synsetStream, int cntSynVertices, int cntHypoVertices, int cntSynEdges, int cntHypoEdges) {
+        this.cntSynVertices = cntSynVertices;
+        this.cntHypoVertices = cntHypoVertices;
+        this.cntSynEdges = cntSynEdges;
+        this.cntHypoEdges = cntHypoEdges;
+        this.graphStream = graphStream;
+        this.synsetStream = synsetStream;
     }
 
     /**
@@ -40,10 +52,10 @@ public class SynsetGraphBuilder {
      * @return graph containing {@link SynsetNode} as nodes
      */
     public DirectedAcyclicGraph<SynsetNode, DefaultEdge> getGraph() {
-        CSVImporter<Integer> importer = new CSVImporter<Integer>(" ", new IntegerVertexParser(), graphPath);
+        CSVImporter<Integer> importer = new CSVImporter<Integer>(" ", new IntegerVertexParser(), graphStream, cntHypoVertices, cntHypoEdges);
         // get all vertices and edges
         Set<Integer> vertices = importer.getVertices();
-        Set<VertexPair<Integer>> edges = importer.getEdges();
+        List<VertexPair<Integer>> edges = importer.getEdges();
 
         DirectedAcyclicGraph<SynsetNode, DefaultEdge> graph = new DirectedAcyclicGraph<SynsetNode, DefaultEdge>(DefaultEdge.class);
         // now add all to the graph
@@ -81,9 +93,9 @@ public class SynsetGraphBuilder {
      * @return {@link java.util.HashMap} containing the mapping
      */
     private HashMap<Integer, SynsetNode> parseSynsets() {
-        CSVImporter<String> importer = new CSVImporter<String>(" ", new StringVertexParser(), synsetPath);
+        CSVImporter<String> importer = new CSVImporter<String>(" ", new StringVertexParser(), synsetStream, cntSynVertices, cntSynEdges);
         // each edge is synsetCode --> word
-        Set<VertexPair<String>> edges = importer.getEdges();
+        List<VertexPair<String>> edges = importer.getEdges();
 
         // for each edge, start vertex is synset code, end vertex is the synset member (word)
         HashMap<Integer, SynsetNode> synsets = new HashMap<Integer, SynsetNode>();

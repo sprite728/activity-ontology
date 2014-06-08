@@ -8,12 +8,13 @@ dependencies{
     compile fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     // currently, custom jgrapht jar is built
     //compile 'org.jgrapht:jgrapht-core:0.9.0'
-    compile 'org.testng:testng:6.8.8'
+    compile 'junit:junit:4.11'
     compile 'com.hp.hpl.jena:jena:2.6.4'
+    compile 'log4j:log4j:1.2.17'
 }
 
 test{
-    useTestNG()
+    useJUnit()
 }
 
 task compile{

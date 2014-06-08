@@ -1,8 +1,9 @@
 package io.mem0r1es.activitysubsumer.io;
 
-import com.sun.deploy.net.URLEncoder;
 
-import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.net.URLEncoder;
 import java.util.*;
 
 /**
@@ -17,13 +18,21 @@ public class WordNetDBInputProvider extends WordNetProvider {
     private static final String HYPONYM = "~";
     private static final String INSTANCE_HYPONYM = "~i";
 
+    private PrintWriter writerGraph;
+    private PrintWriter writerSynset;
+
+    public WordNetDBInputProvider(PrintWriter writerGraph, PrintWriter writerSynset) {
+        this.writerGraph = writerGraph;
+        this.writerSynset = writerSynset;
+    }
+
     @Override
-    public void parseInput(String inputFileName, String outputFileName) {
+    public void parseInput(InputStream input) {
         try {
             Map<String, Set<String>> synsets = new HashMap<String, Set<String>>();
             Map<String, Set<String>> hyponyms = new HashMap<String, Set<String>>();
 
-            Scanner s = new Scanner(new FileInputStream(inputFileName));
+            Scanner s = new Scanner(input);
 
             while (s.hasNextLine()) {
                 String line = s.nextLine();
@@ -64,8 +73,8 @@ public class WordNetDBInputProvider extends WordNetProvider {
                 synsets.put(prefix + synsetCode, members);
                 hyponyms.put(prefix + synsetCode, rels);
             }
-            printToFile(outputFileName + "_synset", synsets);
-            printToFile(outputFileName + "_hyponym", hyponyms);
+            printToFile(writerSynset, synsets);
+            printToFile(writerGraph, hyponyms);
         } catch (Exception e) {
             e.printStackTrace();
         }

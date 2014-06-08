@@ -1,13 +1,19 @@
 package io.mem0r1es.activitysubsumer.graphs;
 
+import io.mem0r1es.activitysubsumer.concurrent.ActivityOpsExecutor;
+import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetGraphBuilder;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
+import org.apache.log4j.Logger;
 import org.jgrapht.Graphs;
 import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.traverse.BreadthFirstIterator;
 
+import java.io.InputStream;
 import java.util.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.Future;
 
 /**
  * Contains all of the synset graphs, which are not connected in the WordNet
@@ -15,32 +21,33 @@ import java.util.*;
  * @author Ivan Gavrilović
  */
 public class SynsetForest {
+    static Logger logger = SubsumerLogger.getLogger(SynsetForest.class);
+
     protected Map<SynsetNode, SynsetGraph> graphs = new HashMap<SynsetNode, SynsetGraph>();
     protected Map<SynsetNode, Integer> subgraphSizes = new HashMap<SynsetNode, Integer>();
 
     /**
      * Generates a forest of synsets
      *
-     * @param hyponymPath path to hyponym file (graph file)
-     * @param synsetPath  path to mapping file, which maps the code from the graph file to synset members
+     * @param hyponymStream stream to hyponym file (graph file)
+     * @param synsetStream  stream to mapping file, which maps the code from the graph file to synset members
      * @param rootLevel   at which level should we split the big graph. If it is 0, only the nodes with in degree 0 are taken,
      *                    if it is 1, the first neighbours are added, if 2, neighbours of neighbours are added, and so on
      */
-    public SynsetForest(String hyponymPath, String synsetPath, int rootLevel) {
-        init(hyponymPath, synsetPath, rootLevel);
+    public SynsetForest(InputStream hyponymStream, InputStream synsetStream, int rootLevel, int cntSynVertices, int cntHypoVertices, int cntSynEdges, int cntHypoEdges) {
+        init(hyponymStream, synsetStream, rootLevel, cntSynVertices, cntHypoVertices, cntSynEdges, cntHypoEdges);
     }
 
-    private void init(String hyponym, String synset, int rootLevel) {
-        SynsetGraphBuilder builder = new SynsetGraphBuilder(hyponym, synset);
+    private void init(InputStream hyponym, InputStream synset, int rootLevel, int cntSynVertices, int cntHypoVertices, int cntSynEdges, int cntHypoEdges) {
+        SynsetGraphBuilder builder = new SynsetGraphBuilder(hyponym, synset, cntSynVertices, cntHypoVertices, cntSynEdges, cntHypoEdges);
         DirectedAcyclicGraph<SynsetNode, DefaultEdge> builderGraph = builder.getGraph();
 
         Set<SynsetNode> roots = nodesAtLevel(builderGraph, rootLevel);
-        System.out.println("Number of sub-graphs: " + roots.size());
+        logger.info("Num of sub-graphs created: " + roots.size());
 
         // all verbs will share the whole verbs graph
         for (SynsetNode node : roots) {
-            VerbsSynsetGraph vsg = new VerbsSynsetGraph(node, builderGraph);
-            graphs.put(node, vsg);
+            graphs.put(node, new SynsetGraph(node, builderGraph));
         }
     }
 
@@ -50,12 +57,29 @@ public class SynsetForest {
      * @param word search term
      * @return set with roots of the sub-graphs
      */
-    public Set<SynsetNode> findSubgraphs(String word) {
+    public Set<SynsetNode> findSubgraphs(final String word) {
         Set<SynsetNode> resultRoots = new HashSet<SynsetNode>();
-        for (Map.Entry<SynsetNode, SynsetGraph> entry : graphs.entrySet()) {
-            if (entry.getValue().contains(word)) {
-                resultRoots.add(entry.getKey());
+        List<Future<SynsetNode>> futures = new LinkedList<Future<SynsetNode>>();
+        for (final Map.Entry<SynsetNode, SynsetGraph> entry : graphs.entrySet()) {
+            Future<SynsetNode> worker = ActivityOpsExecutor.get().submit(new Callable<SynsetNode>() {
+                @Override
+                public SynsetNode call() throws Exception {
+                    if (entry.getValue().contains(word)) {
+                        return entry.getKey();
+                    }
+                    return null;
+                }
+            });
+            futures.add(worker);
+        }
+
+        try {
+            for (Future<SynsetNode> futSyn : futures) {
+                SynsetNode res = futSyn.get();
+                if (res != null) resultRoots.add(res);
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return resultRoots;
     }
@@ -150,7 +174,6 @@ public class SynsetForest {
      * @return set of LCAs
      */
     public Set<SynsetNode> getLCA(SynsetNode root, Set<SynsetNode> nodes) {
-        System.out.println("Finding LCA for: " + nodes);
         return graphs.get(root).getLCA(nodes);
     }
 
@@ -180,20 +203,37 @@ public class SynsetForest {
      * @param word search term
      * @return set of possible child words
      */
-    public Set<String> childWords(String word) {
+    public Set<String> childWords(final String word) {
         Set<SynsetNode> nounRoots = findSubgraphs(word);
         Set<String> possibleNouns = new HashSet<String>();
 
+        List<Future<Set<String>>> workers = new LinkedList<Future<Set<String>>>();
         // for every sub-graph
-        for (SynsetNode n : nounRoots) {
-            Set<SynsetNode> nounNodes = findInSubgraph(n, word);
-            // get the list of synset nodes containing the word
-            for (SynsetNode node : nounNodes) {
-                Set<SynsetNode> childNodes = wordsInSubgraphFrom(n, node);
-                // for every node find its children
-                for (SynsetNode cn : childNodes) possibleNouns.addAll(cn.getSynset());
-            }
+        for (final SynsetNode n : nounRoots) {
+            Future<Set<String>> future = ActivityOpsExecutor.get().submit(new Callable<Set<String>>() {
+                @Override
+                public Set<String> call() throws Exception {
+                    Set<String> subgraphPossibleNouns = new HashSet<String>();
+                    Set<SynsetNode> nounNodes = findInSubgraph(n, word);
+                    // get the list of synset nodes containing the word
+                    for (SynsetNode node : nounNodes) {
+                        Set<SynsetNode> childNodes = wordsInSubgraphFrom(n, node);
+                        // for every node find its children
+                        for (SynsetNode cn : childNodes) subgraphPossibleNouns.addAll(cn.getSynset());
+                    }
+                    return subgraphPossibleNouns;
+                }
+            });
+            workers.add(future);
         }
+
+        try {
+            for (Future<Set<String>> futSets : workers)
+                possibleNouns.addAll(futSets.get());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return possibleNouns;
     }
 

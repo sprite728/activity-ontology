@@ -57,3 +57,4 @@ gradlew
 gradlew.bat
 
 activity-subsumer/src/test/resources
+out/

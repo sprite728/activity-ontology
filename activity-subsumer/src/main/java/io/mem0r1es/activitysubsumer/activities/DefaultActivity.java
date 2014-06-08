@@ -8,6 +8,7 @@ import java.util.Set;
 
 /**
  * Default activity that was learned from the crowdsourcing experiment
+ *
  * @author Ivan Gavrilović
  */
 public class DefaultActivity extends BasicActivity implements ContextualActivity {
@@ -17,27 +18,27 @@ public class DefaultActivity extends BasicActivity implements ContextualActivity
     private int minDuration;
     private int maxDuration;
 
-    public DefaultActivity(String verb, String noun, Set<String> locCategories, Set<String> timesOfDay, String duration) {
+    public DefaultActivity(String verb, String noun, Set<String> locCategories, Set<TimeOfDay> timesOfDay, String duration) {
         super(verb, noun);
         this.locCategories = locCategories;
 
-        this.timesOfDay = new HashSet<TimeOfDay>();
-        for(String s:timesOfDay){
-            this.timesOfDay.add(TimeOfDay.valueOf(s.toUpperCase()));
-        }
+        this.timesOfDay = timesOfDay;
 
-        if (duration.equals("none")){
+        if (duration.equals("none")) {
             this.minDuration = 0;
             this.maxDuration = Integer.MAX_VALUE;
-        }
-        else{
+        } else {
             this.minDuration = Utils.parseMinutes(duration);
 
             int i = 0;
-            while(Character.isDigit(duration.charAt(i++)));
+            while (Character.isDigit(duration.charAt(i++))) ;
             // position to the next number in 30m1h
             i++;
-            this.maxDuration = Utils.parseMinutes(duration.substring(i));
+            if (i >= duration.length()) {
+                this.maxDuration = this.minDuration;
+            } else {
+                this.maxDuration = Utils.parseMinutes(duration.substring(i));
+            }
         }
     }
 

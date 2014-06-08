@@ -130,13 +130,13 @@ public class UserActivity extends BasicActivity implements ContextualActivity {
     @Override
     public int getMinDuration() {
         if (duration.equals("none")) return 0;
-        return Utils.parseMinutes(duration);
+        return Integer.parseInt(duration);
     }
 
     @Override
     public int getMaxDuration() {
         if (duration.equals("none")) return Integer.MAX_VALUE;
-        return Utils.parseMinutes(duration);
+        return Integer.parseInt(duration);
     }
 
     @Override

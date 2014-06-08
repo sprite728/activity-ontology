@@ -1,6 +1,8 @@
 package io.mem0r1es.activitysubsumer.graphs;
 
+import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
+import org.apache.log4j.Logger;
 import org.jgrapht.experimental.dag.DirectedAcyclicGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.traverse.BreadthFirstIterator;
@@ -14,6 +16,7 @@ import java.util.*;
  * @author Ivan Gavrilović
  */
 public class SynsetGraph {
+    static Logger logger = SubsumerLogger.getLogger(SynsetGraph.class);
     protected SynsetNode root;
     protected DirectedAcyclicGraph<SynsetNode, DefaultEdge> graph;
 
@@ -52,10 +55,11 @@ public class SynsetGraph {
 
     /**
      * Get all nodes that have startNode as their parent
+     *
      * @param startNode starting node
      * @return set of synset nodes
      */
-    public Set<SynsetNode> getAllFrom(SynsetNode startNode){
+    public Set<SynsetNode> getAllFrom(SynsetNode startNode) {
         Set<SynsetNode> resultSet = new HashSet<SynsetNode>();
 
         BreadthFirstIterator<SynsetNode, DefaultEdge> bfs = new BreadthFirstIterator<SynsetNode, DefaultEdge>(graph, startNode);
@@ -83,10 +87,11 @@ public class SynsetGraph {
 
     /**
      * Check if this sub-graph contains the specified word
+     *
      * @param word serach term
      * @return {@code true} if sub-graph contains it, {@code false} otherwise
      */
-    public boolean contains(String word){
+    public boolean contains(String word) {
         BreadthFirstIterator<SynsetNode, DefaultEdge> bfs = new BreadthFirstIterator<SynsetNode, DefaultEdge>(graph, root);
         while (bfs.hasNext()) {
             SynsetNode node = bfs.next();
@@ -102,6 +107,7 @@ public class SynsetGraph {
      * @return set of LCAs
      */
     public Set<SynsetNode> getLCA(Set<SynsetNode> nodes) {
+        logger.debug("Finding LCA for: " + nodes);
         List<SynsetNode> listNodes = new ArrayList<SynsetNode>(nodes);
         Set<SynsetNode> previousLCAs = new HashSet<SynsetNode>();
         previousLCAs.add(listNodes.get(0));

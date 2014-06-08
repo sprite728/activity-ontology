@@ -6,7 +6,9 @@ import org.jgrapht.imp.CSVImporter;
 import org.jgrapht.imp.StringVertexParser;
 import org.jgrapht.util.VertexPair;
 
+import java.io.InputStream;
 import java.net.URLDecoder;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -14,15 +16,15 @@ import java.util.Set;
  */
 public class FoursquareCategoriesCSV implements FoursquareCategoriesProvider {
 
-    private String path;
-    public FoursquareCategoriesCSV(String path){
-        this.path = path;
+    private InputStream input;
+    public FoursquareCategoriesCSV(InputStream input){
+        this.input = input;
     }
     @Override
     public DirectedAcyclicGraph<String, DefaultEdge> readGraph() {
-        CSVImporter<String> importer = new CSVImporter<String>(" ", new StringVertexParser(), path);
+        CSVImporter<String> importer = new CSVImporter<String>(" ", new StringVertexParser(), input);
         Set<String> vertices = importer.getVertices();
-        Set<VertexPair<String>> edges = importer.getEdges();
+        List<VertexPair<String>> edges = importer.getEdges();
 
         DirectedAcyclicGraph<String, DefaultEdge> dag = new DirectedAcyclicGraph<String, DefaultEdge>(DefaultEdge.class);
         try {

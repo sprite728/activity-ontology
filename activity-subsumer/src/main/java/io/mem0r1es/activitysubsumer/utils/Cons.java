@@ -33,4 +33,6 @@ public class Cons {
 
     public static final String PREDICATE_HYPONYM = "hyponym";
     public static final String PREDICATE_SYNSET = "synset_member";
+
+    public static final int NUM_THREADS = 10;
 }

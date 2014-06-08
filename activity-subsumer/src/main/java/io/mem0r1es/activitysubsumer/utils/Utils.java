@@ -39,6 +39,7 @@ public class Utils {
         while (Character.isDigit(curr)) {
             cnt = cnt * 10 + Integer.parseInt(Character.toString(curr));
             i++;
+            curr = input.charAt(i);
         }
         if (curr == 'h') {
             cnt = 60 * cnt;
@@ -80,25 +81,4 @@ public class Utils {
 
         return output;
     }
-
-
-//    /**
-//     * Serialize this activity
-//     * @return serialized activity
-//     */
-//    public String serialize() {
-//        List<String> parts = new LinkedList<String>();
-//
-//        parts.add(this.getClass().getSimpleName());
-//        parts.add(verb);
-//        parts.add(noun);
-//
-//        return Utils.encodeParts(parts);
-//    }
-
-//    /**
-//     * All classes should implement this. It allows classes to deserialize the input and initialize object fields.
-//     * @param input input to deserialize
-//     */
-//    public abstract void deSerialize(String input);
 }

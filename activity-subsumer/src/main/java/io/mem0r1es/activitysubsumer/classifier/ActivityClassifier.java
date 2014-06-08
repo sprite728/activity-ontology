@@ -2,15 +2,13 @@ package io.mem0r1es.activitysubsumer.classifier;
 
 import io.mem0r1es.activitysubsumer.activities.BasicActivity;
 import io.mem0r1es.activitysubsumer.activities.ContextualActivity;
+import io.mem0r1es.activitysubsumer.concurrent.ActivityClusterInserter;
 import io.mem0r1es.activitysubsumer.graphs.NounsSynsetForest;
 import io.mem0r1es.activitysubsumer.graphs.VerbsSynsetForest;
 import io.mem0r1es.activitysubsumer.io.ActivityProvider;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 
 /**
@@ -38,8 +36,8 @@ public class ActivityClassifier {
         activities = provider.read(verbs, nouns);
     }
 
-    public boolean save(){
-        return  provider.write(activities);
+    public boolean save() {
+        return provider.write(activities);
     }
 
     /**
@@ -49,14 +47,26 @@ public class ActivityClassifier {
      * @param activity activity to add
      */
     public void addActivity(ContextualActivity activity) {
+        List<ActivityClusterInserter> workers = new LinkedList<ActivityClusterInserter>();
         for (String cat : activity.getLocCategories()) {
             ActivityCluster categoryCluster = activities.get(cat);
             if (categoryCluster == null) {
                 categoryCluster = new ActivityCluster(verbs, nouns);
             }
-            categoryCluster.addActivity(activity);
+            ActivityClusterInserter worker = new ActivityClusterInserter(categoryCluster, activity, cat);
+            worker.start();
 
-            activities.put(cat, categoryCluster);
+            workers.add(worker);
+        }
+
+
+        for (ActivityClusterInserter worker : workers) {
+            try {
+                worker.join();
+                activities.put(worker.getCategory(), worker.getCluster());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -84,7 +94,7 @@ public class ActivityClassifier {
 
         Set<SynsetNode> processedSubgraphs = new HashSet<SynsetNode>();
         for (SynsetNode sn : verbs.getGraphs().keySet()) {
-            if (!categoryCluster.alreadyProcessed(sn, processedSubgraphs)){
+            if (!categoryCluster.alreadyProcessed(sn, processedSubgraphs)) {
                 Set<BasicActivity> subsumed = categoryCluster.subsume(allClusters, sn);
                 if (!subsumed.isEmpty()) allSubgraphSubsumed.add(subsumed);
             }
@@ -107,6 +117,26 @@ public class ActivityClassifier {
         for (ActivityCluster ac : activities.values()) {
             resultSet.addAll(ac.findActivities(verb, noun));
         }
+        return resultSet;
+    }
+
+    public Set<ContextualActivity> getAllActivities() {
+        System.out.println("Started gathering all activities");
+        Set<ContextualActivity> resultSet = new HashSet<ContextualActivity>();
+        for (String cat : activities.keySet()) {
+            resultSet.addAll(getAllActivities(cat, false));
+        }
+        System.out.println("Finished gathering all activities");
+        return resultSet;
+    }
+
+    public Set<ContextualActivity> getAllActivities(String category, boolean hierarchical) {
+        if (!hierarchical) return activities.get(category).getAllActivities();
+
+        Set<String> allCategories = hierarchy.getHierarchy(category);
+
+        Set<ContextualActivity> resultSet = new HashSet<ContextualActivity>();
+        for (String cat : allCategories) resultSet.addAll(getAllActivities(cat, false));
         return resultSet;
     }
 }

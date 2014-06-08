@@ -4,7 +4,7 @@ package io.mem0r1es.activitysubsumer.utils;
  * @author Ivan Gavrilović
  */
 public enum TimeOfDay {
-    MORNING(0, "morning"), NOON(1, "noon"), AFTERNOON(2, "afternoon"), EVENING(3, "evening"), NIGTHTIME(4, "nighttime");
+    MORNING(0, "morning"), NOON(1, "noon"), AFTERNOON(2, "afternoon"), EVENING(3, "evening"), NIGHTTIME(4, "nighttime");
 
     private int order;
     private String value;

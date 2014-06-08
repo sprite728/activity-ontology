@@ -1,10 +1,11 @@
 package io.mem0r1es.activitysubsumer.io;
 
-import io.mem0r1es.activitysubsumer.activities.UserActivity;
+import io.mem0r1es.activitysubsumer.activities.ContextualActivity;
+import io.mem0r1es.activitysubsumer.activities.DefaultActivity;
 import io.mem0r1es.activitysubsumer.utils.Cons;
 import io.mem0r1es.activitysubsumer.utils.TimeOfDay;
 
-import java.io.File;
+import java.io.InputStream;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -16,10 +17,10 @@ import java.util.Set;
  */
 public class DefaultActivitiesProvider {
 
-    private String path;
+    private InputStream input;
 
-    public DefaultActivitiesProvider(String path) {
-        this.path = path;
+    public DefaultActivitiesProvider(InputStream input) {
+        this.input = input;
     }
 
     /**
@@ -27,24 +28,29 @@ public class DefaultActivitiesProvider {
      *
      * @return set of UserActivities
      */
-    public Set<UserActivity> read() {
-        Set<UserActivity> defaultActivities = new HashSet<UserActivity>();
+    public Set<ContextualActivity> read() {
+        Set<ContextualActivity> defaultActivities = new HashSet<ContextualActivity>();
         try {
 
-            Scanner s = new Scanner(new File(path));
+            Scanner s = new Scanner(input);
             while (s.hasNextLine()) {
                 // verb, noun, locations, times, duration
                 String infos[] = (s.nextLine()).split(",");
 
                 Set<String> locations = new HashSet<String>();
-                Collections.addAll(locations, infos[2].split(Cons.ENTRY_SEPARATOR));
+                Collections.addAll(locations, infos[2].split(Cons.ENTRY_SEPARATOR_REG));
 
                 Set<TimeOfDay> times = new HashSet<TimeOfDay>();
-                for (String tm : infos[3].split(Cons.ENTRY_SEPARATOR)) {
-                    times.add(TimeOfDay.valueOf(tm));
+                for (String tm : infos[3].split(Cons.ENTRY_SEPARATOR_REG)) {
+                    try {
+                        times.add(TimeOfDay.valueOf(tm.toUpperCase()));
+                    }
+                    catch (Exception e){
+                        System.err.println("Cast "+infos[3]);
+                    }
                 }
 
-                defaultActivities.add(new UserActivity("0", infos[0], infos[1], locations, times, infos[4]));
+                defaultActivities.add(new DefaultActivity(infos[0], infos[1], locations, times, infos[4]));
             }
 
             return defaultActivities;

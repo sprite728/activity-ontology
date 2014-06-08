@@ -1,8 +1,8 @@
 package io.mem0r1es.activitysubsumer.wordnet;
 
-import com.sun.deploy.net.URLEncoder;
 
 import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,9 +17,10 @@ import java.util.Set;
  * <br />
  * {@code new SynsetNode("04936080-n", "manner", "mode", "style", "way", "fashion")}
  * </p>
- * @author Horia Radu
  *
- * Changes: Ivan Gavrilovic
+ * @author Horia Radu
+ *         <p/>
+ *         Changes: Ivan Gavrilovic
  */
 public class SynsetNode {
     /**
@@ -40,6 +41,20 @@ public class SynsetNode {
     public SynsetNode(String code, Set<String> synset) {
         this.code = code;
         this.synset.addAll(synset);
+    }
+
+    public static SynsetNode deSerialize(String input) {
+        String parts[] = input.split("\\s");
+        String code = parts[0];
+        Set<String> words = new HashSet<String>();
+
+        try {
+            for (int i = 1; i < parts.length; i++) words.add(URLDecoder.decode(parts[i], "UTF-8"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return new SynsetNode(code, words);
     }
 
     public void addWords(String... words) {
@@ -73,8 +88,9 @@ public class SynsetNode {
     public boolean contains(String word) {
         return synset.contains(word);
     }
+
     public boolean containsAny(Set<String> words) {
-        for (String w:words){
+        for (String w : words) {
             if (synset.contains(w)) return true;
         }
         return false;
@@ -91,29 +107,13 @@ public class SynsetNode {
     @Override
     public String toString() {
         String print = code;
-        for (String s: synset){
+        for (String s : synset) {
             try {
                 print += " " + URLEncoder.encode(s, "UTF-8");
-            }
-            catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
         return print;
-    }
-
-    public static SynsetNode deSerialize(String input){
-        String parts[] = input.split("\\s");
-        String code = parts[0];
-        Set<String> words = new HashSet<String>();
-
-        try {
-            for (int i = 1; i < parts.length; i++) words.add(URLDecoder.decode(parts[i], "UTF-8"));
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-
-        return new SynsetNode(code, words);
     }
 }

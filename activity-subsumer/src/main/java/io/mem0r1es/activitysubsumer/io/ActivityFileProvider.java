@@ -7,8 +7,7 @@ import io.mem0r1es.activitysubsumer.graphs.SynsetForest;
 import io.mem0r1es.activitysubsumer.utils.Cons;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
 
-import java.io.File;
-import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.*;
 
@@ -16,39 +15,39 @@ import java.util.*;
  * @author Ivan Gavrilović
  */
 public class ActivityFileProvider implements ActivityProvider {
-    private String path;
+    private InputStream input;
+    private PrintWriter output;
 
-    public ActivityFileProvider(String path) {
-        this.path = path;
+    public ActivityFileProvider(InputStream input, PrintWriter output) {
+        this.input = input;
+        this.output = output;
     }
 
     @Override
     public Map<String, ActivityCluster> read(SynsetForest verbs, SynsetForest nouns) {
         Map<String, ActivityCluster> cluster = new HashMap<String, ActivityCluster>();
         try {
-            if (new File(path).exists()) {
-                Scanner scanner = new Scanner(new FileInputStream(path));
+            Scanner scanner = new Scanner(input);
 
-                while (scanner.hasNextLine()) {
-                    String category = scanner.nextLine();
+            while (scanner.hasNextLine()) {
+                String category = scanner.nextLine();
 
-                    Map<SynsetNode, Set<ContextualActivity>> synsetActivities = new HashMap<SynsetNode, Set<ContextualActivity>>();
-                    String line = scanner.nextLine();
-                    while (line != null && !line.equals(Cons.CATEGORY_SEPARATOR)) {
-                        SynsetNode sn = SynsetNode.deSerialize(line);
+                Map<SynsetNode, Set<ContextualActivity>> synsetActivities = new HashMap<SynsetNode, Set<ContextualActivity>>();
+                String line = scanner.nextLine();
+                while (line != null && !line.equals(Cons.CATEGORY_SEPARATOR)) {
+                    SynsetNode sn = SynsetNode.deSerialize(line);
 
-                        Set<ContextualActivity> acts = new HashSet<ContextualActivity>();
+                    Set<ContextualActivity> acts = new HashSet<ContextualActivity>();
+                    line = scanner.nextLine();
+                    while (line != null && !line.equals(Cons.CLUSTER_SEPARATOR)) {
+                        acts.add(ActivityFactory.deserialize(line));
                         line = scanner.nextLine();
-                        while (line != null && !line.equals(Cons.CLUSTER_SEPARATOR)) {
-                            acts.add(ActivityFactory.deserialize(line));
-                            line = scanner.nextLine();
-                        }
-                        synsetActivities.put(sn, acts);
-
-                        if (scanner.hasNextLine()) line = scanner.nextLine();
                     }
-                    cluster.put(category, new ActivityCluster(verbs, nouns, synsetActivities));
+                    synsetActivities.put(sn, acts);
+
+                    if (scanner.hasNextLine()) line = scanner.nextLine();
                 }
+                cluster.put(category, new ActivityCluster(verbs, nouns, synsetActivities));
             }
         } catch (Exception e) {
             System.err.println("File format exception!");
@@ -60,25 +59,23 @@ public class ActivityFileProvider implements ActivityProvider {
     @Override
     public boolean write(Map<String, ActivityCluster> activities) {
         try {
-            PrintWriter writer = new PrintWriter(path);
-
             for (String cat : activities.keySet()) {
-                writer.println(cat);
+                output.println(cat);
 
                 Map<SynsetNode, Set<ContextualActivity>> categoryActivities = activities.get(cat).getActivities();
                 for (SynsetNode sn : categoryActivities.keySet()) {
-                    writer.println(sn);
+                    output.println(sn);
 
                     for (ContextualActivity ca : categoryActivities.get(sn))
-                        writer.println(ActivityFactory.serialize(ca));
+                        output.println(ActivityFactory.serialize(ca));
 
-                    writer.println(Cons.CLUSTER_SEPARATOR);
+                    output.println(Cons.CLUSTER_SEPARATOR);
                 }
 
-                writer.println(Cons.CATEGORY_SEPARATOR);
+                output.println(Cons.CATEGORY_SEPARATOR);
             }
 
-            writer.close();
+            output.close();
             return true;
         } catch (Exception e) {
             e.printStackTrace();

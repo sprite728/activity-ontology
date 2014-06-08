@@ -11,6 +11,7 @@ import io.mem0r1es.activitysubsumer.utils.Utils;
 
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
@@ -41,19 +42,24 @@ public class WordNetRDFInputProvider extends WordNetProvider {
         }
     }
 
+    private PrintWriter nounGraph;
+    private PrintWriter nounSynset;
+    private PrintWriter verbGraph;
+    private PrintWriter verbSynset;
+
+    public WordNetRDFInputProvider(PrintWriter nounGraph, PrintWriter nounSynset, PrintWriter verbGraph, PrintWriter verbSynset) {
+        this.nounGraph = nounGraph;
+        this.nounSynset = nounSynset;
+        this.verbGraph = verbGraph;
+        this.verbSynset = verbSynset;
+    }
+
     @Override
-    public void parseInput(String inputFileName, String outputFileName) {
+    public void parseInput(InputStream input) {
         // create an empty model
         Model model = ModelFactory.createDefaultModel();
 
-        // use the FileManager to find the io file
-        InputStream in = FileManager.get().open(inputFileName);
-        if (in == null) {
-            throw new IllegalArgumentException(
-                    "File: " + inputFileName + " not found");
-        }
-
-        model.read(in, null, "N-TRIPLE");
+        model.read(input, null, "N-TRIPLE");
         StmtIterator iter = model.listStatements();
         Map<String, Set<String>> nounSyns = new HashMap<String, Set<String>>();
         Map<String, Set<String>> nounHypo = new HashMap<String, Set<String>>();
@@ -82,10 +88,10 @@ public class WordNetRDFInputProvider extends WordNetProvider {
         fixMissing(nounSyns, nounHypo);
         fixMissing(verbsSyns, verbsHypo);
 
-        printToFile(outputFileName + "_nouns_synset", nounSyns);
-        printToFile(outputFileName + "_nouns_hyponym", nounHypo);
-        printToFile(outputFileName + "_verbs_synset", verbsSyns);
-        printToFile(outputFileName + "_verbs_hyponym", verbsHypo);
+        printToFile(nounSynset, nounSyns);
+        printToFile(nounGraph, nounHypo);
+        printToFile(verbSynset, verbsSyns);
+        printToFile(verbSynset, verbsHypo);
         model.close();
     }
 

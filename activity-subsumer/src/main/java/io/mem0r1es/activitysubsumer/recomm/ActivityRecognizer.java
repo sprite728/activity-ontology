@@ -33,7 +33,6 @@ public class ActivityRecognizer {
             }
             activitiesSortable.add(new ContextualActivitySortable(aa, score));
         }
-
         Collections.sort(activitiesSortable);
 
         Set<ContextualActivity> result = new HashSet<ContextualActivity>();
