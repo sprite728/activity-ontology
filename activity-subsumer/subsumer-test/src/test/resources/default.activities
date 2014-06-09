@@ -1,0 +1,738 @@
+pick up,box,moving company,afternoon|morning,2h
+test,blood,doctor,noon|evening|nighttime|afternoon|morning,30m1h
+gamble,money,casino,noon|evening|nighttime|afternoon|morning,0m15m
+eat,bread,bakery,noon|evening|afternoon|morning,0m15m
+sell,shop,pet store,noon|evening,none
+stay,campground,campground,nighttime|afternoon,2h
+repair,caravan,car repair,afternoon,15m30m
+watch,person,lodging,noon|evening|nighttime|afternoon|morning,2h
+visit,grave,cemetery,noon|afternoon|morning,15m30m
+exercise,leg,physiotherapist,noon|afternoon|morning,1h2h
+buy,tool,hardware store,evening|afternoon|morning,15m30m
+bill,bill,city hall,noon|afternoon|morning,15m30m
+drink,beer,bar,evening|afternoon|nighttime,15m30m
+visit,pastor,church,noon|evening|nighttime|afternoon|morning,30m1h
+paint,wall,painter,noon|afternoon|morning,30m1h
+replace,wheel,bicycle store,noon|evening|afternoon|morning,15m30m
+order,latte,cafe,noon|evening|nighttime|afternoon|morning,15m30m
+stay,person,lodging,noon|evening|nighttime|afternoon|morning,2h
+store,object,storage,noon|evening|nighttime|afternoon|morning,2h
+worship,vishnu,hindu temple,noon|evening|nighttime|afternoon|morning,15m30m
+bowl,strike,bowling alley,noon|evening|nighttime|afternoon|morning,0m15m
+buy,gas,gas station,noon|evening|nighttime|afternoon|morning,0m15m
+browse,store,shopping mall,noon|evening|afternoon|morning,2h
+see,ambassador,embassy,noon|afternoon|morning,30m1h
+stand,trial,courthouse,noon|afternoon|morning,2h
+bake,bread,bakery,afternoon|noon|morning,30m1h
+tell,story,lodging,nighttime,0m15m
+eat,food,food|meal delivery|health|meal takeaway|restaurant,evening|noon|nighttime|morning|afternoon,30m1h
+eat,candy,amusement park,noon|evening|afternoon|morning,15m30m
+buy,movie,movie rental,noon|afternoon|morning,0m15m
+clean,vehicle,car wash,evening|afternoon|morning,15m30m
+exercise,body,health,noon|afternoon|morning,15m30m
+pick,rose,florist,noon|evening|afternoon|morning,15m30m
+lift,weight,physiotherapist|gym,evening|afternoon|noon|nighttime|morning,1h2h
+buy,beer,convenience store,noon|evening|afternoon|morning,0m15m
+change,tire,car repair,noon|evening|afternoon|morning,15m30m
+book,vehicle,rv park,noon|evening|nighttime|afternoon|morning,2h
+get on,airplane,airport,noon|evening|nighttime|afternoon|morning,2h
+call,engine,fire station,nighttime,1h2h
+buy,flower,florist,evening|noon|morning|afternoon,0m15m
+swim,fish,aquarium,noon|evening|nighttime|afternoon|morning,none
+sleep in,station,fire station,evening|nighttime,2h
+prepare,chicken,food,noon|evening|nighttime|afternoon|morning,1h2h
+help,recovery,physiotherapist,noon|evening|afternoon|morning,30m1h
+plump out,basin,plumber,morning,0m15m
+turn over,record,accounting,noon|afternoon|morning,1h2h
+play,game,casino|park,evening|noon|nighttime|morning|afternoon,2h
+pick up,band,bus station,morning,0m15m
+purchase,book,book store,evening,30m1h
+buy,candy,convenience store,noon|evening|afternoon|morning,0m15m
+talk,subject,bar,evening|nighttime,2h
+get,educate,university,noon|morning,1h2h
+go to,establishment,establishment,noon|afternoon|morning,15m30m
+pay,locksmith,locksmith,noon|evening|nighttime|afternoon|morning,0m15m
+tour,firehouse,fire station,noon|evening|afternoon|morning,30m1h
+purchase,gift,department store,noon|evening|nighttime|afternoon|morning,1h2h
+buy,liquor,liquor store,evening|nighttime|afternoon,0m15m
+get,paint,painter,noon|evening|afternoon|morning,0m15m
+go to,jail,police,noon|evening|nighttime|afternoon|morning,none
+pull,tooth,dentist,afternoon|noon|morning,30m1h
+lift,furniture,moving company,afternoon|noon|morning,2h
+fly,plane,airport,noon|evening|nighttime|afternoon|morning,2h
+visit,surgery,dentist,noon|afternoon|morning,1h2h
+move,box,storage,noon|afternoon|morning,30m1h
+measure,detergent,laundry,noon|evening|nighttime|afternoon|morning,0m15m
+visit,accountant,accounting,noon,30m1h
+see,movie,movie theater,noon|evening|nighttime|afternoon|morning,2h
+shop at,bag,department store|convenience store,evening|noon|nighttime|morning|afternoon,30m1h
+apply,paint,painter,noon|evening|nighttime|afternoon|morning,2h
+purchase,shoe,shoe store,noon|evening|afternoon|morning,15m30m
+talk,friend,restaurant,noon|evening|nighttime|afternoon|morning,30m1h
+purchase,insurance,insurance agency,afternoon|noon|morning,30m1h
+occidentalise,dentist,dentist,afternoon,none
+fix,car,car repair,noon|afternoon|morning,30m1h
+receive,degree,university,noon|evening|afternoon|morning,none
+learn,grammar,school,noon|evening|nighttime|afternoon|morning,2h
+get,massage,spa,evening|afternoon|noon|nighttime|morning,30m1h
+leave,vehicle,parking,noon|evening|nighttime|afternoon|morning,0m15m
+take,class,gym,noon|evening|afternoon|morning,30m1h
+buy,alcohol,liquor store,noon|afternoon|morning,0m15m
+obtain,estimate,moving company|roofing contractor,afternoon|noon|morning,30m1h
+obtain,document,lawyer,afternoon,1h2h
+get,money,bank,afternoon,0m15m
+purchase,lunch,meal delivery,noon,30m1h
+repair,closet,electrician,noon|evening|nighttime|afternoon|morning,1h2h
+seek,advice,lawyer,noon|afternoon|morning,15m30m
+exercise,gym,health,noon|evening|nighttime|afternoon|morning,1h2h
+seek,representative,embassy,noon|afternoon|morning,1h2h
+meet,worshipper,hindu temple,noon|evening|nighttime|afternoon|morning,1h2h
+watch,ballgame,stadium,noon|evening|nighttime|afternoon|morning,2h
+pray,kali,hindu temple,noon|evening|afternoon|morning,2h
+fix,tooth,dentist,afternoon|noon|morning,30m1h
+buy,vehicle,car dealer,noon|evening|nighttime|afternoon|morning,1h2h
+watch,movie,movie rental|electronics store|movie theater,evening|noon|nighttime|morning|afternoon,1h2h
+learn,mathematics,school,noon|evening|afternoon|morning,30m1h
+look at,tombstone,funeral home,noon|afternoon|morning,30m1h
+read,book,art gallery|library|book store,evening|afternoon|noon|nighttime|morning,30m1h
+teach,pupil,school,noon|afternoon|morning,2h
+praise,god,place of worship|church,evening|afternoon|noon|nighttime|morning,1h2h
+receive,massage,spa,noon|evening|nighttime|afternoon|morning,1h2h
+examine,animal,veterinary care,noon|evening|afternoon|morning,15m30m
+cab,cloth,clothing store,evening,1h2h
+write,word,school,noon|evening|afternoon|morning,2h
+take,pet,veterinary care,noon|afternoon|morning,30m1h
+make,key,locksmith,noon|afternoon|morning,2h
+fix,lock,locksmith,evening|noon|nighttime|morning|afternoon,30m1h
+look,product,department store,noon|afternoon|morning,30m1h
+exercise,muscle,health,noon|evening|nighttime|afternoon|morning,1h2h
+mix,color,painter,noon|evening|nighttime|afternoon|morning,30m1h
+visit,mayor,city hall,noon|afternoon|morning,30m1h
+order,lunch,meal takeaway,noon|afternoon|morning,15m30m
+diagnose,symptom,doctor,noon|evening|afternoon|morning,1h2h
+land,aircraft,airport,noon|evening|nighttime|afternoon|morning,none
+attend,wedding,synagogue,noon|afternoon|morning,1h2h
+eat,breakfast,food,morning,30m1h
+book,room,lodging,noon|evening|nighttime|afternoon|morning,2h
+watch,game,stadium,evening|afternoon|noon|nighttime,2h
+argue,courthouse,courthouse,morning,1h2h
+visit,person,embassy,noon|afternoon|morning,1h2h
+shop at,boutique,shopping mall,noon|evening|afternoon|morning,15m30m
+drink,club,night club,nighttime|morning,1h2h
+buy,locker,storage,afternoon,30m1h
+rent out,movie,movie rental,noon|evening|nighttime|afternoon|morning,30m1h
+receive,tip,meal delivery,noon|evening|nighttime|afternoon|morning,0m15m
+run,treadmill,gym,noon|evening|afternoon|morning,30m1h
+visit,inpatient,hospital,noon|evening|nighttime|afternoon|morning,2h
+enjoy,child,park,noon|evening|nighttime|afternoon|morning,2h
+see,monkey,zoo,noon|evening|afternoon|morning,15m30m
+push,cart,store,noon|evening|nighttime|afternoon|morning,15m30m
+look,animal,zoo,noon|evening|afternoon|morning,1h2h
+purchase,paper,store,noon|evening|morning,15m30m
+lay,tape,painter,noon|afternoon|morning,1h2h
+choose,movie,movie rental,noon|evening|nighttime|afternoon|morning,15m30m
+view,artifact,museum,noon|evening|afternoon|morning,1h2h
+visit,physiotherapist,physiotherapist,noon|afternoon|morning,15m30m
+wire,apartment,electrician,noon|evening|nighttime|afternoon|morning,2h
+plead,case,courthouse,noon|afternoon|morning,30m1h
+borrow,customer,finance,noon|evening|afternoon|morning,30m1h
+purchase,tool,hardware store,noon|evening|afternoon|morning,30m1h
+ride,bus,bus station,noon|evening|afternoon|morning,30m1h
+take off,aircraft,airport,noon|evening|nighttime|afternoon|morning,none
+service,dead,funeral home,morning,15m30m
+roof,building,roofing contractor,noon|afternoon|morning,2h
+purchase,gasoline,gas station,noon|evening|nighttime|afternoon|morning,0m15m
+try on,shoe,shoe store,noon|afternoon|morning,15m30m
+enter,bus,bus station,noon|evening|nighttime|afternoon|morning,15m30m
+buy,ticket,train station|art gallery|travel agency|movie theater,evening|noon|morning|afternoon,0m15m
+pray,prayer,synagogue,morning,1h2h
+manage,employee,general contractor,noon|evening|nighttime|afternoon|morning,2h
+travel,distance,train station,noon|evening|nighttime|afternoon|morning,1h2h
+choose,truck,car dealer,noon|evening|nighttime|afternoon|morning,2h
+play,football,stadium,evening|afternoon|morning,1h2h
+sell,computer,electronics store,noon|evening|afternoon|morning,2h
+get,baptism,church,noon|evening|afternoon|morning,30m1h
+worship,mosque,mosque,morning,30m1h
+ship,furniture,moving company,noon|evening|afternoon|morning,2h
+tour,campus,university,noon|afternoon|morning,1h2h
+protest,ticket,police,morning,15m30m
+ride,play,amusement park,noon|evening|afternoon|morning,2h
+review,ledger,accounting,afternoon,30m1h
+stay,car,rv park,noon|evening|nighttime|afternoon|morning,2h
+buy,stamp,post office,afternoon|noon|morning,0m15m
+purchase,fuel,gas station,noon|evening|nighttime|afternoon|morning,0m15m
+repair,sewage,plumber,morning,30m1h
+catch,taxi,taxi stand,noon|evening|nighttime|afternoon|morning,0m15m
+rent,suite,lodging,noon|evening|nighttime|afternoon|morning,2h
+plan,vacation,travel agency,noon|afternoon|morning,30m1h
+home,building,courthouse,morning,none
+buy,mixer,liquor store,noon|afternoon|morning,0m15m
+change,oil,car repair,evening|noon|morning|afternoon,30m1h
+buy,furniture,home goods store|furniture store,evening|noon|morning|afternoon,30m1h
+pay,ticket,courthouse,noon|afternoon|morning,30m1h
+paint,brush,painter,noon|afternoon|morning,2h
+honor,dead,cemetery,noon|evening|afternoon|morning,1h2h
+buy,dog,pet store,noon|evening|afternoon|morning,30m1h
+exercise,treadmill,gym,evening|morning,1h2h
+order,dinner,restaurant,evening,0m15m
+watch,fish,aquarium,evening|noon|nighttime|morning|afternoon,30m1h
+travel purposefully,travel,travel agency,evening|afternoon,30m1h
+undergo,surgery,hospital,morning,2h
+book,trip,travel agency,noon|evening|afternoon|morning,1h2h
+comb out,hair,hair care,evening|noon|nighttime|morning|afternoon,30m1h
+view,painting,art gallery,noon|afternoon|morning,2h
+rent,van,car rental,noon|evening|nighttime|afternoon|morning,30m1h
+buy,cupcake,bakery,noon|evening|afternoon|morning,15m30m
+file,paperwork,local government office,noon|afternoon|morning,2h
+disembark,station,bus station,noon|evening|nighttime|afternoon|morning,0m15m
+study,student,university,morning,2h
+prevent,vehicle,car repair,afternoon,none
+furnish,furniture,furniture store,noon|evening|morning,1h2h
+get,roofer,roofing contractor,noon|morning,30m1h
+view,gem,jewelry store,noon|evening|afternoon|morning,1h2h
+order,espresso,cafe,noon|evening|nighttime|afternoon|morning,0m15m
+attend,service,synagogue,noon|evening|afternoon|morning,1h2h
+look at,bicycle,bicycle store,noon|afternoon|morning,15m30m
+drink,store,liquor store,nighttime,1h2h
+view,sculpture,museum|art gallery,evening|afternoon|noon|morning,30m1h
+talk about,house,real estate agency,noon|afternoon|morning,1h2h
+play,frisbee,park,noon|evening|nighttime|afternoon|morning,30m1h
+sing,chant,hindu temple,noon|evening|afternoon|morning,2h
+consult,accountant,accounting,noon|afternoon|morning,15m30m
+pay,doctor,hospital|doctor,afternoon|noon|morning,0m15m
+purchase,automobile,car dealer,noon|evening|afternoon|morning,1h2h
+walk around,store,store|furniture store,afternoon|noon|morning,15m30m
+pick up the gauntlet,passenger,bus station,morning,15m30m
+play,roulette,casino,noon|evening|nighttime|afternoon|morning,2h
+fix,leak,plumber,afternoon|noon|morning,30m1h
+mix,medicine,spa,noon|evening|afternoon|morning,1h2h
+settle,loan,establishment,noon|evening|afternoon|morning,1h2h
+pay,painter,painter,noon|afternoon|morning,0m15m
+worship,pilgrim,synagogue,noon|evening|afternoon|morning,2h
+have,fun,park,noon|afternoon|morning,2h
+look at,puppy,pet store,noon|afternoon|morning,0m15m
+eat,pizza,food,noon|afternoon,0m15m
+use,sink,establishment,noon|evening|nighttime|afternoon|morning,30m1h
+curl,hair,beauty salon,noon|evening|afternoon|morning,1h2h
+visit,vet,veterinary care,noon|afternoon|morning,30m1h
+learn,book,school,noon|evening|nighttime|afternoon|morning,1h2h
+eat,dinner,restaurant,evening|nighttime|afternoon,1h2h
+visit,officer,local government office,morning,15m30m
+check,health,health,noon|afternoon,30m1h
+get,test,doctor,noon|evening|nighttime|afternoon|morning,1h2h
+send,letter,post office,noon|afternoon|morning,0m15m
+get,accountant,accounting,noon|evening|afternoon|morning,2h
+store,good,storage,evening|noon|nighttime|morning|afternoon,2h
+address,officer,police,noon|evening|nighttime|afternoon|morning,15m30m
+win,money,casino,noon|evening|nighttime|afternoon|morning,1h2h
+get,document,lawyer,noon|evening|afternoon|morning,30m1h
+access,library,library,noon|evening|afternoon|morning,2h
+repair,wheel,bicycle store,noon|evening|afternoon|morning,1h2h
+buy,dress,clothing store,evening|nighttime|morning,1h2h
+land,helicopter,airport,noon|evening|nighttime|afternoon|morning,none
+schedule,mover,moving company,noon|afternoon|morning,0m15m
+secure,locksmith,locksmith,noon|afternoon|morning,1h2h
+board,taxi,taxi stand,noon|evening|nighttime|afternoon|morning,15m30m
+swim,pool,amusement park|lodging,evening|afternoon|noon|nighttime|morning,2h
+catch,bus,bus station,evening|afternoon|noon|nighttime|morning,15m30m
+buy,suit,clothing store,noon|afternoon|morning,30m1h
+buy,vodka,liquor store,noon|evening|afternoon|morning,0m15m
+pull out,tooth,dentist,noon|evening|afternoon|morning,15m30m
+gather,box,moving company,morning,30m1h
+peruse,book,book store,noon|evening|afternoon|morning,1h2h
+watch,film,movie theater,evening,1h2h
+select,watch,store,noon|evening|afternoon|morning,30m1h
+visit,dog,veterinary care,afternoon,30m1h
+receive,shot,hospital,noon|evening|nighttime|afternoon|morning,0m15m
+pray,relative,funeral home,noon|evening|afternoon,2h
+fill,cart,food,noon|evening|nighttime|afternoon|morning,30m1h
+buy,computer,electronics store,noon|evening|afternoon|morning,30m1h
+purchase,ornament,roofing contractor,noon,2h
+meet,diplomat,embassy,noon|afternoon|morning,1h2h
+retail,building,department store,afternoon,none
+pay,bill,city hall|local government office|general contractor|restaurant,evening|afternoon|noon|morning,15m30m
+make up,actress,hair care,noon|evening|nighttime|afternoon|morning,2h
+sell,cross,funeral home,noon|evening|nighttime|afternoon|morning,none
+buy,wiring,electrician,noon|afternoon|morning,15m30m
+drink,alcohol,night club|bar,evening|nighttime|afternoon,1h2h
+book,flight,airport,noon|evening|nighttime|afternoon|morning,2h
+audit,record,finance,noon|afternoon|morning,2h
+unclog,toilet,plumber,noon|evening|nighttime|afternoon|morning,15m30m
+look at,pot,florist,noon|evening|afternoon|morning,30m1h
+go to,work,local government office,morning,2h
+pray,priest,cemetery,evening|afternoon|morning,1h2h
+cash,check,bank,noon|afternoon|morning,15m30m
+rent,game,movie rental,noon|evening|nighttime|afternoon|morning,15m30m
+buy,carrot,grocery or supermarket,noon|evening|afternoon|morning,0m15m
+stretch,biceps,health,noon|evening|nighttime|afternoon|morning,0m15m
+view,brochure,travel agency,noon|afternoon|morning,15m30m
+meet up with,administrator,city hall,noon|evening|afternoon|morning,2h
+do,weightlifting,gym,morning,15m30m
+deliver,box,meal delivery,noon|evening|nighttime|afternoon|morning,none
+study,college,university,morning,none
+sit down,table,restaurant,noon|evening|nighttime|afternoon|morning,0m15m
+paint,house,painter,noon|afternoon|morning,2h
+pay,lawyer,lawyer,afternoon|noon|morning,15m30m
+visit,lion,zoo,evening|afternoon|noon|morning,30m1h
+decorate,coffin,funeral home,noon|evening|nighttime|afternoon|morning,1h2h
+pack,box,storage,noon|evening|nighttime|afternoon|morning,15m30m
+manage,building,general contractor,noon|afternoon|morning,2h
+sleep,human,campground,evening|nighttime|afternoon,none
+buy,blender,home goods store,noon|morning,0m15m
+install,vent,plumber,noon|evening|afternoon|morning,30m1h
+unlock,door,locksmith,noon|evening|nighttime|afternoon|morning,30m1h
+gamble,house,casino,evening|afternoon|noon|nighttime|morning,2h
+trim,hair,beauty salon,noon|evening|afternoon|morning,30m1h
+purchase,clothing,shopping mall,noon|afternoon|morning,1h2h
+pick out,desk,furniture store,noon|evening|afternoon|morning,30m1h
+deposit,bill,bank,noon|evening|afternoon|morning,0m15m
+pray,devotee,church,evening|afternoon|morning,2h
+go,place,place of worship,morning,0m15m
+ride,home,taxi stand,noon|evening|nighttime|afternoon|morning,15m30m
+care,body,health,noon|evening|nighttime|afternoon|morning,1h2h
+oversee,worker,general contractor,noon|evening|nighttime|afternoon|morning,2h
+order,shot,bar,noon|evening|nighttime|afternoon,2h
+buy,tank,aquarium,evening|morning,30m1h
+pick,couch,furniture store,noon|evening|nighttime|afternoon|morning,1h2h
+run,mile,health,noon|evening|nighttime|afternoon|morning,15m30m
+solicit,application,insurance agency,noon|afternoon|morning,15m30m
+exercise,hospital,physiotherapist,evening|morning,30m1h
+pay,rent,real estate agency,noon|afternoon|morning,0m15m
+peruse,painting,museum,noon|evening|afternoon|morning,2h
+manage,money,finance,noon|morning,0m15m
+rent,rental,car rental,afternoon|morning,1h2h
+worship,temple,hindu temple,evening|morning,0m15m
+buy,shirt,clothing store,evening|afternoon|noon|morning,30m1h
+treat,animal,veterinary care,noon|afternoon|morning,1h2h
+improve,investment,finance,noon|evening|afternoon|morning,none
+rent,dvd,movie rental,evening|noon|nighttime|morning|afternoon,30m1h
+use,computer,library,noon|evening|afternoon|morning,2h
+go,bowling,bowling alley,evening,2h
+give,check,real estate agency,noon|afternoon|morning,0m15m
+install,lock,locksmith,evening|afternoon|noon|nighttime|morning,30m1h
+sell,petrol,gas station,evening|nighttime|afternoon|morning,0m15m
+sell,car,car dealer,noon|evening|morning,2h
+roast,marshmallow,campground,noon|evening|nighttime|afternoon|morning,15m30m
+take off,blimp,airport,noon|evening|nighttime|afternoon|morning,none
+smell,flower,florist,noon|afternoon|morning,0m15m
+tar,roof,roofing contractor,noon|afternoon|morning,2h
+unlock,lock,locksmith,noon|evening|nighttime|afternoon|morning,15m30m
+look at,home,real estate agency,noon|afternoon|morning,2h
+plan,trip,travel agency,evening|afternoon|noon|morning,30m1h
+meet up with,person,cafe,noon|evening|afternoon|morning,30m1h
+dye,hair,hair care,evening|afternoon|noon|morning,30m1h
+try out,mattress,furniture store,evening,1h2h
+buy,fruit,food|grocery or supermarket,noon|evening|morning,30m1h
+care,hair,hair care,evening|morning,1h2h
+color,hair,hair care,noon|afternoon|morning,1h2h
+buy,refrigerator,home goods store,noon|evening|afternoon|morning,30m1h
+get,arrest,police,evening|noon|nighttime|morning|afternoon,30m1h
+ride,ride,amusement park,noon|evening|afternoon|morning,0m15m
+write,contract,roofing contractor|real estate agency,afternoon|noon|morning,30m1h
+buy,medicine,pharmacy,noon|evening|afternoon|morning,0m15m
+call,service,fire station,noon|evening|nighttime|afternoon|morning,1h2h
+fix,stove,electrician,noon|evening|afternoon|morning,30m1h
+throw,ball,bowling alley,evening|noon|nighttime|morning|afternoon,30m1h
+buy,chip,convenience store,noon|evening|nighttime|afternoon|morning,0m15m
+buy,slack,department store,noon|evening|afternoon|morning,15m30m
+compare,price,food,noon|evening|nighttime|afternoon|morning,0m15m
+sue,defendant,lawyer,noon|afternoon|morning,2h
+purchase,pillow,home goods store,noon|evening|nighttime|afternoon|morning,1h2h
+take,attendance,school,morning,0m15m
+slide down,pole,fire station,noon|evening|nighttime|afternoon|morning,0m15m
+lock,door,storage,noon|evening|nighttime|afternoon|morning,0m15m
+drink,wine,art gallery,evening|nighttime|afternoon,0m15m
+go,store,shoe store,morning,30m1h
+order,cake,bakery,noon|evening|afternoon|morning,15m30m
+purchase,envelope,post office,noon|afternoon|morning,15m30m
+repair,sink,plumber,morning,30m1h
+wax,vehicle,car wash,noon|afternoon|morning,15m30m
+pump,pump,gas station,noon|evening|nighttime|afternoon|morning,0m15m
+buy,food,museum|amusement park|zoo|airport|aquarium|meal takeaway|shopping mall|cafe|bowling alley,evening|noon|nighttime|morning|afternoon,30m1h
+buy,insurance,insurance agency,evening|afternoon|noon|morning,30m1h
+buy,earring,jewelry store,noon|evening|afternoon|morning,15m30m
+eat,eating,food,noon|evening|morning,0m15m
+discuss,business,establishment,noon|evening|nighttime|afternoon|morning,2h
+go,shopping,store|shoe store|convenience store,morning,2h
+board,train,train station|subway station,evening|noon|nighttime|morning|afternoon,0m15m
+pick up,taxi,taxi stand,noon,0m15m
+purchase,meal,meal takeaway,noon|evening|nighttime|afternoon|morning,none
+dry,clothes,laundry,noon|evening|afternoon|morning,30m1h
+reduce,spending,finance,noon,15m30m
+pay,cashier,car wash|meal takeaway,evening|afternoon|noon|morning,0m15m
+pray,goddess,hindu temple,noon|evening|afternoon|morning,2h
+pay,tax,city hall,noon|afternoon|morning,15m30m
+eat,lunch,food|park,noon|afternoon,15m30m
+practice,judaism,synagogue,noon|evening|afternoon|morning,2h
+bring in,cat,veterinary care,noon|evening|afternoon|morning,30m1h
+place,bet,casino,noon|evening|nighttime|afternoon|morning,2h
+give,petition,local government office,morning,15m30m
+clean,hair,hair care,evening|afternoon|morning,15m30m
+buy,good,department store|store,evening|afternoon|noon|nighttime|morning,15m30m
+talk about,case,courthouse,noon|afternoon|morning,1h2h
+sell,food,grocery or supermarket,noon|evening,none
+fix,pipe,plumber,noon|afternoon|morning,1h2h
+drink,liquor,night club,evening|nighttime,1h2h
+calculate,figure,accounting,noon|evening|afternoon|morning,2h
+pay for,ticket,city hall,morning,15m30m
+vacuum,carpet,car wash,noon|evening|nighttime|afternoon|morning,15m30m
+diagnose,injection,doctor,morning,0m15m
+practice,religion,mosque|hindu temple,evening|noon|nighttime|morning,30m1h
+check out,book,library,evening|noon|morning|afternoon,0m15m
+buy food,rice,convenience store,evening,0m15m
+play,baseball,park,afternoon|noon|morning,30m1h
+order,chocolate,cafe,noon|evening|afternoon|morning,0m15m
+inspect,vehicle,insurance agency,noon|afternoon|morning,15m30m
+fix,wiring,electrician,noon|evening|afternoon|morning,1h2h
+eat,popcorn,movie theater,noon|evening|nighttime|afternoon|morning,2h
+get,insurance,insurance agency,noon|evening|afternoon|morning,1h2h
+pitch,tent,campground,evening|noon|nighttime|morning|afternoon,2h
+pray,bible,place of worship,evening|morning,1h2h
+sit,chair,stadium,noon|evening|nighttime|afternoon|morning,2h
+store,suit,fire station,noon|evening|nighttime|afternoon|morning,2h
+visit,doctor,veterinary care|hospital|doctor,evening|noon|nighttime|morning|afternoon,30m1h
+see,animal,aquarium|zoo,noon|evening|afternoon|morning,30m1h
+wash,clothes,laundry,evening|noon|nighttime|morning|afternoon,30m1h
+buy,product,home goods store|store,afternoon|noon|morning,15m30m
+issue,license,local government office,morning,30m1h
+look for,game,electronics store,noon|evening|afternoon|morning,30m1h
+purchase,bicycle,bicycle store,noon|evening|afternoon|morning,1h2h
+wait,driver,bus station,noon|evening|nighttime|afternoon|morning,30m1h
+purchase,key,hardware store|locksmith,evening|morning,15m30m
+tip,cashier,meal delivery,noon|evening|afternoon|morning,0m15m
+watch,delegation,city hall,noon|afternoon|morning,30m1h
+consult,lawyer,lawyer,evening,15m30m
+buy,snack,gas station,noon|evening|nighttime|afternoon|morning,0m15m
+buy,jewelry,jewelry store,noon|afternoon|morning,15m30m
+get,treatment,beauty salon,noon|evening|afternoon|morning,30m1h
+watch,basketball,stadium,noon|evening|nighttime|afternoon,2h
+prey,god,mosque,evening,15m30m
+buy,ring,jewelry store,noon|evening|afternoon|morning,0m15m
+barbecue,sausage,campground,noon|evening|nighttime|afternoon|morning,2h
+purchase,flower,florist,evening|noon|morning|afternoon,0m15m
+look at,furniture,furniture store,noon|afternoon|morning,15m30m
+visit,animal,zoo,noon|afternoon|morning,1h2h
+ensure,drug,pharmacy,evening|afternoon|morning,15m30m
+sleep,bed,lodging,noon|evening|nighttime|afternoon|morning,2h
+stay at,lodge,lodging,nighttime,none
+bury,cemetery,cemetery,noon|evening|afternoon|morning,30m1h
+purchase,recliner,furniture store,noon|afternoon|morning,15m30m
+earn,commission,real estate agency,noon|evening|afternoon|morning,2h
+travel,agency,travel agency,noon|afternoon|morning,2h
+spell,islam,mosque,afternoon,none
+spend,money,casino,noon|evening|afternoon,2h
+consume,breadstick,restaurant,noon|nighttime|afternoon,1h2h
+purchase,kitten,pet store,noon|evening|afternoon|morning,1h2h
+throw,frisbee,park,noon|afternoon|morning,1h2h
+buy,bread,bakery,noon|afternoon|morning,0m15m
+pick up,prescription,pharmacy,noon|evening|nighttime|afternoon|morning,15m30m
+calculate,cash,accounting,noon|evening|nighttime|afternoon|morning,1h2h
+pack,lunch,meal delivery,noon,30m1h
+drink,coffee,shopping mall|cafe,evening|noon|nighttime|morning|afternoon,30m1h
+sip,latte,cafe,noon|afternoon|morning,30m1h
+grind,female,night club,nighttime,2h
+rent,truck,car rental,noon|afternoon,2h
+drive,car,meal delivery,noon|evening|nighttime|afternoon|morning,2h
+hire,movie,movie rental,noon,15m30m
+get,electrician,electrician,noon|evening|afternoon|morning,1h2h
+study,art,art gallery,noon|evening|afternoon|morning,2h
+sing,karaoke,bowling alley,noon|evening|nighttime|afternoon|morning,2h
+deliver,food,meal delivery,noon|evening|afternoon,30m1h
+deposit,money,bank,evening|afternoon|noon|morning,0m15m
+pay,mechanic,car repair,afternoon|noon|morning,15m30m
+read,bible,church,morning,30m1h
+buy,cookie,bakery,evening|afternoon|noon|morning,30m1h
+run,bus,parking,noon|evening|nighttime|afternoon|morning,2h
+withdraw,money,bank,noon|afternoon|morning,0m15m
+talk,policy,insurance agency,evening,30m1h
+bake,cake,bakery,noon|evening|afternoon|morning,2h
+visit,patient,hospital,noon|evening|afternoon|morning,1h2h
+specialize,disease,dentist,noon|evening|nighttime|afternoon|morning,none
+leave,receipt,accounting,noon|afternoon|morning,15m30m
+build,house,general contractor,afternoon|noon|morning,2h
+hire,worker,moving company,noon|afternoon|morning,1h2h
+leave,flower,cemetery,noon|evening|afternoon|morning,1h2h
+return,car,car rental,noon|evening|nighttime|afternoon|morning,15m30m
+examine,pet,veterinary care,evening|afternoon|noon|morning,15m30m
+move back and forth,body,physiotherapist,evening|morning,none
+enquire,room,lodging,noon|evening|afternoon|morning,none
+comparison-shop,coffee,grocery or supermarket,afternoon,0m15m
+get,drink,night club,nighttime,2h
+fill,car,gas station,noon|evening|nighttime|afternoon|morning,0m15m
+wash,automobile,car wash,noon|evening|afternoon|morning,15m30m
+attend,church,place of worship,morning,1h2h
+catch,thief,police,noon|evening|nighttime|afternoon|morning,15m30m
+learn,history,museum,noon|afternoon|morning,2h
+park,vehicle,parking,evening|noon|nighttime|morning|afternoon,2h
+buy,toy,pet store,noon|evening|nighttime|afternoon|morning,15m30m
+pay,establishment,establishment,noon|afternoon|morning,1h2h
+worship,god,place of worship|mosque|synagogue|hindu temple,evening|noon|nighttime|morning|afternoon,30m1h
+work out,muscle,gym,evening|afternoon|noon|morning,30m1h
+attend,class,school,noon|evening|afternoon|morning,1h2h
+repair,automobile,car repair,noon|evening|afternoon|morning,2h
+select,grocery,store,noon|evening|afternoon|morning,1h2h
+see,sculpture,art gallery,afternoon,1h2h
+impart,education,university,noon|evening|afternoon|morning,none
+purchase,liquor,liquor store,noon|evening|nighttime|afternoon|morning,0m15m
+board,aircraft,airport,noon|evening|nighttime|afternoon|morning,0m15m
+win,jackpot,casino,noon|evening|nighttime|afternoon|morning,none
+purchase,appliance,home goods store,evening,30m1h
+wash,car,car wash,evening|noon|nighttime|morning|afternoon,30m1h
+observe,exhibit,museum,evening|afternoon,30m1h
+consult,consulate,embassy,noon|evening|afternoon|morning,30m1h
+take,home,meal takeaway,noon|evening|nighttime|afternoon,30m1h
+fill,prescription,pharmacy,evening|noon|nighttime|morning|afternoon,15m30m
+visit,aquarium,aquarium,evening,2h
+measure,roof,roofing contractor,noon|evening|nighttime|afternoon|morning,30m1h
+practice,book,lawyer,noon|evening|afternoon|morning,1h2h
+enjoy,park,amusement park,noon|evening|afternoon|morning,none
+sell,hardware,hardware store,noon,30m1h
+arrest,girl,police,noon|evening|nighttime|afternoon,15m30m
+purchase,wheel,bicycle store,noon|evening|afternoon,0m15m
+meet up with,congregation,mosque,noon|evening|afternoon|morning,1h2h
+buy,jewellery,jewelry store,noon|evening|afternoon|morning,30m1h
+read,magazine,book store,noon|evening|afternoon|morning,1h2h
+drink,shop,liquor store,evening|nighttime,15m30m
+set up,trailer,rv park,morning,1h2h
+state,case,lawyer,noon|evening|afternoon|morning,15m30m
+transport,article,moving company,noon|evening|nighttime|afternoon|morning,none
+work,place,establishment,noon|evening|afternoon|morning,none
+service,coffin,funeral home,noon|evening|nighttime|afternoon|morning,1h2h
+waste,food,food,nighttime|afternoon|morning,0m15m
+purchase,food,pet store|grocery or supermarket|convenience store,evening|noon|nighttime|morning|afternoon,0m15m
+case,courthouse,courthouse,morning,1h2h
+clean,garment,laundry,noon|evening|nighttime|afternoon|morning,1h2h
+park,car,parking,evening|noon|nighttime|morning|afternoon,2h
+study,math,university,noon|evening|nighttime|afternoon|morning,1h2h
+buy,fastener,hardware store,noon|evening|afternoon|morning,0m15m
+meet up with,minister,city hall,noon|evening|afternoon|morning,2h
+work,job,shopping mall,noon|evening|afternoon|morning,2h
+buy,clothes,clothing store|shopping mall|department store,evening|afternoon|noon|morning,1h2h
+sleep,bag,campground,noon|evening|nighttime|afternoon|morning,2h
+visit,teacher,university,noon|evening|afternoon|morning,1h2h
+wait,line,pharmacy,noon|afternoon|morning,0m15m
+look at,jewelry,jewelry store,noon|afternoon|morning,15m30m
+buy,meat,grocery or supermarket,noon|afternoon,15m30m
+deflower,snake,florist,morning,0m15m
+sign,book,book store,noon|evening|afternoon|morning,2h
+visit,establishment,establishment,noon|afternoon|morning,15m30m
+buy,hammer,hardware store,evening|afternoon|noon|morning,15m30m
+get,prescription,pharmacy,noon|afternoon|morning,15m30m
+sit,airplane,airport,noon|evening|nighttime|afternoon|morning,30m1h
+begin,meeting,establishment,noon|evening|afternoon|morning,0m15m
+ride,coaster,amusement park,noon|evening|nighttime|afternoon|morning,2h
+wash up,pant,laundry,evening,2h
+buy,lock,hardware store,noon|evening|afternoon|morning,0m15m
+count,item,hardware store,noon|evening|afternoon|morning,2h
+visit,official,embassy,noon|afternoon|morning,30m1h
+wash,cloth,laundry,noon|evening|nighttime|afternoon|morning,2h
+wash,sock,laundry,noon|evening|nighttime|afternoon|morning,30m1h
+wash,vehicle,car wash,noon|afternoon|morning,15m30m
+rent,shoe,bowling alley,noon|evening|nighttime|afternoon|morning,2h
+argue,waiter,bar,evening|nighttime,1h2h
+wait,train,subway station,evening|noon|nighttime|morning|afternoon,30m1h
+wait,cab,taxi stand,noon|evening|nighttime|afternoon|morning,15m30m
+pick up,food,meal delivery|meal takeaway,evening|noon|nighttime|morning|afternoon,0m15m
+hang by a hair,hair,hair care,afternoon,30m1h
+take off,helicopter,airport,evening|noon|nighttime|morning|afternoon,none
+take,reservation,bus station,noon|evening|nighttime|afternoon|morning,30m1h
+roll,ball,bowling alley,noon|evening|afternoon,1h2h
+buy,car,car dealer,evening|afternoon|noon|morning,2h
+buy,ornament,jewelry store,noon|evening|afternoon|morning,2h
+send,mail,post office,evening|afternoon|noon|morning,none
+get,wire,electrician,noon|afternoon|morning,0m15m
+buy,land,real estate agency,morning,15m30m
+eat,dog,amusement park,noon|afternoon|morning,15m30m
+use,equipment,electronics store,noon|evening|morning,2h
+wash,vacuum,car wash,noon|evening|afternoon|morning,0m15m
+protect,station,police,noon|evening|nighttime|afternoon|morning,1h2h
+issue,citation,police,noon|evening|nighttime|afternoon|morning,2h
+look at,grave,cemetery,noon|afternoon|morning,30m1h
+fill,tank,gas station,evening|noon|nighttime|morning|afternoon,0m15m
+place,sector,stadium,afternoon,none
+visit,veterinarian,veterinary care,noon|evening|afternoon|morning,1h2h
+call,taxi,taxi stand,noon|evening|nighttime|afternoon|morning,30m1h
+pump,gas,gas station,noon|evening|nighttime|afternoon|morning,0m15m
+watch,sport,stadium,evening|afternoon,2h
+sing along,campfire,campground,evening|nighttime|afternoon,30m1h
+assist,buyer,real estate agency,noon|evening|afternoon|morning,2h
+pray,god,church,evening|morning,15m30m
+wear,cloth,clothing store,noon|evening|afternoon|morning,none
+observe,art,museum,noon|evening|nighttime|afternoon|morning,1h2h
+drop off,friend,train station,noon|evening|nighttime|afternoon|morning,30m1h
+cremate,body,cemetery,evening,2h
+buy,chain,jewelry store,noon|afternoon,1h2h
+cut,hair,beauty salon,evening|afternoon|noon|morning,30m1h
+drink,brandy,bar,evening|nighttime,1h2h
+rent,movie,movie rental,noon|evening|nighttime|afternoon|morning,30m1h
+go for,facial,beauty salon,evening|morning,1h2h
+bake,donut,bakery,noon|morning,0m15m
+relax,bath,spa,noon|afternoon|morning,30m1h
+deposit,check,bank,noon|evening|afternoon|morning,15m30m
+order,food,meal delivery,noon|nighttime|afternoon,15m30m
+open,door,locksmith,noon|evening|nighttime|afternoon|morning,30m1h
+visit,dentist,dentist,noon|afternoon|morning,1h2h
+press,charge,police,noon|evening|nighttime|afternoon|morning,1h2h
+hire,car,taxi stand,nighttime,2h
+purchase,furniture,home goods store|furniture store,evening|morning,15m30m
+design,auditorium,establishment,noon|evening|afternoon|morning,2h
+meet,person,place of worship|night club|bar|university|synagogue|church,evening|afternoon|noon|nighttime|morning,2h
+enter,car,subway station,noon|evening|nighttime|afternoon|morning,0m15m
+buy,gadget,electronics store,noon|evening|afternoon|morning,2h
+examine,body,physiotherapist|doctor,evening|afternoon|noon|morning,30m1h
+massage,oil,physiotherapist|spa,noon|evening|afternoon|morning,1h2h
+buy,beverage,liquor store,noon|evening|afternoon|morning,0m15m
+place,wager,casino,noon|evening|nighttime|afternoon|morning,2h
+be,sentence,courthouse,noon|afternoon|morning,none
+pray,quran,mosque,noon|evening|afternoon,1h2h
+pack,food,meal takeaway,evening,15m30m
+be,well,health,noon|evening|nighttime|afternoon|morning,2h
+transport,furniture,moving company,noon|afternoon,30m1h
+purchase,shirt,clothing store,noon|evening|afternoon|morning,0m15m
+chant,flower,hindu temple,evening,1h2h
+dance,club,night club,evening|nighttime,1h2h
+drink,cocktail,night club,evening|nighttime,15m30m
+buy,book,book store,evening|afternoon|noon|morning,30m1h
+start,fire,campground,noon|evening|afternoon|morning,0m15m
+acquire,document,local government office,noon|afternoon|morning,30m1h
+buy,doughnut,bakery,morning,0m15m
+exercise,club,health,evening,2h
+eat,nacho,bowling alley,noon|evening|nighttime|afternoon,0m15m
+retrieve,money,bank,noon|evening|nighttime|afternoon|morning,0m15m
+sell,land,real estate agency,noon|evening|afternoon|morning,none
+rent,vehicle,car rental,evening|afternoon|noon|nighttime|morning,2h
+brush,tooth,dentist,afternoon,0m15m
+sell,beverage,liquor store,evening|noon|nighttime|morning|afternoon,2h
+examine,problem,plumber,noon|evening|nighttime|afternoon|morning,15m30m
+conduct,x-ray,hospital,noon|evening|nighttime|afternoon|morning,15m30m
+say,prayer,mosque,noon|evening|nighttime|afternoon|morning,15m30m
+visit,court,shopping mall,noon|evening|afternoon|morning,15m30m
+paint,building,painter,noon|evening|afternoon|morning,2h
+learn,math,school,morning,30m1h
+stand for,trial,courthouse,afternoon,2h
+honor,deceased,funeral home,noon|evening|afternoon|morning,15m30m
+paint,canvas,painter,noon|evening|nighttime|afternoon|morning,2h
+deposit,agent,insurance agency,noon|evening|nighttime|afternoon|morning,30m1h
+lend,magazine,library,noon|evening|afternoon|morning,30m1h
+wash,hair,hair care|beauty salon,evening|noon|nighttime|morning|afternoon,15m30m
+hail,taxi,taxi stand,morning,0m15m
+treat,patient,doctor,afternoon,15m30m
+pet,animal,pet store|zoo,evening|afternoon|noon|morning,15m30m
+wash,pant,laundry,noon|evening|nighttime|afternoon|morning,30m1h
+use,brake,parking,noon|evening|nighttime|afternoon|morning,0m15m
+buy,shoe,department store|shoe store,evening|afternoon|noon|morning,15m30m
+see,judge,courthouse,noon|evening|nighttime|afternoon|morning,1h2h
+arrive,train,train station,noon|evening|nighttime|afternoon|morning,0m15m
+shop,building,shopping mall,afternoon,none
+play,tennis,park,noon|afternoon|morning,30m1h
+visit,student,university,noon|evening|afternoon|morning,1h2h
+see,fish,aquarium,morning,2h
+shop,apparel,shopping mall,noon|evening|afternoon|morning,1h2h
+buy,towel,home goods store,noon|evening|afternoon|morning,0m15m
+test drive,bicycle,bicycle store,noon|evening|afternoon|morning,30m1h
+sell,furniture,home goods store,afternoon,none
+buy,grocery,grocery or supermarket|convenience store,evening|noon|nighttime|morning|afternoon,30m1h
+view,portrait,museum,noon|afternoon|morning,1h2h
+mediate,argument,embassy,noon|evening|afternoon|morning,1h2h
+visit,secretary,city hall,noon|evening|afternoon|morning,30m1h
+ca-ca,cam,campground,evening,1h2h
+visit,relative,cemetery,noon|evening|nighttime|afternoon|morning,30m1h
+perm,hair,beauty salon,noon|afternoon|morning,30m1h
+question,curator,art gallery,noon|evening|nighttime|afternoon,0m15m
+fix,roof,roofing contractor,noon|evening|afternoon|morning,2h
+visit,friend,hospital,noon|afternoon|morning,30m1h
+view,art,museum|art gallery,evening|noon|nighttime|morning|afternoon,30m1h
+get,car,car rental,evening|afternoon|noon|nighttime|morning,30m1h
+get,grocery,grocery or supermarket,noon|evening|nighttime|afternoon|morning,15m30m
+purchase,ticket,train station,noon|evening|nighttime|afternoon|morning,0m15m
+sell,shoe,shoe store,noon|evening|nighttime|afternoon|morning,0m15m
+ride,subway,subway station,evening|noon|nighttime|morning|afternoon,30m1h
+buy,bicycle,bicycle store,evening|afternoon|noon|morning,none
+file,tax,accounting,noon|afternoon|morning,1h2h
+buy,grave,funeral home,noon|afternoon|morning,30m1h
+mail,letter,post office,evening|noon|nighttime|morning|afternoon,0m15m
+dance,table,night club,nighttime,2h
+attend,funeral,funeral home|cemetery,evening|afternoon|noon|morning,30m1h
+pay,due,church,noon|evening|afternoon|morning,0m15m
+rent out,car,car rental,morning,0m15m
+deal,roofing,roofing contractor,noon|afternoon|morning,none
+get,check,doctor,evening,30m1h
+bowl,ball,bowling alley,evening,1h2h
+sell,property,real estate agency,noon|evening|afternoon|morning,1h2h
+study,english,school,morning,1h2h
+browse,item,department store,noon|evening|afternoon|morning,1h2h
+eat,hotdog,bowling alley,noon|evening|nighttime|afternoon|morning,0m15m
+tip,server,restaurant,noon|evening|nighttime|afternoon|morning,0m15m
+practice,hinduism,hindu temple,noon|evening|afternoon|morning,2h
+fix,wire,electrician,noon|afternoon|morning,15m30m
+land,blimp,airport,noon|evening|nighttime|afternoon|morning,none
+look at,animal,pet store|zoo,afternoon|noon|morning,15m30m
+bury,family,funeral home|cemetery,evening|afternoon|noon|morning,none
+board,airplane,airport,noon|evening|nighttime|afternoon|morning,0m15m
+teach,student,school,noon|evening|afternoon|morning,none
+file,document,local government office,noon|afternoon|morning,15m30m
+buy,gift,hospital|amusement park|museum,evening|afternoon|noon|morning,15m30m
+catch,plane,airport,noon|evening|nighttime|afternoon|morning,2h
+receive,advice,lawyer,noon|evening|afternoon|morning,1h2h
+look at,artifact,museum,noon|afternoon|morning,2h
+ride,train,train station|subway station,evening|afternoon|noon|nighttime|morning,none
+trade in,car,car dealer,evening|noon|nighttime|morning|afternoon,2h
+wait,taxi,taxi stand,noon|evening|nighttime|afternoon|morning,2h
+unpack,box,storage,noon|evening|afternoon|morning,1h2h
+specialize,potable,plumber,noon,15m30m
+rent,minivan,car dealer,evening|afternoon|morning,2h
+invest,money,finance,noon|afternoon|morning,0m15m
+purchase,television,electronics store,noon|evening|morning,1h2h
+review,sale,accounting,afternoon|morning,1h2h
+buy,milk,home goods store,morning,30m1h
+obtain,prescription,doctor,noon|evening|nighttime|afternoon|morning,30m1h
+soak,body,spa,noon|evening|afternoon|morning,1h2h
+see,doctor,physiotherapist,noon|afternoon|morning,1h2h
+get,room,lodging,noon|evening|nighttime|afternoon|morning,2h
+pay,electrician,electrician,noon|afternoon|morning,0m15m
+ask for,asylum,embassy,noon|evening|afternoon|morning,2h
+receive,therapy,physiotherapist,noon|evening|afternoon|morning,30m1h
+buy,television,electronics store,noon|evening|nighttime|afternoon|morning,1h2h
+register,car,local government office,noon|evening|afternoon|morning,1h2h
+write,register,library,noon|evening|afternoon|morning,15m30m
+sing,hymn,place of worship,evening|morning,15m30m
+lease,automobile,car rental,noon|evening|afternoon|morning,1h2h
+exchange,stock,finance,noon|evening|nighttime|afternoon|morning,0m15m
+board,bus,bus station,noon|evening|nighttime|afternoon|morning,0m15m
+store,hose,fire station,noon|evening|nighttime|afternoon|morning,2h
+move,thing,moving company,noon|afternoon|morning,2h
+sit,bench,park,evening,1h2h
+connect,motor,electrician,noon|evening|nighttime|afternoon|morning,30m1h
+see,preview,movie theater,noon|evening|nighttime|afternoon,15m30m
+keep back,room,storage,noon|evening|nighttime|afternoon|morning,2h
+wait on,bench,taxi stand,afternoon,30m1h
+order,material,general contractor,noon|afternoon|morning,30m1h
+sell,medicine,pharmacy,noon|evening|nighttime|afternoon|morning,none
+receive,information,embassy,afternoon|morning,30m1h
+go,bicycle,bicycle store,morning,30m1h
+acquire,licence,courthouse|local government office,afternoon|evening|morning|noon,none
+acquire,pet,pet store|veterinary care,afternoon|morning|noon,30m1h
+break,bone,doctor|hospital|physiotherapist,afternoon|evening|morning|nighttime|noon,0m15m
+buy,home,bank|real estate agency,afternoon|morning|noon,none
+buy,vehicle,car dealer|car rental,afternoon|morning|noon,30m1h
+change,belief,church|hindu temple|mosque|place of worship|synagogue,afternoon|morning|nighttime|noon,none
+change,school,school|university,afternoon|morning|noon,none
+enroll,military,local government office,afternoon|morning|noon,none
+have,baby,hospital,afternoon|evening|morning|nighttime|noon,none
+improve,home,furniture store|general contractor|hardware store|home goods store|painter|roofing contractor|store,afternoon|evening|morning|noon,none
+learn,language,library|school|university,afternoon|evening|morning|nighttime|noon,none
+lose,loved one,cemetery|church|funeral home|hospital|place of worship|synagogue,afternoon|evening|morning|nighttime|noon,none
+lose,weight,doctor|gym|hospital,afternoon|evening|morning|nighttime|noon,none
+marry,partner,church|city hall|courthouse|hindu temple|local government office|mosque|place of worship|synagogue,afternoon|evening|morning|noon,1h2h
+move,home,moving company|real estate agency|rv park,afternoon|noon|morning,none
+meet,family,courthouse|hospital,afternoon|evening|morning|nighttime|noon,none
+overcome,illness,doctor|health|hospital|pharmacy|physiotherapist,afternoon|evening|morning|nighttime|noon,none
+pick up,sport,bowling alley|gym|park|school|stadium,afternoon|evening|morning|nighttime|noon,none
+publish,work,book store|school|university,afternoon|morning|noon,none
+register,organ donor,city hall|courthouse|doctor|health|hospital,afternoon|morning|noon,30m1h
+register,voter,city hall|courthouse|local government office|post office,morning|noon,15m30m
+remove,braces,dentist|hospital,afternoon|morning|noon,1h2h
+repair,vision,doctor|hospital,afternoon|morning|noon,1h2h
+study,abroad,embassy|library|school|travel agency|university,morning|nighttime|afternoon|evening|noon,none
+volunteer,work,church|hindu temple|hospital|library|local government office|museum|park|place of worship|school|synagogue|veterinary care|zoo,afternoon|evening|morning|noon,none
+win,award,bowling alley|city hall|fire station|school|stadium|university,afternoon|evening|morning|noon,1h2h

@@ -1,0 +1,1 @@
+include ':subsumer-core',':subsumer-test',':subsumer-wordnet'
