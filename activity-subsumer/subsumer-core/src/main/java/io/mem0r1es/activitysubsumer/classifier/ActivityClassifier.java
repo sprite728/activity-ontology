@@ -28,12 +28,27 @@ public class ActivityClassifier {
     private CategoryHierarchy hierarchy;
     private ActivityProvider provider;
 
+    private static ActivityClassifier ourInstance = null;
+
     public ActivityClassifier(VerbsSynsetForest verbs, NounsSynsetForest nouns, CategoryHierarchy hierarchy, ActivityProvider provider) {
         this.verbs = verbs;
         this.nouns = nouns;
         this.hierarchy = hierarchy;
         this.provider = provider;
         activities = provider.read(verbs, nouns);
+    }
+
+    public static void setInstance(ActivityClassifier instance){
+        ourInstance = instance;
+    }
+
+    public static ActivityClassifier getInstance(){
+        if (ourInstance == null) throw new RuntimeException("Initialize by invoking ActivityClassifier.setInstance() first.");
+        return ourInstance;
+    }
+
+    public boolean isSet(){
+        return ourInstance != null;
     }
 
     public boolean save() {

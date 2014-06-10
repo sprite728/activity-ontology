@@ -1,13 +1,14 @@
 package io.mem0r1es.activitysubsumer.io;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.set.hash.THashSet;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URLDecoder;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -18,7 +19,7 @@ import java.util.Set;
  * @author Ivan Gavrilović
  */
 public class SynsetCSVProvider implements SynsetProvider {
-    private TIntObjectHashMap<SynsetNode> synsets = null;
+    private Map<Integer, SynsetNode> synsets = null;
 
     private int numSynsets;
 
@@ -45,7 +46,7 @@ public class SynsetCSVProvider implements SynsetProvider {
     public Set<SynsetNode> read() {
         BufferedReader reader = null;
 
-        THashSet<SynsetNode> allNodes = new THashSet<SynsetNode>(numSynsets);
+        Set<SynsetNode> allNodes = new HashSet<SynsetNode>(numSynsets);
         try {
             reader = new BufferedReader(new InputStreamReader(graphStream));
             String line = reader.readLine();
@@ -94,11 +95,11 @@ public class SynsetCSVProvider implements SynsetProvider {
      *
      * @return {@link java.util.HashMap} containing the mapping
      */
-    private TIntObjectHashMap<SynsetNode> parseSynsets() {
+    private Map<Integer, SynsetNode> parseSynsets() {
         BufferedReader reader = null;
 
         // for each edge, start vertex is synset code, end vertex is the synset member (word)
-        TIntObjectHashMap<SynsetNode> synsets = new TIntObjectHashMap<SynsetNode>(numSynsets);
+        Map<Integer, SynsetNode> synsets = new HashMap<Integer, SynsetNode>(numSynsets);
         try {
             reader = new BufferedReader(new InputStreamReader(synsetStream));
             String line = reader.readLine();

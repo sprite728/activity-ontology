@@ -1,6 +1,7 @@
 package io.mem0r1es.activitysubsumer.io;
 
 import io.mem0r1es.activitysubsumer.classifier.CategoryHierarchy;
+import io.mem0r1es.activitysubsumer.utils.Utils;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -30,7 +31,7 @@ public class FoursquareCategoriesCSV implements CategoriesProvider {
             reader = new BufferedReader(new InputStreamReader(input));
             String line = reader.readLine();
             while (line != null) {
-                String parts[] = line.split(" ");
+                String parts[] = Utils.decodeParts(line);
                 if (parts.length == 1) categoryMap.put(parts[0], new CategoryHierarchy.Category(parts[0]));
                 else if (parts.length == 2) {
                     CategoryHierarchy.Category fst = categoryMap.get(parts[0]);

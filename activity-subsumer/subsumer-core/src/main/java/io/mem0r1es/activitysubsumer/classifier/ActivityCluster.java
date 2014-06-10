@@ -5,9 +5,7 @@ import io.mem0r1es.activitysubsumer.activities.ContextualActivity;
 import io.mem0r1es.activitysubsumer.concurrent.ActivityOpsExecutor;
 import io.mem0r1es.activitysubsumer.concurrent.LCAFinder;
 import io.mem0r1es.activitysubsumer.concurrent.SubgraphEvaluator;
-import io.mem0r1es.activitysubsumer.graphs.NounsSynsetForest;
 import io.mem0r1es.activitysubsumer.graphs.SynsetForest;
-import io.mem0r1es.activitysubsumer.graphs.VerbsSynsetForest;
 import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
 import org.apache.log4j.Logger;
@@ -53,7 +51,7 @@ public class ActivityCluster {
      * @param verbs verbs forest
      * @param nouns nouns forest
      */
-    public ActivityCluster(VerbsSynsetForest verbs, NounsSynsetForest nouns) {
+    public ActivityCluster(SynsetForest verbs, SynsetForest nouns) {
         this(verbs, nouns, new HashMap<SynsetNode, Set<ContextualActivity>>());
     }
 
