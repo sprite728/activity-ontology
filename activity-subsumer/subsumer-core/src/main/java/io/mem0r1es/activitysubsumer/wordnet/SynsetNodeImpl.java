@@ -1,8 +1,6 @@
 package io.mem0r1es.activitysubsumer.wordnet;
 
 
-import io.mem0r1es.activitysubsumer.utils.HierarchicalStructure;
-
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.Collections;
@@ -24,7 +22,7 @@ import java.util.Set;
  *         <p/>
  *         Changes: Ivan Gavrilovic
  */
-public class SynsetNode extends HierarchicalStructure<SynsetNode> {
+public class SynsetNodeImpl extends SynsetNode {
     /**
      * Words that belong to this synset
      */
@@ -34,17 +32,26 @@ public class SynsetNode extends HierarchicalStructure<SynsetNode> {
      */
     private String code;
 
-    public SynsetNode(String code, String... synset) {
+
+    /**
+     * All connected synsets, both parents and children
+     */
+    private Set<SynsetNode> children = new HashSet<SynsetNode>();
+    private Set<SynsetNode> parents = new HashSet<SynsetNode>();
+
+    public SynsetNodeImpl(String code, String... synset) {
         this.code = code;
         Collections.addAll(this.synset, synset);
     }
 
-    public SynsetNode(String code, Set<String> synset) {
+    public SynsetNodeImpl(String code, Set<String> synset) {
         this.code = code;
         this.synset.addAll(synset);
     }
 
-    public static SynsetNode deSerialize(String input) {
+    public SynsetNodeImpl(){}
+
+    public static SynsetNodeImpl deSerialize(String input) {
         String parts[] = input.split("\\s");
         String code = parts[0];
         Set<String> words = new HashSet<String>();
@@ -55,20 +62,11 @@ public class SynsetNode extends HierarchicalStructure<SynsetNode> {
             e.printStackTrace();
         }
 
-        return new SynsetNode(code, words);
+        return new SynsetNodeImpl(code, words);
     }
 
     public void addWords(String... words) {
         Collections.addAll(this.synset, words);
-    }
-
-    public boolean hasSharedWords(SynsetNode other) {
-        for (String word : synset) {
-            if (other.synset.contains(word)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     @Override
@@ -76,7 +74,7 @@ public class SynsetNode extends HierarchicalStructure<SynsetNode> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        SynsetNode that = (SynsetNode) o;
+        SynsetNodeImpl that = (SynsetNodeImpl) o;
 
         return code.equals(that.code);
     }
@@ -116,5 +114,14 @@ public class SynsetNode extends HierarchicalStructure<SynsetNode> {
             }
         }
         return print;
+    }
+
+
+    public Set<SynsetNode> getChildren() {
+        return children;
+    }
+
+    public Set<SynsetNode> getParents() {
+        return parents;
     }
 }

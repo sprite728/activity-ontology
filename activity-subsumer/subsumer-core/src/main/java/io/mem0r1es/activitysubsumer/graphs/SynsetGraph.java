@@ -27,7 +27,7 @@ public class SynsetGraph {
         this.root = root;
 
         synsets = new HashMap<String, Set<SynsetNode>>();
-        BFSHierarchicalNode bfs = new BFSHierarchicalNode(root);
+        BFSHierarchicalNode<SynsetNode> bfs = new BFSHierarchicalNode<SynsetNode>(root);
         while (bfs.hasNext()) {
             SynsetNode node = bfs.next();
 
@@ -57,7 +57,7 @@ public class SynsetGraph {
     public Set<SynsetNode> find(String word, SynsetNode startNode) {
         Set<SynsetNode> resultSet = new HashSet<SynsetNode>();
 
-        BFSHierarchicalNode bfs = new BFSHierarchicalNode(startNode);
+        BFSHierarchicalNode<SynsetNode> bfs = new BFSHierarchicalNode<SynsetNode>(startNode);
         while (bfs.hasNext()) {
             SynsetNode node = bfs.next();
             if (node.contains(word)) resultSet.add(node);
@@ -74,7 +74,7 @@ public class SynsetGraph {
     public Set<SynsetNode> getAllFrom(SynsetNode startNode) {
         Set<SynsetNode> resultSet = new HashSet<SynsetNode>();
 
-        BFSHierarchicalNode bfs = new BFSHierarchicalNode(startNode);
+        BFSHierarchicalNode<SynsetNode> bfs = new BFSHierarchicalNode<SynsetNode>(startNode);
         while (bfs.hasNext()) {
             SynsetNode node = bfs.next();
             resultSet.add(node);
@@ -111,7 +111,6 @@ public class SynsetGraph {
      * @return set of LCAs
      */
     public Set<SynsetNode> getLCA(Set<SynsetNode> nodes) {
-        logger.debug("Finding LCA for: " + nodes);
         List<SynsetNode> listNodes = new ArrayList<SynsetNode>(nodes);
         Set<SynsetNode> previousLCAs = new HashSet<SynsetNode>();
         previousLCAs.add(listNodes.get(0));
@@ -129,7 +128,6 @@ public class SynsetGraph {
                 previousLCAs.addAll(getLCA(s, listNodes.get(i)));
             }
         }
-
         return previousLCAs;
     }
 
@@ -177,7 +175,7 @@ public class SynsetGraph {
      */
     public List<List<SynsetNode>> getAllPathsToRoot(SynsetNode startNode) {
         List<List<SynsetNode>> paths = new LinkedList<List<SynsetNode>>();
-        if (startNode == root) {
+        if (startNode.getCode().equals(root.getCode())) {
             List<SynsetNode> myPath = new LinkedList<SynsetNode>();
             myPath.add(startNode);
             paths.add(myPath);
@@ -192,7 +190,6 @@ public class SynsetGraph {
                 paths.add(myPath);
             }
         }
-
         return paths;
     }
 

@@ -47,7 +47,7 @@ public class ActivityClassifier {
         return ourInstance;
     }
 
-    public boolean isSet(){
+    public static boolean isSet(){
         return ourInstance != null;
     }
 

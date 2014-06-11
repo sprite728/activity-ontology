@@ -20,7 +20,8 @@ public class LCAFinder implements Callable<Set<BasicActivity>> {
     private SynsetNode bestVerb;
     private SynsetNode bestNoun;
 
-    public LCAFinder(SynsetForest verbs, SynsetForest nouns, Set<String> verbsToFind, Set<String> nounsToFind, SynsetNode bestVerb, SynsetNode bestNoun) {
+    public LCAFinder(SynsetForest verbs, SynsetForest nouns, Set<String> verbsToFind, Set<String> nounsToFind,
+                     SynsetNode bestVerb, SynsetNode bestNoun) {
         this.verbs = verbs;
         this.nouns = nouns;
         this.verbsToFind = verbsToFind;

@@ -1,12 +1,13 @@
 package io.mem0r1es.activitysubsumer.graphs;
 
 import io.mem0r1es.activitysubsumer.concurrent.ActivityOpsExecutor;
-import io.mem0r1es.activitysubsumer.io.SynsetProvider;
 import io.mem0r1es.activitysubsumer.utils.BFSHierarchicalNode;
 import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
+import io.mem0r1es.activitysubsumer.wordnet.SynsetPool;
 import org.apache.log4j.Logger;
 
+import java.io.PrintWriter;
 import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Future;
@@ -16,7 +17,7 @@ import java.util.concurrent.Future;
  *
  * @author Ivan Gavrilović
  */
-public class SynsetForest {
+public abstract class SynsetForest {
     static Logger logger = SubsumerLogger.getLogger(SynsetForest.class);
 
     protected Map<SynsetNode, SynsetGraph> graphs = new HashMap<SynsetNode, SynsetGraph>();
@@ -25,19 +26,29 @@ public class SynsetForest {
     /**
      * Generates a forest of synsets
      *
-     * @param provider synset provider used to retrieve all synsets
-     * @param rootLevel   at which level should we split the big graph. If it is 0, only the nodes with in degree 0 are taken,
-     *                    if it is 1, the first neighbours are added, if 2, neighbours of neighbours are added, and so on
+     * @param pool      synset pool used to retrieve all synsets
+     * @param rootLevel at which level should we split the big graph. If it is 0, only the nodes with in degree 0 are taken,
+     *                  if it is 1, the first neighbours are added, if 2, neighbours of neighbours are added, and so on
      */
-    public SynsetForest(SynsetProvider provider, int rootLevel) {
-        init(provider, rootLevel);
+    public SynsetForest(SynsetPool pool, int rootLevel) {
+        init(pool, rootLevel);
     }
 
-    private void init(SynsetProvider provider, int rootLevel) {
-        Set<SynsetNode> allNodes = provider.read();
-
-        Set<SynsetNode> roots = nodesAtLevel(allNodes, rootLevel);
+    private void init(SynsetPool pool, int rootLevel) {
+        Set<SynsetNode> roots = nodesAtLevel(pool.getRoots(), rootLevel);
         logger.info("Number of sub-graphs created: " + roots.size());
+
+        try {
+            PrintWriter p = new PrintWriter("/Users/ivan/" + System.currentTimeMillis());
+            for(SynsetNode s:pool.getRoots())
+                p.println(s.getCode());
+
+            p.close();
+        }
+        catch (Exception e){
+
+        }
+
 
         // all verbs will share the whole verbs graph
         for (SynsetNode node : roots) {
@@ -77,6 +88,7 @@ public class SynsetForest {
         }
         return resultRoots;
     }
+    static int cnt = 0;
 
     /**
      * Finds all synset nodes containing any of the specified words
@@ -86,7 +98,14 @@ public class SynsetForest {
      * @return set of {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode}
      */
     public Set<SynsetNode> findAllInSubgraph(SynsetNode subgraphRoot, Set<String> words) {
-        return graphs.get(subgraphRoot).findAll(words);
+        try {
+            if (subgraphRoot.getParents() == null) cnt++;
+            return graphs.get(subgraphRoot).findAll(words);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
     }
 
     /**
@@ -132,18 +151,12 @@ public class SynsetForest {
      * Finds nodes at the specified level. If level is 0, it returns nodes only with in degree 0, if 1 it returns neighbours
      * of those nodes, if 2 neighbours of neighbours etc.
      *
-     * @param graph graph to explore
-     * @param level until which level to go
+     * @param subgraphRoots graph to explore
+     * @param level         until which level to go
      * @return set of {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode} that are found at the specified level
      */
-    private Set<SynsetNode> nodesAtLevel(Set<SynsetNode> graph, int level) {
-        Set<SynsetNode> roots = new HashSet<SynsetNode>();
-
-        for (SynsetNode s : graph) {
-            if (s.getParents().isEmpty()) {
-                roots.add(s);
-            }
-        }
+    private Set<SynsetNode> nodesAtLevel(Set<SynsetNode> subgraphRoots, int level) {
+        Set<SynsetNode> roots = new HashSet<SynsetNode>(subgraphRoots);
 
         for (int i = 1; i < (level + 1); i++) {
             Set<SynsetNode> nextLevel = new HashSet<SynsetNode>();

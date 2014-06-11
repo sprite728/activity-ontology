@@ -1,7 +1,5 @@
 package io.mem0r1es.activitysubsumer.utils;
 
-import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
-
 import java.util.Deque;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -9,12 +7,12 @@ import java.util.LinkedList;
 /**
  * @author Ivan Gavrilović
  */
-public class BFSHierarchicalNode implements Iterator<HierarchicalStructure> {
+public class BFSHierarchicalNode<T extends HierarchicalStructure<T>> implements Iterator<HierarchicalStructure<T>> {
 
-    private Deque<SynsetNode> queue;
+    private Deque<T> queue;
 
-    public BFSHierarchicalNode(SynsetNode startNode) {
-        queue = new LinkedList<SynsetNode>();
+    public BFSHierarchicalNode(T startNode) {
+        queue = new LinkedList<T>();
         queue.addFirst(startNode);
     }
 
@@ -24,9 +22,9 @@ public class BFSHierarchicalNode implements Iterator<HierarchicalStructure> {
     }
 
     @Override
-    public SynsetNode next() {
-        SynsetNode node = queue.pollFirst();
-        for (SynsetNode sn : node.getChildren()) queue.addLast(sn);
+    public T next() {
+        T node = queue.pollFirst();
+        for (T sn : node.getChildren()) queue.addLast(sn);
 
         return node;
     }

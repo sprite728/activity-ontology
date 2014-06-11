@@ -1,6 +1,8 @@
 package io.mem0r1es.activitysubsumer.io;
 
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
+import io.mem0r1es.activitysubsumer.wordnet.SynsetNodeImpl;
+import io.mem0r1es.activitysubsumer.wordnet.SynsetNodeProxy;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -19,7 +21,14 @@ import java.util.Set;
  * @author Ivan Gavrilović
  */
 public class SynsetCSVProvider implements SynsetProvider {
-    private Map<Integer, SynsetNode> synsets = null;
+    /**
+     * Synset codes mapping to synsets with no parent/child info
+     */
+    private Map<Integer, SynsetNodeImpl> codeToSynsetWords = null;
+    /**
+     * Complete synset nodes with parent/child info
+     */
+    private Map<Integer, SynsetNodeImpl> synsets = null;
 
     private int numSynsets;
 
@@ -41,25 +50,25 @@ public class SynsetCSVProvider implements SynsetProvider {
     /**
      * Triggers the csv file reading, and returns the graph in a adjacency list form
      *
-     * @return graph containing {@link SynsetNode} as nodes
+     * @return graph containing {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode} as nodes
      */
-    public Set<SynsetNode> read() {
+    private Map<Integer, SynsetNodeImpl> read() {
         BufferedReader reader = null;
 
-        Set<SynsetNode> allNodes = new HashSet<SynsetNode>(numSynsets);
+        synsets = new HashMap<Integer, SynsetNodeImpl>(numSynsets);
         try {
             reader = new BufferedReader(new InputStreamReader(graphStream));
             String line = reader.readLine();
             while (line != null) {
                 String[] parts = line.split(" ");
-                if (parts.length == 1) allNodes.add(codeToSynset(Integer.parseInt(parts[0])));
+                if (parts.length == 1) synsets.put(Integer.parseInt(parts[0]), codeToSynset(Integer.parseInt(parts[0])));
                 else if (parts.length == 2) {
-                    SynsetNode fst = codeToSynset(Integer.parseInt(parts[0]));
-                    SynsetNode snd = codeToSynset(Integer.parseInt(parts[1]));
+                    SynsetNodeImpl fst = codeToSynset(Integer.parseInt(parts[0]));
+                    SynsetNodeImpl snd = codeToSynset(Integer.parseInt(parts[1]));
                     fst.addChild(snd);
                     snd.addParent(fst);
-                    allNodes.add(fst);
-                    allNodes.add(snd);
+                    synsets.put(Integer.parseInt(parts[0]), fst);
+                    synsets.put(Integer.parseInt(parts[1]), snd);
                 }
 
                 line = reader.readLine();
@@ -74,20 +83,20 @@ public class SynsetCSVProvider implements SynsetProvider {
             }
         }
 
-        return allNodes;
+        return synsets;
     }
 
     /**
      * For the specified code, get the words from the synset
      *
      * @param code synset code
-     * @return {@link SynsetNode} containing all the words
+     * @return {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode} containing all the words
      */
-    private SynsetNode codeToSynset(Integer code) {
-        if (synsets == null) {
-            synsets = parseSynsets();
+    private SynsetNodeImpl codeToSynset(Integer code) {
+        if (codeToSynsetWords == null) {
+            codeToSynsetWords = parseSynsets();
         }
-        return synsets.get(code);
+        return codeToSynsetWords.get(code);
     }
 
     /**
@@ -95,11 +104,11 @@ public class SynsetCSVProvider implements SynsetProvider {
      *
      * @return {@link java.util.HashMap} containing the mapping
      */
-    private Map<Integer, SynsetNode> parseSynsets() {
+    private Map<Integer, SynsetNodeImpl> parseSynsets() {
         BufferedReader reader = null;
 
         // for each edge, start vertex is synset code, end vertex is the synset member (word)
-        Map<Integer, SynsetNode> synsets = new HashMap<Integer, SynsetNode>(numSynsets);
+        Map<Integer, SynsetNodeImpl> synsets = new HashMap<Integer, SynsetNodeImpl>(numSynsets);
         try {
             reader = new BufferedReader(new InputStreamReader(synsetStream));
             String line = reader.readLine();
@@ -108,11 +117,11 @@ public class SynsetCSVProvider implements SynsetProvider {
                 if (parts.length == 2) {
                     Integer synsetCode = Integer.parseInt(parts[0]);
 
-                    SynsetNode node = synsets.get(synsetCode);
+                    SynsetNodeImpl node = synsets.get(synsetCode);
                     try {
                         String newWord = URLDecoder.decode(parts[1], "UTF-8");
                         if (node == null) {
-                            node = new SynsetNode(synsetCode.toString(), newWord);
+                            node = new SynsetNodeImpl(synsetCode.toString(), newWord);
                         } else {
                             node.addWords(newWord);
                         }
@@ -136,5 +145,27 @@ public class SynsetCSVProvider implements SynsetProvider {
 
 
         return synsets;
+    }
+
+    @Override
+    public SynsetNodeImpl readWithCode(int code) {
+        // this initializes all synsets
+        if (synsets == null) read();
+
+        return synsets.get(code);
+    }
+
+    @Override
+    public Set<SynsetNode> rootSynsets() {
+        if (synsets == null) read();
+        Set<SynsetNode> roots = new HashSet<SynsetNode>();
+
+        for (SynsetNodeImpl sn: synsets.values()) {
+            if (sn.getParents().isEmpty()) {
+                SynsetNodeProxy proxy = new SynsetNodeProxy(sn.getCode(), sn);
+                roots.add(proxy);
+            }
+        }
+        return roots;
     }
 }

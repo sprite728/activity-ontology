@@ -6,6 +6,8 @@ import io.mem0r1es.activitysubsumer.classifier.ActivityCluster;
 import io.mem0r1es.activitysubsumer.graphs.SynsetForest;
 import io.mem0r1es.activitysubsumer.utils.Cons;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
+import io.mem0r1es.activitysubsumer.wordnet.SynsetNodeImpl;
+import io.mem0r1es.activitysubsumer.wordnet.SynsetNodeProxy;
 
 import java.io.*;
 import java.util.*;
@@ -34,7 +36,8 @@ public class ActivityFileProvider implements ActivityProvider {
                 Map<SynsetNode, Set<ContextualActivity>> synsetActivities = new HashMap<SynsetNode, Set<ContextualActivity>>();
                 String line = scanner.nextLine();
                 while (line != null && !line.equals(Cons.CATEGORY_SEPARATOR)) {
-                    SynsetNode sn = SynsetNode.deSerialize(line);
+                    SynsetNodeImpl snImpl = SynsetNodeImpl.deSerialize(line);
+                    SynsetNode sn = new SynsetNodeProxy(snImpl.getCode(), snImpl);
 
                     Set<ContextualActivity> acts = new HashSet<ContextualActivity>();
                     line = scanner.nextLine();

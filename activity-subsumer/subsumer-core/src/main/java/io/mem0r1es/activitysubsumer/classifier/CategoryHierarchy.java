@@ -47,14 +47,27 @@ public class CategoryHierarchy {
     }
 
     public static class Category extends HierarchicalStructure<Category>{
+        private Set<Category> children;
+        private Set<Category> parents;
+
         private String name;
 
         public Category(String name) {
             this.name = name;
+            children = new HashSet<Category>();
+            parents = new HashSet<Category>();
         }
 
         public String getName() {
             return name;
+        }
+
+        public Set<Category> getChildren() {
+            return children;
+        }
+
+        public Set<Category> getParents() {
+            return parents;
         }
     }
 }

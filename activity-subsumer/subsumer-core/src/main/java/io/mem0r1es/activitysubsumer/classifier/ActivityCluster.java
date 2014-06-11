@@ -62,7 +62,6 @@ public class ActivityCluster {
      */
     public void addActivity(ContextualActivity activity) {
         Set<SynsetNode> subgraphs = verbs.findSubgraphs(activity.getVerb());
-        logger.debug("Adding activity "+ activity +" to "+subgraphs.size()+" clusters");
         for (SynsetNode s : subgraphs) {
             Set<ContextualActivity> verbActivities = activities.get(s);
             if (verbActivities == null) {
@@ -88,7 +87,6 @@ public class ActivityCluster {
 
         // find all sub-graphs containing the same activities
         Set<SynsetNode> subgraphRoots = findActivityClusters(subgraphActivities);
-
         // set of mandatory nouns which we must find in a noun sub-graph
         Set<String> mandatoryNouns = getActivitiesNouns(subgraphActivities);
 
@@ -111,7 +109,6 @@ public class ActivityCluster {
                 workers.put(evaluator, executor.submit(evaluator));
             }
         }
-        logger.debug("Evaluating subg-raphs for root "+ root);
 
         // find the ones with the highest scores
         List<SynsetNode> bestVerbs = new LinkedList<SynsetNode>();
@@ -134,7 +131,6 @@ public class ActivityCluster {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
         return generateActivities(bestVerbs, bestNouns, getActivitiesVerbs(subgraphActivities), mandatoryNouns);
     }
