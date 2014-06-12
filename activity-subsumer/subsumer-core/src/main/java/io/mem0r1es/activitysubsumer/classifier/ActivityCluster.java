@@ -131,7 +131,6 @@ public class ActivityCluster {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return generateActivities(bestVerbs, bestNouns, getActivitiesVerbs(subgraphActivities), mandatoryNouns);
     }
 

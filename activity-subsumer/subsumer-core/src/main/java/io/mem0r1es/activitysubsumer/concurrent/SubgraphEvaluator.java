@@ -2,7 +2,6 @@ package io.mem0r1es.activitysubsumer.concurrent;
 
 import io.mem0r1es.activitysubsumer.graphs.SynsetForest;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetNodeImpl;
 
 import java.util.HashSet;
 import java.util.Set;

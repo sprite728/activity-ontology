@@ -6,7 +6,6 @@ import io.mem0r1es.activitysubsumer.classifier.ActivityCluster;
 import io.mem0r1es.activitysubsumer.graphs.SynsetForest;
 import io.mem0r1es.activitysubsumer.utils.Cons;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetNodeImpl;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNodeProxy;
 
 import java.io.*;
@@ -25,6 +24,12 @@ public class ActivityFileProvider implements ActivityProvider {
     @Override
     public Map<String, ActivityCluster> read(SynsetForest verbs, SynsetForest nouns) {
         Map<String, ActivityCluster> cluster = new HashMap<String, ActivityCluster>();
+
+        if (!file.exists()){
+            // we are running for the first time, when there are no activities
+            return cluster;
+        }
+
         InputStream input = null;
         try {
             input = new BufferedInputStream(new FileInputStream(file));
@@ -36,8 +41,8 @@ public class ActivityFileProvider implements ActivityProvider {
                 Map<SynsetNode, Set<ContextualActivity>> synsetActivities = new HashMap<SynsetNode, Set<ContextualActivity>>();
                 String line = scanner.nextLine();
                 while (line != null && !line.equals(Cons.CATEGORY_SEPARATOR)) {
-                    SynsetNodeImpl snImpl = SynsetNodeImpl.deSerialize(line);
-                    SynsetNode sn = new SynsetNodeProxy(snImpl.getCode(), snImpl);
+                    String synsCode = line.split(" ")[0];
+                    SynsetNode sn = new SynsetNodeProxy(Integer.parseInt(synsCode));
 
                     Set<ContextualActivity> acts = new HashSet<ContextualActivity>();
                     line = scanner.nextLine();
@@ -52,7 +57,6 @@ public class ActivityFileProvider implements ActivityProvider {
                 cluster.put(category, new ActivityCluster(verbs, nouns, synsetActivities));
             }
         } catch (Exception e) {
-            System.err.println("File format exception!");
             e.printStackTrace();
         } finally {
             try {

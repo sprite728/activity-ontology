@@ -9,9 +9,10 @@ import io.mem0r1es.activitysubsumer.graphs.VerbsSynsetForest;
 import io.mem0r1es.activitysubsumer.io.*;
 import io.mem0r1es.activitysubsumer.utils.Cons;
 import io.mem0r1es.activitysubsumer.utils.TimeOfDay;
-import io.mem0r1es.activitysubsumer.wordnet.NounSynsetPool;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetPool;
-import io.mem0r1es.activitysubsumer.wordnet.VerbSynsetPool;
+import io.mem0r1es.activitysubsumer.wordnet.NounDict;
+import io.mem0r1es.activitysubsumer.wordnet.NounStore;
+import io.mem0r1es.activitysubsumer.wordnet.VerbDict;
+import io.mem0r1es.activitysubsumer.wordnet.VerbStore;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
@@ -29,15 +30,20 @@ public class ActivityTest {
     @Test
     public void testActivities() {
         try {
+            Thread.sleep(10000);
+            long free =            Runtime.getRuntime().totalMemory();
+
             long start = System.currentTimeMillis();
 
-            SynsetProvider verbsProvider = new SynsetCSVProvider(new FileInputStream(Cons.VERBS_HYPONYM), new FileInputStream(Cons.VERBS_SYNSET), 13789);
-            SynsetPool verbsPool = new VerbSynsetPool(13789, verbsProvider);
-            VerbsSynsetForest verbs = new VerbsSynsetForest(verbsPool);
+            VerbStore verbStore = new VerbStore(25061, 13256);
+            SynsetProvider verbsProvider = new SynsetCSVProvider(new FileInputStream(Cons.VERBS_SYNSET), new FileInputStream(Cons.VERBS_WORDS),
+                    new FileInputStream(Cons.VERBS_CHILDREN), new FileInputStream(Cons.VERBS_PARENTS), verbStore, VerbDict.getInstance());
+                VerbsSynsetForest verbs = new VerbsSynsetForest(verbsProvider);
 
-            SynsetProvider nounsProvider = new SynsetCSVProvider(new FileInputStream(Cons.NOUNS_HYPONYM), new FileInputStream(Cons.NOUNS_SYNSET), 82192);
-            SynsetPool nounsPool = new NounSynsetPool(82192, nounsProvider);
-            NounsSynsetForest nouns = new NounsSynsetForest(nounsPool);
+            NounStore nounStore = new NounStore(146547, 84505);
+            SynsetProvider nounsProvider = new SynsetCSVProvider(new FileInputStream(Cons.NOUNS_SYNSET), new FileInputStream(Cons.NOUNS_WORDS),
+                    new FileInputStream(Cons.NOUNS_CHILDREN), new FileInputStream(Cons.NOUNS_PARENTS), nounStore, NounDict.getInstance());
+            NounsSynsetForest nouns = new NounsSynsetForest(nounsProvider);
 
             CategoryHierarchy hierarchy = new CategoryHierarchy(new FoursquareCategoriesCSV(new FileInputStream(Cons.CATEGORIES_CSV)));
             ActivityProvider provider = new ActivityFileProvider(new File(Cons.ACTIVITIES_FILE));
@@ -77,7 +83,11 @@ public class ActivityTest {
 
             start = System.currentTimeMillis();
             logger.info("Find: " + classifier.findActivities("have", "food"));
-            logger.info("Find ms: " + (System.currentTimeMillis() - start));
+
+
+            /* Total amount of free memory available to the JVM */
+            System.out.println("Used memory (bytes): " +
+                    (Runtime.getRuntime().totalMemory() - free));
         } catch (Exception e) {
             e.printStackTrace();
         }

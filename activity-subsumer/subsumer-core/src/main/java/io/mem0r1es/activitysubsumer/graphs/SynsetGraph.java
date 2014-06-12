@@ -2,8 +2,7 @@ package io.mem0r1es.activitysubsumer.graphs;
 
 import io.mem0r1es.activitysubsumer.utils.BFSHierarchicalNode;
 import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
-import io.mem0r1es.activitysubsumer.utils.Utils;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
+import io.mem0r1es.activitysubsumer.wordnet.*;
 import org.apache.log4j.Logger;
 
 import java.util.*;
@@ -17,23 +16,36 @@ import java.util.*;
 public class SynsetGraph {
     static Logger logger = SubsumerLogger.getLogger(SynsetGraph.class);
     protected SynsetNode root;
+    protected SynsetStore store;
 
-    /**
-     * Mapping words to synsets that contain it to improve the performance of the search related operations
-     */
-    protected Map<String, Set<SynsetNode>> synsets;
+    protected int[] synsetCodes;
+
+    Dict dict;
 
     public SynsetGraph(SynsetNode root) {
         this.root = root;
 
-        synsets = new HashMap<String, Set<SynsetNode>>();
+        dict = SynsetNodeProxy.getDict(root.getCode());
+
         BFSHierarchicalNode<SynsetNode> bfs = new BFSHierarchicalNode<SynsetNode>(root);
+        HashSet<Integer> setSyns = new HashSet<Integer>();
         while (bfs.hasNext()) {
             SynsetNode node = bfs.next();
+            setSyns.add(node.getCode());
+        }
+        ArrayList<Integer> tmpSyns = new ArrayList<Integer>(setSyns);
+        Collections.sort(tmpSyns);
+        synsetCodes = new int[tmpSyns.size()];
+        for(int i =0; i < tmpSyns.size(); i++) synsetCodes[i] = tmpSyns.get(i);
 
-            Set<String> currWords = node.getSynset();
-
-            for (String s:currWords) Utils.addToMap(synsets, s, node);
+        if (Integer.toString(root.getCode()).startsWith("1")){
+            this.store = NounStore.getInstance();
+        }
+        else if (Integer.toString(root.getCode()).startsWith("2")){
+            this.store = VerbStore.getInstance();
+        }
+        else {
+            throw new RuntimeException("Unsupported synset code! Nouns and verbs start with 1 or 2");
         }
     }
 
@@ -43,8 +55,17 @@ public class SynsetGraph {
      * @param word search term
      * @return set of {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode} containing the word
      */
-    public Set<SynsetNode> find(String word) {
-        return  synsets.get(word);
+    public Set<SynsetNode> find(String word){
+        return  inThisSubgraph(store.getSynsetsWithWord(dict.get(word)));
+    }
+
+    private Set<SynsetNode> inThisSubgraph(Set<Integer> total){
+        Set<SynsetNode> res = new HashSet<SynsetNode>();
+        for(int s: total){
+            if (SynsetStore.binSearch(synsetCodes, s) != -1) res.add(new SynsetNodeProxy(s));
+        }
+
+        return  res;
     }
 
     /**
@@ -90,7 +111,10 @@ public class SynsetGraph {
      */
     public Set<SynsetNode> findAll(Set<String> words) {
         Set<SynsetNode> resultSet = new HashSet<SynsetNode>();
-        for (String w:words) if (synsets.containsKey(w)) resultSet.addAll(synsets.get(w));
+        for (String w:words){
+            Set<SynsetNode> s = inThisSubgraph(store.getSynsetsWithWord(dict.get(w)));
+            if (!s.isEmpty()) resultSet.addAll(s);
+        }
         return resultSet;
     }
 
@@ -101,7 +125,7 @@ public class SynsetGraph {
      * @return {@code true} if sub-graph contains it, {@code false} otherwise
      */
     public boolean contains(String word) {
-        return synsets.keySet().contains(word);
+        return !inThisSubgraph(store.getSynsetsWithWord(dict.get(word))).isEmpty();
     }
 
     /**
@@ -128,6 +152,7 @@ public class SynsetGraph {
                 previousLCAs.addAll(getLCA(s, listNodes.get(i)));
             }
         }
+
         return previousLCAs;
     }
 
@@ -155,8 +180,9 @@ public class SynsetGraph {
                 List<SynsetNode> shorter = diff > 0 ? path2 : path1;
                 diff = Math.abs(diff);
 
+
                 for (int i = 0; i < shorter.size(); i++) {
-                    if (shorter.get(i) == longer.get(diff + i)) {
+                    if (shorter.get(i).equals(longer.get(diff + i))) {
                         lcas.add(shorter.get(i));
                         break;
                     }
@@ -175,7 +201,7 @@ public class SynsetGraph {
      */
     public List<List<SynsetNode>> getAllPathsToRoot(SynsetNode startNode) {
         List<List<SynsetNode>> paths = new LinkedList<List<SynsetNode>>();
-        if (startNode.getCode().equals(root.getCode())) {
+        if (startNode.getCode() == root.getCode()) {
             List<SynsetNode> myPath = new LinkedList<SynsetNode>();
             myPath.add(startNode);
             paths.add(myPath);

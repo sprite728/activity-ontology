@@ -4,22 +4,24 @@ package io.mem0r1es.activitysubsumer.utils;
  * @author Ivan Gavrilović
  */
 public class Cons {
-    public static final String NOUN_ROOTS = "subsumer-test/src/test/resources/noun_roots";
-
-    public static final String VERB_ROOTS = "subsumer-test/src/test/resources/verb_roots";
-
     public static final String ENTRY_SEPARATOR = "|";
     public static final String ENTRY_SEPARATOR_REG = "[|]";
     public static final String NEW_LINE = System.getProperty("line.separator");
     public static final String CLUSTER_SEPARATOR = "--------";
     public static final String CATEGORY_SEPARATOR = "********";
 
-    public static final String NOUNS_HYPONYM = "subsumer-test/src/test/resources/word_net_nouns_hyponym";
-    public static final String NOUNS_SYNSET = "subsumer-test/src/test/resources/word_net_nouns_synset";
-    public static final String NOUNS = "subsumer-test/src/test/resources/word_net_nouns";
-    public static final String VERBS_HYPONYM = "subsumer-test/src/test/resources/word_net_verbs_hyponym";
-    public static final String VERBS_SYNSET = "subsumer-test/src/test/resources/word_net_verbs_synset";
-    public static final String VERBS = "subsumer-test/src/test/resources/word_net_verbs";
+    /**
+     * Files containing the sorted synsets, parents (each line is node -> node's parent),
+     * and children (each line is node -> node's child)
+     */
+    public static final String NOUNS_PARENTS = "subsumer-test/src/test/resources/nouns_parents_sorted";
+    public static final String NOUNS_CHILDREN = "subsumer-test/src/test/resources/nouns_children_sorted";
+    public static final String NOUNS_SYNSET = "subsumer-test/src/test/resources/nouns_syns_sorted";
+    public static final String NOUNS_WORDS = "subsumer-test/src/test/resources/nouns_words_sorted";
+    public static final String VERBS_PARENTS = "subsumer-test/src/test/resources/verbs_parents_sorted";
+    public static final String VERBS_CHILDREN = "subsumer-test/src/test/resources/verbs_children_sorted";
+    public static final String VERBS_SYNSET = "subsumer-test/src/test/resources/verbs_syns_sorted";
+    public static final String VERBS_WORDS = "subsumer-test/src/test/resources/verbs_words_sorted";
 
     public static final String ACTIVITIES_FILE = "subsumer-test/src/test/resources/user.activities";
     public static final String ACTIVITIES_DEFAULT = "subsumer-test/src/test/resources/default.activities";

@@ -1,6 +1,6 @@
 package io.mem0r1es.activitysubsumer.graphs;
 
-import io.mem0r1es.activitysubsumer.wordnet.SynsetPool;
+import io.mem0r1es.activitysubsumer.io.SynsetProvider;
 
 /**
  * Verbs forest - containing all of the verbs sub-graphs
@@ -8,7 +8,7 @@ import io.mem0r1es.activitysubsumer.wordnet.SynsetPool;
  * @author Ivan Gavrilović
  */
 public class VerbsSynsetForest extends SynsetForest {
-    public VerbsSynsetForest(SynsetPool pool) {
-        super(pool, 0);
+    public VerbsSynsetForest(SynsetProvider provider) {
+        super(provider, 0);
     }
 }

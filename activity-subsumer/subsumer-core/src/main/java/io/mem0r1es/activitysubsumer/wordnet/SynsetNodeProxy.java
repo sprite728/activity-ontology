@@ -1,121 +1,114 @@
 package io.mem0r1es.activitysubsumer.wordnet;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Delays the actual creation of the {@link SynsetNodeImpl} until it is needed
+ * Queries {@link io.mem0r1es.activitysubsumer.wordnet.SynsetStore} for nouns or verbs for all of the methods.
  *
  * @author Ivan Gavrilović
  */
 public class SynsetNodeProxy extends SynsetNode {
 
-    String proxyCode;
-    SynsetNodeImpl content;
+    int proxyCode;
 
-    public SynsetNodeProxy(String proxyCode) {
+    SynsetStore store;
+
+    public SynsetNodeProxy(int proxyCode) {
         this.proxyCode = proxyCode;
-        content = null;
-    }
 
-    public SynsetNodeProxy(String proxyCode, SynsetNodeImpl content) {
-        this.proxyCode = proxyCode;
-        this.content = content;
+        if (Integer.toString(proxyCode).startsWith("1")){
+            store = NounStore.getInstance();
+        }
+        else if (Integer.toString(proxyCode).startsWith("2")){
+            store = VerbStore.getInstance();
+        }
+        else {
+            throw new RuntimeException("Unsupported synset code! Nouns and verbs start with 1 or 2");
+        }
     }
-
-    @Override
-    public void addWords(String... words) {
-        init();
-        content.addWords(words);
-    }
-
 
     @Override
     public boolean equals(Object o) {
-        init();
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
         SynsetNodeProxy that = (SynsetNodeProxy) o;
-        that.init();
-        if (content != null ? !content.equals(that.content) : that.content != null) return false;
-        if (proxyCode != null ? !proxyCode.equals(that.proxyCode) : that.proxyCode != null) return false;
+
+        if (proxyCode != that.proxyCode) return false;
+        if (!store.equals(that.store)) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = proxyCode != null ? proxyCode.hashCode() : 0;
-        result = 31 * result + (content != null ? content.hashCode() : 0);
+        int result = proxyCode;
+        result = 31 * result + store.hashCode();
         return result;
     }
 
     @Override
     public boolean contains(String word) {
-        init();
-        return content.contains(word);
+        return store.getSynset(proxyCode).contains(getDict(proxyCode).get(word));
     }
 
     @Override
-    public boolean containsAny(Set<String> words) {
-        init();
-        return content.containsAny(words);
-    }
-
-    @Override
-    public String getCode() {
+    public int getCode() {
         return proxyCode;
     }
 
     @Override
     public Set<String> getSynset() {
-        init();
-        return content.getSynset();
+        HashSet<String> syns = new HashSet<String>();
+        for(int i:store.getSynset(proxyCode)) syns.add(getDict(proxyCode).get(i));
+        return syns;
     }
 
     @Override
     public String toString() {
-        init();
-        return content.toString();
+        return Integer.toString(proxyCode);
     }
 
     @Override
     public void addParent(SynsetNode parent) {
-        init();
-        content.addParent(parent);
+       // nothing
     }
 
     @Override
     public void addChild(SynsetNode child) {
-        init();
-        content.addChild(child);
+        // nothing
     }
 
     @Override
     public Set<SynsetNode> getParents() {
-        init();
-        return content.getParents();
+        Set<SynsetNode> parents = new HashSet<SynsetNode>();
+        for (int i: store.getParents(proxyCode)){
+            parents.add(new SynsetNodeProxy(i));
+        }
+
+        return parents;
     }
 
     @Override
     public Set<SynsetNode> getChildren() {
-        init();
-        return content.getChildren();
+        Set<SynsetNode> children = new HashSet<SynsetNode>();
+        for (int i: store.getChildren(proxyCode)){
+            children.add(new SynsetNodeProxy(i));
+        }
+
+        return children;
     }
 
-    /**
-     * Instantiates the actual {@link SynsetNodeImpl}
-     */
-    private void init() {
-        if (content == null) {
-            SynsetPool pool;
-            if (proxyCode.startsWith("1"))
-                 pool = NounSynsetPool.getInstance();
-            else if (proxyCode.startsWith("2"))
-                pool = VerbSynsetPool.getInstance();
-            else throw new RuntimeException("Unknown synset code: "+proxyCode);
-
-            content = pool.get(Integer.parseInt(proxyCode));
+    public static Dict getDict(int code){
+        if (Integer.toString(code).startsWith("1")){
+            return NounDict.getInstance();
+        }
+        else if (Integer.toString(code).startsWith("2")){
+            return VerbDict.getInstance();
+        }
+        else {
+            throw new RuntimeException("Unsupported synset code! Nouns and verbs start with 1 or 2");
         }
     }
 }

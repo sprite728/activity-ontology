@@ -1,13 +1,12 @@
 package io.mem0r1es.activitysubsumer.graphs;
 
 import io.mem0r1es.activitysubsumer.concurrent.ActivityOpsExecutor;
+import io.mem0r1es.activitysubsumer.io.SynsetProvider;
 import io.mem0r1es.activitysubsumer.utils.BFSHierarchicalNode;
 import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetPool;
 import org.apache.log4j.Logger;
 
-import java.io.PrintWriter;
 import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Future;
@@ -26,28 +25,17 @@ public abstract class SynsetForest {
     /**
      * Generates a forest of synsets
      *
-     * @param pool      synset pool used to retrieve all synsets
+     * @param provider      synset pool used to retrieve all synsets
      * @param rootLevel at which level should we split the big graph. If it is 0, only the nodes with in degree 0 are taken,
      *                  if it is 1, the first neighbours are added, if 2, neighbours of neighbours are added, and so on
      */
-    public SynsetForest(SynsetPool pool, int rootLevel) {
-        init(pool, rootLevel);
+    public SynsetForest(SynsetProvider provider, int rootLevel) {
+        init(provider, rootLevel);
     }
 
-    private void init(SynsetPool pool, int rootLevel) {
-        Set<SynsetNode> roots = nodesAtLevel(pool.getRoots(), rootLevel);
+    private void init(SynsetProvider provider, int rootLevel) {
+        Set<SynsetNode> roots = nodesAtLevel(provider.rootSynsets(), rootLevel);
         logger.info("Number of sub-graphs created: " + roots.size());
-
-        try {
-            PrintWriter p = new PrintWriter("/Users/ivan/" + System.currentTimeMillis());
-            for(SynsetNode s:pool.getRoots())
-                p.println(s.getCode());
-
-            p.close();
-        }
-        catch (Exception e){
-
-        }
 
 
         // all verbs will share the whole verbs graph

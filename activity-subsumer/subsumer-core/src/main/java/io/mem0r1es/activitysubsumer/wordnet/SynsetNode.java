@@ -9,13 +9,9 @@ import java.util.Set;
  */
 public abstract class SynsetNode extends HierarchicalStructure<SynsetNode>{
 
-    public abstract String getCode();
+    public abstract int getCode();
 
     public abstract Set<String> getSynset();
 
     public abstract boolean contains(String word);
-
-    public abstract boolean containsAny(Set<String> words);
-
-    public abstract void addWords(String... words);
 }
