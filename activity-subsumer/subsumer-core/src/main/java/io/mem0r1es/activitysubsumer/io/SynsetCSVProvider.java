@@ -49,6 +49,7 @@ public class SynsetCSVProvider implements SynsetProvider {
 
     /**
      * Read parent hyponyms and child hyponyms files, depending on the specified parameter.
+     *
      * @param readingChildren if {@code true} read children file, if {@code false} read parents
      */
     private void readHyponyms(boolean readingChildren) {
@@ -83,19 +84,12 @@ public class SynsetCSVProvider implements SynsetProvider {
         }
     }
 
-    Set<SynsetNode> allProxies = new HashSet<SynsetNode>();
-
-    @Override
-    public Set<SynsetNode> read() {
-        if (allProxies.isEmpty()) {
-            // this populates the dict
-            readWords();
-            // read synsets uses the dict
-            allProxies = readSynsets();
-            readHyponyms(false);
-            readHyponyms(true);
-        }
-        return allProxies;
+    private Set<SynsetNode> read() {
+        // this populates the dict
+        readWords();
+        readHyponyms(false);
+        readHyponyms(true);
+        return readSynsets();
     }
 
     /**
@@ -168,10 +162,8 @@ public class SynsetCSVProvider implements SynsetProvider {
 
     @Override
     public Set<SynsetNode> rootSynsets() {
-        if (allProxies.isEmpty()) read();
-
         Set<SynsetNode> roots = new HashSet<SynsetNode>();
-        for (SynsetNode sn : allProxies) {
+        for (SynsetNode sn : read()) {
             if (sn.getParents().isEmpty()) {
                 roots.add(sn);
             }

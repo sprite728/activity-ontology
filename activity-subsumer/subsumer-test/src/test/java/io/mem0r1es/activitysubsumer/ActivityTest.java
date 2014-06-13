@@ -30,17 +30,14 @@ public class ActivityTest {
     @Test
     public void testActivities() {
         try {
-            Thread.sleep(10000);
-            long free =            Runtime.getRuntime().totalMemory();
-
             long start = System.currentTimeMillis();
 
-            VerbStore verbStore = new VerbStore(25061, 13256);
+            VerbStore verbStore = new VerbStore(Cons.VERBS_WORDS_IN_SYNS, Cons.VERBS_PARENT_CHLD_RELS);
             SynsetProvider verbsProvider = new SynsetCSVProvider(new FileInputStream(Cons.VERBS_SYNSET), new FileInputStream(Cons.VERBS_WORDS),
                     new FileInputStream(Cons.VERBS_CHILDREN), new FileInputStream(Cons.VERBS_PARENTS), verbStore, VerbDict.getInstance());
                 VerbsSynsetForest verbs = new VerbsSynsetForest(verbsProvider);
 
-            NounStore nounStore = new NounStore(146547, 84505);
+            NounStore nounStore = new NounStore(Cons.NOUNS_WORDS_IN_SYNS, Cons.NOUNS_PARENT_CHLD_RELS);
             SynsetProvider nounsProvider = new SynsetCSVProvider(new FileInputStream(Cons.NOUNS_SYNSET), new FileInputStream(Cons.NOUNS_WORDS),
                     new FileInputStream(Cons.NOUNS_CHILDREN), new FileInputStream(Cons.NOUNS_PARENTS), nounStore, NounDict.getInstance());
             NounsSynsetForest nouns = new NounsSynsetForest(nounsProvider);
@@ -83,11 +80,6 @@ public class ActivityTest {
 
             start = System.currentTimeMillis();
             logger.info("Find: " + classifier.findActivities("have", "food"));
-
-
-            /* Total amount of free memory available to the JVM */
-            System.out.println("Used memory (bytes): " +
-                    (Runtime.getRuntime().totalMemory() - free));
         } catch (Exception e) {
             e.printStackTrace();
         }

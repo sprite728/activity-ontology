@@ -13,7 +13,7 @@ import java.util.*;
  *
  * @author Ivan Gavrilović
  */
-public class SynsetGraph {
+public abstract class SynsetGraph {
     static Logger logger = SubsumerLogger.getLogger(SynsetGraph.class);
     protected SynsetNode root;
     protected SynsetStore store;
@@ -25,7 +25,7 @@ public class SynsetGraph {
     public SynsetGraph(SynsetNode root) {
         this.root = root;
 
-        dict = SynsetNodeProxy.getDict(root.getCode());
+        dict = getDictionary();
 
         BFSHierarchicalNode<SynsetNode> bfs = new BFSHierarchicalNode<SynsetNode>(root);
         HashSet<Integer> setSyns = new HashSet<Integer>();
@@ -48,6 +48,8 @@ public class SynsetGraph {
             throw new RuntimeException("Unsupported synset code! Nouns and verbs start with 1 or 2");
         }
     }
+
+    protected abstract Dict getDictionary();
 
     /**
      * Find word in the whole graph

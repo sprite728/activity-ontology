@@ -36,5 +36,13 @@ public class Cons {
     public static final String PREDICATE_HYPONYM = "hyponym";
     public static final String PREDICATE_SYNSET = "synset_member";
 
+    public static final int UNIQUE_NOUNS = 116197;
+    public static final int UNIQUE_VERBS = 11340;
+    public static final int NOUNS_WORDS_IN_SYNS = 146547;
+    public static final int NOUNS_PARENT_CHLD_RELS = 84505;
+    public static final int VERBS_WORDS_IN_SYNS = 25061;
+    public static final int VERBS_PARENT_CHLD_RELS = 13256;
+
+
     public static final int NUM_THREADS = 10;
 }

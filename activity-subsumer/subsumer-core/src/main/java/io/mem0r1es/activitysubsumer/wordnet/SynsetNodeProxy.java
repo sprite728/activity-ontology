@@ -50,7 +50,7 @@ public class SynsetNodeProxy extends SynsetNode {
 
     @Override
     public boolean contains(String word) {
-        return store.getSynset(proxyCode).contains(getDict(proxyCode).get(word));
+        return store.getSynset(proxyCode).contains(Dict.getDict(proxyCode).get(word));
     }
 
     @Override
@@ -61,7 +61,7 @@ public class SynsetNodeProxy extends SynsetNode {
     @Override
     public Set<String> getSynset() {
         HashSet<String> syns = new HashSet<String>();
-        for(int i:store.getSynset(proxyCode)) syns.add(getDict(proxyCode).get(i));
+        for(int i:store.getSynset(proxyCode)) syns.add(Dict.getDict(proxyCode).get(i));
         return syns;
     }
 
@@ -98,17 +98,5 @@ public class SynsetNodeProxy extends SynsetNode {
         }
 
         return children;
-    }
-
-    public static Dict getDict(int code){
-        if (Integer.toString(code).startsWith("1")){
-            return NounDict.getInstance();
-        }
-        else if (Integer.toString(code).startsWith("2")){
-            return VerbDict.getInstance();
-        }
-        else {
-            throw new RuntimeException("Unsupported synset code! Nouns and verbs start with 1 or 2");
-        }
     }
 }

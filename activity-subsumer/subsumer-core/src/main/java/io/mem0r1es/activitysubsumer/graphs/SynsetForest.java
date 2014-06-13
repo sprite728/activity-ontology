@@ -33,16 +33,7 @@ public abstract class SynsetForest {
         init(provider, rootLevel);
     }
 
-    private void init(SynsetProvider provider, int rootLevel) {
-        Set<SynsetNode> roots = nodesAtLevel(provider.rootSynsets(), rootLevel);
-        logger.info("Number of sub-graphs created: " + roots.size());
-
-
-        // all verbs will share the whole verbs graph
-        for (SynsetNode node : roots) {
-            graphs.put(node, new SynsetGraph(node));
-        }
-    }
+    protected abstract void init(SynsetProvider provider, int rootLevel);
 
     /**
      * Returns the roots of the sub-graphs containing the word
@@ -143,7 +134,7 @@ public abstract class SynsetForest {
      * @param level         until which level to go
      * @return set of {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode} that are found at the specified level
      */
-    private Set<SynsetNode> nodesAtLevel(Set<SynsetNode> subgraphRoots, int level) {
+    protected Set<SynsetNode> nodesAtLevel(Set<SynsetNode> subgraphRoots, int level) {
         Set<SynsetNode> roots = new HashSet<SynsetNode>(subgraphRoots);
 
         for (int i = 1; i < (level + 1); i++) {

@@ -8,7 +8,5 @@ import java.util.Set;
  * @author Ivan Gavrilović
  */
 public interface SynsetProvider {
-    Set<SynsetNode> read();
-
     Set<SynsetNode> rootSynsets();
 }
