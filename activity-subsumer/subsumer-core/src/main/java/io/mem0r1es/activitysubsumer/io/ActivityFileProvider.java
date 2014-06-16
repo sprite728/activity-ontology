@@ -12,6 +12,7 @@ import java.io.*;
 import java.util.*;
 
 /**
+ * Reads and writes the activities to the text files
  * @author Ivan Gavrilović
  */
 public class ActivityFileProvider implements ActivityProvider {

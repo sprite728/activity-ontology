@@ -1,11 +1,14 @@
 package io.mem0r1es.activitysubsumer.io;
 
+import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
 import io.mem0r1es.activitysubsumer.wordnet.Dict;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetNodeProxy;
 import io.mem0r1es.activitysubsumer.wordnet.SynsetStore;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URLDecoder;
@@ -20,6 +23,8 @@ import java.util.Set;
  * @author Ivan Gavrilović
  */
 public class SynsetCSVProvider implements SynsetProvider {
+    private static final Logger logger = SubsumerLogger.get(SynsetCSVProvider.class.getCanonicalName());
+
     private InputStream synsetStream;
     private InputStream wordStream;
     private InputStream childStream;
@@ -33,10 +38,14 @@ public class SynsetCSVProvider implements SynsetProvider {
     private SynsetStore store;
 
     /**
-     * Creates new {@link SynsetCSVProvider}
+     * Creates new provider. All input streams should be sorted.
      *
-     * @param childStream  path to the file with hyponyms graph
-     * @param synsetStream path that contains the mappings from synset codes to words
+     * @param synsetStream stream to synset code - word pairs
+     * @param wordStream   stream to word - synset code pairs
+     * @param childStream  stream to node - child node pairs
+     * @param parentStream stream to node - parent node pairs
+     * @param store        store to be populated
+     * @param dict         dictionary to be populated
      */
     public SynsetCSVProvider(InputStream synsetStream, InputStream wordStream, InputStream childStream, InputStream parentStream, SynsetStore store, Dict dict) {
         this.store = store;
@@ -52,13 +61,12 @@ public class SynsetCSVProvider implements SynsetProvider {
      *
      * @param readingChildren if {@code true} read children file, if {@code false} read parents
      */
-    private void readHyponyms(boolean readingChildren) {
-        BufferedReader reader = null;
+    private void readHyponyms(boolean readingChildren) throws IOException {
+        LineByLineSplit lbls = null;
         try {
-            reader = new BufferedReader(new InputStreamReader(readingChildren ? childStream : parentStream));
-            String line = reader.readLine();
-            while (line != null) {
-                String[] parts = line.split(" ");
+            lbls = new LineByLineSplit(readingChildren ? childStream : parentStream);
+            while (lbls.hasNext()) {
+                String[] parts = lbls.next();
                 if (parts.length == 1) {
                     if (readingChildren) store.addChild(Integer.parseInt(parts[0]), -1);
                     else store.addParent(Integer.parseInt(parts[0]), -1);
@@ -70,39 +78,38 @@ public class SynsetCSVProvider implements SynsetProvider {
                     else store.addParent(fstCode, sndCode);
 
                 }
-
-                line = reader.readLine();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
+            throw new IOException("Malformed input.");
         } finally {
-            try {
-                if (reader != null) reader.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            if (lbls != null) lbls.close();
         }
     }
 
-    private Set<SynsetNode> read() {
-        // this populates the dict
-        readWords();
-        readHyponyms(false);
-        readHyponyms(true);
-        return readSynsets();
+    private Set<SynsetNode> readAll() {
+        try {
+            // this populates the dict
+            readWords();
+            readHyponyms(false);
+            readHyponyms(true);
+            return readSynsets();
+        } catch (IOException ioe) {
+
+            return null;
+        }
     }
 
     /**
      * Parse the synsets file and make mapping from synset codes to words
      */
-    private Set<SynsetNode> readSynsets() {
-        BufferedReader reader = null;
+    private Set<SynsetNode> readSynsets() throws IOException {
         Set<SynsetNode> proxies = new HashSet<SynsetNode>();
+        LineByLineSplit lbls = null;
         try {
-            reader = new BufferedReader(new InputStreamReader(synsetStream));
-            String line = reader.readLine();
-            while (line != null) {
-                String[] parts = line.split(" ");
+            lbls = new LineByLineSplit(synsetStream);
+            while (lbls.hasNext()) {
+                String[] parts = lbls.next();
                 if (parts.length == 2) {
                     Integer synsetCode = Integer.parseInt(parts[0]);
 
@@ -113,30 +120,24 @@ public class SynsetCSVProvider implements SynsetProvider {
 
                     store.addCodeWord(synsetCode, newWordId);
                 } else {
-                    throw new RuntimeException("Unexpected file format. Each line should have code - word syntax");
+                    throw new IOException("Unexpected file format. Each line should have code - word syntax");
                 }
-                line = reader.readLine();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
+            throw new IOException("Malformed input.");
         } finally {
-            try {
-                if (reader != null) reader.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            if (lbls != null) lbls.close();
         }
-
         return proxies;
     }
 
-    private void readWords() {
-        BufferedReader reader = null;
+    private void readWords() throws IOException {
+        LineByLineSplit lbls = null;
         try {
-            reader = new BufferedReader(new InputStreamReader(wordStream));
-            String line = reader.readLine();
-            while (line != null) {
-                String[] parts = line.split(" ");
+            lbls = new LineByLineSplit(wordStream);
+            while (lbls.hasNext()) {
+                String[] parts = lbls.next();
                 if (parts.length == 2) {
                     String newWord = URLDecoder.decode(parts[0], "UTF-8");
 
@@ -145,29 +146,62 @@ public class SynsetCSVProvider implements SynsetProvider {
 
                     store.addWordCode(newWordId, synsetCode);
                 } else {
-                    throw new RuntimeException("Unexpected file format. Each line should have code - word syntax");
+                    throw new IOException("Unexpected file format. Each line should have code - word syntax");
                 }
-                line = reader.readLine();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
+            throw new IOException("Malformed input.");
         } finally {
-            try {
-                if (reader != null) reader.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            if (lbls != null) lbls.close();
         }
     }
 
     @Override
     public Set<SynsetNode> rootSynsets() {
         Set<SynsetNode> roots = new HashSet<SynsetNode>();
-        for (SynsetNode sn : read()) {
+        for (SynsetNode sn : readAll()) {
             if (sn.getParents().isEmpty()) {
                 roots.add(sn);
             }
         }
         return roots;
+    }
+
+    private static class LineByLineSplit {
+        private BufferedReader reader;
+        private String line;
+
+        private LineByLineSplit(InputStream stream) {
+            this.reader = new BufferedReader(new InputStreamReader(stream));
+            try {
+                line = reader.readLine();
+            } catch (Exception e) {
+                line = null;
+            }
+        }
+
+        boolean hasNext() {
+            return line != null;
+        }
+
+        String[] next() {
+            String[] parts = line.split(" ");
+            try {
+                line = reader.readLine();
+            } catch (Exception e) {
+                logger.error(e.getMessage());
+                line = null;
+            }
+            return parts;
+        }
+
+        void close() {
+            try {
+                reader.close();
+            } catch (Exception e) {
+                logger.error(e.getMessage());
+            }
+        }
     }
 }

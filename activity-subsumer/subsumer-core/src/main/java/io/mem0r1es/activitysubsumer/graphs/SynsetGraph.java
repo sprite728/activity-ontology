@@ -26,6 +26,7 @@ public abstract class SynsetGraph {
         this.root = root;
 
         dict = getDictionary();
+        store = getStore();
 
         BFSHierarchicalNode<SynsetNode> bfs = new BFSHierarchicalNode<SynsetNode>(root);
         HashSet<Integer> setSyns = new HashSet<Integer>();
@@ -37,19 +38,10 @@ public abstract class SynsetGraph {
         Collections.sort(tmpSyns);
         synsetCodes = new int[tmpSyns.size()];
         for(int i =0; i < tmpSyns.size(); i++) synsetCodes[i] = tmpSyns.get(i);
-
-        if (Integer.toString(root.getCode()).startsWith("1")){
-            this.store = NounStore.getInstance();
-        }
-        else if (Integer.toString(root.getCode()).startsWith("2")){
-            this.store = VerbStore.getInstance();
-        }
-        else {
-            throw new RuntimeException("Unsupported synset code! Nouns and verbs start with 1 or 2");
-        }
     }
 
     protected abstract Dict getDictionary();
+    protected abstract SynsetStore getStore();
 
     /**
      * Find word in the whole graph

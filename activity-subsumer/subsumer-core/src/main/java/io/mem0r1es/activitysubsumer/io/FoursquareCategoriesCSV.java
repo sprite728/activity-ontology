@@ -12,19 +12,24 @@ import java.util.Map;
 import java.util.Set;
 
 /**
+ * Reading the Foursquare categories hierarchy from a csv file.
+ *
  * @author Ivan Gavrilović
  */
 public class FoursquareCategoriesCSV implements CategoriesProvider {
 
     private InputStream input;
 
+    /**
+     * Create new {@link io.mem0r1es.activitysubsumer.io.FoursquareCategoriesCSV}
+     * @param input csv input stream to read in order to obtain categories tree
+     */
     public FoursquareCategoriesCSV(InputStream input) {
         this.input = input;
     }
 
     @Override
     public Set<CategoryHierarchy.Category> read() {
-
         BufferedReader reader = null;
         Map<String, CategoryHierarchy.Category> categoryMap = new HashMap<String, CategoryHierarchy.Category>();
         try {

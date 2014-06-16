@@ -2,6 +2,7 @@ package io.mem0r1es.activitysubsumer.activities;
 
 import io.mem0r1es.activitysubsumer.utils.Utils;
 
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -15,15 +16,15 @@ public class ActivityFactory {
      * Creates the co-responding activity based on the serialized input
      * @param input input to serialize
      * @return co-responding activity object
-     * @throws Exception in case that the input is not serializable
+     * @throws IOException in case that the input is not serializable
      */
-    public static ContextualActivity deserialize(String input) throws Exception {
+    public static ContextualActivity deserialize(String input) throws IOException{
         String type = input.substring(0, input.indexOf(" "));
 
         if (type.equals(UserActivity.class.getSimpleName())) {
             return new UserActivity(input);
         } else {
-            throw new Exception("Unsupported activity type: " + input);
+            throw new IOException("Unsupported activity type: " + input);
         }
     }
 

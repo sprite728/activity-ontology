@@ -1,6 +1,6 @@
 package io.mem0r1es.activitysubsumer.concurrent;
 
-import io.mem0r1es.activitysubsumer.utils.Cons;
+import io.mem0r1es.activitysubsumer.utils.SubsumerConfig;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -20,7 +20,7 @@ public class ActivityOpsExecutor {
     }
 
     public static ActivityOpsExecutor get(){
-        if (instance == null) instance = new ActivityOpsExecutor(Cons.NUM_THREADS);
+        if (instance == null) instance = new ActivityOpsExecutor(SubsumerConfig.NUM_THREADS);
         return instance;
     }
 

@@ -1,12 +1,17 @@
 package io.mem0r1es.activitysubsumer.wordnet;
 
+import io.mem0r1es.activitysubsumer.utils.SubsumerConfig;
+
 import java.util.HashSet;
 import java.util.Set;
 
 /**
  * @author Ivan Gavrilović
  */
-public class SynsetStore {
+public enum SynsetStore {
+    NOUNS(SubsumerConfig.NOUNS_WORDS_IN_SYNS, SubsumerConfig.NOUNS_PARENT_CHLD_RELS),
+    VERBS(SubsumerConfig.VERBS_WORDS_IN_SYNS, SubsumerConfig.VERBS_PARENT_CHLD_RELS);
+
     /**
      * Keys contain synset codes, values words
      */
@@ -33,7 +38,7 @@ public class SynsetStore {
     private int childrenVals[];
 
 
-    public SynsetStore(int numWords, int parChldRels) {
+    SynsetStore(int numWords, int parChldRels) {
         synsetKeys = new int[numWords];
         synsetVals = new int[numWords];
 

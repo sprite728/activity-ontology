@@ -36,18 +36,17 @@ public class ActivityClassifier {
         this.hierarchy = hierarchy;
         this.provider = provider;
         activities = provider.read(verbs, nouns);
+
+        ourInstance = this;
     }
 
-    public static void setInstance(ActivityClassifier instance){
-        ourInstance = instance;
-    }
-
-    public static ActivityClassifier getInstance(){
-        if (ourInstance == null) throw new RuntimeException("Initialize by invoking ActivityClassifier.setInstance() first.");
+    public static ActivityClassifier getInstance() throws IllegalStateException {
+        if (ourInstance == null)
+            throw new IllegalStateException("Initialize by invoking ActivityClassifier.setInstance() first.");
         return ourInstance;
     }
 
-    public static boolean isSet(){
+    public static boolean isSet() {
         return ourInstance != null;
     }
 
@@ -101,7 +100,7 @@ public class ActivityClassifier {
 
         ActivityCluster categoryCluster = activities.get(locationCategory);
 
-        Set<String> allCategories = hierarchy.getHierarchy(locationCategory);
+        Set<String> allCategories = hierarchy.getUp(locationCategory);
         Set<ActivityCluster> allClusters = new HashSet<ActivityCluster>();
         for (String ac : allCategories) {
             allClusters.add(activities.get(ac));
@@ -147,12 +146,14 @@ public class ActivityClassifier {
         return resultSet;
     }
 
-    public Set<ContextualActivity> getAllActivities(String category, boolean hierarchical) {
-        if (!hierarchical) return activities.get(category).getAllActivities();
-
-        Set<String> allCategories = hierarchy.getHierarchy(category);
-
+    public Set<ContextualActivity> getAllActivities(String category, boolean allRelated) {
         Set<ContextualActivity> resultSet = new HashSet<ContextualActivity>();
+        if (!allRelated) {
+            if (activities.containsKey(category)) return activities.get(category).getAllActivities();
+            else return resultSet;
+        }
+
+        Set<String> allCategories = hierarchy.getRelated(category);
         for (String cat : allCategories) resultSet.addAll(getAllActivities(cat, false));
         return resultSet;
     }

@@ -6,25 +6,35 @@ import java.util.Set;
 /**
  * Queries {@link io.mem0r1es.activitysubsumer.wordnet.SynsetStore} for nouns or verbs for all of the methods.
  *
+ * This is lightweight class containing not data, but the synset code. Code itself is used to query corresponding
+ * {@link io.mem0r1es.activitysubsumer.wordnet.SynsetStore} and {@link io.mem0r1es.activitysubsumer.wordnet.Dict}
+ * structures.
+ *
  * @author Ivan Gavrilović
  */
 public class SynsetNodeProxy extends SynsetNode {
 
+    /**
+     * Code of this synset
+     */
     int proxyCode;
 
+    /**
+     * Synset store to query for data
+     */
     SynsetStore store;
 
     public SynsetNodeProxy(int proxyCode) {
         this.proxyCode = proxyCode;
 
         if (Integer.toString(proxyCode).startsWith("1")){
-            store = NounStore.getInstance();
+            store = SynsetStore.NOUNS;
         }
         else if (Integer.toString(proxyCode).startsWith("2")){
-            store = VerbStore.getInstance();
+            store = SynsetStore.VERBS;
         }
         else {
-            throw new RuntimeException("Unsupported synset code! Nouns and verbs start with 1 or 2");
+            throw new UnsupportedOperationException("Unsupported synset code! Nouns and verbs start with 1 or 2");
         }
     }
 

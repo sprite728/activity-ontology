@@ -3,7 +3,9 @@ package io.mem0r1es.activitysubsumer.io;
 import io.mem0r1es.activitysubsumer.activities.ContextualActivity;
 import io.mem0r1es.activitysubsumer.activities.DefaultActivity;
 import io.mem0r1es.activitysubsumer.utils.Cons;
+import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
 import io.mem0r1es.activitysubsumer.utils.TimeOfDay;
+import org.apache.log4j.Logger;
 
 import java.io.InputStream;
 import java.util.Collections;
@@ -16,6 +18,7 @@ import java.util.Set;
  * @author Ivan Gavrilović
  */
 public class DefaultActivitiesProvider {
+    private static final Logger logger = SubsumerLogger.getLogger(DefaultActivitiesProvider.class);
 
     private InputStream input;
 
@@ -46,7 +49,7 @@ public class DefaultActivitiesProvider {
                         times.add(TimeOfDay.valueOf(tm.toUpperCase()));
                     }
                     catch (Exception e){
-                        System.err.println("Cast "+infos[3]);
+                        logger.error("While parsing default activities: "+infos[3]);
                     }
                 }
 
