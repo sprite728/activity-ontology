@@ -1,7 +1,6 @@
 package io.mem0r1es.activitysubsumer.io;
 
 import io.mem0r1es.activitysubsumer.utils.Pair;
-import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
 import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
@@ -19,7 +18,7 @@ import java.util.NoSuchElementException;
  * @author Ivan Gavrilović
  */
 public class SynsetCSVAdapter extends SynsetAdapter {
-    private static final Logger logger = SubsumerLogger.get(SynsetCSVAdapter.class.getCanonicalName());
+    private static final Logger logger = Logger.getLogger(SynsetCSVAdapter.class.getCanonicalName());
 
     private LineByLineSplit synsetReader;
     private LineByLineSplit wordReader;

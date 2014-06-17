@@ -1,8 +1,9 @@
 package io.mem0r1es.activitysubsumer.graphs;
 
+import io.mem0r1es.activitysubsumer.synsets.SynsetNode;
+import io.mem0r1es.activitysubsumer.synsets.SynsetNodeProxy;
+import io.mem0r1es.activitysubsumer.synsets.SynsetStore;
 import io.mem0r1es.activitysubsumer.utils.BFSHierarchicalNode;
-import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
-import io.mem0r1es.activitysubsumer.synsets.*;
 import org.apache.log4j.Logger;
 
 import java.util.*;
@@ -14,7 +15,7 @@ import java.util.*;
  * @author Ivan Gavrilović
  */
 public abstract class SynsetGraph {
-    static Logger logger = SubsumerLogger.get(SynsetGraph.class.getCanonicalName());
+    static Logger logger = Logger.getLogger(SynsetGraph.class.getCanonicalName());
     protected SynsetNode root;
     protected SynsetStore store;
 

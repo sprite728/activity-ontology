@@ -3,7 +3,6 @@ package io.mem0r1es.activitysubsumer.io;
 import io.mem0r1es.activitysubsumer.activities.ContextualActivity;
 import io.mem0r1es.activitysubsumer.activities.DefaultActivity;
 import io.mem0r1es.activitysubsumer.utils.Cons;
-import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
 import io.mem0r1es.activitysubsumer.utils.TimeOfDay;
 import org.apache.log4j.Logger;
 
@@ -18,7 +17,7 @@ import java.util.Set;
  * @author Ivan Gavrilović
  */
 public class DefaultActivitiesProvider {
-    private static final Logger logger = SubsumerLogger.get(DefaultActivitiesProvider.class.getCanonicalName());
+    private static final Logger logger = Logger.getLogger(DefaultActivitiesProvider.class.getCanonicalName());
 
     private InputStream input;
 

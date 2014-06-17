@@ -2,7 +2,6 @@ package io.mem0r1es.activitysubsumer.synsets;
 
 import io.mem0r1es.activitysubsumer.io.SynsetAdapter;
 import io.mem0r1es.activitysubsumer.utils.Pair;
-import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
@@ -11,7 +10,7 @@ import java.util.Set;
 
 
 public class Synsets {
-    private static final Logger logger = SubsumerLogger.get(Synsets.class.getCanonicalName());
+    private static final Logger logger = Logger.getLogger(Synsets.class.getCanonicalName());
 
     SynsetAdapter adapter;
 
@@ -71,7 +70,7 @@ public class Synsets {
     private void readParents() throws IOException {
         while (adapter.hasParent()) {
             Pair<Integer, Integer> data = adapter.parent();
-            store.addParent(data.getFst(), data.getFst());
+            store.addParent(data.getFst(), data.getSnd());
         }
         adapter.closeParent();
     }
@@ -79,7 +78,7 @@ public class Synsets {
     private void readChildren() throws IOException {
         while (adapter.hasChild()) {
             Pair<Integer, Integer> data = adapter.child();
-            store.addChild(data.getFst(), data.getFst());
+            store.addChild(data.getFst(), data.getSnd());
         }
         adapter.closeChild();
     }
