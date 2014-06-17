@@ -2,32 +2,32 @@ package io.mem0r1es.activitysubsumer.graphs;
 
 import io.mem0r1es.activitysubsumer.utils.BFSHierarchicalNode;
 import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
-import io.mem0r1es.activitysubsumer.wordnet.*;
+import io.mem0r1es.activitysubsumer.synsets.*;
 import org.apache.log4j.Logger;
 
 import java.util.*;
 
 /**
- * Direct acyclic graph containing the {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode} as nodes,
+ * Direct acyclic graph containing the {@link io.mem0r1es.activitysubsumer.synsets.SynsetNode} as nodes,
  * and with specified root
  *
  * @author Ivan Gavrilović
  */
 public abstract class SynsetGraph {
-    static Logger logger = SubsumerLogger.getLogger(SynsetGraph.class);
+    static Logger logger = SubsumerLogger.get(SynsetGraph.class.getCanonicalName());
     protected SynsetNode root;
     protected SynsetStore store;
 
+    /**
+     * Sorted synset codes contained by this graph.
+     */
     protected int[] synsetCodes;
-
-    Dict dict;
 
     public SynsetGraph(SynsetNode root) {
         this.root = root;
-
-        dict = getDictionary();
         store = getStore();
 
+        // get all codes, by doing BFS
         BFSHierarchicalNode<SynsetNode> bfs = new BFSHierarchicalNode<SynsetNode>(root);
         HashSet<Integer> setSyns = new HashSet<Integer>();
         while (bfs.hasNext()) {
@@ -35,22 +35,22 @@ public abstract class SynsetGraph {
             setSyns.add(node.getCode());
         }
         ArrayList<Integer> tmpSyns = new ArrayList<Integer>(setSyns);
+        // sort them, and assign to the array
         Collections.sort(tmpSyns);
         synsetCodes = new int[tmpSyns.size()];
         for(int i =0; i < tmpSyns.size(); i++) synsetCodes[i] = tmpSyns.get(i);
     }
 
-    protected abstract Dict getDictionary();
     protected abstract SynsetStore getStore();
 
     /**
      * Find word in the whole graph
      *
      * @param word search term
-     * @return set of {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode} containing the word
+     * @return set of {@link io.mem0r1es.activitysubsumer.synsets.SynsetNode} containing the word
      */
     public Set<SynsetNode> find(String word){
-        return  inThisSubgraph(store.getSynsetsWithWord(dict.get(word)));
+        return  inThisSubgraph(store.getSynsetsWithWord(word));
     }
 
     private Set<SynsetNode> inThisSubgraph(Set<Integer> total){
@@ -67,7 +67,7 @@ public abstract class SynsetGraph {
      *
      * @param word      search term
      * @param startNode starting node for search
-     * @return set of {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode} containing the word
+     * @return set of {@link io.mem0r1es.activitysubsumer.synsets.SynsetNode} containing the word
      */
     public Set<SynsetNode> find(String word, SynsetNode startNode) {
         Set<SynsetNode> resultSet = new HashSet<SynsetNode>();
@@ -101,12 +101,12 @@ public abstract class SynsetGraph {
      * Find the words in the sub-graph
      *
      * @param words search term
-     * @return set of {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode} containing the word
+     * @return set of {@link io.mem0r1es.activitysubsumer.synsets.SynsetNode} containing the word
      */
     public Set<SynsetNode> findAll(Set<String> words) {
         Set<SynsetNode> resultSet = new HashSet<SynsetNode>();
         for (String w:words){
-            Set<SynsetNode> s = inThisSubgraph(store.getSynsetsWithWord(dict.get(w)));
+            Set<SynsetNode> s = inThisSubgraph(store.getSynsetsWithWord(w));
             if (!s.isEmpty()) resultSet.addAll(s);
         }
         return resultSet;
@@ -119,7 +119,7 @@ public abstract class SynsetGraph {
      * @return {@code true} if sub-graph contains it, {@code false} otherwise
      */
     public boolean contains(String word) {
-        return !inThisSubgraph(store.getSynsetsWithWord(dict.get(word))).isEmpty();
+        return !inThisSubgraph(store.getSynsetsWithWord(word)).isEmpty();
     }
 
     /**

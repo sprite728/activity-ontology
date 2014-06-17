@@ -1,4 +1,4 @@
-package io.mem0r1es.activitysubsumer.wordnet;
+package io.mem0r1es.activitysubsumer.synsets;
 
 import io.mem0r1es.activitysubsumer.utils.SubsumerConfig;
 
@@ -6,11 +6,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * Representing the relations between the synsets, child and parent relationship. Also, keeps track of which
+ * synset code maps to which words, and which words map to synset codes.
+ *
+ * All data is sorted, and all queries are done using binary search.
+ *
  * @author Ivan Gavrilović
  */
 public enum SynsetStore {
-    NOUNS(SubsumerConfig.NOUNS_WORDS_IN_SYNS, SubsumerConfig.NOUNS_PARENT_CHLD_RELS),
-    VERBS(SubsumerConfig.VERBS_WORDS_IN_SYNS, SubsumerConfig.VERBS_PARENT_CHLD_RELS);
+    NOUNS(SubsumerConfig.NOUNS_WORDS_IN_SYNS, SubsumerConfig.NOUNS_PARENT_CHLD_RELS, Dict.NOUNS),
+    VERBS(SubsumerConfig.VERBS_WORDS_IN_SYNS, SubsumerConfig.VERBS_PARENT_CHLD_RELS, Dict.VERBS);
 
     /**
      * Keys contain synset codes, values words
@@ -37,8 +42,13 @@ public enum SynsetStore {
     private int childrenKeys[];
     private int childrenVals[];
 
+    /**
+     * Dictionary associated with this store
+     */
+    private Dict dict;
 
-    SynsetStore(int numWords, int parChldRels) {
+
+    SynsetStore(int numWords, int parChldRels, Dict dict) {
         synsetKeys = new int[numWords];
         synsetVals = new int[numWords];
 
@@ -50,8 +60,15 @@ public enum SynsetStore {
 
         childrenKeys = new int[parChldRels];
         childrenVals = new int[parChldRels];
+
+        this.dict = dict;
     }
 
+    /**
+     * Get all words from the synset
+     * @param code synset code
+     * @return set of ids of words from the dictionary
+     */
     public Set<Integer> getSynset(int code) {
         int pos = binSearch(synsetKeys, code);
 
@@ -63,7 +80,13 @@ public enum SynsetStore {
         return synsetMembers;
     }
 
-    public Set<Integer> getSynsetsWithWord(int w){
+    /**
+     * Get all synsets that contain the word
+     * @param word word from the dictionary
+     * @return set of synset codes containing the word
+     */
+    public Set<Integer> getSynsetsWithWord(String word){
+        int w = dict.get(word);
         int pos = binSearch(wordsKeys, w);
 
         Set<Integer> synsets = new HashSet<Integer>();
@@ -75,6 +98,11 @@ public enum SynsetStore {
         return synsets;
     }
 
+    /**
+     * Get all parent synsets of the node
+     * @param code synset code
+     * @return set of all parents of the specified node
+     */
     public Set<Integer> getParents(int code) {
         int pos = binSearch(parentsKeys, code);
 
@@ -87,6 +115,11 @@ public enum SynsetStore {
         return parents;
     }
 
+    /**
+     * Get all children of the specified node
+     * @param code synset code
+     * @return set of all children of the specifed node
+     */
     public Set<Integer> getChildren(int code) {
         int pos = binSearch(childrenKeys, code);
 
@@ -99,7 +132,14 @@ public enum SynsetStore {
         return children;
     }
 
-    public void addWordCode(int word, int code){
+    /**
+     * For the word with the id from the corresponding dictionary, add the synset code in which it is contained.
+     * @param w iword from the dictionary
+     * @param code code of the synset that contains the word
+     */
+    public void addWordCode(String w, int code){
+        int word = dict.put(w);
+
         if (wordsCnt > 0){
             if (word < wordsKeys[wordsCnt-1]){
                 throw new RuntimeException("Add in ascending synset words order.");
@@ -110,6 +150,11 @@ public enum SynsetStore {
         wordsVals[wordsCnt++] = code;
     }
 
+    /**
+     * For the synset with the specified code, add the id of the word from the dictionary that the synset contains.
+     * @param code synset code
+     * @param word id of the word from the dictionary
+     */
     public void addCodeWord(int code, int word) {
         if (synsetCnt > 0) {
             if (synsetKeys[synsetCnt-1] > code)
@@ -120,6 +165,11 @@ public enum SynsetStore {
         synsetVals[synsetCnt++] = word;
     }
 
+    /**
+     * For the synset code add parent synset node with the specifed code.
+     * @param code synset code
+     * @param parent node that is parent
+     */
     public void addParent(int code, int parent) {
         if (parentCnt > 0) {
             if (parentsKeys[parentCnt-1] > code)
@@ -130,6 +180,11 @@ public enum SynsetStore {
         parentVals[parentCnt++] = parent;
     }
 
+    /**
+     * For the synset with code add child synset node with the specified code.
+     * @param code synset code
+     * @param child node that is child
+     */
     public void addChild(int code, int child) {
         if (childrenCnt > 0) {
             if (childrenKeys[childrenCnt-1] > code)
@@ -161,5 +216,13 @@ public enum SynsetStore {
                 end = mid - 1;
         }
         return -1;
+    }
+
+    public String idToString(int wordId){
+        return dict.get(wordId);
+    }
+
+    public int stringToId(String word){
+        return dict.get(word);
     }
 }

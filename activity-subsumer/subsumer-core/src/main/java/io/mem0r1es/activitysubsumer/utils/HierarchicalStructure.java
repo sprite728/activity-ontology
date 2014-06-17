@@ -3,6 +3,8 @@ package io.mem0r1es.activitysubsumer.utils;
 import java.util.Set;
 
 /**
+ * Interface for hierarchical structures that have child-parent relations.
+ *
  * @author Ivan Gavrilović
  */
 public abstract class HierarchicalStructure<T extends HierarchicalStructure> {

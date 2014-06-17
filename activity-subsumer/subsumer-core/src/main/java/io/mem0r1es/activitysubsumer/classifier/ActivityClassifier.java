@@ -6,7 +6,7 @@ import io.mem0r1es.activitysubsumer.concurrent.ActivityClusterInserter;
 import io.mem0r1es.activitysubsumer.graphs.NounsSynsetForest;
 import io.mem0r1es.activitysubsumer.graphs.VerbsSynsetForest;
 import io.mem0r1es.activitysubsumer.io.ActivityProvider;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
+import io.mem0r1es.activitysubsumer.synsets.SynsetNode;
 
 import java.util.*;
 
@@ -138,6 +138,10 @@ public class ActivityClassifier {
         return resultSet;
     }
 
+    /**
+     * Get all activities.
+     * @return all activities
+     */
     public Set<ContextualActivity> getAllActivities() {
         Set<ContextualActivity> resultSet = new HashSet<ContextualActivity>();
         for (String cat : activities.keySet()) {
@@ -146,6 +150,13 @@ public class ActivityClassifier {
         return resultSet;
     }
 
+    /**
+     * Get all activities assigned to the specified category, or that are up/down in the category hierarchy.
+     * By specifying the parameter, one can trigger either the first type of retrieval, or the second one.
+     * @param category category in the hierarchy
+     * @param allRelated whether to return activities assigned to up/down categories
+     * @return set of all activities satisfying the query
+     */
     public Set<ContextualActivity> getAllActivities(String category, boolean allRelated) {
         Set<ContextualActivity> resultSet = new HashSet<ContextualActivity>();
         if (!allRelated) {

@@ -5,6 +5,8 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
+ * Breadth first search implementation.
+ *
  * @author Ivan Gavrilović
  */
 public class BFSHierarchicalNode<T extends HierarchicalStructure<T>> implements Iterator<HierarchicalStructure<T>> {

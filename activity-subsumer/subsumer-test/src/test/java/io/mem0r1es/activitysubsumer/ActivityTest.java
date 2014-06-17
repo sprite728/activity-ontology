@@ -9,10 +9,10 @@ import io.mem0r1es.activitysubsumer.graphs.NounsSynsetForest;
 import io.mem0r1es.activitysubsumer.graphs.VerbsSynsetForest;
 import io.mem0r1es.activitysubsumer.io.*;
 import io.mem0r1es.activitysubsumer.recomm.*;
+import io.mem0r1es.activitysubsumer.synsets.Synsets;
 import io.mem0r1es.activitysubsumer.utils.SubsumerConfig;
 import io.mem0r1es.activitysubsumer.utils.TimeOfDay;
-import io.mem0r1es.activitysubsumer.wordnet.Dict;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetStore;
+import io.mem0r1es.activitysubsumer.synsets.SynsetStore;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
@@ -33,13 +33,13 @@ public class ActivityTest {
         try {
             long start = System.currentTimeMillis();
 
-            SynsetProvider verbsProvider = new SynsetCSVProvider(new FileInputStream(SubsumerConfig.VERBS_SYNSET), new FileInputStream(SubsumerConfig.VERBS_WORDS),
-                    new FileInputStream(SubsumerConfig.VERBS_CHILDREN), new FileInputStream(SubsumerConfig.VERBS_PARENTS), SynsetStore.VERBS, Dict.VERBS);
-                VerbsSynsetForest verbs = new VerbsSynsetForest(verbsProvider);
+            SynsetAdapter verbsAdapter = SynsetAdapter.defaultVerbs();
+            Synsets verbsSynsets = new Synsets(verbsAdapter, SynsetStore.VERBS);
+                VerbsSynsetForest verbs = new VerbsSynsetForest(verbsSynsets);
 
-            SynsetProvider nounsProvider = new SynsetCSVProvider(new FileInputStream(SubsumerConfig.NOUNS_SYNSET), new FileInputStream(SubsumerConfig.NOUNS_WORDS),
-                    new FileInputStream(SubsumerConfig.NOUNS_CHILDREN), new FileInputStream(SubsumerConfig.NOUNS_PARENTS), SynsetStore.NOUNS, Dict.NOUNS);
-            NounsSynsetForest nouns = new NounsSynsetForest(nounsProvider);
+            SynsetAdapter nounsAdapter = SynsetAdapter.defaultNouns();
+            Synsets nounsSynsets = new Synsets(nounsAdapter, SynsetStore.NOUNS);
+            NounsSynsetForest nouns = new NounsSynsetForest(nounsSynsets);
 
             CategoryHierarchy hierarchy = new CategoryHierarchy(new FoursquareCategoriesCSV(new FileInputStream(SubsumerConfig.CATEGORIES_CSV)));
             CategoryHierarchy.get();

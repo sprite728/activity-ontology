@@ -1,13 +1,13 @@
-package io.mem0r1es.activitysubsumer.wordnet;
+package io.mem0r1es.activitysubsumer.synsets;
 
 import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Queries {@link io.mem0r1es.activitysubsumer.wordnet.SynsetStore} for nouns or verbs for all of the methods.
+ * Queries {@link io.mem0r1es.activitysubsumer.synsets.SynsetStore} for nouns or verbs for all of the methods.
  *
  * This is lightweight class containing not data, but the synset code. Code itself is used to query corresponding
- * {@link io.mem0r1es.activitysubsumer.wordnet.SynsetStore} and {@link io.mem0r1es.activitysubsumer.wordnet.Dict}
+ * {@link io.mem0r1es.activitysubsumer.synsets.SynsetStore} and {@link io.mem0r1es.activitysubsumer.synsets.Dict}
  * structures.
  *
  * @author Ivan Gavrilović
@@ -60,7 +60,7 @@ public class SynsetNodeProxy extends SynsetNode {
 
     @Override
     public boolean contains(String word) {
-        return store.getSynset(proxyCode).contains(Dict.getDict(proxyCode).get(word));
+        return store.getSynset(proxyCode).contains(store.stringToId(word));
     }
 
     @Override
@@ -71,7 +71,7 @@ public class SynsetNodeProxy extends SynsetNode {
     @Override
     public Set<String> getSynset() {
         HashSet<String> syns = new HashSet<String>();
-        for(int i:store.getSynset(proxyCode)) syns.add(Dict.getDict(proxyCode).get(i));
+        for(int i:store.getSynset(proxyCode)) syns.add(store.idToString(i));
         return syns;
     }
 

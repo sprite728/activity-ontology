@@ -1,6 +1,8 @@
 package io.mem0r1es.activitysubsumer.utils;
 
 /**
+ * Represents the time of day. Four different periods are considered.
+ *
  * @author Ivan Gavrilović
  */
 public enum TimeOfDay {

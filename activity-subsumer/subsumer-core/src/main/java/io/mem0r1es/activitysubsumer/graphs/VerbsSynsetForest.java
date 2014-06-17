@@ -1,7 +1,7 @@
 package io.mem0r1es.activitysubsumer.graphs;
 
-import io.mem0r1es.activitysubsumer.io.SynsetProvider;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
+import io.mem0r1es.activitysubsumer.synsets.Synsets;
+import io.mem0r1es.activitysubsumer.synsets.SynsetNode;
 
 import java.util.Set;
 
@@ -11,12 +11,12 @@ import java.util.Set;
  * @author Ivan Gavrilović
  */
 public class VerbsSynsetForest extends SynsetForest {
-    public VerbsSynsetForest(SynsetProvider provider) {
-        super(provider, 0);
+    public VerbsSynsetForest(Synsets synsets) {
+        super(synsets, 0);
     }
 
-    protected void init(SynsetProvider provider, int rootLevel) {
-        Set<SynsetNode> roots = nodesAtLevel(provider.rootSynsets(), rootLevel);
+    protected void init(Synsets synsets, int rootLevel) {
+        Set<SynsetNode> roots = nodesAtLevel(synsets.rootSynsets(), rootLevel);
         logger.info("Number of sub-graphs created: " + roots.size());
 
         // all verbs will share the whole verbs graph

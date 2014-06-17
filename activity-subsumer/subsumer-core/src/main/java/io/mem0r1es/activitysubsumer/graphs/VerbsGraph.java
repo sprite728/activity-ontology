@@ -1,8 +1,7 @@
 package io.mem0r1es.activitysubsumer.graphs;
 
-import io.mem0r1es.activitysubsumer.wordnet.Dict;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetStore;
+import io.mem0r1es.activitysubsumer.synsets.SynsetNode;
+import io.mem0r1es.activitysubsumer.synsets.SynsetStore;
 
 /**
  * @author Ivan Gavrilović
@@ -10,11 +9,6 @@ import io.mem0r1es.activitysubsumer.wordnet.SynsetStore;
 public class VerbsGraph extends SynsetGraph{
     public VerbsGraph(SynsetNode root) {
         super(root);
-    }
-
-    @Override
-    protected Dict getDictionary() {
-        return Dict.VERBS;
     }
 
     @Override

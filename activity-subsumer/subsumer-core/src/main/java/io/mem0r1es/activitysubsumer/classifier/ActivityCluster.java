@@ -7,7 +7,7 @@ import io.mem0r1es.activitysubsumer.concurrent.LCAFinder;
 import io.mem0r1es.activitysubsumer.concurrent.SubgraphEvaluator;
 import io.mem0r1es.activitysubsumer.graphs.SynsetForest;
 import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
+import io.mem0r1es.activitysubsumer.synsets.SynsetNode;
 import org.apache.log4j.Logger;
 
 import java.util.*;
@@ -19,7 +19,7 @@ import java.util.concurrent.Future;
  * @author Ivan Gavrilović
  */
 public class ActivityCluster {
-    static Logger logger = SubsumerLogger.getLogger(ActivityCluster.class);
+    static Logger logger = SubsumerLogger.get(ActivityCluster.class.getCanonicalName());
 
     Map<SynsetNode, Set<ContextualActivity>> activities;
     /**
@@ -168,7 +168,7 @@ public class ActivityCluster {
     }
 
     /**
-     * Finds all {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode} nodes that are keys to the activity graphs
+     * Finds all {@link io.mem0r1es.activitysubsumer.synsets.SynsetNode} nodes that are keys to the activity graphs
      * (in the cluster mapping) that contain all of the specified activities
      *
      * @param acts set of activities to find in cluster

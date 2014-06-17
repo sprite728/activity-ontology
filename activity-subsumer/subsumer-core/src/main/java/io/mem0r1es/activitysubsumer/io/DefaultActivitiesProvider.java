@@ -18,7 +18,7 @@ import java.util.Set;
  * @author Ivan Gavrilović
  */
 public class DefaultActivitiesProvider {
-    private static final Logger logger = SubsumerLogger.getLogger(DefaultActivitiesProvider.class);
+    private static final Logger logger = SubsumerLogger.get(DefaultActivitiesProvider.class.getCanonicalName());
 
     private InputStream input;
 

@@ -1,10 +1,10 @@
 package io.mem0r1es.activitysubsumer.graphs;
 
 import io.mem0r1es.activitysubsumer.concurrent.ActivityOpsExecutor;
-import io.mem0r1es.activitysubsumer.io.SynsetProvider;
+import io.mem0r1es.activitysubsumer.synsets.Synsets;
 import io.mem0r1es.activitysubsumer.utils.BFSHierarchicalNode;
 import io.mem0r1es.activitysubsumer.utils.SubsumerLogger;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
+import io.mem0r1es.activitysubsumer.synsets.SynsetNode;
 import org.apache.log4j.Logger;
 
 import java.util.*;
@@ -17,7 +17,7 @@ import java.util.concurrent.Future;
  * @author Ivan Gavrilović
  */
 public abstract class SynsetForest {
-    static Logger logger = SubsumerLogger.getLogger(SynsetForest.class);
+    static Logger logger = SubsumerLogger.get(SynsetForest.class.getCanonicalName());
 
     protected Map<SynsetNode, SynsetGraph> graphs = new HashMap<SynsetNode, SynsetGraph>();
     protected Map<SynsetNode, Integer> subgraphSizes = new HashMap<SynsetNode, Integer>();
@@ -25,15 +25,15 @@ public abstract class SynsetForest {
     /**
      * Generates a forest of synsets
      *
-     * @param provider      synset pool used to retrieve all synsets
+     * @param synsets      synset pool used to retrieve all synsets
      * @param rootLevel at which level should we split the big graph. If it is 0, only the nodes with in degree 0 are taken,
      *                  if it is 1, the first neighbours are added, if 2, neighbours of neighbours are added, and so on
      */
-    public SynsetForest(SynsetProvider provider, int rootLevel) {
-        init(provider, rootLevel);
+    public SynsetForest(Synsets synsets, int rootLevel) {
+        init(synsets, rootLevel);
     }
 
-    protected abstract void init(SynsetProvider provider, int rootLevel);
+    protected abstract void init(Synsets synsets, int rootLevel);
 
     /**
      * Returns the roots of the sub-graphs containing the word
@@ -74,7 +74,7 @@ public abstract class SynsetForest {
      *
      * @param subgraphRoot root of the sub-graph to search in
      * @param words        words to find
-     * @return set of {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode}
+     * @return set of {@link io.mem0r1es.activitysubsumer.synsets.SynsetNode}
      */
     public Set<SynsetNode> findAllInSubgraph(SynsetNode subgraphRoot, Set<String> words) {
         try {
@@ -92,7 +92,7 @@ public abstract class SynsetForest {
      *
      * @param subgraphRoot root of the sub-graph to search in
      * @param word         word to find
-     * @return set of {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode}
+     * @return set of {@link io.mem0r1es.activitysubsumer.synsets.SynsetNode}
      */
     public Set<SynsetNode> findInSubgraph(SynsetNode subgraphRoot, String word) {
         return graphs.get(subgraphRoot).find(word);
@@ -103,7 +103,7 @@ public abstract class SynsetForest {
      *
      * @param subgraphRoot root of the sub-graph to search in
      * @param startNode    synset node in the graph from which to start the serach
-     * @return set of {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode}
+     * @return set of {@link io.mem0r1es.activitysubsumer.synsets.SynsetNode}
      */
     public Set<SynsetNode> wordsInSubgraphFrom(SynsetNode subgraphRoot, SynsetNode startNode) {
         return graphs.get(subgraphRoot).getAllFrom(startNode);
@@ -132,7 +132,7 @@ public abstract class SynsetForest {
      *
      * @param subgraphRoots graph to explore
      * @param level         until which level to go
-     * @return set of {@link io.mem0r1es.activitysubsumer.wordnet.SynsetNode} that are found at the specified level
+     * @return set of {@link io.mem0r1es.activitysubsumer.synsets.SynsetNode} that are found at the specified level
      */
     protected Set<SynsetNode> nodesAtLevel(Set<SynsetNode> subgraphRoots, int level) {
         Set<SynsetNode> roots = new HashSet<SynsetNode>(subgraphRoots);

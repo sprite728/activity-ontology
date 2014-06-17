@@ -26,6 +26,7 @@ public class ActivityRecognizer {
     public Set<ContextualActivity> candidates() {
         List<ContextualActivitySortable> activitiesSortable = new LinkedList<ContextualActivitySortable>();
 
+        // calculate the scores for each of the activities, and wrap them in sortable objects
         for(ContextualActivity aa:allActivities){
             double score = 0;
             for(ContextualParameter cp:contextualParameters){
@@ -33,8 +34,10 @@ public class ActivityRecognizer {
             }
             activitiesSortable.add(new ContextualActivitySortable(aa, score));
         }
+        // sort by score
         Collections.sort(activitiesSortable);
 
+        // extract the activity from the sortable object
         Set<ContextualActivity> result = new HashSet<ContextualActivity>();
         for(ContextualActivitySortable aas: activitiesSortable){
             result.add(aas.activity);
@@ -42,6 +45,9 @@ public class ActivityRecognizer {
         return result;
     }
 
+    /**
+     * Simple wrapper class in order to allow one-line sorting of the activites.
+     */
     class ContextualActivitySortable implements Comparable {
         private ContextualActivity activity;
         private double score;

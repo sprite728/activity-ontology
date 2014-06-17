@@ -1,12 +1,12 @@
 package io.mem0r1es.activitysubsumer.io;
 
-import io.mem0r1es.activitysubsumer.activities.ActivityFactory;
+import io.mem0r1es.activitysubsumer.activities.Activities;
 import io.mem0r1es.activitysubsumer.activities.ContextualActivity;
 import io.mem0r1es.activitysubsumer.classifier.ActivityCluster;
 import io.mem0r1es.activitysubsumer.graphs.SynsetForest;
 import io.mem0r1es.activitysubsumer.utils.Cons;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetNodeProxy;
+import io.mem0r1es.activitysubsumer.synsets.SynsetNode;
+import io.mem0r1es.activitysubsumer.synsets.SynsetNodeProxy;
 
 import java.io.*;
 import java.util.*;
@@ -48,7 +48,7 @@ public class ActivityFileProvider implements ActivityProvider {
                     Set<ContextualActivity> acts = new HashSet<ContextualActivity>();
                     line = scanner.nextLine();
                     while (line != null && !line.equals(Cons.CLUSTER_SEPARATOR)) {
-                        acts.add(ActivityFactory.deserialize(line));
+                        acts.add(Activities.deserialize(line));
                         line = scanner.nextLine();
                     }
                     synsetActivities.put(sn, acts);
@@ -82,7 +82,7 @@ public class ActivityFileProvider implements ActivityProvider {
                     output.println(sn);
 
                     for (ContextualActivity ca : categoryActivities.get(sn))
-                        output.println(ActivityFactory.serialize(ca));
+                        output.println(Activities.serialize(ca));
 
                     output.println(Cons.CLUSTER_SEPARATOR);
                 }

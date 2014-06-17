@@ -10,8 +10,7 @@ import java.util.*;
  * Class representing the user activity.
  *
  * @author Sebastian Claici
- *         <p/>
- *         Changes: Ivan Gavrilovic
+ * changes Ivan Gavrilovic
  */
 public class UserActivity extends BasicActivity implements ContextualActivity {
 

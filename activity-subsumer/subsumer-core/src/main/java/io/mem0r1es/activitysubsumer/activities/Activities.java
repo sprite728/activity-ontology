@@ -8,17 +8,19 @@ import java.util.List;
 
 /**
  * Factory for the activities
+ *
  * @author Ivan Gavrilović
  */
-public class ActivityFactory {
+public class Activities {
 
     /**
      * Creates the co-responding activity based on the serialized input
+     *
      * @param input input to serialize
-     * @return co-responding activity object
+     * @return corresponding activity object
      * @throws IOException in case that the input is not serializable
      */
-    public static ContextualActivity deserialize(String input) throws IOException{
+    public static ContextualActivity deserialize(String input) throws IOException {
         String type = input.substring(0, input.indexOf(" "));
 
         if (type.equals(UserActivity.class.getSimpleName())) {
@@ -28,11 +30,17 @@ public class ActivityFactory {
         }
     }
 
-    public static String serialize(ContextualActivity activity){
-        if (activity instanceof UserActivity){
+    /**
+     * Serialize the activity. Class should implement the serialize method, otherwise,
+     * the default serializer is used.
+     *
+     * @param activity activity
+     * @return serialized activity
+     */
+    public static String serialize(ContextualActivity activity) {
+        if (activity instanceof UserActivity) {
             return ((UserActivity) activity).serialize();
-        }
-        else{
+        } else {
             // default serialization
             List<String> parts = new LinkedList<String>();
             parts.add(activity.getClass().getSimpleName());
@@ -41,5 +49,15 @@ public class ActivityFactory {
             parts.add(activity.getNoun());
             return Utils.encodeParts(parts);
         }
+    }
+
+    /**
+     * Creates new {@link io.mem0r1es.activitysubsumer.activities.BasicActivity}
+     * @param verb verbs of activity
+     * @param noun noun of activity
+     * @return created basic activity
+     */
+    public static BasicActivity basic(String verb, String noun){
+        return new BasicActivity(verb, noun);
     }
 }

@@ -1,8 +1,9 @@
 package io.mem0r1es.activitysubsumer.concurrent;
 
+import io.mem0r1es.activitysubsumer.activities.Activities;
 import io.mem0r1es.activitysubsumer.activities.BasicActivity;
 import io.mem0r1es.activitysubsumer.graphs.SynsetForest;
-import io.mem0r1es.activitysubsumer.wordnet.SynsetNode;
+import io.mem0r1es.activitysubsumer.synsets.SynsetNode;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -48,7 +49,7 @@ public class LCAFinder implements Callable<Set<BasicActivity>> {
 
         for (String v : possibleVerbs) {
             for (String n : possibleNouns) {
-                generated.add(new BasicActivity(v, n));
+                generated.add(Activities.basic(v, n));
             }
         }
         return generated;

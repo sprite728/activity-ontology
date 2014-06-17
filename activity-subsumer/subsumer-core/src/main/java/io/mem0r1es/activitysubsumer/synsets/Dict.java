@@ -1,4 +1,4 @@
-package io.mem0r1es.activitysubsumer.wordnet;
+package io.mem0r1es.activitysubsumer.synsets;
 
 import io.mem0r1es.activitysubsumer.utils.SubsumerConfig;
 
