@@ -10,7 +10,7 @@ import io.mem0r1es.activitysubsumer.graphs.VerbsSynsetForest;
 import io.mem0r1es.activitysubsumer.io.*;
 import io.mem0r1es.activitysubsumer.recomm.*;
 import io.mem0r1es.activitysubsumer.synsets.Synsets;
-import io.mem0r1es.activitysubsumer.utils.SubsumerConfig;
+import io.mem0r1es.activitysubsumer.utils.SubConf;
 import io.mem0r1es.activitysubsumer.utils.TimeOfDay;
 import io.mem0r1es.activitysubsumer.synsets.SynsetStore;
 import org.apache.log4j.Logger;
@@ -41,9 +41,9 @@ public class ActivityTest {
             Synsets nounsSynsets = new Synsets(nounsAdapter, SynsetStore.NOUNS);
             NounsSynsetForest nouns = new NounsSynsetForest(nounsSynsets);
 
-            CategoryHierarchy hierarchy = new CategoryHierarchy(new FoursquareCategoriesCSV(new FileInputStream(SubsumerConfig.CATEGORIES_CSV)));
+            CategoryHierarchy hierarchy = new CategoryHierarchy(new FoursquareCategoriesCSV(new FileInputStream(SubConf.CONFIG.getCategoriesCsv())));
             CategoryHierarchy.get();
-            ActivityProvider provider = new ActivityFileProvider(new File(SubsumerConfig.ACTIVITIES_FILE));
+            ActivityProvider provider = new ActivityFileProvider(new File(SubConf.CONFIG.getActivitiesFile()));
             logger.info("Preparing system ms: " + (System.currentTimeMillis() - start));
             start = System.currentTimeMillis();
 
@@ -79,7 +79,7 @@ public class ActivityTest {
             logger.info("Subsumed ms: " + (System.currentTimeMillis() - start));
 
             Set<ContextualActivity> defActs = new DefaultActivitiesProvider(new BufferedInputStream(
-                    new FileInputStream(SubsumerConfig.ACTIVITIES_DEFAULT))).read();
+                    new FileInputStream(SubConf.CONFIG.getActivitiesDefault()))).read();
             defActs.addAll(classifier.getAllActivities());
 
             Set<ContextualParameter> params = new HashSet<ContextualParameter>();

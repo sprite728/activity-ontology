@@ -1,7 +1,7 @@
 package io.mem0r1es.activitysubsumer.io;
 
 import io.mem0r1es.activitysubsumer.utils.Pair;
-import io.mem0r1es.activitysubsumer.utils.SubsumerConfig;
+import io.mem0r1es.activitysubsumer.utils.SubConf;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -13,13 +13,13 @@ import java.io.IOException;
  */
 public abstract class SynsetAdapter {
     public static SynsetAdapter defaultVerbs() throws IOException{
-        return new SynsetCSVAdapter(new FileInputStream(SubsumerConfig.VERBS_SYNSET), new FileInputStream(SubsumerConfig.VERBS_WORDS),
-                new FileInputStream(SubsumerConfig.VERBS_CHILDREN), new FileInputStream(SubsumerConfig.VERBS_PARENTS));
+        return new SynsetCSVAdapter(new FileInputStream(SubConf.CONFIG.getVerbsSynset()), new FileInputStream(SubConf.CONFIG.getVerbsWords()),
+                new FileInputStream(SubConf.CONFIG.getVerbsChildren()), new FileInputStream(SubConf.CONFIG.getVerbsParents()));
     }
 
     public static SynsetAdapter defaultNouns() throws IOException{
-        return new SynsetCSVAdapter(new FileInputStream(SubsumerConfig.NOUNS_SYNSET), new FileInputStream(SubsumerConfig.NOUNS_WORDS),
-                new FileInputStream(SubsumerConfig.NOUNS_CHILDREN), new FileInputStream(SubsumerConfig.NOUNS_PARENTS));
+        return new SynsetCSVAdapter(new FileInputStream(SubConf.CONFIG.getNounsSynset()), new FileInputStream(SubConf.CONFIG.getNounsWords()),
+                new FileInputStream(SubConf.CONFIG.getNounsChildren()), new FileInputStream(SubConf.CONFIG.getNounsParents()));
     }
 
     /**

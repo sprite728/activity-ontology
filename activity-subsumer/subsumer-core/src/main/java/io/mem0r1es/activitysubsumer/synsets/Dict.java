@@ -1,6 +1,6 @@
 package io.mem0r1es.activitysubsumer.synsets;
 
-import io.mem0r1es.activitysubsumer.utils.SubsumerConfig;
+import io.mem0r1es.activitysubsumer.utils.SubConf;
 
 /**
  * Class holding the dictionary for nouns and dictionary for verbs. All nouns are unique, and all verbs are unique,
@@ -9,7 +9,7 @@ import io.mem0r1es.activitysubsumer.utils.SubsumerConfig;
  * @author Ivan Gavrilović
  */
 public enum Dict {
-    NOUNS(SubsumerConfig.UNIQUE_NOUNS), VERBS(SubsumerConfig.UNIQUE_VERBS);
+    NOUNS(SubConf.CONFIG.getUniqueNouns()), VERBS(SubConf.CONFIG.getUniqueVerbs());
 
     protected int nextId = -1;
 

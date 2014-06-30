@@ -1,6 +1,6 @@
 package io.mem0r1es.activitysubsumer.synsets;
 
-import io.mem0r1es.activitysubsumer.utils.SubsumerConfig;
+import io.mem0r1es.activitysubsumer.utils.SubConf;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -14,8 +14,8 @@ import java.util.Set;
  * @author Ivan Gavrilović
  */
 public enum SynsetStore {
-    NOUNS(SubsumerConfig.NOUNS_WORDS_IN_SYNS, SubsumerConfig.NOUNS_PARENT_CHLD_RELS, Dict.NOUNS),
-    VERBS(SubsumerConfig.VERBS_WORDS_IN_SYNS, SubsumerConfig.VERBS_PARENT_CHLD_RELS, Dict.VERBS);
+    NOUNS(SubConf.CONFIG.getNounsWordsInSyns(), SubConf.CONFIG.getNounsParentChldRels(), Dict.NOUNS),
+    VERBS(SubConf.CONFIG.getVerbsWordsInSyns(), SubConf.CONFIG.getVerbsParentChldRels(), Dict.VERBS);
 
     /**
      * Keys contain synset codes, values words

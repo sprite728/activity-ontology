@@ -6,7 +6,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.util.FileManager;
-import io.mem0r1es.activitysubsumer.utils.SubsumerConfig;
+import io.mem0r1es.activitysubsumer.utils.SubConf;
 import io.mem0r1es.activitysubsumer.utils.Utils;
 
 import java.io.FileOutputStream;
@@ -69,7 +69,7 @@ public class WordNetRDFInputProvider extends WordNetProvider {
         while (iter.hasNext()) {
             Tuple4 t = parseStatement(iter.nextStatement());
             if (t != null) {
-                if (t.predicate.equals(SubsumerConfig.PREDICATE_SYNSET)) {
+                if (t.predicate.equals(SubConf.CONFIG.getPredicateSynset())) {
                     if (t.type.equals("n")) {
                         Utils.addToMap(nounSyns, t.subject.toLowerCase(), t.object);
                     } else {
@@ -105,7 +105,7 @@ public class WordNetRDFInputProvider extends WordNetProvider {
         String predicate = stmt.getPredicate().getLocalName();
 
         // get only hyponyms and members of synsets
-        if (predicate.equals(SubsumerConfig.PREDICATE_HYPONYM) || predicate.equals(SubsumerConfig.PREDICATE_SYNSET)) {
+        if (predicate.equals(SubConf.CONFIG.getPredicateHyponym()) || predicate.equals(SubConf.CONFIG.getPredicateSynset())) {
             String subjectURI = stmt.getSubject().getURI();
             // get only nouns and verbs
             if (subjectURI.endsWith("-N") || subjectURI.endsWith("-n") || subjectURI.endsWith("-v") || subjectURI.endsWith("-V")) {
@@ -150,21 +150,21 @@ public class WordNetRDFInputProvider extends WordNetProvider {
         try {
             URL website = new URL("http://wordnet-rdf.princeton.edu/wn31/" + code + ".rdf");
             ReadableByteChannel rbc = Channels.newChannel(website.openStream());
-            FileOutputStream fos = new FileOutputStream(SubsumerConfig.TMP_FILE_IN);
+            FileOutputStream fos = new FileOutputStream(SubConf.CONFIG.getTmpFileIn());
             fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
 
             // create an empty model
             Model model = ModelFactory.createDefaultModel();
 
             // use the FileManager to find the io file
-            InputStream in = FileManager.get().open(SubsumerConfig.TMP_FILE_IN);
+            InputStream in = FileManager.get().open(SubConf.CONFIG.getTmpFileIn());
 
             model.read(in, null, "RDF/XML");
             StmtIterator iter = model.listStatements();
             while (iter.hasNext()) {
                 Tuple4 t = parseStatement(iter.nextStatement());
                 if (t != null) {
-                    if (t.predicate.equals(SubsumerConfig.PREDICATE_SYNSET)) {
+                    if (t.predicate.equals(SubConf.CONFIG.getPredicateSynset())) {
                         members.add(t.object);
                     }
                 }
