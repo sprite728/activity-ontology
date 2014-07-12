@@ -9,6 +9,7 @@ import io.mem0r1es.activitysubsumer.graphs.NounsSynsetForest;
 import io.mem0r1es.activitysubsumer.graphs.VerbsSynsetForest;
 import io.mem0r1es.activitysubsumer.io.*;
 import io.mem0r1es.activitysubsumer.recomm.*;
+import io.mem0r1es.activitysubsumer.synsets.Dict;
 import io.mem0r1es.activitysubsumer.synsets.Synsets;
 import io.mem0r1es.activitysubsumer.utils.SubConf;
 import io.mem0r1es.activitysubsumer.utils.TimeOfDay;
@@ -90,6 +91,13 @@ public class ActivityTest {
             ActivityRecognizer recognizer = new ActivityRecognizer(classifier.getAllActivities(), params);
             for(ContextualActivity ca: recognizer.candidates())
             logger.info("Candidate: "+ca.getVerb()+" "+ca.getNoun());
+
+            logger.info("Match: "+ Dict.NOUNS.search("yo"));
+            logger.info("Match: "+ Dict.NOUNS.search("aaaa"));
+            logger.info("Match: "+ Dict.NOUNS.search("aa"));
+            logger.info("Match: "+ Dict.NOUNS.search("zz"));
+            logger.info("Match: "+ Dict.NOUNS.search("rol"));
+            logger.info("Match: "+ Dict.NOUNS.search("low"));
 
 
             start = System.currentTimeMillis();

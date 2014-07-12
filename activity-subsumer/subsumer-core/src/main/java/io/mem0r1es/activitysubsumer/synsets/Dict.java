@@ -2,6 +2,9 @@ package io.mem0r1es.activitysubsumer.synsets;
 
 import io.mem0r1es.activitysubsumer.utils.SubConf;
 
+import java.util.Collection;
+import java.util.LinkedList;
+
 /**
  * Class holding the dictionary for nouns and dictionary for verbs. All nouns are unique, and all verbs are unique,
  * but there could be a word that is in both noun dictionary, and in verbs dictionary.
@@ -13,10 +16,10 @@ public enum Dict {
 
     protected int nextId = -1;
 
-    protected char[][] wordsKeys;
+    protected char[][] wordValues;
 
     Dict(int size) {
-        wordsKeys = new char[size][];
+        wordValues = new char[size][];
     }
 
     public static Dict getDict(int code) {
@@ -31,20 +34,20 @@ public enum Dict {
 
     public int put(String s) {
         char[] sChar = s.toCharArray();
-        int pos = binarySearch(wordsKeys, sChar, 0, nextId);
-        if (pos != -1) return pos;
+        int pos = binarySearch(wordValues, sChar, 0, nextId);
+        if (pos >= 0) return pos;
         nextId++;
 
-        wordsKeys[nextId] = sChar;
+        wordValues[nextId] = sChar;
         return nextId;
     }
 
     public int get(String s) {
-        return binarySearch(wordsKeys, s.toCharArray(), 0, wordsKeys.length - 1);
+        return binarySearch(wordValues, s.toCharArray(), 0, wordValues.length - 1);
     }
 
     public String get(int code) {
-        return new String(wordsKeys[code]);
+        return new String(wordValues[code]);
     }
 
     public static int compareTo(char[] fst, char[] snd) {
@@ -64,6 +67,28 @@ public enum Dict {
         return len1 - len2;
     }
 
+    public Collection<String> search(String prefix) {
+        int pos = binarySearch(wordValues, prefix.toCharArray(), 0, wordValues.length - 1);
+        pos = pos < 0 ? ((-1) * pos + 1) : pos;
+        char[] p = prefix.toCharArray();
+        Collection<String> matches = new LinkedList<String>();
+        while (pos < wordValues.length && isPrefix(wordValues[pos], p)){
+            matches.add(new String(wordValues[pos++]));
+        }
+        return matches;
+    }
+
+    private boolean isPrefix(char[] a, char[] prefix) {
+        int aLen = a.length;
+        int prefixLen = prefix.length;
+        if (aLen < prefixLen) return false;
+
+        for (int i = 0; i < prefix.length; i++) {
+            if (a[i] != prefix[i]) return false;
+        }
+        return true;
+    }
+
     public static int binarySearch(char[][] a, char[] val, int low, int high) {
         int start = low, end = high;
         while (start <= end) {
@@ -75,6 +100,6 @@ public enum Dict {
             } else if (cmp < 0) start = mid + 1;
             else end = mid - 1;
         }
-        return -1;
+        return -(start + 1);
     }
 }
