@@ -73,6 +73,43 @@ public class ActivityCluster {
     }
 
     /**
+     * Removes the specified activity from the cluster.
+     * @param activity activity to be removed
+     */
+    public void removeActivity(ContextualActivity activity){
+        removeActivity(activity.getId());
+    }
+
+    /**
+     * Remove the activity with the specified id.
+     * @param id id of the activity to be removed
+     */
+    public void removeActivity(String id){
+        for (SynsetNode s : verbs.getGraphs().keySet()) {
+            List<ContextualActivity> verbActivities = new ArrayList<ContextualActivity>(activities.get(s));
+            for (int i = 0; i < verbActivities.size(); i++){
+                if (verbActivities.get(i).getId().equals(id)) {
+                    // ids are unique, so after it is found, we can stop iteration
+                    verbActivities.remove(i);
+                    break;
+                }
+            }
+
+            activities.put(s, new HashSet<ContextualActivity>(verbActivities));
+        }
+    }
+
+    /**
+     * Edit the specified activity. The specified activity is removed, and then added back to
+     * the cluster.
+     * @param newActivity activity that existed, and has been edited
+     */
+    public void editActivity(ContextualActivity newActivity){
+        removeActivity(newActivity.getId());
+        addActivity(newActivity);
+    }
+
+    /**
      * Subsume the specified clusters (including {@code this} one) by subsuming the activities in the specified verbs sub-graph
      *
      * @param clusters clusters to subsume

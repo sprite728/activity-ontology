@@ -11,6 +11,8 @@ import java.util.Set;
  * @author Ivan Gavrilović
  */
 public interface ContextualActivity {
+    String getId();
+
     String getVerb();
 
     String getNoun();

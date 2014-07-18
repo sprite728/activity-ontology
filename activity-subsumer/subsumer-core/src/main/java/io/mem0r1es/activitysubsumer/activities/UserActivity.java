@@ -127,6 +127,11 @@ public class UserActivity extends BasicActivity implements ContextualActivity {
     }
 
     @Override
+    public String getId(){
+        return id;
+    }
+
+    @Override
     public int getMinDuration() {
         if (duration.equals("none")) return 0;
         return Integer.parseInt(duration);

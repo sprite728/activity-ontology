@@ -11,7 +11,10 @@ import java.util.Set;
  * @author Ivan Gavrilović
  */
 public class DefaultActivity extends BasicActivity implements ContextualActivity {
+    private static int CNT = 0;
+    public static String ID_PREF = "DEF";
 
+    private String id;
     private Set<String> locCategories;
     private Set<TimeOfDay> timesOfDay;
     private int minDuration;
@@ -19,6 +22,8 @@ public class DefaultActivity extends BasicActivity implements ContextualActivity
 
     public DefaultActivity(String verb, String noun, Set<String> locCategories, Set<TimeOfDay> timesOfDay, String duration) {
         super(verb, noun);
+        id = ID_PREF + "_" + (CNT++);
+
         this.locCategories = locCategories;
 
         this.timesOfDay = timesOfDay;
@@ -39,6 +44,10 @@ public class DefaultActivity extends BasicActivity implements ContextualActivity
                 this.maxDuration = Utils.parseMinutes(duration.substring(i));
             }
         }
+    }
+
+    public String getId(){
+        return id;
     }
 
     @Override
