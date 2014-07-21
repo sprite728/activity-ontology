@@ -31,7 +31,7 @@ public class UserActivity extends BasicActivity implements ContextualActivity {
      * @param verb          activity verb
      * @param noun          activity noun
      * @param locCategories location categories
-     * @param timesOfDay    times of day when the activity occured (it is possible that spreads across two or more periods
+     * @param timesOfDay    times of day when the activity occurred (it is possible that spreads across two or more periods
      * @param duration      duration of the activity in minutes
      */
     public UserActivity(String id, String verb, String noun, Set<String> locCategories, Set<TimeOfDay> timesOfDay, String duration) {

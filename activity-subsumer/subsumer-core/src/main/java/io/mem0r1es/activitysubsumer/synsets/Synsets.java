@@ -2,7 +2,6 @@ package io.mem0r1es.activitysubsumer.synsets;
 
 import io.mem0r1es.activitysubsumer.io.SynsetAdapter;
 import io.mem0r1es.activitysubsumer.utils.Pair;
-import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -10,7 +9,6 @@ import java.util.Set;
 
 
 public class Synsets {
-    private static final Logger logger = Logger.getLogger(Synsets.class.getCanonicalName());
 
     SynsetAdapter adapter;
 

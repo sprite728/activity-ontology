@@ -4,7 +4,6 @@ import io.mem0r1es.activitysubsumer.activities.ContextualActivity;
 import io.mem0r1es.activitysubsumer.activities.DefaultActivity;
 import io.mem0r1es.activitysubsumer.utils.Cons;
 import io.mem0r1es.activitysubsumer.utils.TimeOfDay;
-import org.apache.log4j.Logger;
 
 import java.io.InputStream;
 import java.util.Collections;
@@ -17,7 +16,6 @@ import java.util.Set;
  * @author Ivan Gavrilović
  */
 public class DefaultActivitiesProvider {
-    private static final Logger logger = Logger.getLogger(DefaultActivitiesProvider.class.getCanonicalName());
 
     private InputStream input;
 
@@ -48,7 +46,6 @@ public class DefaultActivitiesProvider {
                         times.add(TimeOfDay.valueOf(tm.toUpperCase()));
                     }
                     catch (Exception e){
-                        logger.error("While parsing default activities: "+infos[3]);
                     }
                 }
 

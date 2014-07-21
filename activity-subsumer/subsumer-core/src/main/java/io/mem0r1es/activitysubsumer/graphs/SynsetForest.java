@@ -4,7 +4,6 @@ import io.mem0r1es.activitysubsumer.concurrent.ActivityOpsExecutor;
 import io.mem0r1es.activitysubsumer.synsets.SynsetNode;
 import io.mem0r1es.activitysubsumer.synsets.Synsets;
 import io.mem0r1es.activitysubsumer.utils.BFSHierarchicalNode;
-import org.apache.log4j.Logger;
 
 import java.util.*;
 import java.util.concurrent.Callable;
@@ -16,7 +15,6 @@ import java.util.concurrent.Future;
  * @author Ivan Gavrilović
  */
 public abstract class SynsetForest {
-    static Logger logger = Logger.getLogger(SynsetForest.class.getCanonicalName());
 
     protected Map<SynsetNode, SynsetGraph> graphs = new HashMap<SynsetNode, SynsetGraph>();
     protected Map<SynsetNode, Integer> subgraphSizes = new HashMap<SynsetNode, Integer>();

@@ -16,7 +16,6 @@ public class NounsSynsetForest extends SynsetForest {
 
     protected void init(Synsets synsets, int rootLevel) {
         Set<SynsetNode> roots = nodesAtLevel(synsets.rootSynsets(), rootLevel);
-        logger.info("Number of sub-graphs created: " + roots.size());
 
         // all verbs will share the whole verbs graph
         for (SynsetNode node : roots) {

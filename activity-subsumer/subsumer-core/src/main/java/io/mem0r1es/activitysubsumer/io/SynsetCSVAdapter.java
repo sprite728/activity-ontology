@@ -1,7 +1,6 @@
 package io.mem0r1es.activitysubsumer.io;
 
 import io.mem0r1es.activitysubsumer.utils.Pair;
-import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,7 +17,6 @@ import java.util.NoSuchElementException;
  * @author Ivan Gavrilović
  */
 public class SynsetCSVAdapter extends SynsetAdapter {
-    private static final Logger logger = Logger.getLogger(SynsetCSVAdapter.class.getCanonicalName());
 
     private LineByLineSplit synsetReader;
     private LineByLineSplit wordReader;
@@ -163,7 +161,6 @@ public class SynsetCSVAdapter extends SynsetAdapter {
             try {
                 line = reader.readLine();
             } catch (Exception e) {
-                logger.error(e.getMessage());
                 line = null;
             }
             return parts;
@@ -173,7 +170,6 @@ public class SynsetCSVAdapter extends SynsetAdapter {
             try {
                 reader.close();
             } catch (Exception e) {
-                logger.error(e.getMessage());
             }
         }
     }

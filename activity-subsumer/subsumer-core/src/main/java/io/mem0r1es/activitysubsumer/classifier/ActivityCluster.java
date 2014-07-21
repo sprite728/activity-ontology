@@ -7,7 +7,6 @@ import io.mem0r1es.activitysubsumer.concurrent.LCAFinder;
 import io.mem0r1es.activitysubsumer.concurrent.SubgraphEvaluator;
 import io.mem0r1es.activitysubsumer.graphs.SynsetForest;
 import io.mem0r1es.activitysubsumer.synsets.SynsetNode;
-import org.apache.log4j.Logger;
 
 import java.util.*;
 import java.util.concurrent.Future;
@@ -18,8 +17,6 @@ import java.util.concurrent.Future;
  * @author Ivan Gavrilović
  */
 public class ActivityCluster {
-    static Logger logger = Logger.getLogger(ActivityCluster.class.getCanonicalName());
-
     Map<SynsetNode, Set<ContextualActivity>> activities;
     /**
      * Forests of verbs and nouns
