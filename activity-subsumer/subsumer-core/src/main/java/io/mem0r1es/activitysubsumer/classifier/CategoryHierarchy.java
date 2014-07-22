@@ -27,7 +27,7 @@ public class CategoryHierarchy {
 
         Set<Category> readCategories = provider.read();
         categories = new HashMap<String, Category>();
-        for (Category c : readCategories) categories.put(c.name, c);
+        for (Category c : readCategories) categories.put(c.name.toLowerCase(), c);
 
         instance = this;
     }
@@ -50,11 +50,14 @@ public class CategoryHierarchy {
     /**
      * Get all categories that are more general than the specified one
      *
-     * @param s category for which we are looking more general ones
+     * @param cat category for which we are looking more general ones
      * @return all parent categories, including the specified one
      */
-    public Set<String> getUp(String s) {
+    public Set<String> getUp(String cat) {
+        String s = cat.toLowerCase();
         Set<String> resultSet = new HashSet<String>();
+        if (!categories.keySet().contains(s)) return resultSet;
+
         resultSet.add(s);
         Set<Category> edges = categories.get(s).getParents();
         while (!edges.isEmpty()) {
@@ -72,11 +75,14 @@ public class CategoryHierarchy {
     /**
      * Get all categories that are more specific than the specified one
      *
-     * @param s category name
+     * @param cat category name
      * @return all children categories, including the specified one
      */
-    public Set<String> getDown(String s) {
+    public Set<String> getDown(String cat) {
+        String s = cat.toLowerCase();
         Set<String> resultSet = new HashSet<String>();
+        if (!categories.keySet().contains(s)) return resultSet;
+
         resultSet.add(s);
         BFSHierarchicalNode<Category> bfs = new BFSHierarchicalNode<Category>(categories.get(s));
         while (bfs.hasNext()) resultSet.add(bfs.next().name);
@@ -86,10 +92,11 @@ public class CategoryHierarchy {
 
     /**
      * Get all categories that are above, and that are below the specified one in the hierarchy
-     * @param s category name
+     * @param cat category name
      * @return all parent and children categories, including the specified one
      */
-    public Set<String> getRelated(String s){
+    public Set<String> getRelated(String cat){
+        String s = cat.toLowerCase();
         Set<String> res = getUp(s); res.addAll(getDown(s));
         return res;
     }
@@ -105,7 +112,7 @@ public class CategoryHierarchy {
         private String name;
 
         public Category(String name) {
-            this.name = name;
+            this.name = name.toLowerCase();
             children = new HashSet<Category>();
             parents = new HashSet<Category>();
         }

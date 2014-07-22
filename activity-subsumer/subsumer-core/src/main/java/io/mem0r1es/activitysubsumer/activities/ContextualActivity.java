@@ -21,6 +21,10 @@ public interface ContextualActivity {
 
     int getMaxDuration();
 
+    /**
+     * Return category names in lower case.
+     * @return category names associated to this activity
+     */
     Set<String> getLocCategories();
 
     Set<TimeOfDay> getTimesOfDay();

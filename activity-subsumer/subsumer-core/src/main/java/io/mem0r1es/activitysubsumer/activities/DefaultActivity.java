@@ -3,6 +3,7 @@ package io.mem0r1es.activitysubsumer.activities;
 import io.mem0r1es.activitysubsumer.utils.TimeOfDay;
 import io.mem0r1es.activitysubsumer.utils.Utils;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -24,7 +25,9 @@ public class DefaultActivity extends BasicActivity implements ContextualActivity
         super(verb, noun);
         id = ID_PREF + "_" + (CNT++);
 
-        this.locCategories = locCategories;
+        Set<String> lowerCats = new HashSet<String>();
+        for(String c:locCategories) lowerCats.add(c.toLowerCase());
+        this.locCategories = lowerCats;
 
         this.timesOfDay = timesOfDay;
 

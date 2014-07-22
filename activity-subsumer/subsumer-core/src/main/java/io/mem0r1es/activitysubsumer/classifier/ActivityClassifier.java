@@ -10,6 +10,8 @@ import io.mem0r1es.activitysubsumer.synsets.SynsetNode;
 
 import java.util.*;
 
+import javax.naming.Context;
+
 
 /**
  * Classifies the activities according to the {@link CategoryHierarchy}.
@@ -84,6 +86,27 @@ public class ActivityClassifier {
         }
     }
 
+    public void removeActivity(ContextualActivity ca){
+        for (String cat : ca.getLocCategories()) {
+            ActivityCluster categoryCluster = activities.get(cat);
+            if (categoryCluster == null) {
+                break;
+            }
+            categoryCluster.removeActivity(ca);
+        }
+    }
+
+    public void editActivity(ContextualActivity ca){
+        for (String cat : ca.getLocCategories()) {
+            ActivityCluster categoryCluster = activities.get(cat);
+            if (categoryCluster == null) {
+                break;
+            }
+            categoryCluster.removeActivity(ca.getId());
+            categoryCluster.addActivity(ca);
+        }
+    }
+
     /**
      * Subsume all activities of the specified location category. Use activities from the parent location categories in
      * the Foursquare hierarchy to get the support activity set which is used to evaluate the possible.
@@ -153,11 +176,12 @@ public class ActivityClassifier {
     /**
      * Get all activities assigned to the specified category, or that are up/down in the category hierarchy.
      * By specifying the parameter, one can trigger either the first type of retrieval, or the second one.
-     * @param category category in the hierarchy
+     * @param cat category in the hierarchy
      * @param allRelated whether to return activities assigned to up/down categories
      * @return set of all activities satisfying the query
      */
-    public Set<ContextualActivity> getAllActivities(String category, boolean allRelated) {
+    public Set<ContextualActivity> getAllActivities(String cat, boolean allRelated) {
+        String category = cat.toLowerCase();
         Set<ContextualActivity> resultSet = new HashSet<ContextualActivity>();
         if (!allRelated) {
             if (activities.containsKey(category)) return activities.get(category).getAllActivities();
@@ -165,7 +189,7 @@ public class ActivityClassifier {
         }
 
         Set<String> allCategories = hierarchy.getRelated(category);
-        for (String cat : allCategories) resultSet.addAll(getAllActivities(cat, false));
+        for (String c : allCategories) resultSet.addAll(getAllActivities(c, false));
         return resultSet;
     }
 }

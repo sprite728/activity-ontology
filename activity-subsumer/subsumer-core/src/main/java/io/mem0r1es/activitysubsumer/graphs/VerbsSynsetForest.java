@@ -12,7 +12,7 @@ import java.util.Set;
  */
 public class VerbsSynsetForest extends SynsetForest {
     public VerbsSynsetForest(Synsets synsets) {
-        super(synsets, 0);
+            super(synsets, 0);
     }
 
     protected void init(Synsets synsets, int rootLevel) {

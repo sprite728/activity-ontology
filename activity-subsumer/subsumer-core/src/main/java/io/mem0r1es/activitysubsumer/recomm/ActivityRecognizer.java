@@ -46,7 +46,7 @@ public class ActivityRecognizer {
     }
 
     /**
-     * Simple wrapper class in order to allow one-line sorting of the activites.
+     * Simple wrapper class in order to allow one-line sorting of the activities.
      */
     class ContextualActivitySortable implements Comparable {
         private ContextualActivity activity;
