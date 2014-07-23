@@ -10,8 +10,6 @@ import io.mem0r1es.activitysubsumer.synsets.SynsetNode;
 
 import java.util.*;
 
-import javax.naming.Context;
-
 
 /**
  * Classifies the activities according to the {@link CategoryHierarchy}.
@@ -115,10 +113,11 @@ public class ActivityClassifier {
      * <p/>
      * subsumed activities.
      *
-     * @param locationCategory location category to subsume
+     * @param locationCat location category to subsume
      * @return sets of subsumed activities, per verbs sub-graph
      */
-    public Set<Set<BasicActivity>> subsume(String locationCategory) {
+    public Set<Set<BasicActivity>> subsume(String locationCat) {
+        String locationCategory = locationCat.toLowerCase();
         Set<Set<BasicActivity>> allSubgraphSubsumed = new HashSet<Set<BasicActivity>>();
 
         ActivityCluster categoryCluster = activities.get(locationCategory);

@@ -53,7 +53,7 @@ public class ActivityTest {
             times.add(TimeOfDay.EVENING);
 
             Set<String> locs = new HashSet<String>();
-            locs.add("Steakhouse");
+            locs.add("steakhouse");
 
             classifier.addActivity(new UserActivity("0", "eat", "food", locs, times, "10"));
             classifier.addActivity(new UserActivity("1", "eat", "food", locs, times, "10"));
@@ -62,7 +62,7 @@ public class ActivityTest {
             classifier.addActivity(new UserActivity("4", "have", "pasta", locs, times, "10"));
 
             locs.clear();
-            locs.add("Gay Bar");
+            locs.add("gay bar");
 
             classifier.addActivity(new UserActivity("0", "eat", "food", locs, times, "10"));
             classifier.addActivity(new UserActivity("1", "eat", "food", locs, times, "10"));
@@ -71,7 +71,7 @@ public class ActivityTest {
 
             classifier.save();
 
-            for (Set<BasicActivity> ba : classifier.subsume("Steakhouse")) {
+            for (Set<BasicActivity> ba : classifier.subsume("steakhouse")) {
                 logger.info("[][][][][[][][][]");
                 for (BasicActivity bba : ba) {
                     logger.info(bba.getVerb() + " " + bba.getNoun());
