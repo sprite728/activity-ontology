@@ -107,7 +107,8 @@ public class ActivityClassifier {
 
     /**
      * Subsume all activities of the specified location category. Use activities from the parent location categories in
-     * the Foursquare hierarchy to get the support activity set which is used to evaluate the possible.
+     * the Foursquare hierarchy to get the support activity set which is used to evaluate the possible
+     * subsuming activities.
      * <p/>
      * Subsumed activities are per verbs sub-graph.
      * <p/>
