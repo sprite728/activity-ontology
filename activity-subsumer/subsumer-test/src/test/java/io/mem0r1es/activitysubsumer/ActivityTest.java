@@ -34,12 +34,24 @@ public class ActivityTest {
         try {
             long start = System.currentTimeMillis();
 
+            /**
+             * INITIALIZES DICTIONARIES
+             */
+            DictAdapter verbsDict = DictAdapter.getDefaultVerbs();
+            DictAdapter nounsDict = DictAdapter.getDefaultNouns();
+            Synsets.readWords(verbsDict, SynsetStore.VERBS);
+            Synsets.readWords(nounsDict, SynsetStore.NOUNS);
+
+            /**
+             * READ THE OTHER INFO ABOUT THE SYNSETS
+             */
             SynsetAdapter verbsAdapter = SynsetAdapter.defaultVerbs();
             Synsets verbsSynsets = new Synsets(verbsAdapter, SynsetStore.VERBS);
-                VerbsSynsetForest verbs = new VerbsSynsetForest(verbsSynsets);
-
             SynsetAdapter nounsAdapter = SynsetAdapter.defaultNouns();
             Synsets nounsSynsets = new Synsets(nounsAdapter, SynsetStore.NOUNS);
+
+            VerbsSynsetForest verbs = new VerbsSynsetForest(verbsSynsets);
+
             NounsSynsetForest nouns = new NounsSynsetForest(nounsSynsets);
 
             CategoryHierarchy hierarchy = new CategoryHierarchy(new FoursquareCategoriesCSV(new FileInputStream(SubConf.CONFIG.getCategoriesCsv())));

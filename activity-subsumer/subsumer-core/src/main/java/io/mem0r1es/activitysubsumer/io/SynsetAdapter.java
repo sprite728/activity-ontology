@@ -8,17 +8,18 @@ import java.io.IOException;
 
 /**
  * Interface that should be implemented by classes that retrieve synsets (from DB, file, network etc.)
+ * This reads child and parent synset relationships, and reads synset code - word relation.
  *
  * @author Ivan Gavrilović
  */
 public abstract class SynsetAdapter {
     public static SynsetAdapter defaultVerbs() throws IOException{
-        return new SynsetCSVAdapter(new FileInputStream(SubConf.CONFIG.getVerbsSynset()), new FileInputStream(SubConf.CONFIG.getVerbsWords()),
+        return new SynsetCSVAdapter(new FileInputStream(SubConf.CONFIG.getVerbsSynset()),
                 new FileInputStream(SubConf.CONFIG.getVerbsChildren()), new FileInputStream(SubConf.CONFIG.getVerbsParents()));
     }
 
     public static SynsetAdapter defaultNouns() throws IOException{
-        return new SynsetCSVAdapter(new FileInputStream(SubConf.CONFIG.getNounsSynset()), new FileInputStream(SubConf.CONFIG.getNounsWords()),
+        return new SynsetCSVAdapter(new FileInputStream(SubConf.CONFIG.getNounsSynset()),
                 new FileInputStream(SubConf.CONFIG.getNounsChildren()), new FileInputStream(SubConf.CONFIG.getNounsParents()));
     }
 
@@ -46,7 +47,7 @@ public abstract class SynsetAdapter {
     /**
      * NOTICE:
      * For all other methods, see {@link this#child}, {@link this#hasChild()} and {@link this#closeChild()}.
-     * The meaning of all other is the same like for these three.
+     * The meaning of all other methods is the same like for these three.
      */
 
 
@@ -55,12 +56,6 @@ public abstract class SynsetAdapter {
     public abstract boolean hasParent();
 
     public abstract void closeParent();
-
-    public abstract Pair<String, Integer> word() throws IOException;
-
-    public abstract boolean hasWord();
-
-    public abstract void closeWord();
 
     public abstract Pair<Integer, String> synset() throws IOException;
 

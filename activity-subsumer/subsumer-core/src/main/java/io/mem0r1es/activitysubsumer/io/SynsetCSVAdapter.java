@@ -1,11 +1,10 @@
 package io.mem0r1es.activitysubsumer.io;
 
+import io.mem0r1es.activitysubsumer.utils.LineByLineSplit;
 import io.mem0r1es.activitysubsumer.utils.Pair;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.URLDecoder;
 import java.util.NoSuchElementException;
 
@@ -19,7 +18,6 @@ import java.util.NoSuchElementException;
 public class SynsetCSVAdapter extends SynsetAdapter {
 
     private LineByLineSplit synsetReader;
-    private LineByLineSplit wordReader;
     private LineByLineSplit childReader;
     private LineByLineSplit parentReader;
 
@@ -27,13 +25,11 @@ public class SynsetCSVAdapter extends SynsetAdapter {
      * Creates new provider. All input streams should be sorted.
      *
      * @param synsetStream stream to synset code - word pairs
-     * @param wordStream   stream to word - synset code pairs
      * @param childStream  stream to node - child node pairs
      * @param parentStream stream to node - parent node pairs
      */
-    public SynsetCSVAdapter(InputStream synsetStream, InputStream wordStream,
+    public SynsetCSVAdapter(InputStream synsetStream,
                             InputStream childStream, InputStream parentStream) {
-        this.wordReader = new LineByLineSplit(wordStream);
         this.synsetReader = new LineByLineSplit(synsetStream);
         this.childReader = new LineByLineSplit(childStream);
         this.parentReader = new LineByLineSplit(parentStream);
@@ -70,21 +66,6 @@ public class SynsetCSVAdapter extends SynsetAdapter {
     }
 
     @Override
-    public Pair<String, Integer> word() throws IOException {
-        if (wordReader.hasNext()) {
-            String[] parts = wordReader.next();
-            if (parts.length == 2) {
-                String newWord = URLDecoder.decode(parts[0], "UTF-8");
-                Integer synsetCode = Integer.parseInt(parts[1]);
-
-                return Pair.get(newWord, synsetCode);
-            } else {
-                throw new IOException("Unexpected file format. Each line should have word - code syntax");
-            }
-        } else throw new NoSuchElementException();
-    }
-
-    @Override
     public Pair<Integer, String> synset() throws IOException {
         if (synsetReader.hasNext()) {
             String[] parts = synsetReader.next();
@@ -110,11 +91,6 @@ public class SynsetCSVAdapter extends SynsetAdapter {
     }
 
     @Override
-    public boolean hasWord() {
-        return wordReader.hasNext();
-    }
-
-    @Override
     public boolean hasSynset() {
         return synsetReader.hasNext();
     }
@@ -130,47 +106,7 @@ public class SynsetCSVAdapter extends SynsetAdapter {
     }
 
     @Override
-    public void closeWord() {
-        wordReader.close();
-    }
-
-    @Override
     public void closeSynset() {
         synsetReader.close();
-    }
-
-    private static class LineByLineSplit {
-        private BufferedReader reader;
-        private String line;
-
-        private LineByLineSplit(InputStream stream) {
-            this.reader = new BufferedReader(new InputStreamReader(stream));
-            try {
-                line = reader.readLine();
-            } catch (Exception e) {
-                line = null;
-            }
-        }
-
-        boolean hasNext() {
-            return line != null;
-        }
-
-        String[] next() {
-            String[] parts = line.split(" ");
-            try {
-                line = reader.readLine();
-            } catch (Exception e) {
-                line = null;
-            }
-            return parts;
-        }
-
-        void close() {
-            try {
-                reader.close();
-            } catch (Exception e) {
-            }
-        }
     }
 }

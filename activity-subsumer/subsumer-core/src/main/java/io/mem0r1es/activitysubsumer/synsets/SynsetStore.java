@@ -225,4 +225,8 @@ public enum SynsetStore {
     public int stringToId(String word){
         return dict.get(word);
     }
+
+    public boolean isDictSet(){
+        return !dict.isEmpty();
+    }
 }

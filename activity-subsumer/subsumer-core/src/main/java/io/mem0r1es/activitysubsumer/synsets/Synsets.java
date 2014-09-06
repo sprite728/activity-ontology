@@ -1,5 +1,6 @@
 package io.mem0r1es.activitysubsumer.synsets;
 
+import io.mem0r1es.activitysubsumer.io.DictAdapter;
 import io.mem0r1es.activitysubsumer.io.SynsetAdapter;
 import io.mem0r1es.activitysubsumer.utils.Pair;
 
@@ -19,6 +20,8 @@ public class Synsets {
 
     /**
      * Creates new provider. All input streams should be sorted.
+     * </p>
+     * This also initializes noun/verb dictionary, that can be searched.
      *
      * @param adapter synset adapter reading synset data
      * @param store   store to be populated
@@ -41,7 +44,7 @@ public class Synsets {
     private Set<SynsetNode> readAll() {
         try {
             // this populates the dict
-            readWords();
+            //readWords();
             readChildren();
             readParents();
             return readSynsets();
@@ -81,12 +84,19 @@ public class Synsets {
         adapter.closeChild();
     }
 
-    private void readWords() throws IOException {
-        while (adapter.hasWord()) {
-            Pair<String, Integer> data = adapter.word();
+    /**
+     * Read all words and save them to the dictionary.
+     *
+     * @param dictAdapter dictionary adapter to read from
+     * @param dictStore store to save the words (either noun or verb store)
+     * @throws IOException
+     */
+    public static void readWords(DictAdapter dictAdapter, SynsetStore dictStore) throws IOException {
+        while (dictAdapter.hasWord()) {
+            Pair<String, Integer> data = dictAdapter.word();
 
-            store.addWordCode(data.getFst(), data.getSnd());
+            dictStore.addWordCode(data.getFst(), data.getSnd());
         }
-        adapter.closeWord();
+        dictAdapter.closeWord();
     }
 }

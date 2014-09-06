@@ -102,4 +102,8 @@ public enum Dict {
         }
         return -(start + 1);
     }
+
+    public boolean isEmpty(){
+        return nextId == -1;
+    }
 }
