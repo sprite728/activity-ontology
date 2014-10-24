@@ -1,11 +1,13 @@
 package io.mem0r1es.activitysubsumer.activities;
 
+import java.io.Serializable;
+
 /**
  * Basic activity with verb and noun.
  *
  * @author Ivan Gavrilović
  */
-public class BasicActivity {
+public class BasicActivity implements Serializable {
     protected String verb;
     protected String noun;
 
