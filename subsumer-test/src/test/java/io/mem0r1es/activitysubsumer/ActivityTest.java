@@ -1,14 +1,12 @@
 package io.mem0r1es.activitysubsumer;
 
 import io.mem0r1es.activitysubsumer.activities.BasicActivity;
-import io.mem0r1es.activitysubsumer.activities.ContextualActivity;
 import io.mem0r1es.activitysubsumer.activities.UserActivity;
 import io.mem0r1es.activitysubsumer.classifier.ActivityClassifier;
 import io.mem0r1es.activitysubsumer.classifier.CategoryHierarchy;
 import io.mem0r1es.activitysubsumer.graphs.NounsSynsetForest;
 import io.mem0r1es.activitysubsumer.graphs.VerbsSynsetForest;
 import io.mem0r1es.activitysubsumer.io.*;
-import io.mem0r1es.activitysubsumer.recomm.*;
 import io.mem0r1es.activitysubsumer.synsets.Dict;
 import io.mem0r1es.activitysubsumer.synsets.Synsets;
 import io.mem0r1es.activitysubsumer.utils.SubConf;
@@ -17,7 +15,6 @@ import io.mem0r1es.activitysubsumer.synsets.SynsetStore;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
-import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.HashSet;
@@ -90,19 +87,6 @@ public class ActivityTest {
                 }
             }
             logger.info("Subsumed ms: " + (System.currentTimeMillis() - start));
-
-            Set<ContextualActivity> defActs = new DefaultActivitiesProvider(new BufferedInputStream(
-                    new FileInputStream(SubConf.CONFIG.getActivitiesDefault()))).read();
-            defActs.addAll(classifier.getAllActivities());
-
-            Set<ContextualParameter> params = new HashSet<ContextualParameter>();
-            params.add(TimeParameter.get(TimeOfDay.AFTERNOON));
-            params.add(new LocationParameter("Food"));
-            params.add(new DurationParameter(100));
-
-            ActivityRecognizer recognizer = new ActivityRecognizer(classifier.getAllActivities(), params);
-            for(ContextualActivity ca: recognizer.candidates())
-            logger.info("Candidate: "+ca.getVerb()+" "+ca.getNoun());
 
             logger.info("Match: "+ Dict.NOUNS.search("yo"));
             logger.info("Match: "+ Dict.NOUNS.search("aaaa"));
