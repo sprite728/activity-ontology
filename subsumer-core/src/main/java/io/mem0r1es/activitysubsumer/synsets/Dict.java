@@ -68,6 +68,14 @@ public enum Dict {
     }
 
     public Collection<String> search(String prefix) {
+        Collection<String> matches = doPrefixSearch(prefix);
+        if (!prefix.toLowerCase().equals(prefix)){
+            matches.addAll(doPrefixSearch(prefix.toLowerCase()));
+        }
+        return matches;
+    }
+
+    public Collection<String> doPrefixSearch(String prefix) {
         int pos = binarySearch(wordValues, prefix.toCharArray(), 0, wordValues.length - 1);
         pos = pos < 0 ? ((-1) * pos + 1) : pos;
         char[] p = prefix.toCharArray();
