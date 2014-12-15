@@ -29,6 +29,7 @@ public class ActivityClassifier {
     private ActivityProvider provider;
 
     private static ActivityClassifier ourInstance = null;
+    private static boolean dictsInitialized = false;
 
     public ActivityClassifier(VerbsSynsetForest verbs, NounsSynsetForest nouns, CategoryHierarchy hierarchy, ActivityProvider provider) {
         this.verbs = verbs;
@@ -38,6 +39,14 @@ public class ActivityClassifier {
         activities = provider.read(verbs, nouns);
 
         ourInstance = this;
+    }
+
+    public static boolean getDictsInit() {
+        return dictsInitialized;
+    }
+
+    public static void setDictsInit() {
+        dictsInitialized = true;
     }
 
     public static ActivityClassifier getInstance() throws IllegalStateException {
@@ -84,7 +93,7 @@ public class ActivityClassifier {
         }
     }
 
-    public void removeActivity(ContextualActivity ca){
+    public void removeActivity(ContextualActivity ca) {
         for (String cat : ca.getLocCategories()) {
             ActivityCluster categoryCluster = activities.get(cat);
             if (categoryCluster == null) {
@@ -94,7 +103,7 @@ public class ActivityClassifier {
         }
     }
 
-    public void editActivity(ContextualActivity ca){
+    public void editActivity(ContextualActivity ca) {
         for (String cat : ca.getLocCategories()) {
             ActivityCluster categoryCluster = activities.get(cat);
             if (categoryCluster == null) {
@@ -163,6 +172,7 @@ public class ActivityClassifier {
 
     /**
      * Get all activities.
+     *
      * @return all activities
      */
     public Set<ContextualActivity> getAllActivities() {
@@ -176,7 +186,8 @@ public class ActivityClassifier {
     /**
      * Get all activities assigned to the specified category, or that are up/down in the category hierarchy.
      * By specifying the parameter, one can trigger either the first type of retrieval, or the second one.
-     * @param cat category in the hierarchy
+     *
+     * @param cat        category in the hierarchy
      * @param allRelated whether to return activities assigned to up/down categories
      * @return set of all activities satisfying the query
      */
@@ -184,7 +195,8 @@ public class ActivityClassifier {
         String category = cat.toLowerCase();
         Set<ContextualActivity> resultSet = new HashSet<ContextualActivity>();
         if (!allRelated) {
-            if (activities.containsKey(category)) return activities.get(category).getAllActivities();
+            if (activities.containsKey(category))
+                return activities.get(category).getAllActivities();
             else return resultSet;
         }
 
