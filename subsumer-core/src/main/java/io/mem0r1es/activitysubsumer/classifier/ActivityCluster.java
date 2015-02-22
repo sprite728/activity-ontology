@@ -83,16 +83,18 @@ public class ActivityCluster {
      */
     public void removeActivity(String id){
         for (SynsetNode s : verbs.getGraphs().keySet()) {
-            List<ContextualActivity> verbActivities = new ArrayList<ContextualActivity>(activities.get(s));
-            for (int i = 0; i < verbActivities.size(); i++){
-                if (verbActivities.get(i).getId().equals(id)) {
-                    // ids are unique, so after it is found, we can stop iteration
-                    verbActivities.remove(i);
-                    break;
+            if (activities.containsKey(s)){
+                List<ContextualActivity> verbActivities = new ArrayList<ContextualActivity>(activities.get(s));
+                for (int i = 0; i < verbActivities.size(); i++){
+                    if (verbActivities.get(i).getId().equals(id)) {
+                        // ids are unique, so after it is found, we can stop iteration
+                        verbActivities.remove(i);
+                        break;
+                    }
                 }
-            }
 
-            activities.put(s, new HashSet<ContextualActivity>(verbActivities));
+                activities.put(s, new HashSet<ContextualActivity>(verbActivities));
+            }
         }
     }
 
