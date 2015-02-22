@@ -20,7 +20,8 @@ import java.util.*;
  * @author Ivan Gavrilović
  */
 public class ActivityClassifier {
-    // keys in the map are location categories from foursquare, and keys in the second map are periods of the day
+    // keys in the map are location categories from foursquare,
+    // values are activity clusters based on verbs
     private Map<String, ActivityCluster> activities;
 
     private VerbsSynsetForest verbs;
